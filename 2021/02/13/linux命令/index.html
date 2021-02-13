@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="问题1：虚拟机无法登录虚拟机自己没有开小键盘，输入密码是数据没有真实输入进去。 问题2：XShell连接linux虚拟机如果不能连接，首选看linux虚拟机自身是否可以ping通宿主机等点击编辑-虚拟机网络编辑器，然后编辑虚拟机的网络连接，NAT模式，并保持默认不需要手动关闭DHCP【原因】采用ip addr 查看虚拟机的IP信息然后在XShell中填入ip信息Xshell是在已有的连接中点击属性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux命令">
+<meta property="og:url" content="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="问题1：虚拟机无法登录虚拟机自己没有开小键盘，输入密码是数据没有真实输入进去。 问题2：XShell连接linux虚拟机如果不能连接，首选看linux虚拟机自身是否可以ping通宿主机等点击编辑-虚拟机网络编辑器，然后编辑虚拟机的网络连接，NAT模式，并保持默认不需要手动关闭DHCP【原因】采用ip addr 查看虚拟机的IP信息然后在XShell中填入ip信息Xshell是在已有的连接中点击属性">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-13T06:25:41.000Z">
+<meta property="article:modified_time" content="2021-02-13T06:52:38.056Z">
+<meta property="article:author" content="Anna">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>linux命令 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linux命令
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-02-13 14:25:41 / Modified: 14:52:38" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="问题1：虚拟机无法登录"><a href="#问题1：虚拟机无法登录" class="headerlink" title="问题1：虚拟机无法登录"></a>问题1：虚拟机无法登录</h2><p>虚拟机自己没有开小键盘，输入密码是数据没有真实输入进去。</p>
+<h2 id="问题2：XShell连接linux虚拟机"><a href="#问题2：XShell连接linux虚拟机" class="headerlink" title="问题2：XShell连接linux虚拟机"></a>问题2：XShell连接linux虚拟机</h2><p>如果不能连接，首选看linux虚拟机自身是否可以ping通宿主机等<br>点击编辑-虚拟机网络编辑器，然后编辑虚拟机的网络连接，NAT模式，并保持默认<br>不需要手动关闭DHCP【原因】<br>采用ip addr 查看虚拟机的IP信息<br>然后在XShell中填入ip信息<br>Xshell是在已有的连接中点击属性，然后修改ip的，注意点击连接。而不是直接点击已有的连接,可能是之前IP信息没有保存上</p>
+<p>第二次是因为弄sftp的时候修改了sshd_config的配置，导致</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd start</span><br></pre></td></tr></table></figure>
+<p>不成功<br>按照注释，删除掉sshd配置表中导致失败的关键几句话。</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>显示文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l</span><br></pre></td></tr></table></figure>
+<p>显示隐藏文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -a</span><br></pre></td></tr></table></figure>
+<p>逆向显示【默认按照文件名逆向】</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -f -r</span><br></pre></td></tr></table></figure>
+<p>按照时间逆向显示详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l -r -t</span><br></pre></td></tr></table></figure>
+<p>同上的简单写法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lrt</span><br></pre></td></tr></table></figure>
+<p>递归显示，显示子文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -R</span><br></pre></td></tr></table></figure>
+
+<p>绝对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path</span><br></pre></td></tr></table></figure>
+<p>相对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./path</span><br></pre></td></tr></table></figure>
+<p>进入/目录，根目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br></pre></td></tr></table></figure>
+<p>返回用户家目，用户目录：主目录是用户的HOME目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br></pre></td></tr></table></figure>
+<p>用户登录后在 家目录 ，可用pwd命令查看，普通用户为 /home/用户名，root用户为/root<br>根目录是在最顶端的目录<br>相当于查看有多少普通用户的家目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br></pre></td></tr></table></figure>
+<p>返回上一级目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+<p>返回上一层目录下的path路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../path</span><br></pre></td></tr></table></figure>
+<p>linux 一切皆文件<br>ctrl+C 命令进行到一半，强制结束。<br>clear 清屏</p>
+<p>在根目录下新建a目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /a</span><br></pre></td></tr></table></figure>
+<p>mkdir -p 新建多级目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /a/<span class="built_in">test</span>/runrun</span><br></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /a.txt</span><br></pre></td></tr></table></figure>
+<p>递归查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -R /a</span><br></pre></td></tr></table></figure>
+<p>删除a目录，a目录必须是空的，实际中使用场景少。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir /a</span><br></pre></td></tr></table></figure>
+<p>删除非空的目录，有提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r /a</span><br></pre></td></tr></table></figure>
+<p>删除目录，并且不提示，有风险，操作前反复检查。比如这里/ 和a之间不能有空格，否则是把整个根目录下的文件全部删除了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r -f /a</span><br></pre></td></tr></table></figure>
+<p>前者是源文件， 后者是目标位置，如果不加参数的话，只能复制文件，不能复制目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /a/tmp/a.txt /</span><br></pre></td></tr></table></figure>
+<p>可以复制目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /a/tmp /</span><br></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /a.txt</span><br></pre></td></tr></table></figure>
+<p>将文件a.txt 复制到目标目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /a.txt /tmp</span><br></pre></td></tr></table></figure>
+<p>-p 保留源时间<br>-a 保留源文件的所有信息</p>
+<p>mv 改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /a.txt /b.txt</span><br></pre></td></tr></table></figure>
+<p>移动+改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /a.txt /tmp/c.txt</span><br></pre></td></tr></table></figure>
+<p>星号通配符，匹配单个/多个字符<br>？通配符，匹配单个字符<br>列出所有/tmp目录下以test开头的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /tmp/<span class="built_in">test</span>*</span><br></pre></td></tr></table></figure>
+
+<p>cat /tmp/a.txt 查看文件a.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat /tmp/a.txt</span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">head -3 ./a.txt</span><br><span class="line">head -3 ./a.txt</span><br><span class="line">wc -l ./a.txt </span><br><span class="line">more ./a.txt</span><br><span class="line">tail -f ./a.txt</span><br></pre></td></tr></table></figure>
+<p>head -3 ./a.txt 显示开头前三行<br>head -3 ./a.txt显示结尾后三行<br>wc -l ./a.txt 统计行数<br>more ./a.txt 查看一部分，按住空格后，再显示下一部分<br>tail -f 目标文件 实时显示文件，常用于查看日志文件，按住ctrl+c结束</p>
+<p>打包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar cf /tmp/etc-backup.tar /etc</span><br></pre></td></tr></table></figure>
+<p>注意：<br>1.参数前没有-<br>2.目标在前，反而源文件在后</p>
+<p>打包并压缩</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar czf /tmp/etc-backup.tar.gz  /etc</span><br></pre></td></tr></table></figure>
+<p>参数有三个，czf,其中z代表压缩的意思,c代表打包，x代表解包，f指定操作类型为文件</p>
+<p>解包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xf /tmp/etc-backup.tar -C  /a</span><br></pre></td></tr></table></figure>
+
+<p>查看大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lh /tmp/etc-backip.tar</span><br></pre></td></tr></table></figure>
+<p>root 用户是超级管理员<br>普通用户只能看到自己家目录下的，和root用户开放给他的权限，无法看到别人的家目录</p>
+<p>新建用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd TJ</span><br><span class="line">id root</span><br></pre></td></tr></table></figure>
+<p>更改密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd TJ</span><br></pre></td></tr></table></figure>
+<p>删除用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userdel TJ</span><br></pre></td></tr></table></figure>
+<p>centOS，RedHat  yum包管理器，软件安装包格式是rpm<br>Debian，Ubuntu使用apt包管理器，软件安装包格式是deb<br>输入ifconfig报错<br>查看是否有命令ifconfig</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /sbin</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<p>如果没有，则安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="vim-简单使用"><a href="#vim-简单使用" class="headerlink" title="vim 简单使用"></a>vim 简单使用</h2><p>新建a.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /tmp/a.txt</span><br></pre></td></tr></table></figure>
+<p>进入vim编辑内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /tmp/a.txt</span><br></pre></td></tr></table></figure>
+<p>按住i，进入编辑模式<br>输入一些内容<br>按住esc 退出编辑模式<br>输入，冒号wq 保存</p>
+<h2 id="一个实用例子shell脚本"><a href="#一个实用例子shell脚本" class="headerlink" title="一个实用例子shell脚本"></a>一个实用例子shell脚本</h2><p>在路径/usr下新建一个sapexport目录，一个sapbackup目录<br>在/home/下新建scrips，下新建pushdata.sh脚本<br>task1：<br>文件复制和删除：<br>将文件下sapexport下的所有内容，拷贝到sapbackup目录；<br>然后删除sapexport下的所有内容<br>注意：sapbackup目录是一个累加的，原来内容不被覆盖<br>输出语句“执行完毕”</p>
+<p>task2：<br>文件移动：<br>将文件下sapexport下的所有内容，移动到sapbackup目录；<br>注意：sapbackup目录是一个累加的，原来内容不被覆盖<br>输出语句“执行完毕”</p>
+<p>task3：<br>增加ftp或者sftp<br>将文件下sapexport下的所有内容，put到ftp下的特定路径下，再执行任务2的内容</p>
+<p>task4：<br>增加定时任务：<br>每晚22：00定时执行，不需要手动执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/sh</span></span><br><span class="line">mv /usr/sapexport/* /usr/sapbackup</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;执行完成&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><p>列出当前用户定时服务内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure>
+<p>编辑当前用户定时任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<p>自动进入vim，编辑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
+<p>第一个 * 表示分钟：取值范围 0-59</p>
+<p>第二个 * 表示小时：取值范围0-23</p>
+<p>第三个 * 表示天数：取值范围1-31</p>
+<p>第四个 * 表示月份：取值范围1-12</p>
+<p>第五个 * 表示每周：取值范围0-6</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 22 * * * sh /home/scrips/putdata.sh</span><br></pre></td></tr></table></figure>
+<p>查看crontab执行日志,判断定时任务是否执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /var/spool/mail/root</span><br><span class="line">tail -f /var/spool/mail/root</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ol>
+<li>做了定时任务后，输出会在日志里，不会在命令行终端中输出</li>
+<li>如下mv命令，如果sapexport下是空的，会执行失败<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/sapexport/*  /usr/sapbackup</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/13/linux%E5%91%BD%E4%BB%A42/" rel="prev" title="linux命令2">
+      <i class="fa fa-chevron-left"></i> linux命令2
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/13/html/" rel="next" title="html">
+      html <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%981%EF%BC%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">问题1：虚拟机无法登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%982%EF%BC%9AXShell%E8%BF%9E%E6%8E%A5linux%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">2.</span> <span class="nav-text">问题2：XShell连接linux虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">vim 简单使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%AE%9E%E7%94%A8%E4%BE%8B%E5%AD%90shell%E8%84%9A%E6%9C%AC"><span class="nav-number">5.</span> <span class="nav-text">一个实用例子shell脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">6.</span> <span class="nav-text">定时任务</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Anna</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Anna</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
