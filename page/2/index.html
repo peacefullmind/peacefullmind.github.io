@@ -155,6 +155,256 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/linux%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">linux命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:52:38" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="问题1：虚拟机无法登录"><a href="#问题1：虚拟机无法登录" class="headerlink" title="问题1：虚拟机无法登录"></a>问题1：虚拟机无法登录</h2><p>虚拟机自己没有开小键盘，输入密码是数据没有真实输入进去。</p>
+<h2 id="问题2：XShell连接linux虚拟机"><a href="#问题2：XShell连接linux虚拟机" class="headerlink" title="问题2：XShell连接linux虚拟机"></a>问题2：XShell连接linux虚拟机</h2><p>如果不能连接，首选看linux虚拟机自身是否可以ping通宿主机等<br>点击编辑-虚拟机网络编辑器，然后编辑虚拟机的网络连接，NAT模式，并保持默认<br>不需要手动关闭DHCP【原因】<br>采用ip addr 查看虚拟机的IP信息<br>然后在XShell中填入ip信息<br>Xshell是在已有的连接中点击属性，然后修改ip的，注意点击连接。而不是直接点击已有的连接,可能是之前IP信息没有保存上</p>
+<p>第二次是因为弄sftp的时候修改了sshd_config的配置，导致</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd start</span><br></pre></td></tr></table></figure>
+<p>不成功<br>按照注释，删除掉sshd配置表中导致失败的关键几句话。</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>显示文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l</span><br></pre></td></tr></table></figure>
+<p>显示隐藏文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -a</span><br></pre></td></tr></table></figure>
+<p>逆向显示【默认按照文件名逆向】</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -f -r</span><br></pre></td></tr></table></figure>
+<p>按照时间逆向显示详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l -r -t</span><br></pre></td></tr></table></figure>
+<p>同上的简单写法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lrt</span><br></pre></td></tr></table></figure>
+<p>递归显示，显示子文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -R</span><br></pre></td></tr></table></figure>
+
+<p>绝对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path</span><br></pre></td></tr></table></figure>
+<p>相对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./path</span><br></pre></td></tr></table></figure>
+<p>进入/目录，根目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br></pre></td></tr></table></figure>
+<p>返回用户家目，用户目录：主目录是用户的HOME目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br></pre></td></tr></table></figure>
+<p>用户登录后在 家目录 ，可用pwd命令查看，普通用户为 /home/用户名，root用户为/root<br>根目录是在最顶端的目录<br>相当于查看有多少普通用户的家目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br></pre></td></tr></table></figure>
+<p>返回上一级目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+<p>返回上一层目录下的path路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../path</span><br></pre></td></tr></table></figure>
+<p>linux 一切皆文件<br>ctrl+C 命令进行到一半，强制结束。<br>clear 清屏</p>
+<p>在根目录下新建a目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /a</span><br></pre></td></tr></table></figure>
+<p>mkdir -p 新建多级目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /a/<span class="built_in">test</span>/runrun</span><br></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /a.txt</span><br></pre></td></tr></table></figure>
+<p>递归查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -R /a</span><br></pre></td></tr></table></figure>
+<p>删除a目录，a目录必须是空的，实际中使用场景少。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir /a</span><br></pre></td></tr></table></figure>
+<p>删除非空的目录，有提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r /a</span><br></pre></td></tr></table></figure>
+<p>删除目录，并且不提示，有风险，操作前反复检查。比如这里/ 和a之间不能有空格，否则是把整个根目录下的文件全部删除了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r -f /a</span><br></pre></td></tr></table></figure>
+<p>前者是源文件， 后者是目标位置，如果不加参数的话，只能复制文件，不能复制目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /a/tmp/a.txt /</span><br></pre></td></tr></table></figure>
+<p>可以复制目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /a/tmp /</span><br></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /a.txt</span><br></pre></td></tr></table></figure>
+<p>将文件a.txt 复制到目标目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /a.txt /tmp</span><br></pre></td></tr></table></figure>
+<p>-p 保留源时间<br>-a 保留源文件的所有信息</p>
+<p>mv 改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /a.txt /b.txt</span><br></pre></td></tr></table></figure>
+<p>移动+改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /a.txt /tmp/c.txt</span><br></pre></td></tr></table></figure>
+<p>星号通配符，匹配单个/多个字符<br>？通配符，匹配单个字符<br>列出所有/tmp目录下以test开头的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /tmp/<span class="built_in">test</span>*</span><br></pre></td></tr></table></figure>
+
+<p>cat /tmp/a.txt 查看文件a.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat /tmp/a.txt</span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">head -3 ./a.txt</span><br><span class="line">head -3 ./a.txt</span><br><span class="line">wc -l ./a.txt </span><br><span class="line">more ./a.txt</span><br><span class="line">tail -f ./a.txt</span><br></pre></td></tr></table></figure>
+<p>head -3 ./a.txt 显示开头前三行<br>head -3 ./a.txt显示结尾后三行<br>wc -l ./a.txt 统计行数<br>more ./a.txt 查看一部分，按住空格后，再显示下一部分<br>tail -f 目标文件 实时显示文件，常用于查看日志文件，按住ctrl+c结束</p>
+<p>打包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar cf /tmp/etc-backup.tar /etc</span><br></pre></td></tr></table></figure>
+<p>注意：<br>1.参数前没有-<br>2.目标在前，反而源文件在后</p>
+<p>打包并压缩</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar czf /tmp/etc-backup.tar.gz  /etc</span><br></pre></td></tr></table></figure>
+<p>参数有三个，czf,其中z代表压缩的意思,c代表打包，x代表解包，f指定操作类型为文件</p>
+<p>解包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xf /tmp/etc-backup.tar -C  /a</span><br></pre></td></tr></table></figure>
+
+<p>查看大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lh /tmp/etc-backip.tar</span><br></pre></td></tr></table></figure>
+<p>root 用户是超级管理员<br>普通用户只能看到自己家目录下的，和root用户开放给他的权限，无法看到别人的家目录</p>
+<p>新建用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd TJ</span><br><span class="line">id root</span><br></pre></td></tr></table></figure>
+<p>更改密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd TJ</span><br></pre></td></tr></table></figure>
+<p>删除用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userdel TJ</span><br></pre></td></tr></table></figure>
+<p>centOS，RedHat  yum包管理器，软件安装包格式是rpm<br>Debian，Ubuntu使用apt包管理器，软件安装包格式是deb<br>输入ifconfig报错<br>查看是否有命令ifconfig</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /sbin</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<p>如果没有，则安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="vim-简单使用"><a href="#vim-简单使用" class="headerlink" title="vim 简单使用"></a>vim 简单使用</h2><p>新建a.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /tmp/a.txt</span><br></pre></td></tr></table></figure>
+<p>进入vim编辑内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /tmp/a.txt</span><br></pre></td></tr></table></figure>
+<p>按住i，进入编辑模式<br>输入一些内容<br>按住esc 退出编辑模式<br>输入，冒号wq 保存</p>
+<h2 id="一个实用例子shell脚本"><a href="#一个实用例子shell脚本" class="headerlink" title="一个实用例子shell脚本"></a>一个实用例子shell脚本</h2><p>在路径/usr下新建一个sapexport目录，一个sapbackup目录<br>在/home/下新建scrips，下新建pushdata.sh脚本<br>task1：<br>文件复制和删除：<br>将文件下sapexport下的所有内容，拷贝到sapbackup目录；<br>然后删除sapexport下的所有内容<br>注意：sapbackup目录是一个累加的，原来内容不被覆盖<br>输出语句“执行完毕”</p>
+<p>task2：<br>文件移动：<br>将文件下sapexport下的所有内容，移动到sapbackup目录；<br>注意：sapbackup目录是一个累加的，原来内容不被覆盖<br>输出语句“执行完毕”</p>
+<p>task3：<br>增加ftp或者sftp<br>将文件下sapexport下的所有内容，put到ftp下的特定路径下，再执行任务2的内容</p>
+<p>task4：<br>增加定时任务：<br>每晚22：00定时执行，不需要手动执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/sh</span></span><br><span class="line">mv /usr/sapexport/* /usr/sapbackup</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;执行完成&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><p>列出当前用户定时服务内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure>
+<p>编辑当前用户定时任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<p>自动进入vim，编辑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
+<p>第一个 * 表示分钟：取值范围 0-59</p>
+<p>第二个 * 表示小时：取值范围0-23</p>
+<p>第三个 * 表示天数：取值范围1-31</p>
+<p>第四个 * 表示月份：取值范围1-12</p>
+<p>第五个 * 表示每周：取值范围0-6</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 22 * * * sh /home/scrips/putdata.sh</span><br></pre></td></tr></table></figure>
+<p>查看crontab执行日志,判断定时任务是否执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /var/spool/mail/root</span><br><span class="line">tail -f /var/spool/mail/root</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ol>
+<li>做了定时任务后，输出会在日志里，不会在命令行终端中输出</li>
+<li>如下mv命令，如果sapexport下是空的，会执行失败<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/sapexport/*  /usr/sapbackup</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A42/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/linux%E5%91%BD%E4%BB%A42/" class="post-title-link" itemprop="url">linux命令2</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:52:55" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>查看文件安装路径<br>使用whersis 查看所有的文件路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where is oracle</span><br></pre></td></tr></table></figure>
+<p>查询运行文件所在的路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which oracle</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/mysql%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -676,148 +926,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/python+Selenium%20%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95163%E9%82%AE%E7%AE%B1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/python+Selenium%20%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95163%E9%82%AE%E7%AE%B1/" class="post-title-link" itemprop="url">python+selenium自动登录163邮箱</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:56:38" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>python+Selenium 自动登录163邮箱<br>Selenium 是一个 Web 应用的自动化框架。</p>
-<h2 id="安装selenium包"><a href="#安装selenium包" class="headerlink" title="安装selenium包"></a>安装selenium包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
-<h2 id="安装浏览器驱动"><a href="#安装浏览器驱动" class="headerlink" title="安装浏览器驱动"></a>安装浏览器驱动</h2><p>注意配合浏览器版本，我们以chrome为例</p>
-<h2 id="打开某个url"><a href="#打开某个url" class="headerlink" title="打开某个url"></a>打开某个url</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">chromeDriver=<span class="string">&quot;D:\\chromedriver_win32\\chromedriver.exe&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#等号右边 返回的是 WebDriver 类型的对象，我们可以通过这个对象来操控浏览器，比如 打开网址、选择界面元素等。</span></span><br><span class="line">driver=webdriver.Chrome(executable_path=chromeDriver)</span><br><span class="line"><span class="comment">#driver.set_window_size(800,600)</span></span><br><span class="line">url=<span class="string">&quot;https://mail.163.com&quot;</span></span><br><span class="line">driver.get(url=url)</span><br><span class="line">driver.maximize_window()</span><br></pre></td></tr></table></figure>
-<p>执行完自动化代码，如果想关闭浏览器窗口可以调用WebDriver对象的 quit 方法，像这样 driver.quit()</p>
-<h2 id="将浏览器驱动加入环境变量"><a href="#将浏览器驱动加入环境变量" class="headerlink" title="将浏览器驱动加入环境变量"></a>将浏览器驱动加入环境变量</h2><p>我们把浏览器驱动 所在目录 加入环境变量 Path， 再写代码时，就可以无需指定浏览器驱动路径了，像下面这样</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wd = webdriver.Chrome()</span><br></pre></td></tr></table></figure>
-<p>加入环境变量的是chromedriver.exe所在位置的上层目录</p>
-<h2 id="python路径问题"><a href="#python路径问题" class="headerlink" title="python路径问题"></a>python路径问题</h2><p>直接写windows路径，斜杠不能识别，误认为转义而报错<br>1.在windows路径写法前面写r,”&quot;为字符串中的特殊字符，加上r后变为原始字符串，则不会对字符串中的”\t”、”\r” 进行字符串转义；</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wd = webdriver.Chrome(<span class="string">r&#x27;d:\webdrivers\chromedriver.exe&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p>2.斜杠前再加一个斜杠,用一个”&quot;取消第二个”&quot;的特殊转义作用</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chromeDriver=<span class="string">&quot;D:\\chromedriver_win32\\chromedriver.exe&quot;</span></span><br></pre></td></tr></table></figure>
-<p>3.用正斜杠做目录分隔符也可以转到对应目录</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chromeDriver=<span class="string">&quot;D:/chromedriver_win32/chromedriver.exe&quot;</span></span><br></pre></td></tr></table></figure>
-<h2 id="web页面元素定位"><a href="#web页面元素定位" class="headerlink" title="web页面元素定位"></a>web页面元素定位</h2><p>按F12去分析163登录界面的元素<br>难点在于iframe，name为空，并且id是变化的，没办法固定</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iframe = driver.find_elements_by_tag_name(<span class="string">&quot;iframe&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">driver.switch_to.frame(iframe)</span><br></pre></td></tr></table></figure>
-<p>另外设置延时，防止没有加载出来，完整版代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">chromeDriver=<span class="string">&quot;D:\\chromedriver_win32\\chromedriver.exe&quot;</span></span><br><span class="line">driver=webdriver.Chrome(executable_path=chromeDriver)</span><br><span class="line"><span class="comment">#driver.set_window_size(800,600)</span></span><br><span class="line">url=<span class="string">&quot;https://mail.163.com&quot;</span></span><br><span class="line">driver.get(url=url)</span><br><span class="line">driver.maximize_window()</span><br><span class="line">time.sleep(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#driver.switch_to.frame(&#x27;x-URS-iframe&#x27;)</span></span><br><span class="line">iframe = driver.find_elements_by_tag_name(<span class="string">&quot;iframe&quot;</span>)[<span class="number">0</span>]</span><br><span class="line">driver.switch_to.frame(iframe)</span><br><span class="line"></span><br><span class="line">driver.find_element_by_name(<span class="string">&quot;email&quot;</span>).clear()</span><br><span class="line">driver.find_element_by_name(<span class="string">&#x27;email&#x27;</span>).send_keys(<span class="string">&#x27;XXXXX邮箱地址&#x27;</span>)</span><br><span class="line">driver.find_element_by_name(<span class="string">&quot;password&quot;</span>).clear()</span><br><span class="line">driver.find_element_by_name(<span class="string">&#x27;password&#x27;</span>).send_keys(<span class="string">&#x27;XXXXX邮箱密码&#x27;</span>)</span><br><span class="line">loginButton=driver.find_element_by_id(<span class="string">&#x27;dologin&#x27;</span>)</span><br><span class="line"></span><br><span class="line">loginButton.click()</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/python%E5%9F%BA%E7%A1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/python%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">python基础2</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:58:20" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="python-基础梳理"><a href="#python-基础梳理" class="headerlink" title="python 基础梳理"></a>python 基础梳理</h1><p>定义函数：<br>def myfun(a,b,c):</p>
-<p>调用函数：<br>myfun(a=1,b=2,c=3)<br>如果不是一个py文件，需要先import</p>
-<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1><p>Python中私有化的方法也比较简单，即在准备私有化的属性（包括方法、数据）名字前面加两个下划线。<br>注意在Python中，函数名前后各带两个下划线<strong>的函数叫做魔法函数(Magic Methods)__init</strong>()就是一个典型的魔法函数，它的作用是在我们将类实例化给一个对象后，立即就要执行该函数让该对象完成初始化配置，<strong>init</strong>()中的参数self代表实例本身</p>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>直接用class Router(父类)来继承已有的类</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -883,20 +995,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
