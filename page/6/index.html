@@ -155,75 +155,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%ABrequest%E7%88%AC%E5%8F%96%E7%96%AB%E6%83%85%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/%E7%88%AC%E8%99%ABrequest%E7%88%AC%E5%8F%96%E7%96%AB%E6%83%85%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE/" class="post-title-link" itemprop="url">爬虫request疫情实时数据</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：17:17:37" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Map</span><br><span class="line"><span class="keyword">import</span>  requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">myurl=<span class="string">&quot;https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5&quot;</span></span><br><span class="line">respoonse=requests.get(myurl)</span><br><span class="line"></span><br><span class="line">myrawjson=respoonse.json()</span><br><span class="line">mydata=json.loads(myrawjson[<span class="string">&#x27;data&#x27;</span>])[<span class="string">&quot;areaTree&quot;</span>][<span class="number">0</span>][<span class="string">&quot;children&quot;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">new_data=&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> mydata:</span><br><span class="line">    new_data[i[<span class="string">&#x27;name&#x27;</span>]]=i[<span class="string">&#x27;total&#x27;</span>][<span class="string">&#x27;confirm&#x27;</span>]</span><br><span class="line"></span><br><span class="line">name=new_data.keys()</span><br><span class="line">num=new_data.values()</span><br><span class="line">print(<span class="built_in">zip</span>(name,num))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">zip</span>(name,num):</span><br><span class="line">    print(<span class="built_in">list</span>(i))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">new_maps</span>():</span></span><br><span class="line">    myMap=Map()</span><br><span class="line">    myMap.add(</span><br><span class="line">        <span class="string">&#x27;疫情地图&#x27;</span>,</span><br><span class="line">        [<span class="built_in">list</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">zip</span>(new_data.keys(), new_data.values())],</span><br><span class="line">        <span class="string">&#x27;China&#x27;</span>,</span><br><span class="line">        is_map_symbol_show=<span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    )</span><br><span class="line">    myMap.set_global_opts(</span><br><span class="line">        title_opts=opts.TitleOpts(</span><br><span class="line">            title=<span class="string">&quot;sss&quot;</span></span><br><span class="line">        ),</span><br><span class="line">        visualmap_opts=opts.VisualMapOpts(</span><br><span class="line">            is_piecewise=<span class="literal">True</span></span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    myMap.render(<span class="string">&#x27;fs.html&#x27;</span>)</span><br><span class="line">new_maps()</span><br></pre></td></tr></table></figure>
-<p>获取json数据 通过F2，network，筛选view的响应<br>解析获取的数据，多用print,和print(type()),层层逼近，注意格式，字符串格式转化成字典格式。list格式输出[0][1]等试一下<br>通过for 循环获取list内容，通过重构字典，重构数据，还可以通过zip重构成元组，再转化成list。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%AB%E4%B8%8Ehttp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -510,9 +441,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:44:54" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-19 17:34:55" itemprop="dateModified" datetime="2021-02-19T17:34:55+08:00">2021-02-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+                </span>
             </span>
 
           
@@ -526,10 +472,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="查询思路"><a href="#查询思路" class="headerlink" title="查询思路"></a>查询思路</h1><p>senlenium 模拟人的操作去查询，而非借助request</p>
+          <p>[toc]</p>
+<h1 id="查询思路"><a href="#查询思路" class="headerlink" title="查询思路"></a>查询思路</h1><p>senlenium 模拟人的操作去查询，而非借助request</p>
 <h1 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h1><p>安装chrome driver驱动，并放置指定位置<br>通过geturl是否成功进行测试</p>
 <h1 id="如何定位元素："><a href="#如何定位元素：" class="headerlink" title="如何定位元素："></a>如何定位元素：</h1><p>可以通过xpath，F12 copy自动粘贴xpath，不用自己去分析，就可以找到元素</p>
-<h1 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h1><h1 id="程序优化"><a href="#程序优化" class="headerlink" title="程序优化"></a>程序优化</h1><p>节约时间 geturl不用每次都执行，只执行一次<br>需要刷新</p>
+<h1 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h1><p>#代码与 程序优化<br>节约时间 geturl不用每次都执行，只执行一次<br>需要刷新</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> getSS</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">data1=pd.read_excel(<span class="string">&#x27;./data/data3.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment"># data2=pd.read_excel(&#x27;./data/题目抓取（第二部分）.xlsx&#x27;)</span></span><br><span class="line">dfS=data1</span><br><span class="line"></span><br><span class="line">file =xlwt.Workbook() <span class="comment">#新建一个excel</span></span><br><span class="line">table=file.add_sheet(<span class="string">&#x27;输出结果&#x27;</span>)</span><br><span class="line">table_row=<span class="number">0</span><span class="comment">#这是行数，从0行开始写</span></span><br><span class="line">table.write(table_row, <span class="number">0</span>, <span class="string">&#x27;姓名&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">1</span>, <span class="string">&#x27;导师&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">2</span>, <span class="string">&#x27;题目&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">3</span>, <span class="string">&#x27;日期&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table_row=table_row+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># dfS=pd.concat([data1,data2],axis=0,ignore_index=True)</span></span><br><span class="line">college=<span class="string">&#x27;吉林大学&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打开网址</span></span><br><span class="line">chromeDriver = <span class="string">&quot;D:\\chromedriver_win32\\chromedriver.exe&quot;</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=chromeDriver)</span><br><span class="line">url = <span class="string">&#x27;https://kns.cnki.net/kns8/AdvSearch?dbprefix=SCDB&amp;&amp;crossDbcodes=CJFQ%2CCDMD%2CCIPD%2CCCND%2CCISD%2CSNAD%2CBDZK%2CCJFN%2CCCJD&#x27;</span></span><br><span class="line">driver.get(url=url)</span><br><span class="line">time.sleep(<span class="number">1</span>)  <span class="comment"># 休眠2秒</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(dfS)):</span><br><span class="line">    <span class="comment"># print(i)</span></span><br><span class="line">    <span class="comment"># print(dfS.iloc[i,0])</span></span><br><span class="line">    <span class="comment"># print(dfS[i, 1])</span></span><br><span class="line">    author=dfS.iloc[i, <span class="number">0</span>]</span><br><span class="line">    tutor=dfS.iloc[i, <span class="number">1</span>]</span><br><span class="line">    <span class="comment"># college=&#x27;吉林大学&#x27;</span></span><br><span class="line"></span><br><span class="line">    result=getSS.getSS(driver,author,college)</span><br><span class="line">    title=result[<span class="number">0</span>]</span><br><span class="line">    date=result[<span class="number">1</span>]</span><br><span class="line">    print(table_row)</span><br><span class="line">    table.write(table_row, <span class="number">0</span>, author)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table.write(table_row, <span class="number">1</span>, tutor)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table.write(table_row, <span class="number">2</span>, title)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table.write(table_row, <span class="number">3</span>, date)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table_row=table_row+<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(table_row==<span class="number">98</span>):</span><br><span class="line">        file.save(<span class="string">&#x27;查询结果3部分.xls&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">file.save(<span class="string">&#x27;查询结果3.xls&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getSS</span>(<span class="params">driver,author,college</span>):</span></span><br><span class="line">    driver.refresh()</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[2]/div[2]/input&#x27;</span>).clear()</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[2]/div[2]/input&#x27;</span>).send_keys(author)</span><br><span class="line"></span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[3]/div[2]/input&#x27;</span>).clear()</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[3]/div[2]/input&#x27;</span>).send_keys(college)</span><br><span class="line"></span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;/html/body/div[4]/div/div[2]/div/div[1]/div[1]/div[2]/div[2]/input&#x27;</span>).click()</span><br><span class="line">    time.sleep(<span class="number">0.5</span>)  <span class="comment"># 休眠2秒</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        title = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gridTable&quot;]/table/tbody/tr/td[2]/a&#x27;</span>).text</span><br><span class="line">        date= driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gridTable&quot;]/table/tbody/tr/td[5]&#x27;</span>).text</span><br><span class="line">        print(title)</span><br><span class="line">        print(date)</span><br><span class="line">        result=[title,date]</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        date=<span class="string">&#x27;未找到&#x27;</span></span><br><span class="line">        title=<span class="string">&#x27;未找到&#x27;</span></span><br><span class="line">        result = [title, date]</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        <span class="comment"># time.sleep(0.2)</span></span><br><span class="line">        <span class="comment"># driver.quit()</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
@@ -779,10 +726,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-02-13 14:24:40 / 修改时间：17:15:38" itemprop="dateCreated datePublished" datetime="2021-02-13T14:24:40+08:00">2021-02-13</time>
+              <time title="创建时间：2021-02-13 14:24:40" itemprop="dateCreated datePublished" datetime="2021-02-13T14:24:40+08:00">2021-02-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-19 17:53:46" itemprop="dateModified" datetime="2021-02-19T17:53:46+08:00">2021-02-19</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -804,7 +757,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>[toc]</p>
 <h2 id="1-Quick-Start"><a href="#1-Quick-Start" class="headerlink" title="1.Quick Start"></a>1.Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -831,6 +784,93 @@
 <h3 id="3-3-修改语言，博客名，作者名"><a href="#3-3-修改语言，博客名，作者名" class="headerlink" title="3.3 修改语言，博客名，作者名"></a>3.3 修改语言，博客名，作者名</h3><p>语言，博客名，作者名在站点配置文件中</p>
 <h3 id="3-4，开启目录，标签等"><a href="#3-4，开启目录，标签等" class="headerlink" title="3.4，开启目录，标签等"></a>3.4，开启目录，标签等</h3><p>目录和标签需要根据next主题的要求进行设置</p>
 <h3 id="3-5-推送到远程服务器上"><a href="#3-5-推送到远程服务器上" class="headerlink" title="3.5 推送到远程服务器上"></a>3.5 推送到远程服务器上</h3><p>以github为例，建立仓库，通过clone占到git地址，并放置到站点主题中。<br>然后git d -g即可</p>
+<h1 id="4-markdown-常用"><a href="#4-markdown-常用" class="headerlink" title="4. markdown 常用"></a>4. markdown 常用</h1><p>注意事项：回车很重要的一个标志</p>
+<h2 id="4-1文字常用"><a href="#4-1文字常用" class="headerlink" title="4.1文字常用"></a>4.1文字常用</h2><p><strong>加粗</strong> </p>
+<blockquote>
+<p>引用</p>
+</blockquote>
+<p>==标黄文字== </p>
+<p><del>删除线</del></p>
+<ul>
+<li><input disabled="" type="checkbox"> 任务1</li>
+<li><input checked="" disabled="" type="checkbox"> 任务2</li>
+</ul>
+<ul>
+<li>无序列表1</li>
+<li>无序列表2</li>
+</ul>
+<h2 id="4-2快捷键和文章架构"><a href="#4-2快捷键和文章架构" class="headerlink" title="4.2快捷键和文章架构"></a>4.2快捷键和文章架构</h2><p>[toc] 生成目录，放在开头<br>ctrl+T插入表格 </p>
+<h2 id="4-3图片"><a href="#4-3图片" class="headerlink" title="4.3图片"></a>4.3图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line"></span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;1| D[结果1]</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;2| E[结果2]</span><br><span class="line"></span><br><span class="line">    F[横向流程图]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">st&#x3D;&gt;start: 开始框</span><br><span class="line"></span><br><span class="line">op&#x3D;&gt;operation: 处理框</span><br><span class="line"></span><br><span class="line">cond&#x3D;&gt;condition: 判断框(是或否?)</span><br><span class="line"></span><br><span class="line">sub1&#x3D;&gt;subroutine: 子流程</span><br><span class="line"></span><br><span class="line">io&#x3D;&gt;inputoutput: 输入输出框</span><br><span class="line"></span><br><span class="line">e&#x3D;&gt;end: 结束框</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line"></span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line"></span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">%% 语法示例</span><br><span class="line"></span><br><span class="line">        gantt</span><br><span class="line"></span><br><span class="line">        dateFormat  YYYY-MM-DD</span><br><span class="line"></span><br><span class="line">        title 软件开发甘特图</span><br><span class="line"></span><br><span class="line">        section 设计</span><br><span class="line"></span><br><span class="line">        需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line"></span><br><span class="line">        原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line"></span><br><span class="line">        UI设计                     :         des3, after des2, 5d</span><br><span class="line"></span><br><span class="line">    未来任务                     :         des4, after des3, 5d</span><br><span class="line"></span><br><span class="line">        section 开发</span><br><span class="line"></span><br><span class="line">        学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line"></span><br><span class="line">        设计框架                             :crit, done, after des2, 2d</span><br><span class="line"></span><br><span class="line">        开发                                 :crit, active, 3d</span><br><span class="line"></span><br><span class="line">        未来任务                              :crit, 5d</span><br><span class="line"></span><br><span class="line">        耍                                   :2d</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">        section 测试</span><br><span class="line"></span><br><span class="line">        功能测试                              :active, a1, after des3, 3d</span><br><span class="line"></span><br><span class="line">        压力测试                               :after a1  , 20h</span><br><span class="line"></span><br><span class="line">        测试报告                               : 48h</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">a[浏览器]</span><br><span class="line">b[服务器]</span><br><span class="line">c[移动端APP]</span><br><span class="line"></span><br><span class="line">a--&gt;|1-发起验证请求|b</span><br><span class="line">b--&gt;|2-建立sotake连接|a</span><br><span class="line">a--&gt;|3-sotake连接成功|b</span><br><span class="line">b--&gt;|4-发送二维码|a</span><br><span class="line">c--&gt;|5-扫描二维码|a</span><br><span class="line">c--&gt;|6-发送二维码信息|b</span><br><span class="line">b--&gt;|7-返回二维码结果|c</span><br><span class="line">c--&gt;|8-确认结果|b</span><br><span class="line">b--&gt;|9-sotake推送信息,浏览器跳转页面|a</span><br></pre></td></tr></table></figure>
+<p><img src="D:\MyBlog\source_posts\图test.jpg" alt="图test"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/04/06/Test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/06/Test/" class="post-title-link" itemprop="url">Test网址</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-06 00:11:46" itemprop="dateCreated datePublished" datetime="2020-04-06T00:11:46+08:00">2020-04-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-13 15:00:37" itemprop="dateModified" datetime="2021-02-13T15:00:37+08:00">2021-02-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p> Your site is published at <a target="_blank" rel="noopener" href="https://peacefullmind.github.io/">https://peacefullmind.github.io/</a></p>
 
       
     </div>
@@ -915,20 +955,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
