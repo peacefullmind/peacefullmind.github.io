@@ -215,15 +215,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>[toc]</p>
+        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>[toc]</p>
 <h2 id="1-Quick-Start"><a href="#1-Quick-Start" class="headerlink" title="1.Quick Start"></a>1.Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 <h2 id="2-踩坑记"><a href="#2-踩坑记" class="headerlink" title="2. 踩坑记"></a>2. 踩坑记</h2><ol>
 <li>为什么public中不能生成预想的index.html呢？<br>站点配置文件 theme: 冒号后面一定要有空格</li>
 <li>为什么本地效果可以，但是不能hexo d呢？<br>因为需要部署的插件，需要在目录下安装</li>
@@ -258,11 +258,77 @@
 <li>无序列表2</li>
 </ul>
 <h2 id="4-2快捷键和文章架构"><a href="#4-2快捷键和文章架构" class="headerlink" title="4.2快捷键和文章架构"></a>4.2快捷键和文章架构</h2><p>[toc] 生成目录，放在开头<br>ctrl+T插入表格 </p>
-<h2 id="4-3图片"><a href="#4-3图片" class="headerlink" title="4.3图片"></a>4.3图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line"></span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;1| D[结果1]</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;2| E[结果2]</span><br><span class="line"></span><br><span class="line">    F[横向流程图]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="4-3图片"><a href="#4-3图片" class="headerlink" title="4.3图片"></a>4.3图片</h2><pre class="mermaid">
+graph LR
+
+A[方形] -->B(圆角)
+
+    B --> C{条件a}
+
+    C -->|a=1| D[结果1]
+
+    C -->|a=2| E[结果2]
+
+    F[横向流程图]</pre>
+
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">st&#x3D;&gt;start: 开始框</span><br><span class="line"></span><br><span class="line">op&#x3D;&gt;operation: 处理框</span><br><span class="line"></span><br><span class="line">cond&#x3D;&gt;condition: 判断框(是或否?)</span><br><span class="line"></span><br><span class="line">sub1&#x3D;&gt;subroutine: 子流程</span><br><span class="line"></span><br><span class="line">io&#x3D;&gt;inputoutput: 输入输出框</span><br><span class="line"></span><br><span class="line">e&#x3D;&gt;end: 结束框</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line"></span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line"></span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">%% 语法示例</span><br><span class="line"></span><br><span class="line">        gantt</span><br><span class="line"></span><br><span class="line">        dateFormat  YYYY-MM-DD</span><br><span class="line"></span><br><span class="line">        title 软件开发甘特图</span><br><span class="line"></span><br><span class="line">        section 设计</span><br><span class="line"></span><br><span class="line">        需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line"></span><br><span class="line">        原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line"></span><br><span class="line">        UI设计                     :         des3, after des2, 5d</span><br><span class="line"></span><br><span class="line">    未来任务                     :         des4, after des3, 5d</span><br><span class="line"></span><br><span class="line">        section 开发</span><br><span class="line"></span><br><span class="line">        学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line"></span><br><span class="line">        设计框架                             :crit, done, after des2, 2d</span><br><span class="line"></span><br><span class="line">        开发                                 :crit, active, 3d</span><br><span class="line"></span><br><span class="line">        未来任务                              :crit, 5d</span><br><span class="line"></span><br><span class="line">        耍                                   :2d</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">        section 测试</span><br><span class="line"></span><br><span class="line">        功能测试                              :active, a1, after des3, 3d</span><br><span class="line"></span><br><span class="line">        压力测试                               :after a1  , 20h</span><br><span class="line"></span><br><span class="line">        测试报告                               : 48h</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">a[浏览器]</span><br><span class="line">b[服务器]</span><br><span class="line">c[移动端APP]</span><br><span class="line"></span><br><span class="line">a--&gt;|1-发起验证请求|b</span><br><span class="line">b--&gt;|2-建立sotake连接|a</span><br><span class="line">a--&gt;|3-sotake连接成功|b</span><br><span class="line">b--&gt;|4-发送二维码|a</span><br><span class="line">c--&gt;|5-扫描二维码|a</span><br><span class="line">c--&gt;|6-发送二维码信息|b</span><br><span class="line">b--&gt;|7-返回二维码结果|c</span><br><span class="line">c--&gt;|8-确认结果|b</span><br><span class="line">b--&gt;|9-sotake推送信息,浏览器跳转页面|a</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">
+%% 语法示例
+
+        gantt
+
+        dateFormat  YYYY-MM-DD
+
+        title 软件开发甘特图
+
+        section 设计
+
+        需求                      :done,    des1, 2014-01-06,2014-01-08
+
+        原型                      :active,  des2, 2014-01-09, 3d
+
+        UI设计                     :         des3, after des2, 5d
+
+    未来任务                     :         des4, after des3, 5d
+
+        section 开发
+
+        学习准备理解需求                      :crit, done, 2014-01-06,24h
+
+        设计框架                             :crit, done, after des2, 2d
+
+        开发                                 :crit, active, 3d
+
+        未来任务                              :crit, 5d
+
+        耍                                   :2d
+
+    
+
+        section 测试
+
+        功能测试                              :active, a1, after des3, 3d
+
+        压力测试                               :after a1  , 20h
+
+        测试报告                               : 48h</pre>
+
+<pre class="mermaid">graph LR
+a[浏览器]
+b[服务器]
+c[移动端APP]
+
+a-->|1-发起验证请求|b
+b-->|2-建立sotake连接|a
+a-->|3-sotake连接成功|b
+b-->|4-发送二维码|a
+c-->|5-扫描二维码|a
+c-->|6-发送二维码信息|b
+b-->|7-返回二维码结果|c
+c-->|8-确认结果|b
+b-->|9-sotake推送信息,浏览器跳转页面|a</pre>
+
 <p><img src="D:\MyBlog\source_posts\图test.jpg" alt="图test"></p>
 
     </div>
@@ -358,7 +424,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">61</span>
+          <span class="site-state-item-count">60</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -406,6 +472,8 @@
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
+
+
 
         
 

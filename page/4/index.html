@@ -155,81 +155,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/sql%E8%AF%AD%E5%8F%A5%E8%A1%A8%E7%BB%93%E6%9E%84%E7%9B%B8%E5%85%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/sql%E8%AF%AD%E5%8F%A5%E8%A1%A8%E7%BB%93%E6%9E%84%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">sql语句表结构</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:00:10" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-查看表结构"><a href="#1-查看表结构" class="headerlink" title="1.查看表结构"></a>1.查看表结构</h1><p>查看表结构，字段类型<br>describe 或者desc</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">desc</span> table_name;</span><br></pre></td></tr></table></figure>
-<p>查询建表语句</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student;</span><br></pre></td></tr></table></figure>
-<p>查询出表的列信息</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> COLUMNS <span class="keyword">FROM</span> student;</span><br></pre></td></tr></table></figure>
-<h1 id="2-创建表"><a href="#2-创建表" class="headerlink" title="2.创建表"></a>2.创建表</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> Person</span><br><span class="line">(</span><br><span class="line">id <span class="type">int</span>,</span><br><span class="line">name <span class="type">varchar</span>(<span class="number">255</span>),</span><br><span class="line">address <span class="type">varchar</span>(<span class="number">255</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<h1 id="3-列的增加，删除，修改"><a href="#3-列的增加，删除，修改" class="headerlink" title="3.列的增加，删除，修改"></a>3.列的增加，删除，修改</h1><p>增加列</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> stu</span><br><span class="line"><span class="keyword">add</span> address <span class="type">varchar</span>(<span class="number">255</span>)</span><br></pre></td></tr></table></figure>
-<p>删除列【某些数据库不允许这样】</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> stu</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">COLUMN</span> address</span><br></pre></td></tr></table></figure>
-<p>修改字段类型</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">TABLE</span> student MODIFY birthdayday <span class="type">date</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="4-约束"><a href="#4-约束" class="headerlink" title="4.约束"></a>4.约束</h1><p>创建表时，<br>列名，字段类型，约束<br>在 SQL 中，我们有如下约束：</p>
-<p>NOT NULL - 指示某列不能存储 NULL 值。<br>UNIQUE - 保证某列的每行必须有唯一的值。<br>PRIMARY KEY - NOT NULL 和 UNIQUE 的结合。确保某列（或两个列多个列的结合）有唯一标识，有助于更容易更快速地找到表中的一个特定的记录。<br>FOREIGN KEY - 保证一个表中的数据匹配另一个表中的值的参照完整性。<br>CHECK - 保证列中的值符合指定的条件。<br>DEFAULT - 规定没有给列赋值时的默认值。</p>
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>数值类型<br>日期类型<br>字符串类型</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/tensorflow%20%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -348,6 +273,66 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E4%BA%BA%E7%89%A9%E5%8A%A8%E6%BC%AB%E7%94%BB%E8%B0%83%E7%94%A8%E7%99%BE%E5%BA%A6AI%E6%8E%A5%E5%8F%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E4%BA%BA%E7%89%A9%E5%8A%A8%E6%BC%AB%E7%94%BB%E8%B0%83%E7%94%A8%E7%99%BE%E5%BA%A6AI%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">人物动漫调用百度AI接口</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:48:28" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_token</span>():</span></span><br><span class="line">    <span class="comment">#host = &#x27;https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&amp;client_id=【官网获取的AK】&amp;client_secret=【官网获取的SK】&#x27;</span></span><br><span class="line">    url=<span class="string">&quot;https://aip.baidubce.com/oauth/2.0/token&quot;</span></span><br><span class="line">    params=&#123;</span><br><span class="line">        <span class="string">&#x27;grant_type&#x27;</span>:<span class="string">&#x27;client_credentials&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;client_id&#x27;</span>:<span class="string">&#x27;??????????&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;client_secret&#x27;</span>:<span class="string">&#x27;??????????&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url,params)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> response:</span><br><span class="line">       <span class="comment"># print(response.json(),type(response))</span></span><br><span class="line">        access_token = <span class="built_in">eval</span>(response.text)[<span class="string">&#x27;access_token&#x27;</span>]</span><br><span class="line">        <span class="comment">#print(access_token)</span></span><br><span class="line">        <span class="keyword">return</span> access_token</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">人物动漫化</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">request_url = <span class="string">&quot;https://aip.baidubce.com/rest/2.0/image-process/v1/selfie_anime&quot;</span></span><br><span class="line"><span class="comment"># 二进制方式打开图片文件</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;test.jpeg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line">img = base64.b64encode(f.read())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;image&quot;</span>:img&#125;</span><br><span class="line">access_token = get_token()</span><br><span class="line">request_url = request_url + <span class="string">&quot;?access_token=&quot;</span> + access_token</span><br><span class="line">headers = &#123;<span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">response = requests.post(request_url, data=params, headers=headers)</span><br><span class="line"><span class="keyword">if</span> response:</span><br><span class="line">    <span class="built_in">print</span> (response.json())</span><br><span class="line">    img_base64 = <span class="built_in">eval</span>(response.text)[<span class="string">&#x27;image&#x27;</span>]</span><br><span class="line">    print(img_base64)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    f2=<span class="built_in">open</span>(<span class="string">&#x27;testout.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">    img = base64.b64decode(img_base64)</span><br><span class="line">    f2.write(img)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>-百度AI接口的调用<br>-request.post(),request.post()的使用<br>-文件读取和写入的方法<br>-base64编码</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E4%BA%8C%E6%89%8B%E8%BD%A6%E9%A2%84%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -442,66 +427,6 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E4%BA%BA%E7%89%A9%E5%8A%A8%E6%BC%AB%E7%94%BB%E8%B0%83%E7%94%A8%E7%99%BE%E5%BA%A6AI%E6%8E%A5%E5%8F%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/%E4%BA%BA%E7%89%A9%E5%8A%A8%E6%BC%AB%E7%94%BB%E8%B0%83%E7%94%A8%E7%99%BE%E5%BA%A6AI%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">人物动漫调用百度AI接口</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:48:28" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_token</span>():</span></span><br><span class="line">    <span class="comment">#host = &#x27;https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&amp;client_id=【官网获取的AK】&amp;client_secret=【官网获取的SK】&#x27;</span></span><br><span class="line">    url=<span class="string">&quot;https://aip.baidubce.com/oauth/2.0/token&quot;</span></span><br><span class="line">    params=&#123;</span><br><span class="line">        <span class="string">&#x27;grant_type&#x27;</span>:<span class="string">&#x27;client_credentials&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;client_id&#x27;</span>:<span class="string">&#x27;??????????&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;client_secret&#x27;</span>:<span class="string">&#x27;??????????&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url,params)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> response:</span><br><span class="line">       <span class="comment"># print(response.json(),type(response))</span></span><br><span class="line">        access_token = <span class="built_in">eval</span>(response.text)[<span class="string">&#x27;access_token&#x27;</span>]</span><br><span class="line">        <span class="comment">#print(access_token)</span></span><br><span class="line">        <span class="keyword">return</span> access_token</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">人物动漫化</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">request_url = <span class="string">&quot;https://aip.baidubce.com/rest/2.0/image-process/v1/selfie_anime&quot;</span></span><br><span class="line"><span class="comment"># 二进制方式打开图片文件</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;test.jpeg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line">img = base64.b64encode(f.read())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;image&quot;</span>:img&#125;</span><br><span class="line">access_token = get_token()</span><br><span class="line">request_url = request_url + <span class="string">&quot;?access_token=&quot;</span> + access_token</span><br><span class="line">headers = &#123;<span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">response = requests.post(request_url, data=params, headers=headers)</span><br><span class="line"><span class="keyword">if</span> response:</span><br><span class="line">    <span class="built_in">print</span> (response.json())</span><br><span class="line">    img_base64 = <span class="built_in">eval</span>(response.text)[<span class="string">&#x27;image&#x27;</span>]</span><br><span class="line">    print(img_base64)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    f2=<span class="built_in">open</span>(<span class="string">&#x27;testout.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">    img = base64.b64decode(img_base64)</span><br><span class="line">    f2.write(img)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>-百度AI接口的调用<br>-request.post(),request.post()的使用<br>-文件读取和写入的方法<br>-base64编码</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E4%BD%BF%E7%94%A8xlwt%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9Cexcel%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -557,68 +482,6 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 
 
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/" class="post-title-link" itemprop="url">可视化大屏仪表盘</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:06:40" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h1><p>数据可视化包括：<br>local分析<br>PC端数据可视化<br>移动端数据可视化<br>大屏可视化</p>
-<h2 id="本地离线分析"><a href="#本地离线分析" class="headerlink" title="本地离线分析"></a>本地离线分析</h2><p>使用excel做图，做表。<br>可以使用python的Matplotlib、Seaborn等工具等作图<br>使用MATLAB作图，如3维图等。<br>也可以用tableue，power bi等产品来作图。<br>tableue的优点在于大大缩短了拿到数据到出图，出报告的时间，大大提高了效率 。<br>不管用什么作图，都是要导出图片，然后放到PPT，word报告中的，<br>最后的输出成果就是ppt，word报告，这类报告是图文并茂的。</p>
-<h2 id="PC端数据可视化"><a href="#PC端数据可视化" class="headerlink" title="PC端数据可视化"></a>PC端数据可视化</h2><p>PC端数据可视化分成轻度的数据可视化，和重度的数据可视化。<br>前者是报表展示，兼顾用户体验，展示的比较无感，信息密度低，镶嵌在其他功能中，后者更接近于驾驶舱的概念，有一种很硬核，一股脑要告诉用户很多东西的感觉，整张网页都是图展示。<br>有一个简单的区别方法，就是前者一般是白色的，数据展示的比较自然，无感。<br>后者一般是黑色背景，一种强烈的炫技的感觉。</p>
-<p>现在制作可视化大屏的方法我遇见的主要有两种：一是使用Python flask+ajax+ECharts绘图库，二就是使用tableau。当然使用power bi和fine bi的话也是可以绘制的</p>
-<h2 id="仪表盘"><a href="#仪表盘" class="headerlink" title="仪表盘"></a>仪表盘</h2><h2 id="大屏"><a href="#大屏" class="headerlink" title="大屏"></a>大屏</h2>
       
     </div>
 
@@ -695,6 +558,72 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 <p>增加一列，保存表格名字</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df2[<span class="string">&#x27;表名&#x27;</span>]=file.title()</span><br></pre></td></tr></table></figure>
 <h1 id="又遇到一个更简单的写法"><a href="#又遇到一个更简单的写法" class="headerlink" title="又遇到一个更简单的写法"></a>又遇到一个更简单的写法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">file_path=<span class="string">&#x27;课程/名单表格/&#x27;</span></span><br><span class="line">file_names=os.listdir(file_path)</span><br><span class="line">file_merge=pd.DataFrame()</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> file_names:</span><br><span class="line">    df=pd.read_excel(file_path+name)</span><br><span class="line">    file_merge=file_merge.append(df)</span><br><span class="line">file_merge.to_excel(<span class="string">&#x27;./tmp/file_merge.xlsx&#x27;</span>,index=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">批处理命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:48:42" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="dos命令"><a href="#dos命令" class="headerlink" title="dos命令"></a>dos命令</h1><h1 id="单个常用命令"><a href="#单个常用命令" class="headerlink" title="单个常用命令"></a>单个常用命令</h1><p>查看命令使用参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy &#x2F;?</span><br></pre></td></tr></table></figure>
+<p>dir 查看文件下内容 类似于shell的ls<br>cd .. 返回上一级<br>cd \ 返回根目录<br>cd 目录 进入指定目录<br>d: 进入d文件夹</p>
+<p>copy<br>move 移动，重命名<br>del<br>md 新建文件夹<br>ren 重命名<br>xcopy 复制文件和目录树<br>rd 删除<br>rd 目录 /S 删除目录下的所有的<br>/Q 安静模式 </p>
+<p>systeminfo 显示计算机配置<br>msinfo32显示计算机配置图形化界面</p>
+<h1 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h1><p>打开计算器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Windows\System32\</span><br><span class="line">calc.exe</span><br><span class="line">pause</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>echo 输出内容<br>echo off 关闭回显</p>
+
       
     </div>
 
@@ -805,7 +734,7 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -819,7 +748,7 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/02/13/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">批处理命令</a>
+            <a href="/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/" class="post-title-link" itemprop="url">可视化大屏仪表盘</a>
         </h2>
 
         <div class="post-meta">
@@ -830,7 +759,7 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:48:42" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:06:40" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
             </span>
 
           
@@ -844,14 +773,87 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="dos命令"><a href="#dos命令" class="headerlink" title="dos命令"></a>dos命令</h1><h1 id="单个常用命令"><a href="#单个常用命令" class="headerlink" title="单个常用命令"></a>单个常用命令</h1><p>查看命令使用参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy &#x2F;?</span><br></pre></td></tr></table></figure>
-<p>dir 查看文件下内容 类似于shell的ls<br>cd .. 返回上一级<br>cd \ 返回根目录<br>cd 目录 进入指定目录<br>d: 进入d文件夹</p>
-<p>copy<br>move 移动，重命名<br>del<br>md 新建文件夹<br>ren 重命名<br>xcopy 复制文件和目录树<br>rd 删除<br>rd 目录 /S 删除目录下的所有的<br>/Q 安静模式 </p>
-<p>systeminfo 显示计算机配置<br>msinfo32显示计算机配置图形化界面</p>
-<h1 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h1><p>打开计算器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Windows\System32\</span><br><span class="line">calc.exe</span><br><span class="line">pause</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>echo 输出内容<br>echo off 关闭回显</p>
+          <h1 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h1><p>数据可视化包括：<br>local分析<br>PC端数据可视化<br>移动端数据可视化<br>大屏可视化</p>
+<h2 id="本地离线分析"><a href="#本地离线分析" class="headerlink" title="本地离线分析"></a>本地离线分析</h2><p>使用excel做图，做表。<br>可以使用python的Matplotlib、Seaborn等工具等作图<br>使用MATLAB作图，如3维图等。<br>也可以用tableue，power bi等产品来作图。<br>tableue的优点在于大大缩短了拿到数据到出图，出报告的时间，大大提高了效率 。<br>不管用什么作图，都是要导出图片，然后放到PPT，word报告中的，<br>最后的输出成果就是ppt，word报告，这类报告是图文并茂的。</p>
+<h2 id="PC端数据可视化"><a href="#PC端数据可视化" class="headerlink" title="PC端数据可视化"></a>PC端数据可视化</h2><p>PC端数据可视化分成轻度的数据可视化，和重度的数据可视化。<br>前者是报表展示，兼顾用户体验，展示的比较无感，信息密度低，镶嵌在其他功能中，后者更接近于驾驶舱的概念，有一种很硬核，一股脑要告诉用户很多东西的感觉，整张网页都是图展示。<br>有一个简单的区别方法，就是前者一般是白色的，数据展示的比较自然，无感。<br>后者一般是黑色背景，一种强烈的炫技的感觉。</p>
+<p>现在制作可视化大屏的方法我遇见的主要有两种：一是使用Python flask+ajax+ECharts绘图库，二就是使用tableau。当然使用power bi和fine bi的话也是可以绘制的</p>
+<h2 id="仪表盘"><a href="#仪表盘" class="headerlink" title="仪表盘"></a>仪表盘</h2><h2 id="大屏"><a href="#大屏" class="headerlink" title="大屏"></a>大屏</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%8A%93%E5%8F%96%E9%9B%AA%E7%90%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%8A%93%E5%8F%96%E9%9B%AA%E7%90%83/" class="post-title-link" itemprop="url">抓取雪球</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：17:17:01" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="静态页面和动态页面的区别是什么？"><a href="#静态页面和动态页面的区别是什么？" class="headerlink" title="静态页面和动态页面的区别是什么？"></a>静态页面和动态页面的区别是什么？</h1><p>右击 查看源代码，ctrl+f无法搜到元素内容，说明是动态加载的，需要通过request的接口方法来抓取。</p>
+<h1 id="怎么获取接口数据？注意什么"><a href="#怎么获取接口数据？注意什么" class="headerlink" title="怎么获取接口数据？注意什么"></a>怎么获取接口数据？注意什么</h1><p>1.在浏览器F12中network 刷新后，筛选出XHR类型为接口数据。过滤方法。<br>2.在代码获取requson中吗，如果是403，说明不成功，只有2打头的才成功。缺少headers<br>3.注意代码写法，url为响应中的长url。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response=requests.get(url=url,headers=headers)</span><br></pre></td></tr></table></figure>
+<h1 id="获取接口数据后怎么解析？"><a href="#获取接口数据后怎么解析？" class="headerlink" title="获取接口数据后怎么解析？"></a>获取接口数据后怎么解析？</h1><p>1.善用print剥洋葱<br>2.ppprint 看数据两层剥键值对。<br>3.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NextData=RawData[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;list&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line">headers=&#123;<span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36&#x27;</span>&#125;</span><br><span class="line">url=<span class="string">&#x27;https://xueqiu.com/service/v5/stock/screener/quote/list?page=1&amp;size=30&amp;order=desc&amp;orderby=percent&amp;order_by=percent&amp;market=CN&amp;type=sh_sz&amp;_=1603124566528&#x27;</span></span><br><span class="line">response=requests.get(url=url,headers=headers)</span><br><span class="line">print(response)</span><br><span class="line">RawData=response.json()</span><br><span class="line"><span class="comment"># pprint.pprint(RawData)</span></span><br><span class="line">NextData=RawData[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;list&#x27;</span>]</span><br><span class="line">print(<span class="built_in">type</span>(NextData))</span><br><span class="line"><span class="comment"># print(NextData)</span></span><br><span class="line"><span class="comment"># print(NextData[0])</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pprint.pprint(NextData[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> myrow <span class="keyword">in</span> NextData:</span><br><span class="line">    data1=myrow[<span class="string">&#x27;symbol&#x27;</span>]</span><br><span class="line">    data2= myrow[<span class="string">&#x27;name&#x27;</span>]</span><br><span class="line">    data3 = myrow[<span class="string">&#x27;current&#x27;</span>]</span><br><span class="line">    print(data1,data2,data3)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="可以再探索的"><a href="#可以再探索的" class="headerlink" title="可以再探索的"></a>可以再探索的</h1><ul>
+<li>保存至EXCEL</li>
+<li>数据可视化</li>
+</ul>
 
       
     </div>
@@ -870,7 +872,7 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -936,7 +938,7 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">61</span>
+          <span class="site-state-item-count">60</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -984,6 +986,8 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
+
+
 
         
 
