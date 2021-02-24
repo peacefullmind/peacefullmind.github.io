@@ -155,6 +155,81 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/sql%E8%AF%AD%E5%8F%A5%E8%A1%A8%E7%BB%93%E6%9E%84%E7%9B%B8%E5%85%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/sql%E8%AF%AD%E5%8F%A5%E8%A1%A8%E7%BB%93%E6%9E%84%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">sql语句表结构</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:00:10" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1-查看表结构"><a href="#1-查看表结构" class="headerlink" title="1.查看表结构"></a>1.查看表结构</h1><p>查看表结构，字段类型<br>describe 或者desc</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">desc</span> table_name;</span><br></pre></td></tr></table></figure>
+<p>查询建表语句</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student;</span><br></pre></td></tr></table></figure>
+<p>查询出表的列信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> COLUMNS <span class="keyword">FROM</span> student;</span><br></pre></td></tr></table></figure>
+<h1 id="2-创建表"><a href="#2-创建表" class="headerlink" title="2.创建表"></a>2.创建表</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> Person</span><br><span class="line">(</span><br><span class="line">id <span class="type">int</span>,</span><br><span class="line">name <span class="type">varchar</span>(<span class="number">255</span>),</span><br><span class="line">address <span class="type">varchar</span>(<span class="number">255</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h1 id="3-列的增加，删除，修改"><a href="#3-列的增加，删除，修改" class="headerlink" title="3.列的增加，删除，修改"></a>3.列的增加，删除，修改</h1><p>增加列</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> stu</span><br><span class="line"><span class="keyword">add</span> address <span class="type">varchar</span>(<span class="number">255</span>)</span><br></pre></td></tr></table></figure>
+<p>删除列【某些数据库不允许这样】</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> stu</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">COLUMN</span> address</span><br></pre></td></tr></table></figure>
+<p>修改字段类型</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">TABLE</span> student MODIFY birthdayday <span class="type">date</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="4-约束"><a href="#4-约束" class="headerlink" title="4.约束"></a>4.约束</h1><p>创建表时，<br>列名，字段类型，约束<br>在 SQL 中，我们有如下约束：</p>
+<p>NOT NULL - 指示某列不能存储 NULL 值。<br>UNIQUE - 保证某列的每行必须有唯一的值。<br>PRIMARY KEY - NOT NULL 和 UNIQUE 的结合。确保某列（或两个列多个列的结合）有唯一标识，有助于更容易更快速地找到表中的一个特定的记录。<br>FOREIGN KEY - 保证一个表中的数据匹配另一个表中的值的参照完整性。<br>CHECK - 保证列中的值符合指定的条件。<br>DEFAULT - 规定没有给列赋值时的默认值。</p>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>数值类型<br>日期类型<br>字符串类型</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/tensorflow%20%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -196,6 +271,100 @@
       
           <h1 id="tensorflow-安装"><a href="#tensorflow-安装" class="headerlink" title="tensorflow 安装"></a>tensorflow 安装</h1><p>选择是安装GPU版本，还是CPU版本，<br>选择GPU<br>下载cuda，cnnti，然后注意将下载的cnnti版本的内容拷贝到cudn<br>注意 cuda cnnti tensorflow版本适配，最好不要太高版本</p>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E4%BA%8C%E6%89%8B%E8%BD%A6%E9%A2%84%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E4%BA%8C%E6%89%8B%E8%BD%A6%E9%A2%84%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">二手车预测分析</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:04:18" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h1><h2 id="1-生成dataframe"><a href="#1-生成dataframe" class="headerlink" title="1. 生成dataframe"></a>1. 生成dataframe</h2><ol>
+<li>先生成list，再转换成dataframe<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="literal">None</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]</span><br><span class="line">data=pd.DataFrame(a)</span><br></pre></td></tr></table></figure></li>
+<li>先生成字典类型(dict)，再转换成dataframe<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=&#123;<span class="string">&#x27;a&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>] * <span class="number">3</span>,</span><br><span class="line">   <span class="string">&#x27;b&#x27;</span>: [<span class="literal">True</span>, <span class="literal">False</span>] * <span class="number">3</span>,</span><br><span class="line">   <span class="string">&#x27;c&#x27;</span>: [<span class="number">1.0</span>, <span class="number">2.0</span>] * <span class="number">3</span>&#125;</span><br><span class="line">data = pd.DataFrame(a)</span><br></pre></td></tr></table></figure>
+简化写法，两句并入一句<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data=pd.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="literal">None</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data=pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>] * <span class="number">3</span>,</span><br><span class="line">                   <span class="string">&#x27;b&#x27;</span>: [<span class="literal">True</span>, <span class="literal">False</span>] * <span class="number">3</span>,</span><br><span class="line">                   <span class="string">&#x27;c&#x27;</span>: [<span class="number">1.0</span>, <span class="number">2.0</span>] * <span class="number">3</span>&#125;)</span><br></pre></td></tr></table></figure>
+注意：list 类型再转换成dataframe,如下，是个列<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">data = pd.DataFrame(a)</span><br><span class="line">print(data)</span><br></pre></td></tr></table></figure>
+增加行名，列名的方法<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [[<span class="string">&#x27;Alex&#x27;</span>,<span class="number">10</span>],[<span class="string">&#x27;Bob&#x27;</span>,<span class="number">12</span>],[<span class="string">&#x27;Clarke&#x27;</span>,<span class="number">13</span>]]</span><br><span class="line">data = pd.DataFrame(a,index=[<span class="string">&#x27;h1&#x27;</span>,<span class="string">&#x27;h2&#x27;</span>,<span class="string">&#x27;h3&#x27;</span>],columns=[<span class="string">&#x27;Name&#x27;</span>,<span class="string">&#x27;Age&#x27;</span>])</span><br><span class="line">print(data)</span><br></pre></td></tr></table></figure></li>
+<li>字典列表<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>&#125;,&#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">5</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">10</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">20</span>&#125;]</span><br><span class="line">data = pd.DataFrame(a)</span><br></pre></td></tr></table></figure></li>
+<li>从外部读入数据<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(<span class="string">&#x27;used_car_train_20200313.csv&#x27;</span>, sep=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
+read_csv() 函数默认分隔符是逗号<br>对应地，最后写入csv<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myresult.to_csv(<span class="string">&quot;predictions.csv&quot;</span>,index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="2-数据查看"><a href="#2-数据查看" class="headerlink" title="2. 数据查看"></a>2. 数据查看</h2><h3 id="2-1-数据类型查看"><a href="#2-1-数据类型查看" class="headerlink" title="2.1  数据类型查看"></a>2.1  数据类型查看</h3>查看每一列的数据类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dtypes</span><br></pre></td></tr></table></figure>
+如果一列中含有多个类型,则该列的类型会是object,同样字符串类型的列也会被当成object类型.<br>不同的数据类型也会被当成object,比如int32,float32<br>查看数据大小<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.shape</span><br></pre></td></tr></table></figure>
+数据简要概览<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+通过info()可以查看数据列名，<strong>缺失信息</strong>和数据类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.info()</span><br></pre></td></tr></table></figure>
+查看列名<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.columns</span><br></pre></td></tr></table></figure>
+数据统计信息浏览<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.describe()</span><br></pre></td></tr></table></figure>
+<h3 id="进行数值型和object区分"><a href="#进行数值型和object区分" class="headerlink" title="进行数值型和object区分"></a>进行数值型和object区分</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num_col=df.select_dtypes(exclude=<span class="string">&#x27;object&#x27;</span>).columns</span><br></pre></td></tr></table></figure>
+<h2 id="3-数据预处理"><a href="#3-数据预处理" class="headerlink" title="3. 数据预处理"></a>3. 数据预处理</h2><h3 id="3-1-空值处理"><a href="#3-1-空值处理" class="headerlink" title="3.1 空值处理"></a>3.1 空值处理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a=[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="literal">None</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]</span><br><span class="line">data=pd.DataFrame(a)</span><br><span class="line">print(a)</span><br><span class="line">print(data)</span><br><span class="line">print(data.mean())</span><br><span class="line">print(data.fillna(data.mean))</span><br></pre></td></tr></table></figure>
+data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.mean)使用列的平均值进行填充<h2 id="4-选择特征列"><a href="#4-选择特征列" class="headerlink" title="4. 选择特征列"></a>4. 选择特征列</h2>通过列类型选取列<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.select_dtypes(include=<span class="string">&#x27;&#x27;</span>, exclude=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+返回的是dataframe类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num_col=df.select_dtypes(exclude=<span class="string">&#x27;object&#x27;</span>).columns</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>返回index,用法为 dataframe.columns</strong></p>
+<p>获取列名称</p>
+<p>dataframe—&gt;index—&gt;ndarry—&gt;list</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataframe.columns.values.tolist()</span><br></pre></td></tr></table></figure>
+
+<p>选择特征列</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">feature_cols=[col <span class="keyword">for</span> col <span class="keyword">in</span> numerical_cols <span class="keyword">if</span> col <span class="keyword">not</span> <span class="keyword">in</span> [<span class="string">&#x27;SaleID&#x27;</span>,<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;regDate&#x27;</span>,<span class="string">&#x27;creatDate&#x27;</span>,<span class="string">&#x27;price&#x27;</span>,<span class="string">&#x27;model&#x27;</span>,<span class="string">&#x27;brand&#x27;</span>,<span class="string">&#x27;regionCode&#x27;</span>,<span class="string">&#x27;seller&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+<p>根据特征列构造样本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X_data = Train_data[feature_cols]</span><br></pre></td></tr></table></figure>
+<h2 id="5-模型"><a href="#5-模型" class="headerlink" title="5. 模型"></a>5. 模型</h2><p>回归</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xgboost <span class="keyword">as</span> xgb</span><br><span class="line">xgbr=xgb.XGBRegressor()<span class="comment">#调用XGBRegressor函数‍</span></span><br><span class="line">xgbr.fit(X_data,Y_data) <span class="comment">#拟合</span></span><br><span class="line">xgbr_y_predict=xgbr.predict(X_test)<span class="comment">#预测</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-输出结果"><a href="#6-输出结果" class="headerlink" title="6.输出结果"></a>6.输出结果</h2><p>向pandas中增加列<br>方法1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Import pandas package  </span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Define a dictionary containing Students data </span></span><br><span class="line">data = &#123;<span class="string">&#x27;Name&#x27;</span>: [<span class="string">&#x27;Jai&#x27;</span>, <span class="string">&#x27;Princi&#x27;</span>, <span class="string">&#x27;Gaurav&#x27;</span>, <span class="string">&#x27;Anuj&#x27;</span>], </span><br><span class="line">        <span class="string">&#x27;Height&#x27;</span>: [<span class="number">5.1</span>, <span class="number">6.2</span>, <span class="number">5.1</span>, <span class="number">5.2</span>], </span><br><span class="line">        <span class="string">&#x27;Qualification&#x27;</span>: [<span class="string">&#x27;Msc&#x27;</span>, <span class="string">&#x27;MA&#x27;</span>, <span class="string">&#x27;Msc&#x27;</span>, <span class="string">&#x27;Msc&#x27;</span>]&#125; </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Convert the dictionary into DataFrame </span></span><br><span class="line">df = pd.DataFrame(data) </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Declare a list that is to be converted into a column </span></span><br><span class="line">address = [<span class="string">&#x27;Delhi&#x27;</span>, <span class="string">&#x27;Bangalore&#x27;</span>, <span class="string">&#x27;Chennai&#x27;</span>, <span class="string">&#x27;Patna&#x27;</span>] </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Using &#x27;Address&#x27; as the column name </span></span><br><span class="line"><span class="comment"># and equating it to the list </span></span><br><span class="line">df[<span class="string">&#x27;Address&#x27;</span>] = address </span><br></pre></td></tr></table></figure>
+<p>方法2 使用pandas.insert()函数可向任意位置插入</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Define a dictionary containing Students data </span></span><br><span class="line">data = &#123;<span class="string">&#x27;Name&#x27;</span>: [<span class="string">&#x27;Jai&#x27;</span>, <span class="string">&#x27;Princi&#x27;</span>, <span class="string">&#x27;Gaurav&#x27;</span>, <span class="string">&#x27;Anuj&#x27;</span>], </span><br><span class="line">        <span class="string">&#x27;Height&#x27;</span>: [<span class="number">5.1</span>, <span class="number">6.2</span>, <span class="number">5.1</span>, <span class="number">5.2</span>], </span><br><span class="line">        <span class="string">&#x27;Qualification&#x27;</span>: [<span class="string">&#x27;Msc&#x27;</span>, <span class="string">&#x27;MA&#x27;</span>, <span class="string">&#x27;Msc&#x27;</span>, <span class="string">&#x27;Msc&#x27;</span>]&#125; </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Convert the dictionary into DataFrame </span></span><br><span class="line">df = pd.DataFrame(data) </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Using DataFrame.insert() to add a column </span></span><br><span class="line">df.insert(<span class="number">2</span>, <span class="string">&quot;Age&quot;</span>, [<span class="number">21</span>, <span class="number">23</span>, <span class="number">24</span>, <span class="number">21</span>], <span class="literal">True</span>) </span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myresult=TestA_data.loc[:,(<span class="string">&#x27;SaleID&#x27;</span>)]</span><br><span class="line">myresult=pd.DataFrame(myresult)</span><br><span class="line">myresult.insert(<span class="number">1</span>, <span class="string">&#x27;price&#x27;</span>, xgbr_y_predict)</span><br><span class="line">print(myresult)</span><br><span class="line">myresult.to_csv(<span class="string">&quot;predictions.csv&quot;</span>,index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -333,100 +502,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E4%BA%8C%E6%89%8B%E8%BD%A6%E9%A2%84%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/%E4%BA%8C%E6%89%8B%E8%BD%A6%E9%A2%84%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">二手车预测分析</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:04:18" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h1><h2 id="1-生成dataframe"><a href="#1-生成dataframe" class="headerlink" title="1. 生成dataframe"></a>1. 生成dataframe</h2><ol>
-<li>先生成list，再转换成dataframe<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="literal">None</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]</span><br><span class="line">data=pd.DataFrame(a)</span><br></pre></td></tr></table></figure></li>
-<li>先生成字典类型(dict)，再转换成dataframe<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a=&#123;<span class="string">&#x27;a&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>] * <span class="number">3</span>,</span><br><span class="line">   <span class="string">&#x27;b&#x27;</span>: [<span class="literal">True</span>, <span class="literal">False</span>] * <span class="number">3</span>,</span><br><span class="line">   <span class="string">&#x27;c&#x27;</span>: [<span class="number">1.0</span>, <span class="number">2.0</span>] * <span class="number">3</span>&#125;</span><br><span class="line">data = pd.DataFrame(a)</span><br></pre></td></tr></table></figure>
-简化写法，两句并入一句<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data=pd.DataFrame([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="literal">None</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data=pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>] * <span class="number">3</span>,</span><br><span class="line">                   <span class="string">&#x27;b&#x27;</span>: [<span class="literal">True</span>, <span class="literal">False</span>] * <span class="number">3</span>,</span><br><span class="line">                   <span class="string">&#x27;c&#x27;</span>: [<span class="number">1.0</span>, <span class="number">2.0</span>] * <span class="number">3</span>&#125;)</span><br></pre></td></tr></table></figure>
-注意：list 类型再转换成dataframe,如下，是个列<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">data = pd.DataFrame(a)</span><br><span class="line">print(data)</span><br></pre></td></tr></table></figure>
-增加行名，列名的方法<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [[<span class="string">&#x27;Alex&#x27;</span>,<span class="number">10</span>],[<span class="string">&#x27;Bob&#x27;</span>,<span class="number">12</span>],[<span class="string">&#x27;Clarke&#x27;</span>,<span class="number">13</span>]]</span><br><span class="line">data = pd.DataFrame(a,index=[<span class="string">&#x27;h1&#x27;</span>,<span class="string">&#x27;h2&#x27;</span>,<span class="string">&#x27;h3&#x27;</span>],columns=[<span class="string">&#x27;Name&#x27;</span>,<span class="string">&#x27;Age&#x27;</span>])</span><br><span class="line">print(data)</span><br></pre></td></tr></table></figure></li>
-<li>字典列表<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>&#125;,&#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">5</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">10</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">20</span>&#125;]</span><br><span class="line">data = pd.DataFrame(a)</span><br></pre></td></tr></table></figure></li>
-<li>从外部读入数据<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(<span class="string">&#x27;used_car_train_20200313.csv&#x27;</span>, sep=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>
-read_csv() 函数默认分隔符是逗号<br>对应地，最后写入csv<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myresult.to_csv(<span class="string">&quot;predictions.csv&quot;</span>,index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="2-数据查看"><a href="#2-数据查看" class="headerlink" title="2. 数据查看"></a>2. 数据查看</h2><h3 id="2-1-数据类型查看"><a href="#2-1-数据类型查看" class="headerlink" title="2.1  数据类型查看"></a>2.1  数据类型查看</h3>查看每一列的数据类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.dtypes</span><br></pre></td></tr></table></figure>
-如果一列中含有多个类型,则该列的类型会是object,同样字符串类型的列也会被当成object类型.<br>不同的数据类型也会被当成object,比如int32,float32<br>查看数据大小<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.shape</span><br></pre></td></tr></table></figure>
-数据简要概览<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.head()</span><br></pre></td></tr></table></figure>
-通过info()可以查看数据列名，<strong>缺失信息</strong>和数据类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.info()</span><br></pre></td></tr></table></figure>
-查看列名<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.columns</span><br></pre></td></tr></table></figure>
-数据统计信息浏览<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.describe()</span><br></pre></td></tr></table></figure>
-<h3 id="进行数值型和object区分"><a href="#进行数值型和object区分" class="headerlink" title="进行数值型和object区分"></a>进行数值型和object区分</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num_col=df.select_dtypes(exclude=<span class="string">&#x27;object&#x27;</span>).columns</span><br></pre></td></tr></table></figure>
-<h2 id="3-数据预处理"><a href="#3-数据预处理" class="headerlink" title="3. 数据预处理"></a>3. 数据预处理</h2><h3 id="3-1-空值处理"><a href="#3-1-空值处理" class="headerlink" title="3.1 空值处理"></a>3.1 空值处理</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a=[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="literal">None</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]</span><br><span class="line">data=pd.DataFrame(a)</span><br><span class="line">print(a)</span><br><span class="line">print(data)</span><br><span class="line">print(data.mean())</span><br><span class="line">print(data.fillna(data.mean))</span><br></pre></td></tr></table></figure>
-data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.mean)使用列的平均值进行填充<h2 id="4-选择特征列"><a href="#4-选择特征列" class="headerlink" title="4. 选择特征列"></a>4. 选择特征列</h2>通过列类型选取列<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.select_dtypes(include=<span class="string">&#x27;&#x27;</span>, exclude=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
-返回的是dataframe类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">num_col=df.select_dtypes(exclude=<span class="string">&#x27;object&#x27;</span>).columns</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p><strong>返回index,用法为 dataframe.columns</strong></p>
-<p>获取列名称</p>
-<p>dataframe—&gt;index—&gt;ndarry—&gt;list</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataframe.columns.values.tolist()</span><br></pre></td></tr></table></figure>
-
-<p>选择特征列</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">feature_cols=[col <span class="keyword">for</span> col <span class="keyword">in</span> numerical_cols <span class="keyword">if</span> col <span class="keyword">not</span> <span class="keyword">in</span> [<span class="string">&#x27;SaleID&#x27;</span>,<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;regDate&#x27;</span>,<span class="string">&#x27;creatDate&#x27;</span>,<span class="string">&#x27;price&#x27;</span>,<span class="string">&#x27;model&#x27;</span>,<span class="string">&#x27;brand&#x27;</span>,<span class="string">&#x27;regionCode&#x27;</span>,<span class="string">&#x27;seller&#x27;</span>]]</span><br></pre></td></tr></table></figure>
-<p>根据特征列构造样本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X_data = Train_data[feature_cols]</span><br></pre></td></tr></table></figure>
-<h2 id="5-模型"><a href="#5-模型" class="headerlink" title="5. 模型"></a>5. 模型</h2><p>回归</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xgboost <span class="keyword">as</span> xgb</span><br><span class="line">xgbr=xgb.XGBRegressor()<span class="comment">#调用XGBRegressor函数‍</span></span><br><span class="line">xgbr.fit(X_data,Y_data) <span class="comment">#拟合</span></span><br><span class="line">xgbr_y_predict=xgbr.predict(X_test)<span class="comment">#预测</span></span><br></pre></td></tr></table></figure>
-<h2 id="6-输出结果"><a href="#6-输出结果" class="headerlink" title="6.输出结果"></a>6.输出结果</h2><p>向pandas中增加列<br>方法1</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Import pandas package  </span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Define a dictionary containing Students data </span></span><br><span class="line">data = &#123;<span class="string">&#x27;Name&#x27;</span>: [<span class="string">&#x27;Jai&#x27;</span>, <span class="string">&#x27;Princi&#x27;</span>, <span class="string">&#x27;Gaurav&#x27;</span>, <span class="string">&#x27;Anuj&#x27;</span>], </span><br><span class="line">        <span class="string">&#x27;Height&#x27;</span>: [<span class="number">5.1</span>, <span class="number">6.2</span>, <span class="number">5.1</span>, <span class="number">5.2</span>], </span><br><span class="line">        <span class="string">&#x27;Qualification&#x27;</span>: [<span class="string">&#x27;Msc&#x27;</span>, <span class="string">&#x27;MA&#x27;</span>, <span class="string">&#x27;Msc&#x27;</span>, <span class="string">&#x27;Msc&#x27;</span>]&#125; </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Convert the dictionary into DataFrame </span></span><br><span class="line">df = pd.DataFrame(data) </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Declare a list that is to be converted into a column </span></span><br><span class="line">address = [<span class="string">&#x27;Delhi&#x27;</span>, <span class="string">&#x27;Bangalore&#x27;</span>, <span class="string">&#x27;Chennai&#x27;</span>, <span class="string">&#x27;Patna&#x27;</span>] </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Using &#x27;Address&#x27; as the column name </span></span><br><span class="line"><span class="comment"># and equating it to the list </span></span><br><span class="line">df[<span class="string">&#x27;Address&#x27;</span>] = address </span><br></pre></td></tr></table></figure>
-<p>方法2 使用pandas.insert()函数可向任意位置插入</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Define a dictionary containing Students data </span></span><br><span class="line">data = &#123;<span class="string">&#x27;Name&#x27;</span>: [<span class="string">&#x27;Jai&#x27;</span>, <span class="string">&#x27;Princi&#x27;</span>, <span class="string">&#x27;Gaurav&#x27;</span>, <span class="string">&#x27;Anuj&#x27;</span>], </span><br><span class="line">        <span class="string">&#x27;Height&#x27;</span>: [<span class="number">5.1</span>, <span class="number">6.2</span>, <span class="number">5.1</span>, <span class="number">5.2</span>], </span><br><span class="line">        <span class="string">&#x27;Qualification&#x27;</span>: [<span class="string">&#x27;Msc&#x27;</span>, <span class="string">&#x27;MA&#x27;</span>, <span class="string">&#x27;Msc&#x27;</span>, <span class="string">&#x27;Msc&#x27;</span>]&#125; </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Convert the dictionary into DataFrame </span></span><br><span class="line">df = pd.DataFrame(data) </span><br><span class="line">  </span><br><span class="line"><span class="comment"># Using DataFrame.insert() to add a column </span></span><br><span class="line">df.insert(<span class="number">2</span>, <span class="string">&quot;Age&quot;</span>, [<span class="number">21</span>, <span class="number">23</span>, <span class="number">24</span>, <span class="number">21</span>], <span class="literal">True</span>) </span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myresult=TestA_data.loc[:,(<span class="string">&#x27;SaleID&#x27;</span>)]</span><br><span class="line">myresult=pd.DataFrame(myresult)</span><br><span class="line">myresult.insert(<span class="number">1</span>, <span class="string">&#x27;price&#x27;</span>, xgbr_y_predict)</span><br><span class="line">print(myresult)</span><br><span class="line">myresult.to_csv(<span class="string">&quot;predictions.csv&quot;</span>,index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E4%BD%BF%E7%94%A8xlwt%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9Cexcel%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -482,6 +557,68 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 
 
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/" class="post-title-link" itemprop="url">可视化大屏仪表盘</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:06:40" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h1><p>数据可视化包括：<br>local分析<br>PC端数据可视化<br>移动端数据可视化<br>大屏可视化</p>
+<h2 id="本地离线分析"><a href="#本地离线分析" class="headerlink" title="本地离线分析"></a>本地离线分析</h2><p>使用excel做图，做表。<br>可以使用python的Matplotlib、Seaborn等工具等作图<br>使用MATLAB作图，如3维图等。<br>也可以用tableue，power bi等产品来作图。<br>tableue的优点在于大大缩短了拿到数据到出图，出报告的时间，大大提高了效率 。<br>不管用什么作图，都是要导出图片，然后放到PPT，word报告中的，<br>最后的输出成果就是ppt，word报告，这类报告是图文并茂的。</p>
+<h2 id="PC端数据可视化"><a href="#PC端数据可视化" class="headerlink" title="PC端数据可视化"></a>PC端数据可视化</h2><p>PC端数据可视化分成轻度的数据可视化，和重度的数据可视化。<br>前者是报表展示，兼顾用户体验，展示的比较无感，信息密度低，镶嵌在其他功能中，后者更接近于驾驶舱的概念，有一种很硬核，一股脑要告诉用户很多东西的感觉，整张网页都是图展示。<br>有一个简单的区别方法，就是前者一般是白色的，数据展示的比较自然，无感。<br>后者一般是黑色背景，一种强烈的炫技的感觉。</p>
+<p>现在制作可视化大屏的方法我遇见的主要有两种：一是使用Python flask+ajax+ECharts绘图库，二就是使用tableau。当然使用power bi和fine bi的话也是可以绘制的</p>
+<h2 id="仪表盘"><a href="#仪表盘" class="headerlink" title="仪表盘"></a>仪表盘</h2><h2 id="大屏"><a href="#大屏" class="headerlink" title="大屏"></a>大屏</h2>
       
     </div>
 
@@ -730,149 +867,10 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/" class="post-title-link" itemprop="url">可视化大屏仪表盘</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:06:40" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h1><p>数据可视化包括：<br>local分析<br>PC端数据可视化<br>移动端数据可视化<br>大屏可视化</p>
-<h2 id="本地离线分析"><a href="#本地离线分析" class="headerlink" title="本地离线分析"></a>本地离线分析</h2><p>使用excel做图，做表。<br>可以使用python的Matplotlib、Seaborn等工具等作图<br>使用MATLAB作图，如3维图等。<br>也可以用tableue，power bi等产品来作图。<br>tableue的优点在于大大缩短了拿到数据到出图，出报告的时间，大大提高了效率 。<br>不管用什么作图，都是要导出图片，然后放到PPT，word报告中的，<br>最后的输出成果就是ppt，word报告，这类报告是图文并茂的。</p>
-<h2 id="PC端数据可视化"><a href="#PC端数据可视化" class="headerlink" title="PC端数据可视化"></a>PC端数据可视化</h2><p>PC端数据可视化分成轻度的数据可视化，和重度的数据可视化。<br>前者是报表展示，兼顾用户体验，展示的比较无感，信息密度低，镶嵌在其他功能中，后者更接近于驾驶舱的概念，有一种很硬核，一股脑要告诉用户很多东西的感觉，整张网页都是图展示。<br>有一个简单的区别方法，就是前者一般是白色的，数据展示的比较自然，无感。<br>后者一般是黑色背景，一种强烈的炫技的感觉。</p>
-<p>现在制作可视化大屏的方法我遇见的主要有两种：一是使用Python flask+ajax+ECharts绘图库，二就是使用tableau。当然使用power bi和fine bi的话也是可以绘制的</p>
-<h2 id="仪表盘"><a href="#仪表盘" class="headerlink" title="仪表盘"></a>仪表盘</h2><h2 id="大屏"><a href="#大屏" class="headerlink" title="大屏"></a>大屏</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%8A%93%E5%8F%96%E9%9B%AA%E7%90%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/%E6%8A%93%E5%8F%96%E9%9B%AA%E7%90%83/" class="post-title-link" itemprop="url">抓取雪球</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：17:17:01" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="静态页面和动态页面的区别是什么？"><a href="#静态页面和动态页面的区别是什么？" class="headerlink" title="静态页面和动态页面的区别是什么？"></a>静态页面和动态页面的区别是什么？</h1><p>右击 查看源代码，ctrl+f无法搜到元素内容，说明是动态加载的，需要通过request的接口方法来抓取。</p>
-<h1 id="怎么获取接口数据？注意什么"><a href="#怎么获取接口数据？注意什么" class="headerlink" title="怎么获取接口数据？注意什么"></a>怎么获取接口数据？注意什么</h1><p>1.在浏览器F12中network 刷新后，筛选出XHR类型为接口数据。过滤方法。<br>2.在代码获取requson中吗，如果是403，说明不成功，只有2打头的才成功。缺少headers<br>3.注意代码写法，url为响应中的长url。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response=requests.get(url=url,headers=headers)</span><br></pre></td></tr></table></figure>
-<h1 id="获取接口数据后怎么解析？"><a href="#获取接口数据后怎么解析？" class="headerlink" title="获取接口数据后怎么解析？"></a>获取接口数据后怎么解析？</h1><p>1.善用print剥洋葱<br>2.ppprint 看数据两层剥键值对。<br>3.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NextData=RawData[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;list&#x27;</span>]</span><br></pre></td></tr></table></figure>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line">headers=&#123;<span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36&#x27;</span>&#125;</span><br><span class="line">url=<span class="string">&#x27;https://xueqiu.com/service/v5/stock/screener/quote/list?page=1&amp;size=30&amp;order=desc&amp;orderby=percent&amp;order_by=percent&amp;market=CN&amp;type=sh_sz&amp;_=1603124566528&#x27;</span></span><br><span class="line">response=requests.get(url=url,headers=headers)</span><br><span class="line">print(response)</span><br><span class="line">RawData=response.json()</span><br><span class="line"><span class="comment"># pprint.pprint(RawData)</span></span><br><span class="line">NextData=RawData[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;list&#x27;</span>]</span><br><span class="line">print(<span class="built_in">type</span>(NextData))</span><br><span class="line"><span class="comment"># print(NextData)</span></span><br><span class="line"><span class="comment"># print(NextData[0])</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pprint.pprint(NextData[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> myrow <span class="keyword">in</span> NextData:</span><br><span class="line">    data1=myrow[<span class="string">&#x27;symbol&#x27;</span>]</span><br><span class="line">    data2= myrow[<span class="string">&#x27;name&#x27;</span>]</span><br><span class="line">    data3 = myrow[<span class="string">&#x27;current&#x27;</span>]</span><br><span class="line">    print(data1,data2,data3)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="可以再探索的"><a href="#可以再探索的" class="headerlink" title="可以再探索的"></a>可以再探索的</h1><ul>
-<li>保存至EXCEL</li>
-<li>数据可视化</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -938,20 +936,20 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
