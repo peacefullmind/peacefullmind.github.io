@@ -155,6 +155,141 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E5%8F%96%E6%9F%90%E5%B9%B3%E5%8F%B0%E5%90%84%E4%B8%AA%E5%85%AC%E5%8F%B8%E7%BB%9F%E8%AE%A1%E7%8A%B6%E6%80%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%88%AC%E5%8F%96%E6%9F%90%E5%B9%B3%E5%8F%B0%E5%90%84%E4%B8%AA%E5%85%AC%E5%8F%B8%E7%BB%9F%E8%AE%A1%E7%8A%B6%E6%80%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">爬取某平台各个公司统计状态的几种思路</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:22:36" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><p>1.需要登录<br>2.登陆后，需要点击特定功能模块<br>3.需要选择下拉框，选好时间后，进行查询</p>
+<h1 id="尝试1-senlenium"><a href="#尝试1-senlenium" class="headerlink" title="尝试1 senlenium"></a>尝试1 senlenium</h1><p>senlenium爬取,需要处理下拉框，比较复杂<br>好处是可以登录，解决方法是，time.sleep(10),手动输入查询条件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<p>下一步：下拉框的处理</p>
+<h1 id="尝试2-http请求"><a href="#尝试2-http请求" class="headerlink" title="尝试2 http请求"></a>尝试2 http请求</h1><p>要不看看接口发的啥，直接改接口发包更快<br>如果你发查询的请求需要身份验证，看看要带什么参数，能不能模拟生成，如果要cookie，就登录一次，把cookie加上去模拟请求查询，能用一段时间，风控不严的站这样就齐活了<br>post出来的response不太对劲<br>可能原因<br>1.post参数不对<br>2.cookie 请求头不对，需要登录<br>找到为什么不对</p>
+<h1 id="尝试3-手动-自动"><a href="#尝试3-手动-自动" class="headerlink" title="尝试3 手动+自动"></a>尝试3 手动+自动</h1><p>直接F12得到response的json，进行解析</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> demjson</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;data.txt&quot;</span>,<span class="string">&quot;r&quot;</span>,encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">cont=f.read()</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">print(cont)</span><br><span class="line">print(<span class="built_in">type</span>(cont))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data = demjson.decode(cont)</span><br><span class="line">print(data)</span><br><span class="line">print(<span class="built_in">type</span>(data))</span><br><span class="line"></span><br><span class="line">value=data[<span class="string">&#x27;ROOT&#x27;</span>]</span><br><span class="line">print(value)</span><br><span class="line">print(<span class="built_in">type</span>(value))</span><br><span class="line">print(<span class="built_in">len</span>(value))</span><br><span class="line"></span><br><span class="line">file =xlwt.Workbook() <span class="comment">#新建一个excel</span></span><br><span class="line">table=file.add_sheet(<span class="string">&#x27;输出结果&#x27;</span>)</span><br><span class="line">table_row=<span class="number">0</span><span class="comment">#这是行数，从0行开始写</span></span><br><span class="line">table.write(table_row, <span class="number">0</span>, <span class="string">&#x27;编码&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">1</span>, <span class="string">&#x27;公司&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">2</span>, <span class="string">&#x27;状态&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table_row=table_row+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> value:</span><br><span class="line">    print(row)</span><br><span class="line">    print(<span class="built_in">type</span>(row))</span><br><span class="line">    bianma=row[<span class="string">&#x27;ZBPCTYGSDM&#x27;</span>]</span><br><span class="line">    name=row[<span class="string">&#x27;ZBPCTYGSMC&#x27;</span>]</span><br><span class="line">    zhuangtai=row[<span class="string">&#x27;ZLOCK&#x27;</span>]</span><br><span class="line">    table.write(table_row,<span class="number">0</span>,bianma)</span><br><span class="line">    table.write(table_row, <span class="number">1</span>, name)</span><br><span class="line">    table.write(table_row, <span class="number">2</span>, zhuangtai)</span><br><span class="line">    table_row=table_row+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">file.save(<span class="string">&#x27;查询结果.xls&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>关键str转字典，因为key应该也有引号，json.loads()会报错<br>data = demjson.decode(cont)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%ABrequest%E7%88%AC%E5%8F%96%E7%96%AB%E6%83%85%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%88%AC%E8%99%ABrequest%E7%88%AC%E5%8F%96%E7%96%AB%E6%83%85%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE/" class="post-title-link" itemprop="url">爬虫request疫情实时数据</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：17:17:37" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Map</span><br><span class="line"><span class="keyword">import</span>  requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">myurl=<span class="string">&quot;https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5&quot;</span></span><br><span class="line">respoonse=requests.get(myurl)</span><br><span class="line"></span><br><span class="line">myrawjson=respoonse.json()</span><br><span class="line">mydata=json.loads(myrawjson[<span class="string">&#x27;data&#x27;</span>])[<span class="string">&quot;areaTree&quot;</span>][<span class="number">0</span>][<span class="string">&quot;children&quot;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">new_data=&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> mydata:</span><br><span class="line">    new_data[i[<span class="string">&#x27;name&#x27;</span>]]=i[<span class="string">&#x27;total&#x27;</span>][<span class="string">&#x27;confirm&#x27;</span>]</span><br><span class="line"></span><br><span class="line">name=new_data.keys()</span><br><span class="line">num=new_data.values()</span><br><span class="line">print(<span class="built_in">zip</span>(name,num))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">zip</span>(name,num):</span><br><span class="line">    print(<span class="built_in">list</span>(i))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">new_maps</span>():</span></span><br><span class="line">    myMap=Map()</span><br><span class="line">    myMap.add(</span><br><span class="line">        <span class="string">&#x27;疫情地图&#x27;</span>,</span><br><span class="line">        [<span class="built_in">list</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">zip</span>(new_data.keys(), new_data.values())],</span><br><span class="line">        <span class="string">&#x27;China&#x27;</span>,</span><br><span class="line">        is_map_symbol_show=<span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    )</span><br><span class="line">    myMap.set_global_opts(</span><br><span class="line">        title_opts=opts.TitleOpts(</span><br><span class="line">            title=<span class="string">&quot;sss&quot;</span></span><br><span class="line">        ),</span><br><span class="line">        visualmap_opts=opts.VisualMapOpts(</span><br><span class="line">            is_piecewise=<span class="literal">True</span></span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    myMap.render(<span class="string">&#x27;fs.html&#x27;</span>)</span><br><span class="line">new_maps()</span><br></pre></td></tr></table></figure>
+<p>获取json数据 通过F2，network，筛选view的响应<br>解析获取的数据，多用print,和print(type()),层层逼近，注意格式，字符串格式转化成字典格式。list格式输出[0][1]等试一下<br>通过for 循环获取list内容，通过重构字典，重构数据，还可以通过zip重构成元组，再转化成list。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%AB%E4%B8%8Ehttp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -287,6 +422,65 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Anna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C/" class="post-title-link" itemprop="url">登录页面制作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:01:36" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="VS使用"><a href="#VS使用" class="headerlink" title="VS使用"></a>VS使用</h1><p>注释<br>选中代码，ctrl+K，然后ctrl+c；<br>页面的实时预览<br>open with live server配合brower preview使用</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%AB%E7%BE%8E%E4%B8%BD%E6%B1%A4%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -359,7 +553,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%AC%AC%E4%B8%80%E4%B8%AAVUEdemo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -373,7 +567,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/02/13/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C/" class="post-title-link" itemprop="url">登录页面制作</a>
+            <a href="/2021/02/13/%E7%AC%AC%E4%B8%80%E4%B8%AAVUEdemo/" class="post-title-link" itemprop="url">第一个VUEdemo</a>
         </h2>
 
         <div class="post-meta">
@@ -384,7 +578,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:01:36" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：16:45:45" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
             </span>
 
           
@@ -398,8 +592,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="VS使用"><a href="#VS使用" class="headerlink" title="VS使用"></a>VS使用</h1><p>注释<br>选中代码，ctrl+K，然后ctrl+c；<br>页面的实时预览<br>open with live server配合brower preview使用</p>
-
+          <h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>从nodejs官网下载安装，验证：命令行中，node-v出现版本号，说明成功。</p>
+<h1 id="安装npm的国内镜像"><a href="#安装npm的国内镜像" class="headerlink" title="安装npm的国内镜像"></a>安装npm的国内镜像</h1><p>node环境中包括，npm包管理器，由于国外，网速问题，我们安装国内镜像<br>命令行中，<br>npm install -g cnpm -registry=<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a><br>然后可以用cnpm来代替cpm安装依赖包</p>
+<h1 id="安装vue-cli脚手架构建工具"><a href="#安装vue-cli脚手架构建工具" class="headerlink" title="安装vue-cli脚手架构建工具"></a>安装vue-cli脚手架构建工具</h1><p>命令行<br>cnpm install -g vue-cli</p>
+<h1 id="用vue-cli构建项目"><a href="#用vue-cli构建项目" class="headerlink" title="用vue-cli构建项目"></a>用vue-cli构建项目</h1><p>选择一个目录放项目，命令行转到该目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack firstVue</span><br></pre></td></tr></table></figure>
+<p>意思是初始化一个项目，利用的是webpack打包和压缩。<br>然后按照提示输入选项</p>
+<h1 id="安装项目所需的依赖"><a href="#安装项目所需的依赖" class="headerlink" title="安装项目所需的依赖"></a>安装项目所需的依赖</h1><p>cd 到项目文件夹下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
+<p>项目目录firstVue中多出一个node_modules的文件夹，就是项目所需的依赖包资源。</p>
+<h1 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h1><p>在项目目录中,运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -482,74 +685,6 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getSS</span>(<span class="params">driver,author,college</span>):</span></span><br><span class="line">    driver.refresh()</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[2]/div[2]/input&#x27;</span>).clear()</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[2]/div[2]/input&#x27;</span>).send_keys(author)</span><br><span class="line"></span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[3]/div[2]/input&#x27;</span>).clear()</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[3]/div[2]/input&#x27;</span>).send_keys(college)</span><br><span class="line"></span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;/html/body/div[4]/div/div[2]/div/div[1]/div[1]/div[2]/div[2]/input&#x27;</span>).click()</span><br><span class="line">    time.sleep(<span class="number">0.5</span>)  <span class="comment"># 休眠2秒</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        title = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gridTable&quot;]/table/tbody/tr/td[2]/a&#x27;</span>).text</span><br><span class="line">        date= driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gridTable&quot;]/table/tbody/tr/td[5]&#x27;</span>).text</span><br><span class="line">        print(title)</span><br><span class="line">        print(date)</span><br><span class="line">        result=[title,date]</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        date=<span class="string">&#x27;未找到&#x27;</span></span><br><span class="line">        title=<span class="string">&#x27;未找到&#x27;</span></span><br><span class="line">        result = [title, date]</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        <span class="comment"># time.sleep(0.2)</span></span><br><span class="line">        <span class="comment"># driver.quit()</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
 <h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><p>1.查多<br>2.查无  try<br>3.登录，无账号，但是自动记住</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%AC%AC%E4%B8%80%E4%B8%AAVUEdemo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/%E7%AC%AC%E4%B8%80%E4%B8%AAVUEdemo/" class="post-title-link" itemprop="url">第一个VUEdemo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：16:45:45" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>从nodejs官网下载安装，验证：命令行中，node-v出现版本号，说明成功。</p>
-<h1 id="安装npm的国内镜像"><a href="#安装npm的国内镜像" class="headerlink" title="安装npm的国内镜像"></a>安装npm的国内镜像</h1><p>node环境中包括，npm包管理器，由于国外，网速问题，我们安装国内镜像<br>命令行中，<br>npm install -g cnpm -registry=<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a><br>然后可以用cnpm来代替cpm安装依赖包</p>
-<h1 id="安装vue-cli脚手架构建工具"><a href="#安装vue-cli脚手架构建工具" class="headerlink" title="安装vue-cli脚手架构建工具"></a>安装vue-cli脚手架构建工具</h1><p>命令行<br>cnpm install -g vue-cli</p>
-<h1 id="用vue-cli构建项目"><a href="#用vue-cli构建项目" class="headerlink" title="用vue-cli构建项目"></a>用vue-cli构建项目</h1><p>选择一个目录放项目，命令行转到该目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack firstVue</span><br></pre></td></tr></table></figure>
-<p>意思是初始化一个项目，利用的是webpack打包和压缩。<br>然后按照提示输入选项</p>
-<h1 id="安装项目所需的依赖"><a href="#安装项目所需的依赖" class="headerlink" title="安装项目所需的依赖"></a>安装项目所需的依赖</h1><p>cd 到项目文件夹下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
-<p>项目目录firstVue中多出一个node_modules的文件夹，就是项目所需的依赖包资源。</p>
-<h1 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h1><p>在项目目录中,运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -699,215 +834,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/13/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-02-13 14:24:40" itemprop="dateCreated datePublished" datetime="2021-02-13T14:24:40+08:00">2021-02-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-19 20:47:38" itemprop="dateModified" datetime="2021-02-19T20:47:38+08:00">2021-02-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>[toc]</p>
-<h2 id="1-Quick-Start"><a href="#1-Quick-Start" class="headerlink" title="1.Quick Start"></a>1.Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h2 id="2-踩坑记"><a href="#2-踩坑记" class="headerlink" title="2. 踩坑记"></a>2. 踩坑记</h2><ol>
-<li>为什么public中不能生成预想的index.html呢？<br>站点配置文件 theme: 冒号后面一定要有空格</li>
-<li>为什么本地效果可以，但是不能hexo d呢？<br>因为需要部署的插件，需要在目录下安装</li>
-<li>修改中文后，首页还是英文？<br>有缓存，先修改下一项，自然解决</li>
-<li>目录和tags怎么设置？<br>首选要hexo new page tags 然后在生成的文件中修改type<br>其次，将文章和tags关联<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2>public 是生成的静态文件，也就是浏览器实际加载的，而source文件时源文件，相当于数据库<br>hexo g就是根据source生成public和另外一个文件<br>hexo clean 是删除hexo g生成的文件<br>hexo d是部署到远程服务器中，而远程服务器的地址在站点配置文件中配置</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:peacefullmind&#x2F;peacefullmind.github.io.git</span><br><span class="line">  master: master</span><br></pre></td></tr></table></figure>
-<p>hexo s在未配置远程服务器的情况下，可以在本地预览效果</p>
-<h2 id="3-步骤"><a href="#3-步骤" class="headerlink" title="3. 步骤"></a>3. 步骤</h2><h3 id="3-1-搭建hexo博客"><a href="#3-1-搭建hexo博客" class="headerlink" title="3.1 搭建hexo博客"></a>3.1 搭建hexo博客</h3><p>安装nodejs，hexo，git等<br>初始化hexo </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-<p>然后测试</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;firstBlog&quot;</span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>在本地查看博客效果，是默认主题</p>
-<h3 id="3-2-更换主题"><a href="#3-2-更换主题" class="headerlink" title="3.2 更换主题"></a>3.2 更换主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-<p>然后在站点配置文件中修改theme为next<br>在本地进行测试，是否成功</p>
-<h3 id="3-3-修改语言，博客名，作者名"><a href="#3-3-修改语言，博客名，作者名" class="headerlink" title="3.3 修改语言，博客名，作者名"></a>3.3 修改语言，博客名，作者名</h3><p>语言，博客名，作者名在站点配置文件中</p>
-<h3 id="3-4，开启目录，标签等"><a href="#3-4，开启目录，标签等" class="headerlink" title="3.4，开启目录，标签等"></a>3.4，开启目录，标签等</h3><p>目录和标签需要根据next主题的要求进行设置</p>
-<h3 id="3-5-推送到远程服务器上"><a href="#3-5-推送到远程服务器上" class="headerlink" title="3.5 推送到远程服务器上"></a>3.5 推送到远程服务器上</h3><p>以github为例，建立仓库，通过clone占到git地址，并放置到站点主题中。<br>然后git d -g即可</p>
-<h2 id="4-markdown-常用"><a href="#4-markdown-常用" class="headerlink" title="4. markdown 常用"></a>4. markdown 常用</h2><p>注意事项：回车很重要的一个标志</p>
-<h3 id="4-1文字常用"><a href="#4-1文字常用" class="headerlink" title="4.1文字常用"></a>4.1文字常用</h3><p><strong>加粗</strong> </p>
-<blockquote>
-<p>引用</p>
-</blockquote>
-<p>==标黄文字== </p>
-<p><del>删除线</del></p>
-<ul>
-<li><input disabled="" type="checkbox"> 任务1</li>
-<li><input checked="" disabled="" type="checkbox"> 任务2</li>
-</ul>
-<ul>
-<li>无序列表1</li>
-<li>无序列表2</li>
-</ul>
-<h3 id="4-2快捷键和文章架构"><a href="#4-2快捷键和文章架构" class="headerlink" title="4.2快捷键和文章架构"></a>4.2快捷键和文章架构</h3><p>[toc] 生成目录，放在开头<br>ctrl+T插入表格 </p>
-<h3 id="4-3图片"><a href="#4-3图片" class="headerlink" title="4.3图片"></a>4.3图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line"></span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;1| D[结果1]</span><br><span class="line"></span><br><span class="line">    C --&gt;|a&#x3D;2| E[结果2]</span><br><span class="line"></span><br><span class="line">    F[横向流程图]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<div id="flowchart-0" class="flow-chart"></div>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">%% 语法示例</span><br><span class="line"></span><br><span class="line">        gantt</span><br><span class="line"></span><br><span class="line">        dateFormat  YYYY-MM-DD</span><br><span class="line"></span><br><span class="line">        title 软件开发甘特图</span><br><span class="line"></span><br><span class="line">        section 设计</span><br><span class="line"></span><br><span class="line">        需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line"></span><br><span class="line">        原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line"></span><br><span class="line">        UI设计                     :         des3, after des2, 5d</span><br><span class="line"></span><br><span class="line">    未来任务                     :         des4, after des3, 5d</span><br><span class="line"></span><br><span class="line">        section 开发</span><br><span class="line"></span><br><span class="line">        学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line"></span><br><span class="line">        设计框架                             :crit, done, after des2, 2d</span><br><span class="line"></span><br><span class="line">        开发                                 :crit, active, 3d</span><br><span class="line"></span><br><span class="line">        未来任务                              :crit, 5d</span><br><span class="line"></span><br><span class="line">        耍                                   :2d</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">        section 测试</span><br><span class="line"></span><br><span class="line">        功能测试                              :active, a1, after des3, 3d</span><br><span class="line"></span><br><span class="line">        压力测试                               :after a1  , 20h</span><br><span class="line"></span><br><span class="line">        测试报告                               : 48h</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">a[浏览器]</span><br><span class="line">b[服务器]</span><br><span class="line">c[移动端APP]</span><br><span class="line"></span><br><span class="line">a--&gt;|1-发起验证请求|b</span><br><span class="line">b--&gt;|2-建立sotake连接|a</span><br><span class="line">a--&gt;|3-sotake连接成功|b</span><br><span class="line">b--&gt;|4-发送二维码|a</span><br><span class="line">c--&gt;|5-扫描二维码|a</span><br><span class="line">c--&gt;|6-发送二维码信息|b</span><br><span class="line">b--&gt;|7-返回二维码结果|c</span><br><span class="line">c--&gt;|8-确认结果|b</span><br><span class="line">b--&gt;|9-sotake推送信息,浏览器跳转页面|a</span><br></pre></td></tr></table></figure>
-
-
-
-
-<p><img src="/images/%E5%9B%BEtest.jpg" alt="图test"><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">
-st=>start: 开始框
-
-op=>operation: 处理框
-
-cond=>condition: 判断框(是或否?)
-
-sub1=>subroutine: 子流程
-
-io=>inputoutput: 输入输出框
-
-e=>end: 结束框
-
-st->op->cond
-
-cond(yes)->io->e
-
-cond(no)->sub1(right)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/04/06/Test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Anna">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的Hexo博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/06/Test/" class="post-title-link" itemprop="url">Test网址</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-06 00:11:46" itemprop="dateCreated datePublished" datetime="2020-04-06T00:11:46+08:00">2020-04-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-13 15:00:37" itemprop="dateModified" datetime="2021-02-13T15:00:37+08:00">2021-02-13</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p> Your site is published at <a href="https://peacefullmind.github.io/">https://peacefullmind.github.io/</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -977,20 +903,20 @@ cond(no)->sub1(right)->op</textarea><textarea id="flowchart-0-options" style="di
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
