@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="问题1：虚拟机无法登录虚拟机自己没有开小键盘，输入密码是数据没有真实输入进去。 问题2：XShell连接linux虚拟机如果不能连接，首选看linux虚拟机自身是否可以ping通宿主机等点击编辑-虚拟机网络编辑器，然后编辑虚拟机的网络连接，NAT模式，并保持默认不需要手动关闭DHCP【原因】采用ip addr 查看虚拟机的IP信息然后在XShell中填入ip信息Xshell是在已有的连接中点击属性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux命令">
+<meta property="og:url" content="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="问题1：虚拟机无法登录虚拟机自己没有开小键盘，输入密码是数据没有真实输入进去。 问题2：XShell连接linux虚拟机如果不能连接，首选看linux虚拟机自身是否可以ping通宿主机等点击编辑-虚拟机网络编辑器，然后编辑虚拟机的网络连接，NAT模式，并保持默认不需要手动关闭DHCP【原因】采用ip addr 查看虚拟机的IP信息然后在XShell中填入ip信息Xshell是在已有的连接中点击属性">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-13T06:25:41.000Z">
+<meta property="article:modified_time" content="2021-12-18T09:59:15.593Z">
+<meta property="article:author" content="TJ">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>linux命令 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linux命令
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-18 17:59:15" itemprop="dateModified" datetime="2021-12-18T17:59:15+08:00">2021-12-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="问题1：虚拟机无法登录"><a href="#问题1：虚拟机无法登录" class="headerlink" title="问题1：虚拟机无法登录"></a>问题1：虚拟机无法登录</h2><p>虚拟机自己没有开小键盘，输入密码是数据没有真实输入进去。</p>
+<h2 id="问题2：XShell连接linux虚拟机"><a href="#问题2：XShell连接linux虚拟机" class="headerlink" title="问题2：XShell连接linux虚拟机"></a>问题2：XShell连接linux虚拟机</h2><p>如果不能连接，首选看linux虚拟机自身是否可以ping通宿主机等<br>点击编辑-虚拟机网络编辑器，然后编辑虚拟机的网络连接，NAT模式，并保持默认<br>不需要手动关闭DHCP【原因】<br>采用ip addr 查看虚拟机的IP信息<br>然后在XShell中填入ip信息<br>Xshell是在已有的连接中点击属性，然后修改ip的，注意点击连接。而不是直接点击已有的连接,可能是之前IP信息没有保存上</p>
+<p>第二次是因为弄sftp的时候修改了sshd_config的配置，导致</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd start</span><br></pre></td></tr></table></figure>
+<p>不成功<br>按照注释，删除掉sshd配置表中导致失败的关键几句话。</p>
+<p>第三次是因为宿主机网络和共享中心的更改适配器设置中的，VMware 8被禁用。</p>
+<p>有一次：<br>将虚拟网络编辑器里的 vmnet8 还原默认设置，然后登录。</p>
+<h2 id="3-常用命令"><a href="#3-常用命令" class="headerlink" title="3.常用命令"></a>3.常用命令</h2><h3 id="3-1常用文件命令"><a href="#3-1常用文件命令" class="headerlink" title="3.1常用文件命令"></a>3.1常用文件命令</h3><p>显示文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l</span><br></pre></td></tr></table></figure>
+<p>显示隐藏文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -a</span><br></pre></td></tr></table></figure>
+<p>逆向显示【默认按照文件名逆向】</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -f -r</span><br></pre></td></tr></table></figure>
+<p>按照时间逆向显示详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l -r -t</span><br></pre></td></tr></table></figure>
+<p>同上的简单写法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lrt</span><br></pre></td></tr></table></figure>
+<p>递归显示，显示子文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -R</span><br></pre></td></tr></table></figure>
+
+<p>绝对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path</span><br></pre></td></tr></table></figure>
+<p>相对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./path</span><br></pre></td></tr></table></figure>
+<p>进入/目录，根目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br></pre></td></tr></table></figure>
+<p>返回用户家目，用户目录：主目录是用户的HOME目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br></pre></td></tr></table></figure>
+<p>用户登录后在 家目录 ，可用pwd命令查看，普通用户为 /home/用户名，root用户为/root<br>根目录是在最顶端的目录<br>相当于查看有多少普通用户的家目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br></pre></td></tr></table></figure>
+<p>返回上一级目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+<p>返回上一层目录下的path路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../path</span><br></pre></td></tr></table></figure>
+<p>linux 一切皆文件<br>ctrl+C 命令进行到一半，强制结束。<br>clear 清屏</p>
+<p>在根目录下新建a目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /a</span><br></pre></td></tr></table></figure>
+<p>mkdir -p 新建多级目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /a/<span class="built_in">test</span>/runrun</span><br></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /a.txt</span><br></pre></td></tr></table></figure>
+<p>递归查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -R /a</span><br></pre></td></tr></table></figure>
+<p>删除a目录，a目录必须是空的，实际中使用场景少。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir /a</span><br></pre></td></tr></table></figure>
+<p>删除非空的目录，有提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r /a</span><br></pre></td></tr></table></figure>
+<p>删除目录，并且不提示，有风险，操作前反复检查。比如这里/ 和a之间不能有空格，否则是把整个根目录下的文件全部删除了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r -f /a</span><br></pre></td></tr></table></figure>
+<p>前者是源文件， 后者是目标位置，如果不加参数的话，只能复制文件，不能复制目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /a/tmp/a.txt /</span><br></pre></td></tr></table></figure>
+<p>可以复制目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /a/tmp /</span><br></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /a.txt</span><br></pre></td></tr></table></figure>
+<p>将文件a.txt 复制到目标目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /a.txt /tmp</span><br></pre></td></tr></table></figure>
+<p>-p 保留源时间<br>-a 保留源文件的所有信息</p>
+<p>mv 改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /a.txt /b.txt</span><br></pre></td></tr></table></figure>
+<p>移动+改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /a.txt /tmp/c.txt</span><br></pre></td></tr></table></figure>
+<p>星号通配符，匹配单个/多个字符<br>？通配符，匹配单个字符<br>列出所有/tmp目录下以test开头的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /tmp/<span class="built_in">test</span>*</span><br></pre></td></tr></table></figure>
+
+<p>cat /tmp/a.txt 查看文件a.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat /tmp/a.txt</span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">head -3 ./a.txt</span><br><span class="line">head -3 ./a.txt</span><br><span class="line">wc -l ./a.txt </span><br><span class="line">more ./a.txt</span><br><span class="line">tail -f ./a.txt</span><br></pre></td></tr></table></figure>
+<p>head -3 ./a.txt 显示开头前三行<br>head -3 ./a.txt显示结尾后三行<br>wc -l ./a.txt 统计行数<br>more ./a.txt 查看一部分，按住空格后，再显示下一部分<br>tail -f 目标文件 实时显示文件，常用于查看日志文件，按住ctrl+c结束</p>
+<h3 id="3-2压缩和解压缩"><a href="#3-2压缩和解压缩" class="headerlink" title="3.2压缩和解压缩"></a>3.2压缩和解压缩</h3><p>打包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar cf /tmp/etc-backup.tar /etc</span><br></pre></td></tr></table></figure>
+<p>注意：<br>1.参数前没有-<br>2.目标在前，反而源文件在后</p>
+<p>打包并压缩</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar czf /tmp/etc-backup.tar.gz  /etc</span><br></pre></td></tr></table></figure>
+<p>参数有三个，czf,其中z代表压缩的意思,c代表打包，x代表解包，f指定操作类型为文件</p>
+<p>解包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xf /tmp/etc-backup.tar -C  /a</span><br></pre></td></tr></table></figure>
+
+<p>查看大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lh /tmp/etc-backip.tar</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-用户管理和文件权限"><a href="#3-3-用户管理和文件权限" class="headerlink" title="3.3 用户管理和文件权限"></a>3.3 用户管理和文件权限</h3><p>root 用户是超级管理员<br>普通用户只能看到自己家目录下的，和root用户开放给他的权限，无法看到别人的家目录</p>
+<p>新建用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd TJ</span><br><span class="line">adduser TJ cat</span><br><span class="line">id root</span><br></pre></td></tr></table></figure>
+<p>更改密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd TJ</span><br></pre></td></tr></table></figure>
+<p>删除用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userdel TJ</span><br></pre></td></tr></table></figure>
+<p>查看用户所属的用户组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/group |grep root</span><br></pre></td></tr></table></figure>
+<p>用户组信息保存在/etc/group中，cat可以查看所有 ，后面加 |grep 用户名，可以筛选查看。</p>
+<p>新建用户组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd group_name</span><br></pre></td></tr></table></figure>
+<p>删除用户组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupdel group_name</span><br></pre></td></tr></table></figure>
+<p>重命名用户组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupmod -n newname oldname</span><br></pre></td></tr></table></figure>
+<p>在创建新用户时，将修改以下 4 个文件</p>
+<ul>
+<li><code>/etc/passwd</code>： 用户账户的详细信息在此文件中更新。</li>
+<li><code>/etc/shadow</code>： 用户账户密码在此文件中更新。</li>
+<li><code>/etc/group</code>： 新用户群组的详细信息在此文件中更新。</li>
+<li><code>/etc/gshadow</code>： 新用户群组密码在此文件中更新。</li>
+</ul>
+<p>每个文件有三组固定的权限，分别对应拥有者，所属用户组，其他用户，这个顺序是固定的。文件的读写执行对应字母 rwx，以二进制表示就是 111，用十进制表示就是 7，<br>我们刚刚新建的文件 iphone11 的权限是 rw-rw-rw-，换成对应的十进制表示就是 666，这就表示这个文件的拥有者，所属用户组和其他用户具有读写权限，不具有执行权限。</p>
+<p>向文件追加内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo bbbbb&gt;a.txt</span><br></pre></td></tr></table></figure>
+<p>注意 &gt;是覆盖，&gt;&gt;是追加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -ll 文件名</span><br><span class="line">chmod 600 文件名</span><br></pre></td></tr></table></figure>
+<p>切换用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - 用户名</span><br></pre></td></tr></table></figure>
+<p>改变文件所属的用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown user file</span><br></pre></td></tr></table></figure>
+<p>虽然本质上无论是目录结构还是操作系统内核都是存储在磁盘上的，但从逻辑上来说 Linux 的磁盘是“挂在”（挂载在）目录上的。<br>例如 /etc 应该放置设置文件，/bin 与 /sbin 则应该放置可执行文件等等。<br>针对 /usr 及 /var 这两个目录的子目录来定义。例如 /var/log 放置系统日志文件，/usr/share 放置共享数据等等。</p>
+<p>找出/etc/目录下的所有以.list结尾的文件。<br>sudo find /etc/ -name “*.list”</p>
+<h3 id="3-4软件安装"><a href="#3-4软件安装" class="headerlink" title="3.4软件安装"></a>3.4软件安装</h3><p>centOS，RedHat  yum包管理器，软件安装包格式是rpm，<br>Debian，Ubuntu使用apt包管理器，软件安装包格式是deb，<br>输入ifconfig报错<br>查看是否有命令ifconfig</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /sbin</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<p>如果没有，则安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
+<p>查看文件安装路径<br>使用whersis 查看所有的文件路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where is oracle</span><br></pre></td></tr></table></figure>
+<p>查询运行文件所在的路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which oracle</span><br></pre></td></tr></table></figure>
+<h3 id="3-5-磁盘查看命令"><a href="#3-5-磁盘查看命令" class="headerlink" title="3.5 磁盘查看命令"></a>3.5 磁盘查看命令</h3><p>查看内存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
+<p>查看文件系统的占用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
+<p>最后一列是挂载的位置，挂载的涵义是类似于windows的各个盘符。</p>
+<h3 id="3-6-网络命令"><a href="#3-6-网络命令" class="headerlink" title="3.6 网络命令"></a>3.6 网络命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-常用技巧"><a href="#4-常用技巧" class="headerlink" title="4.常用技巧"></a>4.常用技巧</h2><p>上箭头，可以恢复你之前输入的历史命令<br>ctrl +c 可以强行终止<br>tab 补全目录，命令</p>
+<p>通配符<br>星号， 0个或者多个<br>问号，一个<br>ls *.txt<br>小键盘不能用</p>
+<p>一次性创建多个文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch love_&#123;1..10&#125;_shiyanlou.txt</span><br></pre></td></tr></table></figure>
+<p>man +命令名字，可以查看命令使用方法</p>
+<h2 id="5-vim-简单使用"><a href="#5-vim-简单使用" class="headerlink" title="5. vim 简单使用"></a>5. vim 简单使用</h2><p>新建a.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /tmp/a.txt</span><br></pre></td></tr></table></figure>
+<p>进入vim编辑内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /tmp/a.txt</span><br></pre></td></tr></table></figure>
+<p>按住i，进入编辑模式<br>输入一些内容<br>按住esc 退出编辑模式<br>输入，冒号wq 保存</p>
+<p>esc 正常模式<br>:q! 放弃改动退出<br>：wq 保存改动</p>
+<p>正常模式下删除光标所在位置的字符，请按X<br>正常模式下，输入i，A可以增加文本，增加位置不一样。</p>
+<p>vimtutor 非常好的教程</p>
+<h2 id="6-一个实用例子shell脚本"><a href="#6-一个实用例子shell脚本" class="headerlink" title="6.一个实用例子shell脚本"></a>6.一个实用例子shell脚本</h2><p>在路径/usr下新建一个sapexport目录，一个sapbackup目录<br>在/home/下新建scrips，下新建pushdata.sh脚本<br>task1：<br>文件复制和删除：<br>将文件下sapexport下的所有内容，拷贝到sapbackup目录；<br>然后删除sapexport下的所有内容<br>注意：sapbackup目录是一个累加的，原来内容不被覆盖<br>输出语句“执行完毕”</p>
+<p>task2：<br>文件移动：<br>将文件下sapexport下的所有内容，移动到sapbackup目录；<br>注意：sapbackup目录是一个累加的，原来内容不被覆盖<br>输出语句“执行完毕”</p>
+<p>task3：<br>增加ftp或者sftp<br>将文件下sapexport下的所有内容，put到ftp下的特定路径下，再执行任务2的内容</p>
+<p>task4：<br>增加定时任务：<br>每晚22：00定时执行，不需要手动执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/sh</span></span><br><span class="line">mv /usr/sapexport/* /usr/sapbackup</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;执行完成&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-定时任务"><a href="#7-定时任务" class="headerlink" title="7.定时任务"></a>7.定时任务</h2><p>列出当前用户定时服务内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure>
+<p>编辑当前用户定时任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<p>自动进入vim，编辑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
+<p>第一个 * 表示分钟：取值范围 0-59</p>
+<p>第二个 * 表示小时：取值范围0-23</p>
+<p>第三个 * 表示天数：取值范围1-31</p>
+<p>第四个 * 表示月份：取值范围1-12</p>
+<p>第五个 * 表示每周：取值范围0-6</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 22 * * * sh /home/scrips/putdata.sh</span><br></pre></td></tr></table></figure>
+<p>查看crontab执行日志,判断定时任务是否执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /var/spool/mail/root</span><br><span class="line">tail -f /var/spool/mail/root</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ol>
+<li>做了定时任务后，输出会在日志里，不会在命令行终端中输出</li>
+<li>如下mv命令，如果sapexport下是空的，会执行失败<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/sapexport/*  /usr/sapbackup</span><br></pre></td></tr></table></figure>
+<h2 id="8-进程与线程"><a href="#8-进程与线程" class="headerlink" title="8 进程与线程"></a>8 进程与线程</h2>1个程序至少有一个进程，一个进程至少有一个线程。</li>
+</ol>
+<p>第一个角度来看，我们可以分为用户进程与系统进程：</p>
+<ul>
+<li>用户进程：通过执行用户程序、应用程序或称之为内核之外的系统程序而产生的进程，此类进程可以在用户的控制下运行或关闭。</li>
+<li>系统进程：通过执行系统内核程序而产生的进程，比如可以执行内存资源分配和进程切换等相对底层的工作；而且该进程的运行不受用户的干预，即使是 root 用户也不能干预系统进程的运行。</li>
+</ul>
+<p>第二角度来看，我们可以将进程分为交互进程、批处理进程、守护进程：</p>
+<ul>
+<li>交互进程：由一个 shell 终端启动的进程，在执行过程中，需要与用户进行交互操作，可以运行于前台，也可以运行在后台。</li>
+<li>批处理进程：该进程是一个进程集合，负责按顺序启动其他的进程。</li>
+<li>守护进程：守护进程是一直运行的一种进程，在 Linux 系统启动时启动，在系统关闭时终止。它们独立于控制终端并且周期性的执行某种任务或等待处理某些发生的事件。例如 httpd 进程，一直处于运行状态，等待用户的访问。还有经常用的 cron（在 centOS 系列为 crond）进程，这个进程为 crontab 的守护进程，可以周期性的执行用户设定的某些任务。</li>
+<li>top 是一个在前台执行的程序，所以执行后便进入到这样的一个交互界面，正是因为交互界面我们才可以实时的获取到系统与进程的信息。在交互界面中我们可以通过一些指令来操作和筛选。在此之前我们先来了解显示了哪些信息。</li>
+</ul>
+<p>我们看到 top 显示的第一排，</p>
+<p>内容    解释<br>top    表示当前程序的名称<br>11:05:18    表示当前的系统的时间<br>up 8 days,17:12    表示该机器已经启动了多长时间<br>1 user    表示当前系统中只有一个用户<br>load average: 0.29,0.20,0.25    分别对应 1、5、15 分钟内 cpu 的平均负载<br>load average 在 wikipedia 中的解释是 the system load is a measure of the amount of work that a computer system is doing 也就是对当前 CPU 工作量的度量，具体来说也就是指运行队列的平均长度，也就是等待 CPU 的平均进程数相关的一个计算值。</p>
+<p>我们该如何看待这个 load average 数据呢？</p>
+<p>假设我们的系统是单 CPU、单内核的，把它比喻成是一条单向的桥，把 CPU 任务比作汽车。</p>
+<p>load = 0 的时候意味着这个桥上并没有车，cpu 没有任何任务；<br>load &lt; 1 的时候意味着桥上的车并不多，一切都还是很流畅的，cpu 的任务并不多，资源还很充足；<br>load = 1 的时候就意味着桥已经被车给占满了，没有一点空隙，cpu 已经在全力工作了，所有的资源都被用完了，当然还好，这还在能力范围之内，只是有点慢而已；<br>load &gt; 1 的时候就意味着不仅仅是桥上已经被车占满了，就连桥外都被占满了，cpu 已经在全力工作，系统资源的用完了，但是还是有大量的进程在请求，在等待。若是这个值大于 2 表示进程请求超过 CPU 工作能力的 2 倍。而若是这个值大于 5 说明系统已经在超负荷运作了。<br>这是单个 CPU 单核的情况，而实际生活中我们需要将得到的这个值除以我们的核数来看。我们可以通过以下的命令来查看 CPU 的个数与核心数：</p>
+<p>#查看物理 CPU 的个数<br>cat /proc/cpuinfo | grep “physical id” | sort | uniq |wc -l</p>
+<p>#每个 cpu 的核心数<br>cat /proc/cpuinfo | grep “physical id” | grep “0” | wc -l<br>copy<br>通过上面的指数我们可以得知 load 的临界值为 1 ，但是在实际生活中，比较有经验的运维或者系统管理员会将临界值定为 0.7。这里的指数都是除以核心数以后的值，不要混淆了</p>
+<p>若是 load &lt; 0.7 并不会去关注他；<br>若是 0.7&lt; load &lt; 1 的时候我们就需要稍微关注一下了，虽然还可以应付但是这个值已经离临界不远了；<br>若是 load = 1 的时候我们就需要警惕了，因为这个时候已经没有更多的资源的了，已经在全力以赴了；<br>若是 load &gt; 5 的时候系统已经快不行了，这个时候你需要加班解决问题了<br>通常我们都会先看 15 分钟的值来看这个大体的趋势，然后再看 5 分钟的值对比来看是否有下降的趋势。</p>
+<p>查看 busybox 的代码可以知道，数据是每 5 秒钟就检查一次活跃的进程数，然后计算出该值，然后 load 从 /proc/loadavg 中读取的。而这个 load 的值是如何计算的呢，这是 load 的计算的源码</p>
+<p>#define FSHIFT      11          /* nr of bits of precision */<br>#define FIXED_1     (1&lt;&lt;FSHIFT) /* 1.0 as fixed-point(定点) */<br>#define LOAD_FREQ   (5*HZ)      /* 5 sec intervals，每隔5秒计算一次平均负载值 */<br>#define CALC_LOAD(load, exp, n)     <br>         load *= exp;               <br>         load += n*(FIXED_1 - exp); <br>         load &gt;&gt;= FSHIFT;</p>
+<p>unsigned long avenrun[3];</p>
+<p>EXPORT_SYMBOL(avenrun);</p>
+<p>/*</p>
+<ul>
+<li>calc_load - given tick count, update the avenrun load estimates.</li>
+<li>This is called while holding a write_lock on xtime_lock.</li>
+<li>/<br>static inline void calc_load(unsigned long ticks)<br>{<pre><code>   unsigned long active_tasks; /* fixed-point */
+   static int count = LOAD_FREQ;
+   count -= ticks;
+   if (count &lt; 0) &#123;
+           count += LOAD_FREQ;
+           active_tasks = count_active_tasks();
+           CALC_LOAD(avenrun[0], EXP_1, active_tasks);
+           CALC_LOAD(avenrun[1], EXP_5, active_tasks);
+           CALC_LOAD(avenrun[2], EXP_15, active_tasks);
+   &#125;
+</code></pre>
+}<br>copy<br>有兴趣的朋友可以研究一下，是如何计算的。代码中的后面这部分相当于它的计算公式。</li>
+</ul>
+<p>我们回归正题，来看 top 的第二行数据，基本上第二行是进程的一个情况统计：</p>
+<p>内容    解释<br>Tasks: 26 total    进程总数<br>1 running    1 个正在运行的进程数<br>25 sleeping    25 个睡眠的进程数<br>0 stopped    没有停止的进程数<br>0 zombie    没有僵尸进程数<br>来看 top 的第三行数据，这一行基本上是 CPU 的一个使用情况的统计了：</p>
+<p>内容    解释<br>Cpu(s): 1.0%us    用户空间进程占用 CPU 百分比<br>1.0% sy    内核空间运行占用 CPU 百分比<br>0.0%ni    用户进程空间内改变过优先级的进程占用 CPU 百分比<br>97.9%id    空闲 CPU 百分比<br>0.0%wa    等待输入输出的 CPU 时间百分比<br>0.1%hi    硬中断(Hardware IRQ)占用 CPU 的百分比<br>0.0%si    软中断(Software IRQ)占用 CPU 的百分比<br>0.0%st    (Steal time) 是 hypervisor 等虚拟服务中，虚拟 CPU 等待实际 CPU 的时间的百分比<br>CPU 利用率是对一个时间段内 CPU 使用状况的统计，通过这个指标可以看出在某一个时间段内 CPU 被占用的情况，而 Load Average 是 CPU 的 Load，它所包含的信息不是 CPU 的使用率状况，而是在一段时间内 CPU 正在处理以及等待 CPU 处理的进程数情况统计信息，这两个指标并不一样。</p>
+<p>来看 top 的第四行数据，这一行基本上是内存的一个使用情况的统计了：</p>
+<p>内容    解释<br>8176740 total    物理内存总量<br>8032104 used    使用的物理内存总量<br>144636 free    空闲内存总量<br>313088 buffers    用作内核缓存的内存量<br>注意：</p>
+<p>系统中可用的物理内存最大值并不是 free 这个单一的值，而是 free + buffers + swap 中的 cached 的和。</p>
+<p>来看 top 的第五行数据，这一行基本上是交换区的一个使用情况的统计了：</p>
+<p>内容    解释<br>total    交换区总量<br>used    使用的交换区总量<br>free    空闲交换区总量<br>cached    缓冲的交换区总量，内存中的内容被换出到交换区，而后又被换入到内存，但使用过的交换区尚未被覆盖<br>再下面就是进程的一个情况了</p>
+<p>列名    解释<br>PID     进程 id<br>USER      该进程的所属用户<br>PR      该进程执行的优先级 priority 值<br>NI      该进程的 nice 值<br>VIRT    该进程任务所使用的虚拟内存的总数<br>RES    该进程所使用的物理内存数，也称之为驻留内存数<br>SHR    该进程共享内存的大小<br>S    该进程进程的状态: S=sleep R=running Z=zombie<br>%CPU    该进程 CPU 的利用率<br>%MEM    该进程内存的利用率<br>TIME+    该进程活跃的总时间<br>COMMAND    该进程运行的名字  </p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/13/hello-world/" rel="prev" title="hexo搭建">
+      <i class="fa fa-chevron-left"></i> hexo搭建
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/13/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5eTree%E5%92%8Cxpath%E7%BF%BB%E9%A1%B5/" rel="next" title="静态网页eTree和xpath翻页">
+      静态网页eTree和xpath翻页 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%981%EF%BC%9A%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95%E7%99%BB%E5%BD%95"><span class="nav-text">问题1：虚拟机无法登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%982%EF%BC%9AXShell%E8%BF%9E%E6%8E%A5linux%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-text">问题2：XShell连接linux虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">3.常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E5%B8%B8%E7%94%A8%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4"><span class="nav-text">3.1常用文件命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="nav-text">3.2压缩和解压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%92%8C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="nav-text">3.3 用户管理和文件权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-text">3.4软件安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E7%A3%81%E7%9B%98%E6%9F%A5%E7%9C%8B%E5%91%BD%E4%BB%A4"><span class="nav-text">3.5 磁盘查看命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4"><span class="nav-text">3.6 网络命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="nav-text">4.常用技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-vim-%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="nav-text">5. vim 简单使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E4%B8%80%E4%B8%AA%E5%AE%9E%E7%94%A8%E4%BE%8B%E5%AD%90shell%E8%84%9A%E6%9C%AC"><span class="nav-text">6.一个实用例子shell脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-text">7.定时任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="nav-text">8 进程与线程</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="我的Hexo博客">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/27/javascript%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/27/javascript%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">javascript基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-27 07:15:33" itemprop="dateCreated datePublished" datetime="2021-10-27T07:15:33+08:00">2021-10-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-29 22:03:29" itemprop="dateModified" datetime="2021-12-29T22:03:29+08:00">2021-12-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>js是运行在客户端的脚本语言。<br>声明变量<br>外边是双引号，里面是单引号。<br>引入外部js 的script标签中间不可以写代码<br>let var</p>
+<h2 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h2><h3 id="2-1数据类型"><a href="#2-1数据类型" class="headerlink" title="2.1数据类型"></a>2.1数据类型</h3><p>变量的初始化，分号</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name=<span class="number">12</span>；</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>String</p>
+</li>
+<li><p>Number</p>
+</li>
+<li><p>Boolean</p>
+</li>
+<li><p> Array</p>
+</li>
+<li><p>Object<br>这种变量本身类型不固定的语言称之为动态语言。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>; <span class="comment">// a的值是整数123</span></span><br><span class="line">a = <span class="string">&#x27;ABC&#x27;</span>; <span class="comment">// a变为字符串</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v=<span class="built_in">document</span>.querySelector(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>ParseInt 转换成<br>转换成string</p>
+<h3 id="2-2数组"><a href="#2-2数组" class="headerlink" title="2.2数组"></a>2.2数组</h3><p>JavaScript的数组可以包括任意数据类型。数组用[]表示，元素之间用,分隔。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3.14</span>, <span class="string">&#x27;Hello&#x27;</span>, <span class="literal">null</span>, <span class="literal">true</span>];</span><br></pre></td></tr></table></figure>
+<p>slice()<br>push()<br>pop()<br>如果要往Array的头部添加若干元素，使用unshift()方法，shift()方法则把Array的第一个元素删掉：<br>sort()可以对当前Array进行排序;<br>reverse()把整个Array的元素给调个个<br>splice()方法是修改Array的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：<br>concat()方法把当前的Array和另一个Array连接起来，并返回一个新的Array：<br>join()方法是一个非常实用的方法，它把当前Array的每个元素都用指定的字符串连接起来，然后返回连接后的字符串;<br>如果数组的某个元素又是一个Array，则可以形成多维数组;</p>
+<h3 id="2-3字符串"><a href="#2-3字符串" class="headerlink" title="2.3字符串"></a>2.3字符串</h3><p>用加号连接字符串<br>用${}包裹变量名的形式<br>获取字符串长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;Hello, world!&#x27;</span>;</span><br><span class="line">s.length; <span class="comment">// 13</span></span><br></pre></td></tr></table></figure>
+<p>要获取字符串某个指定位置的字符，使用类似Array的下标操作，索引号从0开始：<br>toUpperCase()把一个字符串全部变为大写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;Hello&#x27;</span>;</span><br><span class="line">s.toUpperCase(); <span class="comment">// 返回&#x27;HELLO&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>toLowerCase()把一个字符串全部变为小写：<br>indexOf()会搜索指定字符串出现的位置：<br>substring()返回指定索引区间的子串：</p>
+<h3 id="2-4对象"><a href="#2-4对象" class="headerlink" title="2.4对象"></a>2.4对象</h3><p>JavaScript中一切皆对象。JavaScript的对象是一组由键-值组成的无序集合。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">    name: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">    age: <span class="number">20</span>,</span><br><span class="line">    tags: [<span class="string">&#x27;js&#x27;</span>, <span class="string">&#x27;web&#x27;</span>, <span class="string">&#x27;mobile&#x27;</span>],</span><br><span class="line">    city: <span class="string">&#x27;Beijing&#x27;</span>,</span><br><span class="line">    hasCar: <span class="literal">true</span>,</span><br><span class="line">    zipcode: <span class="literal">null</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>要获取一个对象的属性，我们用对象变量.属性名的方式：<br>JavaScript的原型链和Java的Class区别就在，它没有“Class”的概念，所有对象都是实例，所谓继承关系不过是把一个对象的原型指向另一个对象而已。</p>
+<h3 id="2-5运算符"><a href="#2-5运算符" class="headerlink" title="2.5运算符"></a>2.5运算符</h3><ul>
+<li><p>%是求余运算</p>
+</li>
+<li><p>&amp;&amp;运算是与运算</p>
+</li>
+<li><p>||运算是或运算</p>
+</li>
+<li><p>!运算是非运算</p>
+</li>
+<li><p>===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。三个等号比较的是内存地址。</p>
+<h3 id="2-6-json"><a href="#2-6-json" class="headerlink" title="2.6 json"></a>2.6 json</h3><p>json格式的字符串和对象的相互转化</p>
+</li>
+</ul>
+<h2 id="3-逻辑判断"><a href="#3-逻辑判断" class="headerlink" title="3.逻辑判断"></a>3.逻辑判断</h2><h3 id="3-1循环"><a href="#3-1循环" class="headerlink" title="3.1循环"></a>3.1循环</h3><h3 id="3-2条件判断"><a href="#3-2条件判断" class="headerlink" title="3.2条件判断"></a>3.2条件判断</h3><h3 id="3-3结构"><a href="#3-3结构" class="headerlink" title="3.3结构"></a>3.3结构</h3><p>Map是一组键值对的结构</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>([[<span class="string">&#x27;Michael&#x27;</span>, <span class="number">95</span>], [<span class="string">&#x27;Bob&#x27;</span>, <span class="number">75</span>], [<span class="string">&#x27;Tracy&#x27;</span>, <span class="number">85</span>]]);</span><br><span class="line">m.get(<span class="string">&#x27;Michael&#x27;</span>); <span class="comment">// 95</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>(); <span class="comment">// 空Map</span></span><br><span class="line">m.set(<span class="string">&#x27;Adam&#x27;</span>, <span class="number">67</span>); <span class="comment">// 添加新的key-value</span></span><br><span class="line">m.set(<span class="string">&#x27;Bob&#x27;</span>, <span class="number">59</span>);</span><br><span class="line">m.has(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// 是否存在key &#x27;Adam&#x27;: true</span></span><br><span class="line">m.get(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// 67</span></span><br><span class="line">m.delete(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// 删除key &#x27;Adam&#x27;</span></span><br><span class="line">m.get(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>Set和Map类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在Set中，没有重复的key。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">Set</span>(); <span class="comment">// 空Set</span></span><br><span class="line"><span class="keyword">var</span> s2 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]); <span class="comment">// 含1, 2, 3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="string">&#x27;3&#x27;</span>]);</span><br><span class="line">s; <span class="comment">// Set &#123;1, 2, 3, &quot;3&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-函数"><a href="#2-函数" class="headerlink" title="2.函数"></a>2.函数</h2><h3 id="2-1-常用自带函数"><a href="#2-1-常用自带函数" class="headerlink" title="2.1 常用自带函数"></a>2.1 常用自带函数</h3><ul>
+<li>唯一能判断NaN的方法是通过isNaN()函数<br>typeof <h3 id="2-2函数"><a href="#2-2函数" class="headerlink" title="2.2函数"></a>2.2函数</h3>匿名函数</li>
+</ul>
+<p>map()用法,调用Array的map()方法，传入我们自己的函数，就得到了一个新的Array作为结果。<br>reduce()把结果继续和序列的下一个元素做累积计算。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)</span><br></pre></td></tr></table></figure>
+<p>Array的filter()也接收一个函数。过滤<br>Array.filter(函数名)<br>Array的sort()方法默认把所有元素先转换为String再排序，原生的方法不能直接用来对数字排序，会不对。<br>every()方法可以判断数组的所有元素是否满足测试条件。<br>例如，给定一个包含若干字符串的数组，判断所有字符串是否满足指定的测试条件：<br>find()方法用于查找符合条件的第一个元素，如果找到了，返回这个元素，否则，返回undefined<br>findIndex()和find()类似，也是查找符合条件的第一个元素，不同之处在于findIndex()会返回这个元素的索引，如果没有找到，返回-1；<br>forEach()和map()类似，它也把每个元素依次作用于传入的函数，但不会返回新的数组。forEach()常用于遍历数组，因此，传入的函数不需要返回值，</p>
+<p>闭包</p>
+<h2 id="3-事件"><a href="#3-事件" class="headerlink" title="3.事件"></a>3.事件</h2><p>比如 onclick<br>将事件与元素绑定有许多方法。</p>
+<h2 id="4-浏览器对象"><a href="#4-浏览器对象" class="headerlink" title="4.浏览器对象"></a>4.浏览器对象</h2><p>window 浏览器窗口,window对象有innerWidth和innerHeight属性，可以获取浏览器窗口的内部宽度和高度。内部宽高是指除去菜单栏、工具栏、边框等占位元素后，用于显示网页的净宽高。<br>screen对象表示屏幕的信息<br>location对象表示当前页面的URL信息<br>document对象表示当前页面。由于HTML在浏览器中以DOM形式表示为树形结构，document对象就是整个DOM树的根节点。<br>用document对象提供的getElementById()和getElementsByTagName()可以按ID获得一个DOM节点和按Tag名称获得一组DOM节点.</p>
+<h3 id="4-1操作dom"><a href="#4-1操作dom" class="headerlink" title="4.1操作dom"></a>4.1操作dom</h3><p>在操作一个DOM节点前，我们需要通过各种方式先拿到这个DOM节点。最常用的方法是document.getElementById()和document.getElementsByTagName()，以及CSS选择器document.getElementsByClassName()。<br>由于ID在HTML文档中是唯一的，所以document.getElementById()可以直接定位唯一的一个DOM节点。document.getElementsByTagName()和document.getElementsByClassName()总是返回一组DOM节点。要精确地选择DOM，可以先定位父节点，再从父节点开始选择，以缩小范围。<br>选择节点</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回ID为&#x27;test&#x27;的节点：</span></span><br><span class="line"><span class="keyword">var</span> test = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;test&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 先定位ID为&#x27;test-table&#x27;的节点，再返回其内部所有tr节点：</span></span><br><span class="line"><span class="keyword">var</span> trs = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;test-table&#x27;</span>).getElementsByTagName(<span class="string">&#x27;tr&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 先定位ID为&#x27;test-div&#x27;的节点，再返回其内部所有class包含red的节点：</span></span><br><span class="line"><span class="keyword">var</span> reds = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;test-div&#x27;</span>).getElementsByClassName(<span class="string">&#x27;red&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取节点test下的所有直属子节点:</span></span><br><span class="line"><span class="keyword">var</span> cs = test.children;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取节点test下第一个、最后一个子节点：</span></span><br><span class="line"><span class="keyword">var</span> first = test.firstElementChild;</span><br><span class="line"><span class="keyword">var</span> last = test.lastElementChild;</span><br></pre></td></tr></table></figure>
+<p>第二种方法是使用querySelector()和querySelectorAll()，需要了解selector语法，然后使用条件来获取节点</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过querySelector获取ID为q1的节点：</span></span><br><span class="line"><span class="keyword">var</span> q1 = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#q1&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过querySelectorAll获取q1节点内的符合条件的所有节点：</span></span><br><span class="line"><span class="keyword">var</span> ps = q1.querySelectorAll(<span class="string">&#x27;div.highlighted &gt; p&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>插入dom</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/13/git%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/13/git%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">git使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-10-13T14:25:41+08:00">2021-10-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-18 18:30:51" itemprop="dateModified" datetime="2021-12-18T18:30:51+08:00">2021-12-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/github/" itemprop="url" rel="index"><span itemprop="name">github</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="git使用"><a href="#git使用" class="headerlink" title="git使用"></a>git使用</h1><h2 id="1-本地版本管理"><a href="#1-本地版本管理" class="headerlink" title="1.本地版本管理"></a>1.本地版本管理</h2><p>提交修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add XXX</span><br><span class="line">git commit -m &#39;版本1&#39;</span><br><span class="line">git log</span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
+<p>工作区<br>版本库 .git   里边有暂存区,版本库又名仓库，英文名repository<br>git init 初始化，生成.git 版本库和暂存区,此命令把这个目录变成Git可以管理的仓库：<br>git add XX 讲工作区的放到暂存区<br>git commit 创建版本记录，将暂存区提交到当前分支</p>
+<p>可以多次add,一次commit,创建一个版本<br>版本管理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^ </span><br><span class="line">git reset --hard 版本编号</span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+<p>head 是一个指针<br>HEAD^ 代表 的上一个版本</p>
+<h2 id="2-连接远程仓库管理"><a href="#2-连接远程仓库管理" class="headerlink" title="2.连接远程仓库管理"></a>2.连接远程仓库管理</h2><p>获取项目代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone http:&#x2F;&#x2F;github.com&#x2F;micheloosterhof&#x2F;cowrie</span><br></pre></td></tr></table></figure>
+<p>在本地创建了一个Git仓库后，又在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:michaelliao&#x2F;learngit.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。<br>由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<p>从现在起，只要本地作了提交，就可以通过命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>分布式版本管理工具：<br>Git不需要总是联网就能进行版本管理，因为它有本地仓库。你可以无需联网，在本地就能进行很多版本管理相关的工作，例如创建分支、提交、回滚代码等<br>SVN 集中式版本管理工具：必须联网</p>
+<h2 id="3-分支管理"><a href="#3-分支管理" class="headerlink" title="3.分支管理"></a>3.分支管理</h2><p>新建分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
+<p>切换分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
+<p>新建并切换分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
+<p>推送新分支到远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin dev</span><br></pre></td></tr></table></figure>
+<p>查看本地分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<p>查看远程分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure>
+<p>查看所有分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+<p>删除本地分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev</span><br></pre></td></tr></table></figure>
+<p>删除远程分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :dev</span><br></pre></td></tr></table></figure>
+<p>和推送本地分支至远程仓库类似，只是前面加了一个冒号，代表删除。</p>
+<p>将其他分支合并到master</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+<p>先切换到master，再将其他分支合并到master。</p>
+<p>git在线游戏网站，超级棒</p>
+<p><a href="https://learngitbranching.js.org/?NODEMO=&amp;locale=zh_CN">https://learngitbranching.js.org/?NODEMO=&amp;locale=zh_CN</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/21/bootstrap%E6%8A%A5%E8%A1%A8%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/21/bootstrap%E6%8A%A5%E8%A1%A8%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">bootstrap报表入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-21 15:06:35" itemprop="dateCreated datePublished" datetime="2021-09-21T15:06:35+08:00">2021-09-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-26 08:40:21" itemprop="dateModified" datetime="2022-01-26T08:40:21+08:00">2022-01-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/bootstrap/" itemprop="url" rel="index"><span itemprop="name">bootstrap</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>引入bootstrap</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href&#x3D;&quot;https:&#x2F;&#x2F;cdn.staticfile.org&#x2F;twitter-bootstrap&#x2F;3.0.3&#x2F;css&#x2F;bootstrap.min.css&quot; rel&#x3D;&quot;stylesheet&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>整体</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">&#x27;table&#x27;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">th</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>如果table的class有table，table-striped</p>
+<p>斑马条纹的 CSS class，这个 class 是在相关的 bootstrap css 文件中定义，class 名称是 .table-striped。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/07/CSS%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/07/CSS%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">CSS基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-07 00:46:32" itemprop="dateCreated datePublished" datetime="2021-09-07T00:46:32+08:00">2021-09-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-08 01:01:55" itemprop="dateModified" datetime="2022-01-08T01:01:55+08:00">2022-01-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1-基本结构"><a href="#1-基本结构" class="headerlink" title="1.基本结构"></a>1.基本结构</h1><p>在head中写，内部样式表。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&#x27;text/css&#x27;</span>&gt;</span></span><br><span class="line">具体CSS代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>外部样式表<br>内联样式表</p>
+<p>三大特征<br>层叠性：<br>css处理冲突的一种能力<br>层叠性只有在多个选择器同时选中同一个标签，然后又设置了相同的属性，才会发生层叠<br>可通过谷歌浏览器开发者工具右边的style标签中查看<br>继承性：<br>给父元素设置一些属性，所有的子元素都可以继承<br>并不是所有的属性都可以继承，只有以color、font-、text-、line开头的属性才可以继承<br>a标签的字体颜色和下划线是不能继承的<br>h标签的文字大小是不能继承的<br>可通过谷歌浏览器开发者工具右边的style标签中查看<br>一般用于设置网页上的一些共性信息，例如网页的文字颜色，字体大小等<br>优先级：<br>当多个选择器同时选中同一个标签，然后又设置了相同的属性，如何层叠就由优先级来确定<br>如果是间接选中（继承），谁离目标标签近就听谁的<br>如果是直接选中，而且选择器类型相同，那么谁写在后面就听谁的<br>如果是直接选中，选择器类型不同，那么就会按照选择器的优先级来层叠：id选择器》类选择器》标签选择器》通配符选择器》继承》浏览器默认</p>
+<h1 id="2-常用属性"><a href="#2-常用属性" class="headerlink" title="2.常用属性"></a>2.常用属性</h1><p>margin<br>padding<br>font-size：30px；<br>color:yellow;<br>backgroud-color:</p>
+<p>颜色的三种表达方式，rgb三位数255，十六进制，颜色英文名字<br>text-align<br>text-dectoration</p>
+<h2 id="2-1-外边距margin"><a href="#2-1-外边距margin" class="headerlink" title="2.1 外边距margin"></a>2.1 外边距margin</h2><p>margin: 20px;（上、下、左、右各20px。）<br>margin: 20px 40px;（上、下20px；左、右40px。）<br>margin: 20px 40px 60px;（上20px；左、右40px；下60px。）<br>margin: 20px 40px 60px 80px;（上20px；右40px；下60px；左80px。）<br>在css中使用margin可以将margin-top，margin-right，margin-bottom，margin-left，缩写为一个标记，顺序为上右下左（顺时针）。</p>
+<h2 id="2-2内边距-padding"><a href="#2-2内边距-padding" class="headerlink" title="2.2内边距 padding"></a>2.2内边距 padding</h2><p>length - 以 px、pt、cm 等单位指定内边距<br>% - 指定以包含元素宽度的百分比计的内边距<br>inherit - 指定应从父元素继承内边距</p>
+<h2 id="2-3-高度宽度"><a href="#2-3-高度宽度" class="headerlink" title="2.3 高度宽度"></a>2.3 高度宽度</h2><p>height 和 width 属性可设置如下值：</p>
+<p>auto - 默认。浏览器计算高度和宽度。<br>length - 以 px、cm 等定义高度/宽度。<br>% - 以包含块的百分比定义高度/宽度。<br>initial - 将高度/宽度设置为默认值。<br>inherit - 从其父值继承高度/宽度。<br>height 和 width 属性不包括内边距、边框或外边距！它们设置的是元素的内边距、边框和外边距内的区域的高度/宽度！</p>
+<h2 id="2-4outline"><a href="#2-4outline" class="headerlink" title="2.4outline"></a>2.4outline</h2><p>　和border效果类似，只不过<br> outline是不占空间的，即不会增加额外的宽度（width）或高度（height）</p>
+<p>CSS 拥有如下轮廓属性：</p>
+<ul>
+<li>outline-style</li>
+<li>outline-color</li>
+<li>outline-width</li>
+<li>outline-offset</li>
+<li>outline<h2 id="2-5表格"><a href="#2-5表格" class="headerlink" title="2.5表格"></a>2.5表格</h2>为了实现斑马纹表格效果，请使用 nth-child() 选择器，并为所有偶数（或奇数）表行添加 background-color<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tr:nth-child(even) &#123;background-color: #f2f2f2;&#125;</span><br></pre></td></tr></table></figure>
+如果屏幕太小而无法显示全部内容，则响应式表格会显示水平滚动条：<br>在 <table> 元素周围添加带有 overflow-x:auto 的容器元素（例如 <div>），以实现响应式效果：</li>
+</ul>
+<h1 id="3-CSS选择器"><a href="#3-CSS选择器" class="headerlink" title="3.CSS选择器"></a>3.CSS选择器</h1><h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.cont&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在html中是class=‘’</p>
+<h2 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># pd&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在html中是<br>id=‘’</p>
+<h2 id="逗号选择器"><a href="#逗号选择器" class="headerlink" title="逗号选择器"></a>逗号选择器</h2><p>是所有涉及到的都增加此样式</p>
+<h2 id="空格选择器"><a href="#空格选择器" class="headerlink" title="空格选择器"></a>空格选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div p&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有上下级关系，是div下的p标签</p>
+<h2 id="加号选择器"><a href="#加号选择器" class="headerlink" title="加号选择器"></a>加号选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div+p&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>div后面，紧挨其后的p标签</p>
+<h2 id="大于号选择器"><a href="#大于号选择器" class="headerlink" title="大于号选择器"></a>大于号选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.uu &gt;p&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>父节点的类是uu的p标签<br>大于号选择器是强调父节点的。</p>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>[]<br>方括号里边包属性</p>
+<h2 id="属性值选择器"><a href="#属性值选择器" class="headerlink" title="属性值选择器"></a>属性值选择器</h2><p>[属性名=属性值]</p>
+<h1 id="4-块元素"><a href="#4-块元素" class="headerlink" title="4.块元素"></a>4.块元素</h1><p>块元素是一个元素，占用了全宽，前后都是换行符。<br>块元素的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt; </span><br><span class="line">&lt;p&gt; </span><br><span class="line">&lt;div&gt; </span><br></pre></td></tr></table></figure>
+<h1 id="5-盒子模型"><a href="#5-盒子模型" class="headerlink" title="5.盒子模型"></a>5.盒子模型</h1><p>Margin - 清除边框区域。Margin没有背景颜色，它是完全透明<br>Border - 边框周围的填充和内容。边框是受到盒子的背景颜色影响<br>Padding - 清除内容周围的区域。会受到框中填充的背景颜色影响<br>Content - 盒子的内容，显示文本和图像 </p>
+<p>最终元素的总宽度计算公式是这样的：</p>
+<p>总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距</p>
+<p>元素的总高度最终计算公式是这样的：</p>
+<p>总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</p>
+<p>##5.1 position属性</p>
+<ul>
+<li>static 是默认值。任意 position: static; 的元素不会被特殊的定位。一个 static 元素表示它不会被“positioned”，一个 position 属性被设置为其他值的元素表示它会被“positioned”。</li>
+<li>一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。和 relative 一样， top 、 right 、 bottom 和 left 属性都可用。移动浏览器对 fixed 的支持很差。</li>
+<li>absolute 是最棘手的position值。 absolute 与 fixed 的表现类似，但是它不是相对于视窗而是相对于最近的“positioned”祖先元素。如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，那么它是相对于文档的 body 元素，并且它会随着页面滚动而移动。记住一个“positioned”元素是指 position 值不是 static 的元素。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/30/%E9%80%92%E5%BD%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/30/%E9%80%92%E5%BD%92/" class="post-title-link" itemprop="url">递归</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-30 22:39:34" itemprop="dateCreated datePublished" datetime="2021-08-30T22:39:34+08:00">2021-08-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-26 08:40:36" itemprop="dateModified" datetime="2022-01-26T08:40:36+08:00">2022-01-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+</blockquote>
+<p>递归，在数学与计算机科学中，是指在函数的定义中使用函数自身的方法。递归一词还较常用于描述以自相似方法重复事物的过程。 – 维基百科</p>
+<blockquote>
+<p>正式定义: 在数学和计算机科学中，递归指由一种（或多种）简单的基本情况定义的一类对象或方法，并规定其他所有情况都能被还原为其基本情况。 – 维基百科</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/28/bootstrap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/28/bootstrap/" class="post-title-link" itemprop="url">bootstrap</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-28 19:41:35" itemprop="dateCreated datePublished" datetime="2021-08-28T19:41:35+08:00">2021-08-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-26 08:44:13" itemprop="dateModified" datetime="2022-01-26T08:44:13+08:00">2022-01-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/23/%E6%A0%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/23/%E6%A0%88/" class="post-title-link" itemprop="url">栈</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-23 13:47:06" itemprop="dateCreated datePublished" datetime="2021-08-23T13:47:06+08:00">2021-08-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 14:22:16" itemprop="dateModified" datetime="2021-10-11T14:22:16+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">MyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">0</span>,-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">s = []</span><br><span class="line">flag=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> MyList:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(s) == <span class="number">0</span>  :</span><br><span class="line">        s.append(i)</span><br><span class="line">    <span class="keyword">elif</span> s[i] <span class="keyword">and</span> flag&gt;=<span class="number">0</span>:</span><br><span class="line">        s.append(i)</span><br><span class="line">        flag=<span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> s[-<span class="number">1</span>] - <span class="number">1</span> == i <span class="keyword">and</span> flag&lt;=<span class="number">0</span>:</span><br><span class="line">        s.append(i)</span><br><span class="line">        flag=-<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(s) &gt;= <span class="number">2</span>:</span><br><span class="line">            print(s)</span><br><span class="line">        s = []    <span class="comment"># 清空</span></span><br><span class="line">        flag=<span class="number">0</span></span><br><span class="line">        s.append(i)  <span class="comment"># 入栈</span></span><br><span class="line"><span class="comment"># 最后一轮，需判断下</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(s) &gt;= <span class="number">2</span>:</span><br><span class="line">    print(s)</span><br></pre></td></tr></table></figure>
+<p>数组，不是显式的；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">calculate</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">calculate</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">        Stack stk=<span class="keyword">new</span> Stack();</span><br><span class="line"><span class="comment">//        // 定义一个栈</span></span><br><span class="line"><span class="comment">//        Stack&lt;Integer&gt; stk;</span></span><br><span class="line">        <span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span> sign=<span class="string">&#x27;+&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">char</span> c= s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(Character.isDigit(c))&#123;</span><br><span class="line">                num=num*<span class="number">10</span>+(c-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!Character.isDigit(c)|| i==s.length()-<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">switch</span> (sign)&#123;</span><br><span class="line">                    <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">                        stk.push(num);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">                        stk.push(-num);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                sign=c;</span><br><span class="line">                num=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (!stk.empty())&#123;</span><br><span class="line">            res+= (<span class="keyword">int</span>) stk.pop();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s=<span class="string">&quot;52-32&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> out=calculate(s);</span><br><span class="line">        System.out.println(out);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/22/html%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/22/html%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">html基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-22 21:46:42 / 修改时间：21:49:08" itemprop="dateCreated datePublished" datetime="2021-08-22T21:46:42+08:00">2021-08-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>VS新建html<br>第一步：在空文档中输入!<br>第二步：按下tab键。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/19/%E5%8F%8C%E6%8C%87%E9%92%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/19/%E5%8F%8C%E6%8C%87%E9%92%88/" class="post-title-link" itemprop="url">双指针</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-19 11:00:29 / 修改时间：11:04:18" itemprop="dateCreated datePublished" datetime="2021-08-19T11:00:29+08:00">2021-08-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyMain</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkNode</span></span></span><br><span class="line"><span class="class">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> val;</span><br><span class="line">        LinkNode next;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">LinkNode</span><span class="params">(<span class="keyword">int</span> val)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.val=val;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(LinkNode head)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        LinkNode fast=head;</span><br><span class="line">        LinkNode slow=head;</span><br><span class="line">        <span class="keyword">while</span> (fast.next!=<span class="keyword">null</span>&amp;&amp;fast.next.next!=<span class="keyword">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            fast=fast.next.next;</span><br><span class="line">            slow=slow.next;</span><br><span class="line">            <span class="keyword">if</span>(fast==slow)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> LinkNode <span class="title">CycleNode</span><span class="params">(LinkNode head)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Queue&lt;LinkNode&gt; q=<span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        LinkNode cur=head;</span><br><span class="line">        q.offer(cur);</span><br><span class="line">        <span class="keyword">while</span> (cur.next!=<span class="keyword">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cur=cur.next;</span><br><span class="line">            <span class="keyword">if</span>(q.contains(cur))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> cur;</span><br><span class="line">            &#125;</span><br><span class="line">            q.offer(cur);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;出错&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LinkNode n1= <span class="keyword">new</span> LinkNode(<span class="number">1</span>);</span><br><span class="line">        LinkNode n2= <span class="keyword">new</span> LinkNode(<span class="number">2</span>);</span><br><span class="line">        LinkNode n3= <span class="keyword">new</span> LinkNode(<span class="number">3</span>);</span><br><span class="line">        LinkNode n4= <span class="keyword">new</span> LinkNode(<span class="number">4</span>);</span><br><span class="line">        LinkNode n5= <span class="keyword">new</span> LinkNode(<span class="number">5</span>);</span><br><span class="line">        LinkNode n6= <span class="keyword">new</span> LinkNode(<span class="number">6</span>);</span><br><span class="line">        n1.next=n2;</span><br><span class="line">        n2.next=n3;</span><br><span class="line">        n3.next=n4;</span><br><span class="line">        n4.next=n5;</span><br><span class="line">        n5.next=n6;</span><br><span class="line">        n6.next=n4;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> b=hasCycle(n1);</span><br><span class="line">        System.out.println(b);</span><br><span class="line"></span><br><span class="line">        LinkNode nn=CycleNode(n1);</span><br><span class="line">        System.out.println(nn.val);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/14/%E5%85%AB%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/14/%E5%85%AB%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">八皇后问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-14 18:45:12" itemprop="dateCreated datePublished" datetime="2021-08-14T18:45:12+08:00">2021-08-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-26 08:42:59" itemprop="dateModified" datetime="2022-01-26T08:42:59+08:00">2022-01-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>八皇后问题<br>MATLAB 暴力循环 蒙塔卡洛模拟</p>
+<p>主程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">clc;</span><br><span class="line">clear;</span><br><span class="line">N&#x3D;5;</span><br><span class="line">k&#x3D;0;</span><br><span class="line">while k&lt;&#x3D;1000000000</span><br><span class="line">X&#x3D;zeros(N,N);</span><br><span class="line">for i&#x3D;1:N</span><br><span class="line">    for j&#x3D;1:N</span><br><span class="line">        t&#x3D;rand(1);</span><br><span class="line">        if t&gt;0.5</span><br><span class="line">            X(i,j)&#x3D;1;</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">if(isValid(N,X))</span><br><span class="line">    X</span><br><span class="line">    break;</span><br><span class="line">end</span><br><span class="line">k&#x3D;k+1;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>判断是否有效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">function [ff] &#x3D; isValid(N,X)</span><br><span class="line">    a&#x3D;sum(X);</span><br><span class="line">    b&#x3D;sum(X,2);</span><br><span class="line">    if sum(sum(X))~&#x3D;N</span><br><span class="line">        ff&#x3D;0;</span><br><span class="line">        return</span><br><span class="line">    end</span><br><span class="line">    for i&#x3D;1:length(a)</span><br><span class="line">        if a(i)&gt;1</span><br><span class="line">            ff&#x3D;0;</span><br><span class="line">            return </span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">    for i&#x3D;1:length(b)</span><br><span class="line">        if b(i)&gt;1</span><br><span class="line">            ff&#x3D;0;</span><br><span class="line">            return</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">    for j&#x3D;1:N</span><br><span class="line">        temp&#x3D;0;</span><br><span class="line">        i&#x3D;1;</span><br><span class="line">        jj&#x3D;j;</span><br><span class="line">        while (i&lt;&#x3D;N) &amp; (jj&lt;&#x3D;N)</span><br><span class="line">            temp&#x3D;temp+X(i,j);</span><br><span class="line">            i&#x3D;i+1;</span><br><span class="line">            jj&#x3D;j+1;</span><br><span class="line">        end</span><br><span class="line">        if temp&gt;1</span><br><span class="line">            ff&#x3D;0;</span><br><span class="line">            return</span><br><span class="line">        end    </span><br><span class="line">    end</span><br><span class="line">     for j&#x3D;1:N</span><br><span class="line">        temp&#x3D;0;</span><br><span class="line">        i&#x3D;1;</span><br><span class="line">        jj&#x3D;j;</span><br><span class="line">        while (i&gt;&#x3D;1) &amp; (jj&lt;&#x3D;N)</span><br><span class="line">            temp&#x3D;temp+X(i,j);</span><br><span class="line">            i&#x3D;i-1;</span><br><span class="line">            jj&#x3D;j+1;</span><br><span class="line">        end</span><br><span class="line">        if temp&gt;1</span><br><span class="line">            ff&#x3D;0;</span><br><span class="line">            return</span><br><span class="line">        end</span><br><span class="line">         </span><br><span class="line">     end</span><br><span class="line">    </span><br><span class="line">     ff&#x3D;1;</span><br><span class="line">     return </span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>遍历太多，甚至把八皇后放到了是否正好是8个，放到了函数里面去验证；应该是在主程序里面去验证的。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

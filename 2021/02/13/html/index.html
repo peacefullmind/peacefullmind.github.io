@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1.HTML基础1.1  基本结构html下包裹head和body；head 下包裹titlebody下包裹正文 123456789&lt;html&gt;	&lt;head&gt;		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;		&lt;title&gt;&lt;&#x2F;title&gt;	&lt;&#x2F;head&gt;	&lt;body&gt;		正文	&lt;&#x2F;bod">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html，css基础">
+<meta property="og:url" content="http://example.com/2021/02/13/html/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="1.HTML基础1.1  基本结构html下包裹head和body；head 下包裹titlebody下包裹正文 123456789&lt;html&gt;	&lt;head&gt;		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;		&lt;title&gt;&lt;&#x2F;title&gt;	&lt;&#x2F;head&gt;	&lt;body&gt;		正文	&lt;&#x2F;bod">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-13T06:25:41.000Z">
+<meta property="article:modified_time" content="2022-01-07T16:14:31.182Z">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/02/13/html/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>html，css基础 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          html，css基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-08 00:14:31" itemprop="dateModified" datetime="2022-01-08T00:14:31+08:00">2022-01-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-HTML基础"><a href="#1-HTML基础" class="headerlink" title="1.HTML基础"></a>1.HTML基础</h1><h2 id="1-1-基本结构"><a href="#1-1-基本结构" class="headerlink" title="1.1  基本结构"></a>1.1  基本结构</h2><p>html下包裹head和body；<br>head 下包裹title<br>body下包裹正文</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		正文</span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="1-2-标题"><a href="#1-2-标题" class="headerlink" title="1.2 标题"></a>1.2 标题</h2><p>在body内包裹标题<br> 一级标题 中间包裹标题内容，一级标题只能有一个</p>
+<h1></h1>
+<h2></h2>
+一直到h6
+## 1.3 段落
+段落
+<p></p> 包裹着中间的段落
+注释
+<!--注释内容-->
+
+<h2 id="1-4-链接"><a href="#1-4-链接" class="headerlink" title="1.4 链接"></a>1.4 链接</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">hrep</span>=<span class="string">&quot;htttps://www.baidu.com&quot;</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>a包裹这内容，<br>然后在首a 上 属性=“  ”这种内容，a的属性就是href</p>
+<h2 id="1-5瞄点"><a href="#1-5瞄点" class="headerlink" title="1.5瞄点"></a>1.5瞄点</h2><p>页面跳转，href=没办法写成链接，可以在地方写成<br>需要找到的地方写id=””<br>href=”#”<br>这种方式进行连接</p>
+<p>1、id是一个标签，用于区分不同的结构和内容；id是先找到结构/内容，再给它定义样式；class是一个样式，可以套在任何结构和内容上；class是先定义好一种样式，再套给多个结构/内容。<br>2、id是元素的名称，可以供js或其它脚本程序来访问该元素对象，而class是该元素的css类名。<br>3、定义样式时，id=”aa”的用#aa{…}，class=”bb”的用.bb{…}。<br>4、class是全局属性，id是局部属性。</p>
+<h2 id="1-6表格"><a href="#1-6表格" class="headerlink" title="1.6表格"></a>1.6表格</h2><p>table 包裹整个表格，tr包裹行，td包裹列<br>表格常见属性<br>border=”1” 边框像素值1px<br>align=”center” 表格在浏览器中居中<br>cellpadding=”20” 文字和边框的距离<br>cellspacing=”0.1” 表格小单元格之间的距离</p>
+<p>bgcolor=”blue” 属性如果在table后面，修饰的是整个表格，如果是在特定的td后面修饰的是单元格</p>
+<p>不同的属性用空格隔开<br>合并单元格 行合并 rowsapan=”2” 列合并 colspan=”2”<br>始终为属性值加引号</p>
+<h2 id="1-7图像标签"><a href="#1-7图像标签" class="headerlink" title="1.7图像标签"></a>1.7图像标签</h2><p>img 是单标签，属性有src,width height等，宽，高给一个，另外的等比例缩放就可以<br>如果要居中的话，需要有个父标签，让父标签居中<br>img的align指的是图片和周围文字的距离，不推荐使用，<br>title 属性 当鼠标悬停在图片上的提示文字<br>alt 当图片无法正常加载时，给的提示性文字。</p>
+<h2 id="1-8-列表"><a href="#1-8-列表" class="headerlink" title="1.8 列表"></a>1.8 列表</h2><p>无序列表<br>ul li 可以嵌套使用<br>ul必须紧跟li</p>
+<p>有序列表<br>ol li</p>
+<p>定义列表<br>dl dt dd</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dt</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dd</span>&gt;</span>中国的首都<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dd</span>&gt;</span>中国的政治中心<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="1-9常用标签"><a href="#1-9常用标签" class="headerlink" title="1.9常用标签"></a>1.9常用标签</h2><p>加粗 b strong<br>斜体 i em<br>下划线 u<br>删除线 s del</p>
+<p>单标签<br>分割线hr<br>换行 br</p>
+<p>下标 sub<br>上标 sup</p>
+<h2 id="1-10-div-span标签"><a href="#1-10-div-span标签" class="headerlink" title="1.10 div span标签"></a>1.10 div span标签</h2><p>span包裹了一段文字，然后通过css，来设置格式。区分css这样设置格式，和直接html标签设置格式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>很长的一段话，<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;background-color: yellow;color: red;&quot;</span>&gt;</span>具体<span class="tag">&lt;/<span class="name">span</span>&gt;</span>内容如下<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>网页布局通过div+css实现</p>
+<h2 id="1-11-表单"><a href="#1-11-表单" class="headerlink" title="1.11 表单"></a>1.11 表单</h2><p>表单有文本输入框，密码框，多选框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">	用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">	密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> /&gt;</span> <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">	性别：</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>/&gt;</span>男</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> /&gt;</span>女</span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>对于多选框，通过两个选择，都赋值一样的name来实现单选。<br>select 和option配合实现下拉框选择</p>
+<h2 id="1-12转义"><a href="#1-12转义" class="headerlink" title="1.12转义"></a>1.12转义</h2><p>&amp;lt &amp;gt</p>
+<h1 id="2-css基础"><a href="#2-css基础" class="headerlink" title="2.css基础"></a>2.css基础</h1><h2 id="2-1基本结构"><a href="#2-1基本结构" class="headerlink" title="2.1基本结构"></a>2.1基本结构</h2><p>css关键字 style，stytle写在head中，title后面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line">		&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">			.content&#123;</span><br><span class="line">				color: red;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;&#x2F;style&gt;</span><br><span class="line">	&lt;&#x2F;head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;p class&#x3D;&quot;content&quot;&gt;正文内容&lt;&#x2F;p&gt;</span><br><span class="line">	&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-2-CSS选择器"><a href="#2-2-CSS选择器" class="headerlink" title="2.2 CSS选择器"></a>2.2 CSS选择器</h2><p>类选择器<br>id选择器<br>通配符选择器<br>标签选择器<br>逗号 标识并列<br>空格 标识父子关系<br>加号 紧挨着<br>大于号选择器</p>
+<h2 id="2-3css浮动"><a href="#2-3css浮动" class="headerlink" title="2.3css浮动"></a>2.3css浮动</h2><p>float :left</p>
+<h2 id="2-4"><a href="#2-4" class="headerlink" title="2.4"></a>2.4</h2><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">#header&#123;</span><br><span class="line"><span class="css">	<span class="attribute">background-color</span>:black;</span></span><br><span class="line"><span class="css">	<span class="attribute">color</span>:white;</span></span><br><span class="line"><span class="css">	<span class="attribute">text-align</span>:center;</span></span><br><span class="line"><span class="css">	<span class="attribute">padding</span>:<span class="number">5px</span>;</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">#citys&#123;</span><br><span class="line"><span class="css">	<span class="attribute">line-height</span>:<span class="number">30px</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">background-color</span>:<span class="number">#eeeeee</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">height</span>:<span class="number">300px</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">width</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">float</span><span class="selector-pseudo">:left</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">padding</span>:<span class="number">10px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line">#neirong&#123;</span><br><span class="line"><span class="css">	<span class="attribute">width</span>:<span class="number">350px</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">float</span><span class="selector-pseudo">:left</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">padding</span>:<span class="number">10px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line">#footer&#123;</span><br><span class="line"><span class="css">	<span class="attribute">background-color</span>:black;</span></span><br><span class="line"><span class="css">	<span class="attribute">color</span>:white;</span></span><br><span class="line"><span class="css">	<span class="attribute">clear</span>:both;</span></span><br><span class="line"><span class="css">	<span class="attribute">text-align</span>:center;</span></span><br><span class="line"><span class="css">	<span class="attribute">padding</span>:<span class="number">5px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>城市列表<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;citys&quot;</span>&gt;</span></span><br><span class="line">北京<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">天津<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">保定<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;neirong&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>北京市（Běijīng Shì）简称京，是中华人民共和国的首都，中国中央四个直辖市之一，全国政治、经济、文化、科研、教育和国际交往中心。北京位于华北平原北端，东南局部地区与天津市相连，其余为河北省所环绕。以市区人口数相比，北京为次于上海的中国第二大城市，同时也是中国陆空交通的总枢纽。北京已经成功举办了2008年北京奥运会。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>全球只有极少数城市像北京一样长时间作为一个国家的政治和文化中心。其荟萃了自元明清以来的中华文化，拥有众多名胜古迹和人文景观。《不列颠百科全书》将北京形容为&quot;One of the world&#x27;s great cities&quot;。北京正以它古老又时尚的全新面貌，迎接每年超过1亿4700万的旅客。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;footer&quot;</span>&gt;</span></span><br><span class="line">Copyright W3School.com.cn</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>bolck块级元素<br>比如div form p等都是块级元素，会新开始一行并尽可能撑满容器。</p>
+<p>inline行内元素<br>span a标签等是常用的行业元素。不会打乱布局。</p>
+<ul>
+<li>diaplay值可以是none，一些特殊元素的display值是它，通常用来被JavaScript 用来在不删除元素的情况下隐藏或显示元素。</li>
+<li> visibility 属性，把 display 设置成 none 元素不会占据它本来应该显示的空间，但是设置成 visibility: hidden; 还会占据空间。</li>
+<li>  display 值，例如 list-item 和 table，到 inline-block 和 flex 。</li>
+<li>  一个常用的：把 li 元素修改成 inline，制作成水平菜单。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/13/mysql%E4%BD%BF%E7%94%A8/" rel="prev" title="mysql使用">
+      <i class="fa fa-chevron-left"></i> mysql使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/13/chrom%E6%8F%92%E4%BB%B6/" rel="next" title="chrome插件">
+      chrome插件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-HTML%E5%9F%BA%E7%A1%80"><span class="nav-text">1.HTML基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="nav-text">1.1  基本结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E6%A0%87%E9%A2%98"><span class="nav-text">1.2 标题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E9%93%BE%E6%8E%A5"><span class="nav-text">1.4 链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5%E7%9E%84%E7%82%B9"><span class="nav-text">1.5瞄点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6%E8%A1%A8%E6%A0%BC"><span class="nav-text">1.6表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE"><span class="nav-text">1.7图像标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-%E5%88%97%E8%A1%A8"><span class="nav-text">1.8 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="nav-text">1.9常用标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-10-div-span%E6%A0%87%E7%AD%BE"><span class="nav-text">1.10 div span标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-11-%E8%A1%A8%E5%8D%95"><span class="nav-text">1.11 表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-12%E8%BD%AC%E4%B9%89"><span class="nav-text">1.12转义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-css%E5%9F%BA%E7%A1%80"><span class="nav-text">2.css基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="nav-text">2.1基本结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">2.2 CSS选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3css%E6%B5%AE%E5%8A%A8"><span class="nav-text">2.3css浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4"><span class="nav-text">2.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

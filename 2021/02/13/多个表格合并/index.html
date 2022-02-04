@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="成功了的方法：1.先保留原来的excel，格式，不用转换成csv格式2.用python代码合并，保存为csv3.用记事本打开乱码csv，另存为编码方式选择ANSI 123456789101112131415import osimport pandas as pdpath &#x3D; &amp;#x27;.&#x2F;222&amp;#x27;   #设置csv所在文件夹files &#x3D; os.listdir(path)  #获取文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多个表格合并">
+<meta property="og:url" content="http://example.com/2021/02/13/%E5%A4%9A%E4%B8%AA%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="成功了的方法：1.先保留原来的excel，格式，不用转换成csv格式2.用python代码合并，保存为csv3.用记事本打开乱码csv，另存为编码方式选择ANSI 123456789101112131415import osimport pandas as pdpath &#x3D; &amp;#x27;.&#x2F;222&amp;#x27;   #设置csv所在文件夹files &#x3D; os.listdir(path)  #获取文件">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-02-13T06:25:41.000Z">
+<meta property="article:modified_time" content="2021-04-17T12:53:27.780Z">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/02/13/%E5%A4%9A%E4%B8%AA%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>多个表格合并 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E5%A4%9A%E4%B8%AA%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          多个表格合并
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 20:53:27" itemprop="dateModified" datetime="2021-04-17T20:53:27+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="成功了的方法："><a href="#成功了的方法：" class="headerlink" title="成功了的方法："></a>成功了的方法：</h2><p>1.先保留原来的excel，格式，不用转换成csv格式<br>2.用python代码合并，保存为csv<br>3.用记事本打开乱码csv，另存为编码方式选择ANSI</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;./222&#x27;</span>   <span class="comment">#设置csv所在文件夹</span></span><br><span class="line">files = os.listdir(path)  <span class="comment">#获取文件夹下所有文件名</span></span><br><span class="line"></span><br><span class="line">df1 = pd.read_excel(path + <span class="string">&#x27;/&#x27;</span> + files[<span class="number">0</span>])  <span class="comment">#读取首个csv文件，保存到df1中</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files[<span class="number">1</span>:]:</span><br><span class="line">  df2 = pd.read_excel(path +<span class="string">&#x27;/&#x27;</span> +  file)  <span class="comment">#打开csv文件，注意编码问题，保存到df2中</span></span><br><span class="line">  df1 = pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index=<span class="literal">True</span>)  <span class="comment">#将df2数据与df1合并</span></span><br><span class="line"></span><br><span class="line">df1 = df1.drop_duplicates()   <span class="comment">#去重</span></span><br><span class="line">df1 = df1.reset_index(drop=<span class="literal">True</span>) <span class="comment">#重新生成index</span></span><br><span class="line">df1.to_csv(path + <span class="string">&#x27;/&#x27;</span> + <span class="string">&#x27;total.csv&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="过程的坑："><a href="#过程的坑：" class="headerlink" title="过程的坑："></a>过程的坑：</h2><p>1.最后一步，csv乱码问题，用excel打开然后保存编码，或者用naotepad++改变编码另存为，其实都没起作用。<br>2.用python代码合并，保存一直提示是读入的那一句，实际上是编码问题，改最后一句另存为。前面反而不报错了。<br>3.一开始想通过windows的批处理文件自动合并，网上说先换成csv然后再</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy *.csv out.csv</span><br></pre></td></tr></table></figure>
+<p>但是编码怎么都弄不对。</p>
+<h1 id="第二个需求经验更新"><a href="#第二个需求经验更新" class="headerlink" title="第二个需求经验更新"></a>第二个需求经验更新</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;./表格文件夹名字&#x27;</span>   <span class="comment">#设置表格所在文件夹</span></span><br><span class="line">files = os.listdir(path)  <span class="comment">#获取文件夹下所有文件名</span></span><br><span class="line"></span><br><span class="line">df1 = pd.read_excel(path + <span class="string">&#x27;/&#x27;</span> + files[<span class="number">0</span>],sheet_name=<span class="string">&#x27;收入支出类报表项目&#x27;</span>,skiprows=<span class="number">3</span>)  <span class="comment">#读取首个表格文件，保存到df1中</span></span><br><span class="line"><span class="comment">#收入支出类报表项目</span></span><br><span class="line"><span class="comment">#负债和权益类报表项目</span></span><br><span class="line"><span class="comment"># print(df1)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files[<span class="number">1</span>:]:</span><br><span class="line">  df2 = pd.read_excel(path +<span class="string">&#x27;/&#x27;</span> +  file,sheet_name=<span class="string">&#x27;收入支出类报表项目&#x27;</span>,skiprows=<span class="number">3</span>)  <span class="comment">#打开表格文件，注意编码问题，保存到df2中</span></span><br><span class="line">  df1 = pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index=<span class="literal">True</span>)  <span class="comment">#将df2数据与df1合并</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#df1 = df1.drop_duplicates()   #去重,没有用到</span></span><br><span class="line">df1 = df1.reset_index(drop=<span class="literal">True</span>) <span class="comment">#重新生成index</span></span><br><span class="line">df1.to_csv(<span class="string">&#x27;total表3.csv&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br><span class="line">df1.to_excel(<span class="string">&#x27;total表3.xls&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="经验："><a href="#经验：" class="headerlink" title="经验："></a>经验：</h2><p>1.遇到问题，先合并两个，看是否成功<br>2.合并多个不行，要输出，方便定位</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files[<span class="number">1</span>:]:</span><br><span class="line">  print(<span class="string">&quot;要读入&quot;</span>+file.title())<span class="comment">#为了方便定位进度，遇到问题知道出在哪里</span></span><br><span class="line">  df2 = pd.read_excel(path +<span class="string">&#x27;/&#x27;</span> +  file,sheet_name=<span class="string">&#x27;收入支出类报表项目&#x27;</span>,skiprows=<span class="number">3</span>)  <span class="comment">#打开表格文件，注意编码问题，保存到df2中</span></span><br><span class="line">  print(<span class="string">&quot;已经读入&quot;</span>+file.title())<span class="comment">#为了方便定位进度，遇到问题知道出在哪里</span></span><br><span class="line">  print(df2)<span class="comment">#为了方便定位进度，遇到问题知道出在哪里</span></span><br><span class="line">  df1 = pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index=<span class="literal">True</span>)  <span class="comment">#将df2数据与df1合并</span></span><br></pre></td></tr></table></figure>
+<p>3.遇到一个问题执行程序卡住，并且没有报错，原因是：<br>就是个别文件读入很多列，但是实际只有13列，后面的是空的。<br>然后读入下一个文件后，再做合并时卡住了。</p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>进行同一目录下所有的表格合并是非常常用自动化的场景，如：</p>
+<ul>
+<li>分发表格模板让多个分行填报网络访问关系，然后合并表格成一份，进行统一申请</li>
+<li>分发表格让多个公司/机构填报XX数据，然后合并表格成一份，方便自己筛选查看，和一次性导入系统等。<br>更加拓展场景和应用，关键点注意：</li>
+</ul>
+<p>1.用户只需要给出目录路径，不需要指定文件<br>2.格式 csv ，xls，xlsx<br>3.剔除空的，清洗，去重等等。<br>4.增加一列，用来保存表格名，方便对比源文件和程序合并后的，看是否有遗漏的现象。<br>5.可看uistroe上的一些自动化应用场景，获取一些灵感。除了场景还有解决方法上的。</p>
+<h1 id="再改进"><a href="#再改进" class="headerlink" title="再改进"></a>再改进</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;./路径名字&#x27;</span>   <span class="comment">#设置表格所在文件夹</span></span><br><span class="line">files = os.listdir(path)  <span class="comment">#获取文件夹下所有文件名</span></span><br><span class="line"></span><br><span class="line">df1 = pd.read_excel(path + <span class="string">&#x27;/&#x27;</span> + files[<span class="number">0</span>],sheet_name=<span class="string">&#x27;负债和权益类报表项目&#x27;</span>,skiprows=<span class="number">4</span>)  <span class="comment">#读取首个表格文件，保存到df1中</span></span><br><span class="line"><span class="comment">#资产类报表项目 表1</span></span><br><span class="line"><span class="comment">#收入支出类报表项目 表3</span></span><br><span class="line"><span class="comment">#负债和权益类报表项目 表2</span></span><br><span class="line"><span class="comment"># print(df1)</span></span><br><span class="line">df1[<span class="string">&#x27;表名&#x27;</span>]=files[<span class="number">0</span>].title()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files[<span class="number">1</span>:]:</span><br><span class="line">  print(<span class="string">&quot;要读入&quot;</span>+file.title())</span><br><span class="line">  df2 = pd.read_excel(path +<span class="string">&#x27;/&#x27;</span> +  file,sheet_name=<span class="string">&#x27;负债和权益类报表项目&#x27;</span>,skiprows=<span class="number">4</span>)  <span class="comment">#打开表格文件，注意编码问题，保存到df2中</span></span><br><span class="line">  df2[<span class="string">&#x27;表名&#x27;</span>]=file.title()</span><br><span class="line">  print(<span class="string">&quot;已经读入&quot;</span>+file.title())</span><br><span class="line">  print(df2)</span><br><span class="line">  df1 = pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index=<span class="literal">True</span>)  <span class="comment">#将df2数据与df1合并</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># df1 = df1.drop_duplicates()   #去重</span></span><br><span class="line">df1 = df1.reset_index(drop=<span class="literal">True</span>) <span class="comment">#重新生成index</span></span><br><span class="line">df1.to_csv(<span class="string">&#x27;total表2.csv&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br><span class="line">df1.to_excel(<span class="string">&#x27;total表2.xls&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br></pre></td></tr></table></figure>
+<p>增加一列，保存表格名字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df2[<span class="string">&#x27;表名&#x27;</span>]=file.title()</span><br></pre></td></tr></table></figure>
+<h1 id="又遇到一个更简单的写法"><a href="#又遇到一个更简单的写法" class="headerlink" title="又遇到一个更简单的写法"></a>又遇到一个更简单的写法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">file_path=<span class="string">&#x27;课程/名单表格/&#x27;</span></span><br><span class="line">file_names=os.listdir(file_path)</span><br><span class="line">file_merge=pd.DataFrame()</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> file_names:</span><br><span class="line">    df=pd.read_excel(file_path+name)</span><br><span class="line">    file_merge=file_merge.append(df)</span><br><span class="line">file_merge.to_excel(<span class="string">&#x27;./tmp/file_merge.xlsx&#x27;</span>,index=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/13/%E6%8C%89%E7%85%A7word%E6%A8%A1%E6%9D%BF%E6%89%B9%E9%87%8F%E8%BE%93%E5%87%BA/" rel="prev" title="按照word模板批量输出">
+      <i class="fa fa-chevron-left"></i> 按照word模板批量输出
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/" rel="next" title="可视化大屏仪表盘">
+      可视化大屏仪表盘 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%8A%9F%E4%BA%86%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-text">成功了的方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E7%9A%84%E5%9D%91%EF%BC%9A"><span class="nav-text">过程的坑：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%9C%80%E6%B1%82%E7%BB%8F%E9%AA%8C%E6%9B%B4%E6%96%B0"><span class="nav-text">第二个需求经验更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E9%AA%8C%EF%BC%9A"><span class="nav-text">经验：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%A9%E5%B1%95"><span class="nav-text">扩展</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%8D%E6%94%B9%E8%BF%9B"><span class="nav-text">再改进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%88%E9%81%87%E5%88%B0%E4%B8%80%E4%B8%AA%E6%9B%B4%E7%AE%80%E5%8D%95%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-text">又遇到一个更简单的写法</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

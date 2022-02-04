@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1.window文件管理选中文件，按F2，重命名 2.excel快速操作场景：共同过一个excel表，一边讨论，一边修改，需要快速熟练操作拉一列数据按住ctrl往下拉才是序列，或者先拉下来，再在右下角点击固定功能区：开始，右下角，固定功能区，把菜单固定下来。【ctrl+F1】或者【ctrl+win+F1】最好保留固定功能区，有利于快速找到要用的工具，快速熟悉工具。把已经审核了的条目和未审核的条目区">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Excel 相关">
+<meta property="og:url" content="http://example.com/2016/07/13/excel%E7%9B%B8%E5%85%B3/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="1.window文件管理选中文件，按F2，重命名 2.excel快速操作场景：共同过一个excel表，一边讨论，一边修改，需要快速熟练操作拉一列数据按住ctrl往下拉才是序列，或者先拉下来，再在右下角点击固定功能区：开始，右下角，固定功能区，把菜单固定下来。【ctrl+F1】或者【ctrl+win+F1】最好保留固定功能区，有利于快速找到要用的工具，快速熟悉工具。把已经审核了的条目和未审核的条目区">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-07-13T12:46:25.000Z">
+<meta property="article:modified_time" content="2021-04-17T11:36:04.598Z">
+<meta property="article:author" content="TJ">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="EXCEL">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2016/07/13/excel%E7%9B%B8%E5%85%B3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Excel 相关 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2016/07/13/excel%E7%9B%B8%E5%85%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Excel 相关
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-07-13 20:46:25" itemprop="dateCreated datePublished" datetime="2016-07-13T20:46:25+08:00">2016-07-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 19:36:04" itemprop="dateModified" datetime="2021-04-17T19:36:04+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/EXCEL/" itemprop="url" rel="index"><span itemprop="name">EXCEL</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-window文件管理"><a href="#1-window文件管理" class="headerlink" title="1.window文件管理"></a>1.window文件管理</h1><p>选中文件，按F2，重命名</p>
+<h1 id="2-excel快速操作"><a href="#2-excel快速操作" class="headerlink" title="2.excel快速操作"></a>2.excel快速操作</h1><p><strong>场景</strong>：<br>共同过一个excel表，一边讨论，一边修改，需要快速熟练操作<br><strong>拉一列数据</strong><br>按住ctrl往下拉才是序列，或者先拉下来，再在右下角点击<br><strong>固定功能区：</strong><br>开始，右下角，固定功能区，把菜单固定下来。【ctrl+F1】或者【ctrl+win+F1】<br>最好保留固定功能区，有利于快速找到要用的工具，快速熟悉工具。<br><strong>把已经审核了的条目和未审核的条目区分开：</strong><br>利用颜色：录制宏，将该行变成浅蓝色<br>注意：ctrl+Z 无法撤销用宏快捷键的操作。</p>
+<p><strong>删除未审核的条目但是和审核的条目重复的：</strong></p>
+<p><strong>根据颜色筛选：</strong><br>【ctrl+shift+L】 下三角：按照颜色筛选</p>
+<p><strong>删除重复行：</strong><br>选中，数据，删除重复值</p>
+<p><strong>快速选中多行:</strong><br>选择位置首，按住shift，再选择位置末<br>如果一直到末尾的话，可以选择位置首，【ctrl+shift+下箭头】<br>选择整个表：选中这个区域内的任意一个单元格，按下快捷键Ctrl+A</p>
+<p><strong>复制表格，并插入到另一个位置：</strong><br>先复制特定的表格，再在待插入的位置，【ctrl++】，就可以复制到上方【方便！】<br>试用场景：复制特定的表格，要连续，并且只能复制，不能剪切</p>
+<p><strong>快速调换两行位置：</strong><br>鼠标拖动：<br>选中其中的一行数据，将光标移动到选内中区域的边缘，出现黑十字，然后在键盘上敲击“shift”，然后将鼠标移动到另外一行上，松开鼠标和“shift”了，Excel两行容数据交换成功。<br>注意，只是将下边行拖动到上边，并没有完成交换。</p>
+<p><strong>快速交换两列</strong><br>通过鼠标拖动<br>核心：注意放到边缘上，鼠标变成黑十字</p>
+<p><strong>删除多行:</strong><br>先选中，再快捷键[ctrl+-]<br>如果先选中，再按delete地话，没有删除多行，而是将多行中的文字删除了。<br><strong>插入多行:</strong><br>先选中，再快捷键[ctrl++] 小键盘时，如果是共用+号，需要再按住shift<br><strong>筛选：</strong><br>选中哪一行：然后【ctrl+shift+L】</p>
+<p>** 填充快捷键**<br>先手动填充某个单元格，下次填充，先选中单元格，或者某行，直接F4即可。<br>** 自动换行**<br>开始——自动换行 ，在居中的右边<br> ** 条件格式**<br> 善用条件格式<br> ** 清除**<br> 开始——&gt;清除<br> ** 保护与锁定 **<br> 1.首选取消整张表的锁定<br> 2.然后选择特定的，右击 设置单元格格式 锁定<br> 3.审阅，保护工作表</p>
+<h2 id="vlookup函数"><a href="#vlookup函数" class="headerlink" title="vlookup函数"></a>vlookup函数</h2><p>=vlookup()<br>表1，原始表<br>表2，查找表（小表）<br>第一个参数是，查找表的查找值【也就是查找线索】<br>第二个参数是，查找表，是一个范围，注意从第一个参数所在列的位置开始。<br>第三个参数是，需要返回的列在小表的列数的序号<br>第四个参数是，0或者1，表示精确查找或者近似查找</p>
+<p>常见问题：</p>
+<ul>
+<li>返回”#N/A”<br>格式不对<br>1.有的是绿色小三角的文本格式，有的不带，无法匹配<br>2.有的在文字前面有一个空字符</li>
+</ul>
+<p>针对第一种情况，要转换成文本格式，分列，选择文本格式<br>针对第二种情况，使用替换功能，将空字符替换成空</p>
+<ul>
+<li>返回内容有，但是不符合预期<br>原因是返回内容的格式问题。</li>
+</ul>
+<p>绝对引用：美元符号</p>
+<p>多列匹配，新建一个合并列<br>用&amp;将两列合并在一起。</p>
+<h2 id="excel场景"><a href="#excel场景" class="headerlink" title="excel场景"></a>excel场景</h2><p>excel 不可替代性主要体现在哪里呢？<br>我的理解是：如果我用tableau，power bi，确实很快，但是局限性有二：1.对方不一定安装tableau，power bi，而excel每个人都会安装。Excel  基本上电脑都自带，对基层员工使用比较友好<br>2.如果我是具体的业务统计人员，不同的工具自然是哪个快用哪个，但是我是技术支持人员，我要提供的不是一次性的数据结果。而是一套模板，业务人员可以每次填入这个模板，然后自动计算出统计性的数据。也就是不是提供一次性的数据结果，而是多次性的通用方法流程和模板</p>
+<p>补充：<br>Powerquery和Powerpivot 都可以在Excel上使用，可以在Excel上设置好模板，然后刷新数据，结果就出来了<br>excel是对业务人员最轻量级的办法，【最小成本】，尤其是一些比较紧急的情况下，很难大费周章地再去上其他工具，最好用对方熟悉工具，用对方熟悉的工具取得信任，其他额外的工具可能会吓退一些基层的业务人员<br>敏捷快速，需要立即响应的需求VS常规、频繁、可复用的工程化的需求</p>
+<h2 id="excel-做表美观专业"><a href="#excel-做表美观专业" class="headerlink" title="excel 做表美观专业"></a>excel 做表美观专业</h2><p>1.表头[第一行]加粗，底色用绿色，或者某个轻的颜色和下边的数据区分开。<br>2.所有文字居中，所有字体保持一致。<br>3.一定要有边框，与表格外的内容做明显区隔。<br>4.行高，列宽要舒服</p>
+<blockquote>
+<p>Excel的预设行高一般为「13.5」。用这样的行高制作表格，会让行与行之间没有空隙，看起来很拥挤。因此，正确的格式应该是把行高设定为[18]。只要把行高从[13.5」改到[18」，就能让文字的上下多出一点空间，此举不仅能让文字更容易阅读，也能使表格呈现出简练的风格。</p>
+</blockquote>
+<p>表头比数据行高高，设置为24</p>
+<p>5.强调可以用加粗，黄色底纹等标注<br>6.填报须知：用红色大字写在表头左上方的位置。</p>
+<p>是否显示网格线？<br>操作：视图-网格线</p>
+<p>其他参考<br>将同一类记录归组在一起；并将不同类别的记录或字段增加间距、拉开距离，同时将标题与数据间的间距拉开。<br>明细级的项目应该与上一层级保持一定的缩进，以凸显各项目的逻辑层次。同级的项目保持同样的缩进距离（参见Step3的表格）。</p>
+<p><strong>问题</strong><br>为什么word中有设计工具，excel中没有？<br>因为你需要插入table，或者数据透视表，才有<br>如果是已经做好的表，转换成table，方法是：<br>选中表格：点击插入-表格【选择包含标题】<br>或者选中表格中的数据，开始：套用单元格格式</p>
+<h2 id="数据表和阅读表的区别"><a href="#数据表和阅读表的区别" class="headerlink" title="数据表和阅读表的区别"></a>数据表和阅读表的区别</h2><p>一般来说，制作的表格可能是无意识的阅读表，<br>但是数据分析的素材一定是数据表，也就是存入数据库的基础表，也就是套用单元格式后的表。</p>
+<h2 id="excel打印"><a href="#excel打印" class="headerlink" title="excel打印"></a>excel打印</h2><p>视图 分页视图，拖拽分页线<br>页面布局-分隔符<br>设置标题自动延续到下一页<br>页面布局-右下角的页面设置 工作表标题<br>页面布局-右下角的页面设置—页眉页脚，首页不同，在自定义页眉中输入 续表</p>
+<h1 id="3-EXCEL实用功能"><a href="#3-EXCEL实用功能" class="headerlink" title="3.EXCEL实用功能"></a>3.EXCEL实用功能</h1><h2 id="3-1-表间跳转"><a href="#3-1-表间跳转" class="headerlink" title="3.1 表间跳转"></a>3.1 表间跳转</h2><p>目录跳转使用excel公式HYPERLINK实现的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x3D;HYPERLINK(&quot;#表2!A1&quot;,&quot;跳转到表2&quot;)</span><br></pre></td></tr></table></figure>
+<h2 id="3-2-名称和数据验证"><a href="#3-2-名称和数据验证" class="headerlink" title="3.2 名称和数据验证"></a>3.2 名称和数据验证</h2><p>公式选项卡下的名称管理器<br>数据下的数据验证</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"># 数据分析</a>
+              <a href="/tags/EXCEL/" rel="tag"># EXCEL</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/07/13/python%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" rel="prev" title="Excel 相关">
+      <i class="fa fa-chevron-left"></i> Excel 相关
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/06/Test/" rel="next" title="Test网址">
+      Test网址 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-window%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="nav-text">1.window文件管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-excel%E5%BF%AB%E9%80%9F%E6%93%8D%E4%BD%9C"><span class="nav-text">2.excel快速操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vlookup%E5%87%BD%E6%95%B0"><span class="nav-text">vlookup函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#excel%E5%9C%BA%E6%99%AF"><span class="nav-text">excel场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#excel-%E5%81%9A%E8%A1%A8%E7%BE%8E%E8%A7%82%E4%B8%93%E4%B8%9A"><span class="nav-text">excel 做表美观专业</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E5%92%8C%E9%98%85%E8%AF%BB%E8%A1%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">数据表和阅读表的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#excel%E6%89%93%E5%8D%B0"><span class="nav-text">excel打印</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-EXCEL%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="nav-text">3.EXCEL实用功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E8%A1%A8%E9%97%B4%E8%B7%B3%E8%BD%AC"><span class="nav-text">3.1 表间跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%90%8D%E7%A7%B0%E5%92%8C%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81"><span class="nav-text">3.2 名称和数据验证</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

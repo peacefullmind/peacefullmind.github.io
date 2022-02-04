@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="我的Hexo博客">
+<meta property="og:url" content="http://example.com/page/9/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/9/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">正则表达式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 09:17:23" itemprop="dateModified" datetime="2021-10-11T09:17:23+08:00">2021-10-11</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h1><p>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。</p>
+<p>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表前面的字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。</p>
+<p>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）。</p>
+<p>[0-9] 匹配一个数字<br>星号 匹配0个或多个字符</p>
+<p>[\s\S]*是完全通配的意思；</p>
+<p>“[ ]”是范围描述符。</p>
+<p>\s是指空白，包括空格、换行、tab缩进等所有的空白，而\S刚好相反，这样一正一反下来，就表示所有的字符，完全的，一字不漏的。</p>
+<p>另外，[]这个符号，表示在它里面包含的单个字符不限顺序的出现，比如：<br>[ace]*—这表示，只要出现a/c/e这三个任意的字母，都会被匹配；<br>[\s]—表示，只要出现空白就匹配；<br>[\S]—表示，非空白就匹配；</p>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><p>开始 上三角<br>结束 美元符号<br>花括号 特定的 匹配字符串<br>杠w星表示匹配字母，其中星号表示0个或者多个。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">机器学习入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-27 13:11:17" itemprop="dateModified" datetime="2021-03-27T13:11:17+08:00">2021-03-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="机器学习（ML）"><a href="#机器学习（ML）" class="headerlink" title="机器学习（ML）"></a>机器学习（ML）</h1><p>当前最主流的两种机器学习模型是<strong>随机森林</strong>和<strong>梯度提升树</strong>。<br>机器学习的主要障碍是特征工程这个步骤，这需要领域专家在进入训练过程之前就要找到非常重要的特征。特征工程步骤是要靠手动完成的，而且需要大量领域专业知识，因此它成为当今大多数机器学习任务的主要瓶颈。<br>机器学习的本质就是将问题转化为数学问题，然后解答数学题的过程。</p>
+<h2 id="机器学习的算法和算法导论的经典算法有什么不同？"><a href="#机器学习的算法和算法导论的经典算法有什么不同？" class="headerlink" title="机器学习的算法和算法导论的经典算法有什么不同？"></a>机器学习的算法和算法导论的经典算法有什么不同？</h2><p>算法导论里的算法本质上是对有精确解的问题，如何更有效率地求得这个解。这个效率可以是计算时间更短，也可以是计算过程所需要的空间更少。<br>算法导论中的算法关注点在数据结构和计算复杂度，属于离散数学的一个分支。<br>一个简单的例子是，给定一个乱序数组，如何快速的将其按从小到大的顺序重新排列，或者找到其中的中位数。这些问题都有确定且唯一的答案，一般都会有一个笨方法（穷举或遍历），只要一步一步来就可以解，所谓算法只是如何精简步骤，更快更省事地找到这个解。这些算法处理的数据也都是结构简洁且干净的类型，比如数组，二叉树，图之类的数据结构。数据规模对于这些算法而言，影响的是计算所需的时间和空间，不会因为规模改变而影响算法本身的逻辑以及计算的结果。<br>机器学习要解决的问题一般没有精确解，也不能用穷举或遍历这种步骤明确的方法找到解，而且需要强调的是“学习”这个属性。<br>《算法导论》里几乎都是组合优化；而机器学习里主要是连续的问题，凸优化较多，也有很多非凸优化。机器学习算法自然大都是梯度下降、坐标下降、蒙特卡洛 这样的算法，与《算法导论》里的算法长得很不像。<br>是机器学习里也有组合优化，比如聚类、比如概率图模型。</p>
+<ul>
+<li>k-means是method，有几种优化问题model，有很多求解的algorithms。你们最常用的那种迭代算法是Lloyd Algorithm。</li>
+<li>LDA是method也是model（这种method就一种model），这个model的求解是个NP Hard的问题（我记得Arora文章里证明过）。有很多种算法求解LDA，比如variational inference、MCMC、tensor decomposition。</li>
+<li>word2vec是method，用来解决NLP的一些问题；有很多models，比如skip-gram、深度学习；每种model都有很多算法求解。<br>method和model有区别，但是界限不明，很多时候可以混用。但是algorithm和method绝对不能混用<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2></li>
+<li>分类</li>
+<li>回归</li>
+<li>聚类<h2 id="常见的模型指标"><a href="#常见的模型指标" class="headerlink" title="常见的模型指标"></a>常见的模型指标</h2>正确率 —— 提取出的正确信息条数 / 提取出的信息条数<br>召回率 —— 提取出的正确信息条数 / 样本中的信息条数<br>F 值 —— 正确率 * 召回率 * 2 / （正确率 + 召回率）（F值即为正确率和召回率的调和平均值）<br>举个例子如下:</li>
+</ul>
+<p>举个例子如下: 某池塘有 1400 条鲤鱼，300 只虾，300 只乌龟。现在以捕鲤鱼为目的。撒了一张网，逮住了 700 条鲤鱼，200 只 虾， 100 只乌龟。那么这些指标分别如下: 正确率 = 700 / (700 + 200 + 100) = 70% 召回率 = 700 / 1400 = 50% F 值 = 70% * 50% * 2 / (70% + 50%) = 58.3%</p>
+<h2 id="交叉验证"><a href="#交叉验证" class="headerlink" title="交叉验证"></a>交叉验证</h2><p>在使用训练集对参数进行训练的时候，经常会发现人们通常会将一整个训练集分为三个部分（比如mnist手写训练集）。一般分为：训练集（train_set），评估集（valid_set），测试集（test_set）这三个部分。这其实是为了保证训练效果而特意设置的。其中测试集很好理解，其实就是完全不参与训练的数据，仅仅用来观测测试效果的数据。而训练集和评估集则牵涉到下面的知识了。<br>因为在实际的训练中，训练的结果对于训练集的拟合程度通常还是挺好的（初始条件敏感），但是对于训练集之外的数据的拟合程度通常就不那么令人满意了。因此我们通常并不会把所有的数据集都拿来训练，而是分出一部分来（这一部分不参加训练）对训练集生成的参数进行测试，相对客观的判断这些参数对训练集之外的数据的符合程度。这种思想就称为交叉验证</p>
+<h1 id="深度学习（Deep-Learning）"><a href="#深度学习（Deep-Learning）" class="headerlink" title="深度学习（Deep Learning）"></a>深度学习（Deep Learning）</h1><p>计算机科学家重新使用<strong>神经网络</strong>的许多层来完成这些人类模仿的任务。这给<strong>DNN（深度神经网络)</strong> 带来了新的生机，并在图像分类和语音识别任务方面提供了重大突破。DNN的主要区别在于，你可以将原始信号（例如RGB像素值）直接输入DNN，而不需要创建任何域特定的输入功能。通过多层神经元（这就是为什么它被称为“深度”神经网络），DNN可以“自动”通过每一层产生适当的特征，最后提供一个非常好的预测。这极大地消除了寻找“特征工程”的麻烦。<br>DNN也演变成许多不同的网络拓扑结构，所以有<strong>CNN（卷积神经网络)**， **RNN（递归神经网络</strong>， <strong>LSTM（长期短期记忆）</strong>， <strong>GAN（生成敌对网络）</strong> ，转移学习，注意模型（attention model）所有的这些被统称为深度学习（Deep Learning），它正在引起整个机器学习界的关注。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E5%8F%96%E4%BA%8C%E6%89%8B%E6%88%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%88%AC%E5%8F%96%E4%BA%8C%E6%89%8B%E6%88%BF/" class="post-title-link" itemprop="url">爬取二手房</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 20:50:06" itemprop="dateModified" datetime="2021-04-17T20:50:06+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#http://esf.0515fc.cn/esf-1-1-0-0-0-0-0-0-0-0-.html 网址</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">file =xlwt.Workbook() <span class="comment">#新建一个excel</span></span><br><span class="line">table=file.add_sheet(<span class="string">&#x27;from鹤鸣亭&#x27;</span>)</span><br><span class="line"></span><br><span class="line">table_row=<span class="number">0</span><span class="comment">#这是行数，从0行开始写</span></span><br><span class="line">table.write(table_row, <span class="number">0</span>, <span class="string">&#x27;名称&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">1</span>, <span class="string">&#x27;面积&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">2</span>, <span class="string">&#x27;户型&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">3</span>, <span class="string">&#x27;楼层&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">4</span>,<span class="string">&#x27;装修&#x27;</span>)  <span class="comment"># 将,,写</span></span><br><span class="line">table_row = table_row + <span class="number">1</span></span><br><span class="line">headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">page=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> page&lt;<span class="number">11</span>:</span><br><span class="line">    url = <span class="string">&quot;http://esf.0515fc.cn/esf-&quot;</span> + <span class="built_in">str</span>(page) + <span class="string">&quot;-1-0-0-0-0-0-0-0-0-.html&quot;</span></span><br><span class="line">    r = requests.get(url, headers=headers)</span><br><span class="line">    <span class="comment"># print(r.text)</span></span><br><span class="line">    <span class="comment"># text = r.text.encode(&#x27;iso-8859-1&#x27;).decode(&#x27;gbk&#x27;)</span></span><br><span class="line">    bs = BeautifulSoup(r.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">    homes = bs.find(<span class="string">&#x27;ul&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&#x27;ershou_list&#x27;</span>&#125;).find_all(<span class="string">&#x27;li&#x27;</span>)</span><br><span class="line">    <span class="comment"># for i in homes:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> homes:</span><br><span class="line">        print(<span class="built_in">type</span>(i))</span><br><span class="line">        home_title = i.find(<span class="string">&#x27;a&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&#x27;title fl ellipsis&#x27;</span>&#125;).text</span><br><span class="line">        print(home_title)</span><br><span class="line">        table.write(table_row, <span class="number">0</span>, home_title)  <span class="comment"># 将,,写入</span></span><br><span class="line"></span><br><span class="line">        cont1 = i.find_all(<span class="string">&#x27;div&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&#x27;font&#x27;</span>&#125;)[<span class="number">0</span>].text</span><br><span class="line">        cont2 = i.find_all(<span class="string">&#x27;div&#x27;</span>, attrs=&#123;<span class="string">&#x27;class&#x27;</span>: <span class="string">&#x27;font&#x27;</span>&#125;)[<span class="number">2</span>].text</span><br><span class="line">        mianji = cont1.split(<span class="string">&#x27;|&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        mianji = <span class="string">&quot;&quot;</span>.join(mianji.split())</span><br><span class="line">        print(mianji)</span><br><span class="line">        table.write(table_row, <span class="number">1</span>, mianji)  <span class="comment"># 将,,写入</span></span><br><span class="line"></span><br><span class="line">        huxing = cont1.split(<span class="string">&#x27;|&#x27;</span>)[<span class="number">1</span>]</span><br><span class="line">        huxing = <span class="string">&quot;&quot;</span>.join(huxing.split())</span><br><span class="line">        print(huxing)</span><br><span class="line">        table.write(table_row, <span class="number">2</span>, huxing)  <span class="comment"># 将,,写入</span></span><br><span class="line"></span><br><span class="line">        louceng = cont1.split(<span class="string">&#x27;|&#x27;</span>)[<span class="number">2</span>]</span><br><span class="line">        louceng = <span class="string">&quot;&quot;</span>.join(louceng.split())</span><br><span class="line">        print(louceng)</span><br><span class="line">        table.write(table_row, <span class="number">3</span>, louceng)  <span class="comment"># 将,,写入</span></span><br><span class="line"></span><br><span class="line">        zhuangxiu = cont1.split(<span class="string">&#x27;|&#x27;</span>)[<span class="number">3</span>]</span><br><span class="line">        zhuangxiu = <span class="string">&quot;&quot;</span>.join(zhuangxiu.split())</span><br><span class="line">        print(zhuangxiu)</span><br><span class="line">        table.write(table_row, <span class="number">4</span>, zhuangxiu)  <span class="comment"># 将,,写</span></span><br><span class="line">        table_row = table_row + <span class="number">1</span></span><br><span class="line">    page = page + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># print(cont1.split(&#x27;|&#x27;))</span></span><br><span class="line">file.save(<span class="string">&#x27;二手房信息.xls&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E5%8F%96%E6%9F%90%E5%B9%B3%E5%8F%B0%E5%90%84%E4%B8%AA%E5%85%AC%E5%8F%B8%E7%BB%9F%E8%AE%A1%E7%8A%B6%E6%80%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%88%AC%E5%8F%96%E6%9F%90%E5%B9%B3%E5%8F%B0%E5%90%84%E4%B8%AA%E5%85%AC%E5%8F%B8%E7%BB%9F%E8%AE%A1%E7%8A%B6%E6%80%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">爬取某平台各个公司统计状态的几种思路</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:22:36" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><p>1.需要登录<br>2.登陆后，需要点击特定功能模块<br>3.需要选择下拉框，选好时间后，进行查询</p>
+<h1 id="尝试1-senlenium"><a href="#尝试1-senlenium" class="headerlink" title="尝试1 senlenium"></a>尝试1 senlenium</h1><p>senlenium爬取,需要处理下拉框，比较复杂<br>好处是可以登录，解决方法是，time.sleep(10),手动输入查询条件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<p>下一步：下拉框的处理</p>
+<h1 id="尝试2-http请求"><a href="#尝试2-http请求" class="headerlink" title="尝试2 http请求"></a>尝试2 http请求</h1><p>要不看看接口发的啥，直接改接口发包更快<br>如果你发查询的请求需要身份验证，看看要带什么参数，能不能模拟生成，如果要cookie，就登录一次，把cookie加上去模拟请求查询，能用一段时间，风控不严的站这样就齐活了<br>post出来的response不太对劲<br>可能原因<br>1.post参数不对<br>2.cookie 请求头不对，需要登录<br>找到为什么不对</p>
+<h1 id="尝试3-手动-自动"><a href="#尝试3-手动-自动" class="headerlink" title="尝试3 手动+自动"></a>尝试3 手动+自动</h1><p>直接F12得到response的json，进行解析</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> demjson</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&quot;data.txt&quot;</span>,<span class="string">&quot;r&quot;</span>,encoding=<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">cont=f.read()</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line">print(cont)</span><br><span class="line">print(<span class="built_in">type</span>(cont))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data = demjson.decode(cont)</span><br><span class="line">print(data)</span><br><span class="line">print(<span class="built_in">type</span>(data))</span><br><span class="line"></span><br><span class="line">value=data[<span class="string">&#x27;ROOT&#x27;</span>]</span><br><span class="line">print(value)</span><br><span class="line">print(<span class="built_in">type</span>(value))</span><br><span class="line">print(<span class="built_in">len</span>(value))</span><br><span class="line"></span><br><span class="line">file =xlwt.Workbook() <span class="comment">#新建一个excel</span></span><br><span class="line">table=file.add_sheet(<span class="string">&#x27;输出结果&#x27;</span>)</span><br><span class="line">table_row=<span class="number">0</span><span class="comment">#这是行数，从0行开始写</span></span><br><span class="line">table.write(table_row, <span class="number">0</span>, <span class="string">&#x27;编码&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">1</span>, <span class="string">&#x27;公司&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">2</span>, <span class="string">&#x27;状态&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table_row=table_row+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> value:</span><br><span class="line">    print(row)</span><br><span class="line">    print(<span class="built_in">type</span>(row))</span><br><span class="line">    bianma=row[<span class="string">&#x27;ZBPCTYGSDM&#x27;</span>]</span><br><span class="line">    name=row[<span class="string">&#x27;ZBPCTYGSMC&#x27;</span>]</span><br><span class="line">    zhuangtai=row[<span class="string">&#x27;ZLOCK&#x27;</span>]</span><br><span class="line">    table.write(table_row,<span class="number">0</span>,bianma)</span><br><span class="line">    table.write(table_row, <span class="number">1</span>, name)</span><br><span class="line">    table.write(table_row, <span class="number">2</span>, zhuangtai)</span><br><span class="line">    table_row=table_row+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">file.save(<span class="string">&#x27;查询结果.xls&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>关键str转字典，因为key应该也有引号，json.loads()会报错<br>data = demjson.decode(cont)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%ABrequest%E7%88%AC%E5%8F%96%E7%96%AB%E6%83%85%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%88%AC%E8%99%ABrequest%E7%88%AC%E5%8F%96%E7%96%AB%E6%83%85%E5%AE%9E%E6%97%B6%E6%95%B0%E6%8D%AE/" class="post-title-link" itemprop="url">爬虫request疫情实时数据</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 20:54:01" itemprop="dateModified" datetime="2021-04-17T20:54:01+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Map</span><br><span class="line"><span class="keyword">import</span>  requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">myurl=<span class="string">&quot;https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5&quot;</span></span><br><span class="line">respoonse=requests.get(myurl)</span><br><span class="line"></span><br><span class="line">myrawjson=respoonse.json()</span><br><span class="line">mydata=json.loads(myrawjson[<span class="string">&#x27;data&#x27;</span>])[<span class="string">&quot;areaTree&quot;</span>][<span class="number">0</span>][<span class="string">&quot;children&quot;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">new_data=&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> mydata:</span><br><span class="line">    new_data[i[<span class="string">&#x27;name&#x27;</span>]]=i[<span class="string">&#x27;total&#x27;</span>][<span class="string">&#x27;confirm&#x27;</span>]</span><br><span class="line"></span><br><span class="line">name=new_data.keys()</span><br><span class="line">num=new_data.values()</span><br><span class="line">print(<span class="built_in">zip</span>(name,num))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">zip</span>(name,num):</span><br><span class="line">    print(<span class="built_in">list</span>(i))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">new_maps</span>():</span></span><br><span class="line">    myMap=Map()</span><br><span class="line">    myMap.add(</span><br><span class="line">        <span class="string">&#x27;疫情地图&#x27;</span>,</span><br><span class="line">        [<span class="built_in">list</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">zip</span>(new_data.keys(), new_data.values())],</span><br><span class="line">        <span class="string">&#x27;China&#x27;</span>,</span><br><span class="line">        is_map_symbol_show=<span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    )</span><br><span class="line">    myMap.set_global_opts(</span><br><span class="line">        title_opts=opts.TitleOpts(</span><br><span class="line">            title=<span class="string">&quot;sss&quot;</span></span><br><span class="line">        ),</span><br><span class="line">        visualmap_opts=opts.VisualMapOpts(</span><br><span class="line">            is_piecewise=<span class="literal">True</span></span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    myMap.render(<span class="string">&#x27;fs.html&#x27;</span>)</span><br><span class="line">new_maps()</span><br></pre></td></tr></table></figure>
+<p>获取json数据 通过F2，network，筛选view的响应<br>解析获取的数据，多用print,和print(type()),层层逼近，注意格式，字符串格式转化成字典格式。list格式输出[0][1]等试一下<br>通过for 循环获取list内容，通过重构字典，重构数据，还可以通过zip重构成元组，再转化成list。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%AB%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%88%AC%E8%99%AB%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%A4%9A%E8%BF%9B%E7%A8%8B/" class="post-title-link" itemprop="url">python与多线程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：17:17:31" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h1><p>1.文字，表格<br>2.图片<br>3.文件</p>
+<h1 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%AB%E4%B8%8Ehttp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%88%AC%E8%99%AB%E4%B8%8Ehttp/" class="post-title-link" itemprop="url">爬虫与http</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:07:53" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>resp.text返回的是Unicode型的数据。<br>resp.content返回的是bytes型也就是二进制的数据。<br>resp.json()返回的是json格式数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">url=<span class="string">&#x27;https://chongqing.anjuke.com/esf-ajax/property/info/pc/area/business/?city_id=20&amp;page_size=10&amp;area_id=2359&amp;from=sale_map&amp;page=1&amp;select_type=0&#x27;</span></span><br><span class="line">header=&#123;<span class="string">&#x27;user-agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36&#x27;</span>,<span class="string">&#x27;referer&#x27;</span>: <span class="string">&#x27;https://chongqing.anjuke.com/sale/yubei/?from=sale_map&#x27;</span>&#125;</span><br><span class="line">mycookie=&#123;<span class="string">&#x27;cookie&#x27;</span>:<span class="string">&#x27;sessid=FA5DADAA-F544-92CD-A106-A505D73579B3; aQQ_ajkguid=5EB6A80A-859A-16C5-39D8-323C1810F941; id58=e87rkF/chwKQr/OBBT+KAg==; _ga=GA1.2.1522895678.1608288003; 58tj_uuid=f6cdd636-2fbf-4763-9760-b1e34553d784; als=0; xxzl_cid=5dfe5c053c18490d9b04b8276a974eb3; xzuid=1135c1b7-88af-4876-8383-a8384eb80dc0; ctid=20; twe=2; _gid=GA1.2.25214172.1611587986; new_uv=2; obtain_by=2&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line">res=requests.get(url=url,headers=header,cookies=mycookie)</span><br><span class="line">print(res.json())</span><br></pre></td></tr></table></figure>
+<p>注意点：<br>1.要写cookie，即使不用登录，否则python返回的json要少很多内容<br>2.headers和cookies,都是字典形，键值对，都加引号<br>3.浏览器F12返回的。可以用在线json解析网站，先看下内容</p>
+<p>更好的方法是把html爬下来，再用美丽汤或者etree解析</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">url=<span class="string">&#x27;https://chongqing.anjuke.com/esf-ajax/property/info/pc/area/business/?city_id=20&amp;page_size=10&amp;area_id=2359&amp;from=sale_map&amp;page=1&amp;select_type=0&#x27;</span></span><br><span class="line">header=&#123;<span class="string">&#x27;user-agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36&#x27;</span>,<span class="string">&#x27;referer&#x27;</span>: <span class="string">&#x27;https://chongqing.anjuke.com/sale/yubei/?from=sale_map&#x27;</span>&#125;</span><br><span class="line">mycookie=&#123;<span class="string">&#x27;cookie&#x27;</span>:<span class="string">&#x27;sessid=FA5DADAA-F544-92CD-A106-A505D73579B3; aQQ_ajkguid=5EB6A80A-859A-16C5-39D8-323C1810F941; id58=e87rkF/chwKQr/OBBT+KAg==; _ga=GA1.2.1522895678.1608288003; 58tj_uuid=f6cdd636-2fbf-4763-9760-b1e34553d784; als=0; xxzl_cid=5dfe5c053c18490d9b04b8276a974eb3; xzuid=1135c1b7-88af-4876-8383-a8384eb80dc0; ctid=20; twe=2; _gid=GA1.2.25214172.1611587986; new_uv=2; obtain_by=2&#x27;</span>&#125;</span><br><span class="line">res=requests.get(url=url,headers=header,cookies=mycookie)</span><br><span class="line"></span><br><span class="line">url2=<span class="string">&#x27;https://chongqing.anjuke.com/sale/yubei/?from=sale_map#&#x27;</span></span><br><span class="line">res2=requests.get(url=url2,headers=header,cookies=mycookie)</span><br><span class="line"><span class="comment"># print(res2.json())</span></span><br><span class="line">myhtml=res2.text</span><br><span class="line">print(myhtml)</span><br></pre></td></tr></table></figure>
+<p>二手房，51job，电影等类似的网页都是爬html，而不是通过数据接口。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C/" class="post-title-link" itemprop="url">登录页面制作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:01:36" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="VS使用"><a href="#VS使用" class="headerlink" title="VS使用"></a>VS使用</h1><p>注释<br>选中代码，ctrl+K，然后ctrl+c；<br>页面的实时预览<br>open with live server配合brower preview使用</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%88%AC%E8%99%AB%E7%BE%8E%E4%B8%BD%E6%B1%A4%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%88%AC%E8%99%AB%E7%BE%8E%E4%B8%BD%E6%B1%A4%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D/" class="post-title-link" itemprop="url">爬虫美丽汤大学排名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-15 02:02:48" itemprop="dateModified" datetime="2021-04-15T02:02:48+08:00">2021-04-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>创建 Beautiful Soup对象   soup = BeautifulSoup(html，’html.parser’) </p>
+<p>标签树的下行遍历<br>.contents 子节点的列表，将<tag>所有儿子节点存入列表<br>.children 子节点的迭代类型，与.contents类似，用于循环遍历儿子节点<br>.descendants 子孙节点的迭代类型，包含所有子孙节点，用于循环遍历</p>
+<p>标签树的上行遍<br>.parent 节点的父亲标签<br>.parents 节点先辈标签的迭代类型，用于循环遍历先辈节点</p>
+<p>标签树的平行遍历<br>.next_sibling 返回按照HTML文本顺序的下一个平行节点标签<br>.previous_sibling 返回按照HTML文本顺序的上一个平行节点标签<br>.next_siblings 迭代类型，返回按照HTML文本顺序的后续所有平行节点标签<br>.previous_siblings 迭代类型，返回按照HTML文本顺序的前续所有平行节点标签</p>
+<p>程序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> bs4</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gethtml</span>():</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.get(<span class="string">&#x27;https://www.shanghairanking.cn/rankings/bcur/2020&#x27;</span>)</span><br><span class="line">        r.encoding = r.apparent_encoding</span><br><span class="line">        demo = r.text</span><br><span class="line">        <span class="keyword">return</span> demo</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">totable</span>(<span class="params">html</span>):</span></span><br><span class="line">    data=pd.DataFrame()</span><br><span class="line">    soup=BeautifulSoup(html,<span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line">    temp=soup.find(<span class="string">&#x27;tbody&#x27;</span>).children</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> tr <span class="keyword">in</span> temp:</span><br><span class="line">        tds = tr(<span class="string">&#x27;td&#x27;</span>)</span><br><span class="line">        <span class="built_in">list</span>=[[tds[<span class="number">0</span>].text.strip().replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>),tds[<span class="number">1</span>].text.strip().replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>),tds[<span class="number">4</span>].text.strip().replace(<span class="string">&#x27;\n&#x27;</span>,<span class="string">&#x27;&#x27;</span>)]]</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">len</span>(<span class="built_in">list</span>)&gt;<span class="number">0</span>):</span><br><span class="line">            data=data.append(<span class="built_in">list</span>,ignore_index=<span class="literal">True</span>)</span><br><span class="line">    data.columns=[<span class="string">&#x27;排名&#x27;</span>,<span class="string">&#x27;学校名称&#x27;</span>,<span class="string">&#x27;总分&#x27;</span>]</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line">html=gethtml()</span><br><span class="line"><span class="built_in">list</span>=[]</span><br><span class="line">data=totable(html)</span><br><span class="line">print(data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%9F%A5%E7%BD%91%E6%9F%A5%E8%AF%A2%E6%A0%87%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%9F%A5%E7%BD%91%E6%9F%A5%E8%AF%A2%E6%A0%87%E9%A2%98/" class="post-title-link" itemprop="url">知网查询标题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-19 17:34:55" itemprop="dateModified" datetime="2021-02-19T17:34:55+08:00">2021-02-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[toc]</p>
+<h1 id="查询思路"><a href="#查询思路" class="headerlink" title="查询思路"></a>查询思路</h1><p>senlenium 模拟人的操作去查询，而非借助request</p>
+<h1 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h1><p>安装chrome driver驱动，并放置指定位置<br>通过geturl是否成功进行测试</p>
+<h1 id="如何定位元素："><a href="#如何定位元素：" class="headerlink" title="如何定位元素："></a>如何定位元素：</h1><p>可以通过xpath，F12 copy自动粘贴xpath，不用自己去分析，就可以找到元素</p>
+<h1 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h1><p>#代码与 程序优化<br>节约时间 geturl不用每次都执行，只执行一次<br>需要刷新</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> getSS</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">data1=pd.read_excel(<span class="string">&#x27;./data/data3.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment"># data2=pd.read_excel(&#x27;./data/题目抓取（第二部分）.xlsx&#x27;)</span></span><br><span class="line">dfS=data1</span><br><span class="line"></span><br><span class="line">file =xlwt.Workbook() <span class="comment">#新建一个excel</span></span><br><span class="line">table=file.add_sheet(<span class="string">&#x27;输出结果&#x27;</span>)</span><br><span class="line">table_row=<span class="number">0</span><span class="comment">#这是行数，从0行开始写</span></span><br><span class="line">table.write(table_row, <span class="number">0</span>, <span class="string">&#x27;姓名&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">1</span>, <span class="string">&#x27;导师&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">2</span>, <span class="string">&#x27;题目&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">3</span>, <span class="string">&#x27;日期&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table_row=table_row+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># dfS=pd.concat([data1,data2],axis=0,ignore_index=True)</span></span><br><span class="line">college=<span class="string">&#x27;吉林大学&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打开网址</span></span><br><span class="line">chromeDriver = <span class="string">&quot;D:\\chromedriver_win32\\chromedriver.exe&quot;</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=chromeDriver)</span><br><span class="line">url = <span class="string">&#x27;https://kns.cnki.net/kns8/AdvSearch?dbprefix=SCDB&amp;&amp;crossDbcodes=CJFQ%2CCDMD%2CCIPD%2CCCND%2CCISD%2CSNAD%2CBDZK%2CCJFN%2CCCJD&#x27;</span></span><br><span class="line">driver.get(url=url)</span><br><span class="line">time.sleep(<span class="number">1</span>)  <span class="comment"># 休眠2秒</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(dfS)):</span><br><span class="line">    <span class="comment"># print(i)</span></span><br><span class="line">    <span class="comment"># print(dfS.iloc[i,0])</span></span><br><span class="line">    <span class="comment"># print(dfS[i, 1])</span></span><br><span class="line">    author=dfS.iloc[i, <span class="number">0</span>]</span><br><span class="line">    tutor=dfS.iloc[i, <span class="number">1</span>]</span><br><span class="line">    <span class="comment"># college=&#x27;吉林大学&#x27;</span></span><br><span class="line"></span><br><span class="line">    result=getSS.getSS(driver,author,college)</span><br><span class="line">    title=result[<span class="number">0</span>]</span><br><span class="line">    date=result[<span class="number">1</span>]</span><br><span class="line">    print(table_row)</span><br><span class="line">    table.write(table_row, <span class="number">0</span>, author)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table.write(table_row, <span class="number">1</span>, tutor)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table.write(table_row, <span class="number">2</span>, title)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table.write(table_row, <span class="number">3</span>, date)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table_row=table_row+<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(table_row==<span class="number">98</span>):</span><br><span class="line">        file.save(<span class="string">&#x27;查询结果3部分.xls&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">file.save(<span class="string">&#x27;查询结果3.xls&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getSS</span>(<span class="params">driver,author,college</span>):</span></span><br><span class="line">    driver.refresh()</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[2]/div[2]/input&#x27;</span>).clear()</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[2]/div[2]/input&#x27;</span>).send_keys(author)</span><br><span class="line"></span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[3]/div[2]/input&#x27;</span>).clear()</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gradetxt&quot;]/dd[3]/div[2]/input&#x27;</span>).send_keys(college)</span><br><span class="line"></span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;/html/body/div[4]/div/div[2]/div/div[1]/div[1]/div[2]/div[2]/input&#x27;</span>).click()</span><br><span class="line">    time.sleep(<span class="number">0.5</span>)  <span class="comment"># 休眠2秒</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        title = driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gridTable&quot;]/table/tbody/tr/td[2]/a&#x27;</span>).text</span><br><span class="line">        date= driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;gridTable&quot;]/table/tbody/tr/td[5]&#x27;</span>).text</span><br><span class="line">        print(title)</span><br><span class="line">        print(date)</span><br><span class="line">        result=[title,date]</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        date=<span class="string">&#x27;未找到&#x27;</span></span><br><span class="line">        title=<span class="string">&#x27;未找到&#x27;</span></span><br><span class="line">        result = [title, date]</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        <span class="comment"># time.sleep(0.2)</span></span><br><span class="line">        <span class="comment"># driver.quit()</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><p>1.查多<br>2.查无  try<br>3.登录，无账号，但是自动记住</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

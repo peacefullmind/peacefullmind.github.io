@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="二维表转换12import pandas as pddf&#x3D;pd.read_excel(&quot;data.xlsx&quot;,&quot;Sheet1&quot;) df数据为 123456#将二维表转换成一维表new_data&#x3D;df.set_indwx(&quot;地区&quot;) # 将df中的地区一列设置为索引列df1 &#x3D; new_data.stack()  # stack的返回对象d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二维表转换与透视表python">
+<meta property="og:url" content="http://example.com/2021/04/24/%E4%BA%8C%E7%BB%B4%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%B8%8E%E9%80%8F%E8%A7%86%E8%A1%A8python/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="二维表转换12import pandas as pddf&#x3D;pd.read_excel(&quot;data.xlsx&quot;,&quot;Sheet1&quot;) df数据为 123456#将二维表转换成一维表new_data&#x3D;df.set_indwx(&quot;地区&quot;) # 将df中的地区一列设置为索引列df1 &#x3D; new_data.stack()  # stack的返回对象d">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/df%E6%95%B0%E6%8D%AE.jpg">
+<meta property="article:published_time" content="2021-04-24T06:28:12.000Z">
+<meta property="article:modified_time" content="2021-06-09T01:10:53.087Z">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/df%E6%95%B0%E6%8D%AE.jpg">
+
+<link rel="canonical" href="http://example.com/2021/04/24/%E4%BA%8C%E7%BB%B4%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%B8%8E%E9%80%8F%E8%A7%86%E8%A1%A8python/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>二维表转换与透视表python | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/24/%E4%BA%8C%E7%BB%B4%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%B8%8E%E9%80%8F%E8%A7%86%E8%A1%A8python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          二维表转换与透视表python
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-24 14:28:12" itemprop="dateCreated datePublished" datetime="2021-04-24T14:28:12+08:00">2021-04-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-09 09:10:53" itemprop="dateModified" datetime="2021-06-09T09:10:53+08:00">2021-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="二维表转换"><a href="#二维表转换" class="headerlink" title="二维表转换"></a>二维表转换</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df=pd.read_excel(<span class="string">&quot;data.xlsx&quot;</span>,<span class="string">&quot;Sheet1&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>df数据为<br><img src="/images/df%E6%95%B0%E6%8D%AE.jpg" alt="df数据"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将二维表转换成一维表</span></span><br><span class="line">new_data=df.set_indwx(<span class="string">&quot;地区&quot;</span>) <span class="comment"># 将df中的地区一列设置为索引列</span></span><br><span class="line">df1 = new_data.stack()  <span class="comment"># stack的返回对象df1是一个二级索引Series对象</span></span><br><span class="line">df2 = df1.reset_index() <span class="comment"># 通过reset_index函数将Series对象的二级索引均转化为DataFrame对象的列值</span></span><br><span class="line"> df2.columns = [<span class="string">&#x27;地区&#x27;</span>,<span class="string">&#x27;时间&#x27;</span>,<span class="string">&#x27;金额&#x27;</span>]</span><br><span class="line">df2</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 将一维数据表转化为二维数据表：</span></span><br><span class="line">s = pd.Series(<span class="built_in">list</span>(df2[<span class="string">&#x27;金额&#x27;</span>]),index=[df2[<span class="string">&#x27;地区&#x27;</span>],df2[<span class="string">&#x27;时间&#x27;</span>]])  <span class="comment"># 利用一维数据表df2构造一个二级索引Series对象</span></span><br><span class="line">df3 = s.unstack() <span class="comment"># 对s执行stack的逆操作unstack</span></span><br><span class="line">df3</span><br></pre></td></tr></table></figure>
+<h2 id="分类型数据"><a href="#分类型数据" class="headerlink" title="分类型数据"></a>分类型数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&quot;状态&quot;</span>] = df[<span class="string">&quot;状态&quot;</span>].astype(<span class="string">&quot;category&quot;</span>)</span><br><span class="line">df[<span class="string">&quot;状态&quot;</span>].cat.set_categories([<span class="string">&quot;完成&quot;</span>,<span class="string">&quot;待供&quot;</span>,<span class="string">&quot;提供&quot;</span>,<span class="string">&quot;被拒供&quot;</span>],inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="透视数据"><a href="#透视数据" class="headerlink" title="透视数据"></a>透视数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>])</span><br></pre></td></tr></table></figure>
+<p>通过将“销售代表”与其“经理”分组来开始汇总数据并进行汇总,其他列我们暂时不想看。那我们通过显式定义 values 字段来指定要显示的列。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>])</span><br></pre></td></tr></table></figure>
+<p>价格会自动对数据进行平均，但我们可以进行计数或总和。使用aggfunc和添加np.sum。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>],aggfunc=np.<span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>
+<p>aggfunc可以添加不同的聚合函数。可以使用numpy.mean函数求平均值并len计数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>],aggfunc=[np.mean,<span class="built_in">len</span>])</span><br></pre></td></tr></table></figure>
+<p>透视表pivot_table()是一种进行分组统计的函数，参数aggfunc决定统计类型。</p>
+<h2 id="多层索引与转换"><a href="#多层索引与转换" class="headerlink" title="多层索引与转换"></a>多层索引与转换</h2><p>stack<br>unstack</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/04/24/%E4%BD%BF%E7%94%A8openyxl%E6%9D%A5%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC/" rel="prev" title="使用openyxl来处理表格">
+      <i class="fa fa-chevron-left"></i> 使用openyxl来处理表格
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/04/%E6%95%B0%E6%8D%AE%E5%88%86%E7%AE%B1/" rel="next" title="数据分箱">
+      数据分箱 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E8%A1%A8%E8%BD%AC%E6%8D%A2"><span class="nav-text">二维表转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE"><span class="nav-text">分类型数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%8F%E8%A7%86%E6%95%B0%E6%8D%AE"><span class="nav-text">透视数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%B1%82%E7%B4%A2%E5%BC%95%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="nav-text">多层索引与转换</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

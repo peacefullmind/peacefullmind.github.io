@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="我的Hexo博客">
+<meta property="og:url" content="http://example.com/page/10/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/10/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%AC%AC%E4%B8%80%E4%B8%AAVUEdemo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%AC%AC%E4%B8%80%E4%B8%AAVUEdemo/" class="post-title-link" itemprop="url">第一个VUEdemo</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-18 18:29:29" itemprop="dateModified" datetime="2021-12-18T18:29:29+08:00">2021-12-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>从nodejs官网下载安装，验证：命令行中，node-v出现版本号，说明成功。</p>
+<h1 id="安装npm的国内镜像"><a href="#安装npm的国内镜像" class="headerlink" title="安装npm的国内镜像"></a>安装npm的国内镜像</h1><p>node环境中包括，npm包管理器，由于国外，网速问题，我们安装国内镜像<br>命令行中，<br>npm install -g cnpm -registry=<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a><br>然后可以用cnpm来代替cpm安装依赖包</p>
+<h1 id="安装vue-cli脚手架构建工具"><a href="#安装vue-cli脚手架构建工具" class="headerlink" title="安装vue-cli脚手架构建工具"></a>安装vue-cli脚手架构建工具</h1><p>命令行<br>cnpm install -g vue-cli</p>
+<h1 id="用vue-cli构建项目"><a href="#用vue-cli构建项目" class="headerlink" title="用vue-cli构建项目"></a>用vue-cli构建项目</h1><p>选择一个目录放项目，命令行转到该目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack firstVue</span><br></pre></td></tr></table></figure>
+<p>意思是初始化一个项目，利用的是webpack打包和压缩。<br>然后按照提示输入选项</p>
+<h1 id="安装项目所需的依赖"><a href="#安装项目所需的依赖" class="headerlink" title="安装项目所需的依赖"></a>安装项目所需的依赖</h1><p>cd 到项目文件夹下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
+<p>项目目录firstVue中多出一个node_modules的文件夹，就是项目所需的依赖包资源。</p>
+<h1 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h1><p>在项目目录中,运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<p>今天犯了三个错误<br>1.src写错了<br>2.script没有写到head中，也没有写到boby内<br>3.有中文的空格，需要在调试中看报错。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E8%87%AA%E5%88%B6ocr%E8%BD%AF%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E8%87%AA%E5%88%B6ocr%E8%BD%AF%E4%BB%B6/" class="post-title-link" itemprop="url">自治ocr软件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:43:58" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> keyboard</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageGrab</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> aip <span class="keyword">import</span> AipOcr</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot; 你的 APPID AK SK &quot;&quot;&quot;</span></span><br><span class="line">APP_ID = <span class="string">&#x27;&#x27;</span></span><br><span class="line">API_KEY = <span class="string">&#x27;&#x27;</span></span><br><span class="line">SECRET_KEY = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">client = AipOcr(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    keyboard.wait(hotkey=<span class="string">&#x27;f1&#x27;</span>)</span><br><span class="line">    keyboard.wait(hotkey=<span class="string">&#x27;ctrl+c&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    time.sleep(<span class="number">0.1</span>)</span><br><span class="line">    <span class="comment"># 从剪切板中获取图片</span></span><br><span class="line">    image = ImageGrab.grabclipboard()</span><br><span class="line">    image.save(<span class="string">&#x27;mypic.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;&quot;&quot; 读取图片 &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># def get_file_content(filePath):</span></span><br><span class="line">    <span class="comment">#     with open(filePath, &#x27;rb&#x27;) as fp:</span></span><br><span class="line">    <span class="comment">#         return fp.read()</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mypic.jpg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        image = file.read()</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 调用通用文字识别, 图片参数为本地图片 &quot;&quot;&quot;</span></span><br><span class="line">        text = client.basicGeneral(image)</span><br><span class="line">        <span class="comment"># print(text)</span></span><br><span class="line">        res = text[<span class="string">&#x27;words_result&#x27;</span>]</span><br><span class="line">        <span class="comment"># print(res)</span></span><br><span class="line">        <span class="comment"># print(type(res))</span></span><br><span class="line">        <span class="comment"># print(res)</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">            print(i[<span class="string">&#x27;words&#x27;</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5eTree%E5%92%8Cxpath%E7%BF%BB%E9%A1%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5eTree%E5%92%8Cxpath%E7%BF%BB%E9%A1%B5/" class="post-title-link" itemprop="url">静态网页eTree和xpath翻页</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:06:12" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>判断是静态网站，核心思路：</p>
+<h1 id="1-下载得到html"><a href="#1-下载得到html" class="headerlink" title="1.下载得到html"></a>1.下载得到html</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r = requests.get(url)</span><br><span class="line">html = r.text</span><br></pre></td></tr></table></figure>
+<h1 id="2-解析html，用xpath"><a href="#2-解析html，用xpath" class="headerlink" title="2.解析html，用xpath"></a>2.解析html，用xpath</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Selector = etree.HTML(html)</span><br><span class="line">name=Selector.xpath(<span class="string">&#x27;xpath路径&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>然后观察name的type，len<br>然后[0].text等<br>如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = Selector.xpath(<span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[2]/a/h2&#x27;</span>.<span class="built_in">format</span>(i))[<span class="number">0</span>].text</span><br></pre></td></tr></table></figure>
+<p>注意提取元素，有的会缺失，这时使用try，except</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">try</span>:</span><br><span class="line">            fen = Selector.xpath(<span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[3]/p[1]&#x27;</span>.<span class="built_in">format</span>(i))[<span class="number">0</span>].text.strip()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">            fen = <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h1 id="3-数据整理"><a href="#3-数据整理" class="headerlink" title="3. 数据整理"></a>3. 数据整理</h1><p>剧情,爱情,歌舞,传记 这种先将多个string转换成一个临时的list，然后将这个list转换成一个字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">temp = []</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, l + <span class="number">1</span>):</span><br><span class="line">                leixing = \</span><br><span class="line">                    Selector.xpath(</span><br><span class="line">                        <span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[2]/div[1]/button[&#123;&#125;]/span&#x27;</span>.<span class="built_in">format</span>(i, j))[</span><br><span class="line">                        <span class="number">0</span>].text</span><br><span class="line">                temp.append(leixing)</span><br><span class="line">            leixing_out = <span class="string">&#x27;,&#x27;</span>.join(temp)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            leixing_out = <span class="string">&#x27; &#x27;</span></span><br></pre></td></tr></table></figure>
+<p>a.join(b)，a是连接符，b是多个字符的list</p>
+<p>得到一页的data，多个list拼接成一个dataframe</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = pd.DataFrame(columns=[<span class="string">&#x27;名称&#x27;</span>, <span class="string">&#x27;类型&#x27;</span>, <span class="string">&#x27;地区&#x27;</span>, <span class="string">&#x27;时长&#x27;</span>, <span class="string">&#x27;上映时间&#x27;</span>, <span class="string">&#x27;评分&#x27;</span>])</span><br><span class="line"><span class="built_in">list</span> = [name, leixing_out, diqu, shichang, time, fen]</span><br><span class="line">data.loc[i - <span class="number">1</span>] = <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
+<p>多页通过的url服从规律<br>然后多个datagram，拼接成一个总的dataframe</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res= pd.DataFrame(columns=[<span class="string">&#x27;名称&#x27;</span>, <span class="string">&#x27;类型&#x27;</span>, <span class="string">&#x27;地区&#x27;</span>, <span class="string">&#x27;时长&#x27;</span>, <span class="string">&#x27;上映时间&#x27;</span>, <span class="string">&#x27;评分&#x27;</span>])</span><br><span class="line">res=res.append(data,ignore_index=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<p>最后输出成表格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.to_excel(<span class="string">&#x27;结果.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="4-所有程序"><a href="#4-所有程序" class="headerlink" title="4. 所有程序"></a>4. 所有程序</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getpd</span>(<span class="params">url</span>):</span></span><br><span class="line">    r = requests.get(url)</span><br><span class="line">    html = r.text</span><br><span class="line">    Selector = etree.HTML(html)</span><br><span class="line"></span><br><span class="line">    data = pd.DataFrame(columns=[<span class="string">&#x27;名称&#x27;</span>, <span class="string">&#x27;类型&#x27;</span>, <span class="string">&#x27;地区&#x27;</span>, <span class="string">&#x27;时长&#x27;</span>, <span class="string">&#x27;上映时间&#x27;</span>, <span class="string">&#x27;评分&#x27;</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">        <span class="built_in">list</span> = []</span><br><span class="line">        name = Selector.xpath(<span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[2]/a/h2&#x27;</span>.<span class="built_in">format</span>(i))[<span class="number">0</span>].text</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            leixing_all = Selector.xpath(</span><br><span class="line">                <span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[2]/div[1]/button&#x27;</span>.<span class="built_in">format</span>(i))</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            leixing_all = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        l = <span class="built_in">len</span>(leixing_all)</span><br><span class="line"></span><br><span class="line">        leixing_out = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        temp = []</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, l + <span class="number">1</span>):</span><br><span class="line">                leixing = \</span><br><span class="line">                    Selector.xpath(</span><br><span class="line">                        <span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[2]/div[1]/button[&#123;&#125;]/span&#x27;</span>.<span class="built_in">format</span>(i, j))[</span><br><span class="line">                        <span class="number">0</span>].text</span><br><span class="line">                temp.append(leixing)</span><br><span class="line">            leixing_out = <span class="string">&#x27;,&#x27;</span>.join(temp)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            leixing_out = <span class="string">&#x27; &#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            diqu = Selector.xpath(<span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[2]/div[2]/span[1]&#x27;</span>.<span class="built_in">format</span>(i))[</span><br><span class="line">                <span class="number">0</span>].text</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            diqu = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            shichang = Selector.xpath(<span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[2]/div[2]/span[3]&#x27;</span>.<span class="built_in">format</span>(i))[</span><br><span class="line">                <span class="number">0</span>].text</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            shichang = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            time = Selector.xpath(<span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[2]/div[3]/span&#x27;</span>.<span class="built_in">format</span>(i))[</span><br><span class="line">                <span class="number">0</span>].text.replace(<span class="string">&#x27;上映&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            time = <span class="string">&#x27; &#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            fen = Selector.xpath(<span class="string">&#x27;//*[@id=&quot;index&quot;]/div[1]/div[1]/div[&#123;&#125;]/div/div/div[3]/p[1]&#x27;</span>.<span class="built_in">format</span>(i))[<span class="number">0</span>].text.strip()</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            fen = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">list</span> = [name, leixing_out, diqu, shichang, time, fen]</span><br><span class="line">        data.loc[i - <span class="number">1</span>] = <span class="built_in">list</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data = pd.DataFrame(columns=[<span class="string">&#x27;名称&#x27;</span>, <span class="string">&#x27;类型&#x27;</span>, <span class="string">&#x27;地区&#x27;</span>, <span class="string">&#x27;时长&#x27;</span>, <span class="string">&#x27;上映时间&#x27;</span>, <span class="string">&#x27;评分&#x27;</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">    url=<span class="string">&#x27;https://ssr1.scrape.center/page/&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(i)</span><br><span class="line">    temp=getpd(url)</span><br><span class="line">    data=data.append(temp,ignore_index=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># print(temp)</span></span><br><span class="line"></span><br><span class="line">print(data)</span><br><span class="line">data.to_excel(<span class="string">&#x27;结果.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="5-问题"><a href="#5-问题" class="headerlink" title="5.问题"></a>5.问题</h1><p>1.图片怎么爬取并保存<br>2.内页怎么爬取<br>3.用什么数据库保存这种图片+电影简介的数据？</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/linux%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/linux%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">linux命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-18 17:59:15" itemprop="dateModified" datetime="2021-12-18T17:59:15+08:00">2021-12-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="问题1：虚拟机无法登录"><a href="#问题1：虚拟机无法登录" class="headerlink" title="问题1：虚拟机无法登录"></a>问题1：虚拟机无法登录</h2><p>虚拟机自己没有开小键盘，输入密码是数据没有真实输入进去。</p>
+<h2 id="问题2：XShell连接linux虚拟机"><a href="#问题2：XShell连接linux虚拟机" class="headerlink" title="问题2：XShell连接linux虚拟机"></a>问题2：XShell连接linux虚拟机</h2><p>如果不能连接，首选看linux虚拟机自身是否可以ping通宿主机等<br>点击编辑-虚拟机网络编辑器，然后编辑虚拟机的网络连接，NAT模式，并保持默认<br>不需要手动关闭DHCP【原因】<br>采用ip addr 查看虚拟机的IP信息<br>然后在XShell中填入ip信息<br>Xshell是在已有的连接中点击属性，然后修改ip的，注意点击连接。而不是直接点击已有的连接,可能是之前IP信息没有保存上</p>
+<p>第二次是因为弄sftp的时候修改了sshd_config的配置，导致</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd start</span><br></pre></td></tr></table></figure>
+<p>不成功<br>按照注释，删除掉sshd配置表中导致失败的关键几句话。</p>
+<p>第三次是因为宿主机网络和共享中心的更改适配器设置中的，VMware 8被禁用。</p>
+<p>有一次：<br>将虚拟网络编辑器里的 vmnet8 还原默认设置，然后登录。</p>
+<h2 id="3-常用命令"><a href="#3-常用命令" class="headerlink" title="3.常用命令"></a>3.常用命令</h2><h3 id="3-1常用文件命令"><a href="#3-1常用文件命令" class="headerlink" title="3.1常用文件命令"></a>3.1常用文件命令</h3><p>显示文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l</span><br></pre></td></tr></table></figure>
+<p>显示隐藏文件详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -a</span><br></pre></td></tr></table></figure>
+<p>逆向显示【默认按照文件名逆向】</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -f -r</span><br></pre></td></tr></table></figure>
+<p>按照时间逆向显示详细信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l -r -t</span><br></pre></td></tr></table></figure>
+<p>同上的简单写法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lrt</span><br></pre></td></tr></table></figure>
+<p>递归显示，显示子文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -R</span><br></pre></td></tr></table></figure>
+
+<p>绝对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path</span><br></pre></td></tr></table></figure>
+<p>相对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./path</span><br></pre></td></tr></table></figure>
+<p>进入/目录，根目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br></pre></td></tr></table></figure>
+<p>返回用户家目，用户目录：主目录是用户的HOME目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br></pre></td></tr></table></figure>
+<p>用户登录后在 家目录 ，可用pwd命令查看，普通用户为 /home/用户名，root用户为/root<br>根目录是在最顶端的目录<br>相当于查看有多少普通用户的家目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br></pre></td></tr></table></figure>
+<p>返回上一级目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+<p>返回上一层目录下的path路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../path</span><br></pre></td></tr></table></figure>
+<p>linux 一切皆文件<br>ctrl+C 命令进行到一半，强制结束。<br>clear 清屏</p>
+<p>在根目录下新建a目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /a</span><br></pre></td></tr></table></figure>
+<p>mkdir -p 新建多级目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /a/<span class="built_in">test</span>/runrun</span><br></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /a.txt</span><br></pre></td></tr></table></figure>
+<p>递归查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -R /a</span><br></pre></td></tr></table></figure>
+<p>删除a目录，a目录必须是空的，实际中使用场景少。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir /a</span><br></pre></td></tr></table></figure>
+<p>删除非空的目录，有提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r /a</span><br></pre></td></tr></table></figure>
+<p>删除目录，并且不提示，有风险，操作前反复检查。比如这里/ 和a之间不能有空格，否则是把整个根目录下的文件全部删除了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r -f /a</span><br></pre></td></tr></table></figure>
+<p>前者是源文件， 后者是目标位置，如果不加参数的话，只能复制文件，不能复制目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /a/tmp/a.txt /</span><br></pre></td></tr></table></figure>
+<p>可以复制目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /a/tmp /</span><br></pre></td></tr></table></figure>
+<p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /a.txt</span><br></pre></td></tr></table></figure>
+<p>将文件a.txt 复制到目标目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /a.txt /tmp</span><br></pre></td></tr></table></figure>
+<p>-p 保留源时间<br>-a 保留源文件的所有信息</p>
+<p>mv 改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /a.txt /b.txt</span><br></pre></td></tr></table></figure>
+<p>移动+改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /a.txt /tmp/c.txt</span><br></pre></td></tr></table></figure>
+<p>星号通配符，匹配单个/多个字符<br>？通配符，匹配单个字符<br>列出所有/tmp目录下以test开头的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /tmp/<span class="built_in">test</span>*</span><br></pre></td></tr></table></figure>
+
+<p>cat /tmp/a.txt 查看文件a.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat /tmp/a.txt</span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">head -3 ./a.txt</span><br><span class="line">head -3 ./a.txt</span><br><span class="line">wc -l ./a.txt </span><br><span class="line">more ./a.txt</span><br><span class="line">tail -f ./a.txt</span><br></pre></td></tr></table></figure>
+<p>head -3 ./a.txt 显示开头前三行<br>head -3 ./a.txt显示结尾后三行<br>wc -l ./a.txt 统计行数<br>more ./a.txt 查看一部分，按住空格后，再显示下一部分<br>tail -f 目标文件 实时显示文件，常用于查看日志文件，按住ctrl+c结束</p>
+<h3 id="3-2压缩和解压缩"><a href="#3-2压缩和解压缩" class="headerlink" title="3.2压缩和解压缩"></a>3.2压缩和解压缩</h3><p>打包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar cf /tmp/etc-backup.tar /etc</span><br></pre></td></tr></table></figure>
+<p>注意：<br>1.参数前没有-<br>2.目标在前，反而源文件在后</p>
+<p>打包并压缩</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar czf /tmp/etc-backup.tar.gz  /etc</span><br></pre></td></tr></table></figure>
+<p>参数有三个，czf,其中z代表压缩的意思,c代表打包，x代表解包，f指定操作类型为文件</p>
+<p>解包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xf /tmp/etc-backup.tar -C  /a</span><br></pre></td></tr></table></figure>
+
+<p>查看大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -lh /tmp/etc-backip.tar</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-用户管理和文件权限"><a href="#3-3-用户管理和文件权限" class="headerlink" title="3.3 用户管理和文件权限"></a>3.3 用户管理和文件权限</h3><p>root 用户是超级管理员<br>普通用户只能看到自己家目录下的，和root用户开放给他的权限，无法看到别人的家目录</p>
+<p>新建用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd TJ</span><br><span class="line">adduser TJ cat</span><br><span class="line">id root</span><br></pre></td></tr></table></figure>
+<p>更改密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd TJ</span><br></pre></td></tr></table></figure>
+<p>删除用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userdel TJ</span><br></pre></td></tr></table></figure>
+<p>查看用户所属的用户组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/group |grep root</span><br></pre></td></tr></table></figure>
+<p>用户组信息保存在/etc/group中，cat可以查看所有 ，后面加 |grep 用户名，可以筛选查看。</p>
+<p>新建用户组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd group_name</span><br></pre></td></tr></table></figure>
+<p>删除用户组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupdel group_name</span><br></pre></td></tr></table></figure>
+<p>重命名用户组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupmod -n newname oldname</span><br></pre></td></tr></table></figure>
+<p>在创建新用户时，将修改以下 4 个文件</p>
+<ul>
+<li><code>/etc/passwd</code>： 用户账户的详细信息在此文件中更新。</li>
+<li><code>/etc/shadow</code>： 用户账户密码在此文件中更新。</li>
+<li><code>/etc/group</code>： 新用户群组的详细信息在此文件中更新。</li>
+<li><code>/etc/gshadow</code>： 新用户群组密码在此文件中更新。</li>
+</ul>
+<p>每个文件有三组固定的权限，分别对应拥有者，所属用户组，其他用户，这个顺序是固定的。文件的读写执行对应字母 rwx，以二进制表示就是 111，用十进制表示就是 7，<br>我们刚刚新建的文件 iphone11 的权限是 rw-rw-rw-，换成对应的十进制表示就是 666，这就表示这个文件的拥有者，所属用户组和其他用户具有读写权限，不具有执行权限。</p>
+<p>向文件追加内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo bbbbb&gt;a.txt</span><br></pre></td></tr></table></figure>
+<p>注意 &gt;是覆盖，&gt;&gt;是追加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -ll 文件名</span><br><span class="line">chmod 600 文件名</span><br></pre></td></tr></table></figure>
+<p>切换用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - 用户名</span><br></pre></td></tr></table></figure>
+<p>改变文件所属的用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown user file</span><br></pre></td></tr></table></figure>
+<p>虽然本质上无论是目录结构还是操作系统内核都是存储在磁盘上的，但从逻辑上来说 Linux 的磁盘是“挂在”（挂载在）目录上的。<br>例如 /etc 应该放置设置文件，/bin 与 /sbin 则应该放置可执行文件等等。<br>针对 /usr 及 /var 这两个目录的子目录来定义。例如 /var/log 放置系统日志文件，/usr/share 放置共享数据等等。</p>
+<p>找出/etc/目录下的所有以.list结尾的文件。<br>sudo find /etc/ -name “*.list”</p>
+<h3 id="3-4软件安装"><a href="#3-4软件安装" class="headerlink" title="3.4软件安装"></a>3.4软件安装</h3><p>centOS，RedHat  yum包管理器，软件安装包格式是rpm，<br>Debian，Ubuntu使用apt包管理器，软件安装包格式是deb，<br>输入ifconfig报错<br>查看是否有命令ifconfig</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /sbin</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<p>如果没有，则安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
+<p>查看文件安装路径<br>使用whersis 查看所有的文件路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where is oracle</span><br></pre></td></tr></table></figure>
+<p>查询运行文件所在的路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which oracle</span><br></pre></td></tr></table></figure>
+<h3 id="3-5-磁盘查看命令"><a href="#3-5-磁盘查看命令" class="headerlink" title="3.5 磁盘查看命令"></a>3.5 磁盘查看命令</h3><p>查看内存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
+<p>查看文件系统的占用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
+<p>最后一列是挂载的位置，挂载的涵义是类似于windows的各个盘符。</p>
+<h3 id="3-6-网络命令"><a href="#3-6-网络命令" class="headerlink" title="3.6 网络命令"></a>3.6 网络命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-常用技巧"><a href="#4-常用技巧" class="headerlink" title="4.常用技巧"></a>4.常用技巧</h2><p>上箭头，可以恢复你之前输入的历史命令<br>ctrl +c 可以强行终止<br>tab 补全目录，命令</p>
+<p>通配符<br>星号， 0个或者多个<br>问号，一个<br>ls *.txt<br>小键盘不能用</p>
+<p>一次性创建多个文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch love_&#123;1..10&#125;_shiyanlou.txt</span><br></pre></td></tr></table></figure>
+<p>man +命令名字，可以查看命令使用方法</p>
+<h2 id="5-vim-简单使用"><a href="#5-vim-简单使用" class="headerlink" title="5. vim 简单使用"></a>5. vim 简单使用</h2><p>新建a.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch /tmp/a.txt</span><br></pre></td></tr></table></figure>
+<p>进入vim编辑内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /tmp/a.txt</span><br></pre></td></tr></table></figure>
+<p>按住i，进入编辑模式<br>输入一些内容<br>按住esc 退出编辑模式<br>输入，冒号wq 保存</p>
+<p>esc 正常模式<br>:q! 放弃改动退出<br>：wq 保存改动</p>
+<p>正常模式下删除光标所在位置的字符，请按X<br>正常模式下，输入i，A可以增加文本，增加位置不一样。</p>
+<p>vimtutor 非常好的教程</p>
+<h2 id="6-一个实用例子shell脚本"><a href="#6-一个实用例子shell脚本" class="headerlink" title="6.一个实用例子shell脚本"></a>6.一个实用例子shell脚本</h2><p>在路径/usr下新建一个sapexport目录，一个sapbackup目录<br>在/home/下新建scrips，下新建pushdata.sh脚本<br>task1：<br>文件复制和删除：<br>将文件下sapexport下的所有内容，拷贝到sapbackup目录；<br>然后删除sapexport下的所有内容<br>注意：sapbackup目录是一个累加的，原来内容不被覆盖<br>输出语句“执行完毕”</p>
+<p>task2：<br>文件移动：<br>将文件下sapexport下的所有内容，移动到sapbackup目录；<br>注意：sapbackup目录是一个累加的，原来内容不被覆盖<br>输出语句“执行完毕”</p>
+<p>task3：<br>增加ftp或者sftp<br>将文件下sapexport下的所有内容，put到ftp下的特定路径下，再执行任务2的内容</p>
+<p>task4：<br>增加定时任务：<br>每晚22：00定时执行，不需要手动执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/sh</span></span><br><span class="line">mv /usr/sapexport/* /usr/sapbackup</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;执行完成&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="7-定时任务"><a href="#7-定时任务" class="headerlink" title="7.定时任务"></a>7.定时任务</h2><p>列出当前用户定时服务内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure>
+<p>编辑当前用户定时任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<p>自动进入vim，编辑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
+<p>第一个 * 表示分钟：取值范围 0-59</p>
+<p>第二个 * 表示小时：取值范围0-23</p>
+<p>第三个 * 表示天数：取值范围1-31</p>
+<p>第四个 * 表示月份：取值范围1-12</p>
+<p>第五个 * 表示每周：取值范围0-6</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 22 * * * sh /home/scrips/putdata.sh</span><br></pre></td></tr></table></figure>
+<p>查看crontab执行日志,判断定时任务是否执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /var/spool/mail/root</span><br><span class="line">tail -f /var/spool/mail/root</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ol>
+<li>做了定时任务后，输出会在日志里，不会在命令行终端中输出</li>
+<li>如下mv命令，如果sapexport下是空的，会执行失败<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/sapexport/*  /usr/sapbackup</span><br></pre></td></tr></table></figure>
+<h2 id="8-进程与线程"><a href="#8-进程与线程" class="headerlink" title="8 进程与线程"></a>8 进程与线程</h2>1个程序至少有一个进程，一个进程至少有一个线程。</li>
+</ol>
+<p>第一个角度来看，我们可以分为用户进程与系统进程：</p>
+<ul>
+<li>用户进程：通过执行用户程序、应用程序或称之为内核之外的系统程序而产生的进程，此类进程可以在用户的控制下运行或关闭。</li>
+<li>系统进程：通过执行系统内核程序而产生的进程，比如可以执行内存资源分配和进程切换等相对底层的工作；而且该进程的运行不受用户的干预，即使是 root 用户也不能干预系统进程的运行。</li>
+</ul>
+<p>第二角度来看，我们可以将进程分为交互进程、批处理进程、守护进程：</p>
+<ul>
+<li>交互进程：由一个 shell 终端启动的进程，在执行过程中，需要与用户进行交互操作，可以运行于前台，也可以运行在后台。</li>
+<li>批处理进程：该进程是一个进程集合，负责按顺序启动其他的进程。</li>
+<li>守护进程：守护进程是一直运行的一种进程，在 Linux 系统启动时启动，在系统关闭时终止。它们独立于控制终端并且周期性的执行某种任务或等待处理某些发生的事件。例如 httpd 进程，一直处于运行状态，等待用户的访问。还有经常用的 cron（在 centOS 系列为 crond）进程，这个进程为 crontab 的守护进程，可以周期性的执行用户设定的某些任务。</li>
+<li>top 是一个在前台执行的程序，所以执行后便进入到这样的一个交互界面，正是因为交互界面我们才可以实时的获取到系统与进程的信息。在交互界面中我们可以通过一些指令来操作和筛选。在此之前我们先来了解显示了哪些信息。</li>
+</ul>
+<p>我们看到 top 显示的第一排，</p>
+<p>内容    解释<br>top    表示当前程序的名称<br>11:05:18    表示当前的系统的时间<br>up 8 days,17:12    表示该机器已经启动了多长时间<br>1 user    表示当前系统中只有一个用户<br>load average: 0.29,0.20,0.25    分别对应 1、5、15 分钟内 cpu 的平均负载<br>load average 在 wikipedia 中的解释是 the system load is a measure of the amount of work that a computer system is doing 也就是对当前 CPU 工作量的度量，具体来说也就是指运行队列的平均长度，也就是等待 CPU 的平均进程数相关的一个计算值。</p>
+<p>我们该如何看待这个 load average 数据呢？</p>
+<p>假设我们的系统是单 CPU、单内核的，把它比喻成是一条单向的桥，把 CPU 任务比作汽车。</p>
+<p>load = 0 的时候意味着这个桥上并没有车，cpu 没有任何任务；<br>load &lt; 1 的时候意味着桥上的车并不多，一切都还是很流畅的，cpu 的任务并不多，资源还很充足；<br>load = 1 的时候就意味着桥已经被车给占满了，没有一点空隙，cpu 已经在全力工作了，所有的资源都被用完了，当然还好，这还在能力范围之内，只是有点慢而已；<br>load &gt; 1 的时候就意味着不仅仅是桥上已经被车占满了，就连桥外都被占满了，cpu 已经在全力工作，系统资源的用完了，但是还是有大量的进程在请求，在等待。若是这个值大于 2 表示进程请求超过 CPU 工作能力的 2 倍。而若是这个值大于 5 说明系统已经在超负荷运作了。<br>这是单个 CPU 单核的情况，而实际生活中我们需要将得到的这个值除以我们的核数来看。我们可以通过以下的命令来查看 CPU 的个数与核心数：</p>
+<p>#查看物理 CPU 的个数<br>cat /proc/cpuinfo | grep “physical id” | sort | uniq |wc -l</p>
+<p>#每个 cpu 的核心数<br>cat /proc/cpuinfo | grep “physical id” | grep “0” | wc -l<br>copy<br>通过上面的指数我们可以得知 load 的临界值为 1 ，但是在实际生活中，比较有经验的运维或者系统管理员会将临界值定为 0.7。这里的指数都是除以核心数以后的值，不要混淆了</p>
+<p>若是 load &lt; 0.7 并不会去关注他；<br>若是 0.7&lt; load &lt; 1 的时候我们就需要稍微关注一下了，虽然还可以应付但是这个值已经离临界不远了；<br>若是 load = 1 的时候我们就需要警惕了，因为这个时候已经没有更多的资源的了，已经在全力以赴了；<br>若是 load &gt; 5 的时候系统已经快不行了，这个时候你需要加班解决问题了<br>通常我们都会先看 15 分钟的值来看这个大体的趋势，然后再看 5 分钟的值对比来看是否有下降的趋势。</p>
+<p>查看 busybox 的代码可以知道，数据是每 5 秒钟就检查一次活跃的进程数，然后计算出该值，然后 load 从 /proc/loadavg 中读取的。而这个 load 的值是如何计算的呢，这是 load 的计算的源码</p>
+<p>#define FSHIFT      11          /* nr of bits of precision */<br>#define FIXED_1     (1&lt;&lt;FSHIFT) /* 1.0 as fixed-point(定点) */<br>#define LOAD_FREQ   (5*HZ)      /* 5 sec intervals，每隔5秒计算一次平均负载值 */<br>#define CALC_LOAD(load, exp, n)     <br>         load *= exp;               <br>         load += n*(FIXED_1 - exp); <br>         load &gt;&gt;= FSHIFT;</p>
+<p>unsigned long avenrun[3];</p>
+<p>EXPORT_SYMBOL(avenrun);</p>
+<p>/*</p>
+<ul>
+<li>calc_load - given tick count, update the avenrun load estimates.</li>
+<li>This is called while holding a write_lock on xtime_lock.</li>
+<li>/<br>static inline void calc_load(unsigned long ticks)<br>{<pre><code>   unsigned long active_tasks; /* fixed-point */
+   static int count = LOAD_FREQ;
+   count -= ticks;
+   if (count &lt; 0) &#123;
+           count += LOAD_FREQ;
+           active_tasks = count_active_tasks();
+           CALC_LOAD(avenrun[0], EXP_1, active_tasks);
+           CALC_LOAD(avenrun[1], EXP_5, active_tasks);
+           CALC_LOAD(avenrun[2], EXP_15, active_tasks);
+   &#125;
+</code></pre>
+}<br>copy<br>有兴趣的朋友可以研究一下，是如何计算的。代码中的后面这部分相当于它的计算公式。</li>
+</ul>
+<p>我们回归正题，来看 top 的第二行数据，基本上第二行是进程的一个情况统计：</p>
+<p>内容    解释<br>Tasks: 26 total    进程总数<br>1 running    1 个正在运行的进程数<br>25 sleeping    25 个睡眠的进程数<br>0 stopped    没有停止的进程数<br>0 zombie    没有僵尸进程数<br>来看 top 的第三行数据，这一行基本上是 CPU 的一个使用情况的统计了：</p>
+<p>内容    解释<br>Cpu(s): 1.0%us    用户空间进程占用 CPU 百分比<br>1.0% sy    内核空间运行占用 CPU 百分比<br>0.0%ni    用户进程空间内改变过优先级的进程占用 CPU 百分比<br>97.9%id    空闲 CPU 百分比<br>0.0%wa    等待输入输出的 CPU 时间百分比<br>0.1%hi    硬中断(Hardware IRQ)占用 CPU 的百分比<br>0.0%si    软中断(Software IRQ)占用 CPU 的百分比<br>0.0%st    (Steal time) 是 hypervisor 等虚拟服务中，虚拟 CPU 等待实际 CPU 的时间的百分比<br>CPU 利用率是对一个时间段内 CPU 使用状况的统计，通过这个指标可以看出在某一个时间段内 CPU 被占用的情况，而 Load Average 是 CPU 的 Load，它所包含的信息不是 CPU 的使用率状况，而是在一段时间内 CPU 正在处理以及等待 CPU 处理的进程数情况统计信息，这两个指标并不一样。</p>
+<p>来看 top 的第四行数据，这一行基本上是内存的一个使用情况的统计了：</p>
+<p>内容    解释<br>8176740 total    物理内存总量<br>8032104 used    使用的物理内存总量<br>144636 free    空闲内存总量<br>313088 buffers    用作内核缓存的内存量<br>注意：</p>
+<p>系统中可用的物理内存最大值并不是 free 这个单一的值，而是 free + buffers + swap 中的 cached 的和。</p>
+<p>来看 top 的第五行数据，这一行基本上是交换区的一个使用情况的统计了：</p>
+<p>内容    解释<br>total    交换区总量<br>used    使用的交换区总量<br>free    空闲交换区总量<br>cached    缓冲的交换区总量，内存中的内容被换出到交换区，而后又被换入到内存，但使用过的交换区尚未被覆盖<br>再下面就是进程的一个情况了</p>
+<p>列名    解释<br>PID     进程 id<br>USER      该进程的所属用户<br>PR      该进程执行的优先级 priority 值<br>NI      该进程的 nice 值<br>VIRT    该进程任务所使用的虚拟内存的总数<br>RES    该进程所使用的物理内存数，也称之为驻留内存数<br>SHR    该进程共享内存的大小<br>S    该进程进程的状态: S=sleep R=running Z=zombie<br>%CPU    该进程 CPU 的利用率<br>%MEM    该进程内存的利用率<br>TIME+    该进程活跃的总时间<br>COMMAND    该进程运行的名字  </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/hello-world/" class="post-title-link" itemprop="url">hexo搭建</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:24:40" itemprop="dateCreated datePublished" datetime="2021-02-13T14:24:40+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-25 21:47:02" itemprop="dateModified" datetime="2022-01-25T21:47:02+08:00">2022-01-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>[toc]</p>
+<h2 id="1-Quick-Start"><a href="#1-Quick-Start" class="headerlink" title="1.Quick Start"></a>1.Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="2-踩坑记"><a href="#2-踩坑记" class="headerlink" title="2. 踩坑记"></a>2. 踩坑记</h2><ol>
+<li>为什么public中不能生成预想的index.html呢？<br>站点配置文件 theme: 冒号后面一定要有空格</li>
+<li>为什么本地效果可以，但是不能hexo d呢？<br>因为需要部署的插件，需要在目录下安装</li>
+<li>修改中文后，首页还是英文？<br>有缓存，先修改下一项，自然解决</li>
+<li>目录和tags怎么设置？<br>首选要hexo new page tags 然后在生成的文件中修改type<br>其次，将文章和tags关联</li>
+<li>标签/分类数量统计不准确？<br>因为 Hexo 有缓存的功能，因此有时候你会发现在 标签 和 分类 页面中的数量统计并不准确。 出现这个问题时，可以按照以下步骤重新生成站点的内容：<br>先移除博客根目录下的.deploy git文件夹和db.json文件，然后清理下public目录下的categories和tags两个文件夹里的文件，然后重新部署静态博客：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2>public 是生成的静态文件，也就是浏览器实际加载的，而source文件时源文件，相当于数据库<br>hexo g就是根据source生成public和另外一个文件<br>hexo clean 是删除hexo g生成的文件<br>hexo d是部署到远程服务器中，而远程服务器的地址在站点配置文件中配置</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:peacefullmind&#x2F;peacefullmind.github.io.git</span><br><span class="line">  master: master</span><br></pre></td></tr></table></figure>
+<p>hexo s在未配置远程服务器的情况下，可以在本地预览效果</p>
+<h2 id="3-步骤"><a href="#3-步骤" class="headerlink" title="3. 步骤"></a>3. 步骤</h2><h3 id="3-1-搭建hexo博客"><a href="#3-1-搭建hexo博客" class="headerlink" title="3.1 搭建hexo博客"></a>3.1 搭建hexo博客</h3><p>安装nodejs，hexo，git等<br>初始化hexo </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<p>然后测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;firstBlog&quot;</span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>在本地查看博客效果，是默认主题</p>
+<h3 id="3-2-更换主题"><a href="#3-2-更换主题" class="headerlink" title="3.2 更换主题"></a>3.2 更换主题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<p>然后在站点配置文件中修改theme为next<br>在本地进行测试，是否成功</p>
+<h3 id="3-3-修改语言，博客名，作者名"><a href="#3-3-修改语言，博客名，作者名" class="headerlink" title="3.3 修改语言，博客名，作者名"></a>3.3 修改语言，博客名，作者名</h3><p>语言，博客名，作者名在站点配置文件中</p>
+<h3 id="3-4，开启目录，标签等"><a href="#3-4，开启目录，标签等" class="headerlink" title="3.4，开启目录，标签等"></a>3.4，开启目录，标签等</h3><p>目录和标签需要根据next主题的要求进行设置</p>
+<h3 id="3-5-推送到远程服务器上"><a href="#3-5-推送到远程服务器上" class="headerlink" title="3.5 推送到远程服务器上"></a>3.5 推送到远程服务器上</h3><p>以github为例，建立仓库，通过clone占到git地址，并放置到站点主题中。<br>然后git d -g即可</p>
+<h2 id="4-markdown-常用"><a href="#4-markdown-常用" class="headerlink" title="4. markdown 常用"></a>4. markdown 常用</h2><p>注意事项：回车很重要的一个标志</p>
+<h3 id="4-1文字常用"><a href="#4-1文字常用" class="headerlink" title="4.1文字常用"></a>4.1文字常用</h3><p><strong>加粗</strong> </p>
+<blockquote>
+<p>引用</p>
+</blockquote>
+<p>==标黄文字== </p>
+<p><del>删除线</del></p>
+<ul>
+<li><input disabled="" type="checkbox"> 任务1</li>
+<li><input checked="" disabled="" type="checkbox"> 任务2</li>
+</ul>
+<ul>
+<li>无序列表1</li>
+<li>无序列表2</li>
+</ul>
+<h3 id="4-2快捷键和文章架构"><a href="#4-2快捷键和文章架构" class="headerlink" title="4.2快捷键和文章架构"></a>4.2快捷键和文章架构</h3><p>[toc] 生成目录，放在开头<br>ctrl+T插入表格 </p>
+<h3 id="4-3图片"><a href="#4-3图片" class="headerlink" title="4.3图片"></a>4.3图片</h3><p>这种引用本地图片的形式，在本地的markdown编辑器里无法显示，但是在hexo博客里是可以的<br><img src="/images/%E5%9B%BEtest.jpg" alt="图test"><br>或者可以引用在线的图片，则在本地markdown，hexo博客均可显示。<br><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
+<p>使用PicGO工具，设置好图床后，即可使用。<br><img src="https://raw.githubusercontent.com/peacefullmind/Picture/main/v2-221ef98ff1449faf9775f240a67e74f3_720w.jpg" alt="图床测试"></p>
+<h3 id="4-4表格"><a href="#4-4表格" class="headerlink" title="4.4表格"></a>4.4表格</h3><table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="right">右对齐</th>
+<th align="center">居中对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+<tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/04/06/Test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/06/Test/" class="post-title-link" itemprop="url">Test网址</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-06 00:11:46" itemprop="dateCreated datePublished" datetime="2020-04-06T00:11:46+08:00">2020-04-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-13 15:00:37" itemprop="dateModified" datetime="2021-02-13T15:00:37+08:00">2021-02-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p> Your site is published at <a href="https://peacefullmind.github.io/">https://peacefullmind.github.io/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2016/07/13/excel%E7%9B%B8%E5%85%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/07/13/excel%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">Excel 相关</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-07-13 20:46:25" itemprop="dateCreated datePublished" datetime="2016-07-13T20:46:25+08:00">2016-07-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 19:36:04" itemprop="dateModified" datetime="2021-04-17T19:36:04+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/EXCEL/" itemprop="url" rel="index"><span itemprop="name">EXCEL</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1-window文件管理"><a href="#1-window文件管理" class="headerlink" title="1.window文件管理"></a>1.window文件管理</h1><p>选中文件，按F2，重命名</p>
+<h1 id="2-excel快速操作"><a href="#2-excel快速操作" class="headerlink" title="2.excel快速操作"></a>2.excel快速操作</h1><p><strong>场景</strong>：<br>共同过一个excel表，一边讨论，一边修改，需要快速熟练操作<br><strong>拉一列数据</strong><br>按住ctrl往下拉才是序列，或者先拉下来，再在右下角点击<br><strong>固定功能区：</strong><br>开始，右下角，固定功能区，把菜单固定下来。【ctrl+F1】或者【ctrl+win+F1】<br>最好保留固定功能区，有利于快速找到要用的工具，快速熟悉工具。<br><strong>把已经审核了的条目和未审核的条目区分开：</strong><br>利用颜色：录制宏，将该行变成浅蓝色<br>注意：ctrl+Z 无法撤销用宏快捷键的操作。</p>
+<p><strong>删除未审核的条目但是和审核的条目重复的：</strong></p>
+<p><strong>根据颜色筛选：</strong><br>【ctrl+shift+L】 下三角：按照颜色筛选</p>
+<p><strong>删除重复行：</strong><br>选中，数据，删除重复值</p>
+<p><strong>快速选中多行:</strong><br>选择位置首，按住shift，再选择位置末<br>如果一直到末尾的话，可以选择位置首，【ctrl+shift+下箭头】<br>选择整个表：选中这个区域内的任意一个单元格，按下快捷键Ctrl+A</p>
+<p><strong>复制表格，并插入到另一个位置：</strong><br>先复制特定的表格，再在待插入的位置，【ctrl++】，就可以复制到上方【方便！】<br>试用场景：复制特定的表格，要连续，并且只能复制，不能剪切</p>
+<p><strong>快速调换两行位置：</strong><br>鼠标拖动：<br>选中其中的一行数据，将光标移动到选内中区域的边缘，出现黑十字，然后在键盘上敲击“shift”，然后将鼠标移动到另外一行上，松开鼠标和“shift”了，Excel两行容数据交换成功。<br>注意，只是将下边行拖动到上边，并没有完成交换。</p>
+<p><strong>快速交换两列</strong><br>通过鼠标拖动<br>核心：注意放到边缘上，鼠标变成黑十字</p>
+<p><strong>删除多行:</strong><br>先选中，再快捷键[ctrl+-]<br>如果先选中，再按delete地话，没有删除多行，而是将多行中的文字删除了。<br><strong>插入多行:</strong><br>先选中，再快捷键[ctrl++] 小键盘时，如果是共用+号，需要再按住shift<br><strong>筛选：</strong><br>选中哪一行：然后【ctrl+shift+L】</p>
+<p>** 填充快捷键**<br>先手动填充某个单元格，下次填充，先选中单元格，或者某行，直接F4即可。<br>** 自动换行**<br>开始——自动换行 ，在居中的右边<br> ** 条件格式**<br> 善用条件格式<br> ** 清除**<br> 开始——&gt;清除<br> ** 保护与锁定 **<br> 1.首选取消整张表的锁定<br> 2.然后选择特定的，右击 设置单元格格式 锁定<br> 3.审阅，保护工作表</p>
+<h2 id="vlookup函数"><a href="#vlookup函数" class="headerlink" title="vlookup函数"></a>vlookup函数</h2><p>=vlookup()<br>表1，原始表<br>表2，查找表（小表）<br>第一个参数是，查找表的查找值【也就是查找线索】<br>第二个参数是，查找表，是一个范围，注意从第一个参数所在列的位置开始。<br>第三个参数是，需要返回的列在小表的列数的序号<br>第四个参数是，0或者1，表示精确查找或者近似查找</p>
+<p>常见问题：</p>
+<ul>
+<li>返回”#N/A”<br>格式不对<br>1.有的是绿色小三角的文本格式，有的不带，无法匹配<br>2.有的在文字前面有一个空字符</li>
+</ul>
+<p>针对第一种情况，要转换成文本格式，分列，选择文本格式<br>针对第二种情况，使用替换功能，将空字符替换成空</p>
+<ul>
+<li>返回内容有，但是不符合预期<br>原因是返回内容的格式问题。</li>
+</ul>
+<p>绝对引用：美元符号</p>
+<p>多列匹配，新建一个合并列<br>用&amp;将两列合并在一起。</p>
+<h2 id="excel场景"><a href="#excel场景" class="headerlink" title="excel场景"></a>excel场景</h2><p>excel 不可替代性主要体现在哪里呢？<br>我的理解是：如果我用tableau，power bi，确实很快，但是局限性有二：1.对方不一定安装tableau，power bi，而excel每个人都会安装。Excel  基本上电脑都自带，对基层员工使用比较友好<br>2.如果我是具体的业务统计人员，不同的工具自然是哪个快用哪个，但是我是技术支持人员，我要提供的不是一次性的数据结果。而是一套模板，业务人员可以每次填入这个模板，然后自动计算出统计性的数据。也就是不是提供一次性的数据结果，而是多次性的通用方法流程和模板</p>
+<p>补充：<br>Powerquery和Powerpivot 都可以在Excel上使用，可以在Excel上设置好模板，然后刷新数据，结果就出来了<br>excel是对业务人员最轻量级的办法，【最小成本】，尤其是一些比较紧急的情况下，很难大费周章地再去上其他工具，最好用对方熟悉工具，用对方熟悉的工具取得信任，其他额外的工具可能会吓退一些基层的业务人员<br>敏捷快速，需要立即响应的需求VS常规、频繁、可复用的工程化的需求</p>
+<h2 id="excel-做表美观专业"><a href="#excel-做表美观专业" class="headerlink" title="excel 做表美观专业"></a>excel 做表美观专业</h2><p>1.表头[第一行]加粗，底色用绿色，或者某个轻的颜色和下边的数据区分开。<br>2.所有文字居中，所有字体保持一致。<br>3.一定要有边框，与表格外的内容做明显区隔。<br>4.行高，列宽要舒服</p>
+<blockquote>
+<p>Excel的预设行高一般为「13.5」。用这样的行高制作表格，会让行与行之间没有空隙，看起来很拥挤。因此，正确的格式应该是把行高设定为[18]。只要把行高从[13.5」改到[18」，就能让文字的上下多出一点空间，此举不仅能让文字更容易阅读，也能使表格呈现出简练的风格。</p>
+</blockquote>
+<p>表头比数据行高高，设置为24</p>
+<p>5.强调可以用加粗，黄色底纹等标注<br>6.填报须知：用红色大字写在表头左上方的位置。</p>
+<p>是否显示网格线？<br>操作：视图-网格线</p>
+<p>其他参考<br>将同一类记录归组在一起；并将不同类别的记录或字段增加间距、拉开距离，同时将标题与数据间的间距拉开。<br>明细级的项目应该与上一层级保持一定的缩进，以凸显各项目的逻辑层次。同级的项目保持同样的缩进距离（参见Step3的表格）。</p>
+<p><strong>问题</strong><br>为什么word中有设计工具，excel中没有？<br>因为你需要插入table，或者数据透视表，才有<br>如果是已经做好的表，转换成table，方法是：<br>选中表格：点击插入-表格【选择包含标题】<br>或者选中表格中的数据，开始：套用单元格格式</p>
+<h2 id="数据表和阅读表的区别"><a href="#数据表和阅读表的区别" class="headerlink" title="数据表和阅读表的区别"></a>数据表和阅读表的区别</h2><p>一般来说，制作的表格可能是无意识的阅读表，<br>但是数据分析的素材一定是数据表，也就是存入数据库的基础表，也就是套用单元格式后的表。</p>
+<h2 id="excel打印"><a href="#excel打印" class="headerlink" title="excel打印"></a>excel打印</h2><p>视图 分页视图，拖拽分页线<br>页面布局-分隔符<br>设置标题自动延续到下一页<br>页面布局-右下角的页面设置 工作表标题<br>页面布局-右下角的页面设置—页眉页脚，首页不同，在自定义页眉中输入 续表</p>
+<h1 id="3-EXCEL实用功能"><a href="#3-EXCEL实用功能" class="headerlink" title="3.EXCEL实用功能"></a>3.EXCEL实用功能</h1><h2 id="3-1-表间跳转"><a href="#3-1-表间跳转" class="headerlink" title="3.1 表间跳转"></a>3.1 表间跳转</h2><p>目录跳转使用excel公式HYPERLINK实现的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x3D;HYPERLINK(&quot;#表2!A1&quot;,&quot;跳转到表2&quot;)</span><br></pre></td></tr></table></figure>
+<h2 id="3-2-名称和数据验证"><a href="#3-2-名称和数据验证" class="headerlink" title="3.2 名称和数据验证"></a>3.2 名称和数据验证</h2><p>公式选项卡下的名称管理器<br>数据下的数据验证</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2016/07/13/python%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/07/13/python%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">Excel 相关</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-07-13 20:46:25" itemprop="dateCreated datePublished" datetime="2016-07-13T20:46:25+08:00">2016-07-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-03 23:05:38" itemprop="dateModified" datetime="2021-03-03T23:05:38+08:00">2021-03-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">数据分析</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install opencv-python -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
+<p>pip 和pip3 不同<br>换个源，这样网速快些<br>如果报错 通常是因为超时，这时可以换个源</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

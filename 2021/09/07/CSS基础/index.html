@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1.基本结构在head中写，内部样式表。 123&lt;style type&#x3D;&amp;#x27;text&#x2F;css&amp;#x27;&gt;具体CSS代码&lt;&#x2F;style&gt; 外部样式表内联样式表 三大特征层叠性：css处理冲突的一种能力层叠性只有在多个选择器同时选中同一个标签，然后又设置了相同的属性，才会发生层叠可通过谷歌浏览器开发者工具右边的style标签中查看继承性：给父元素设置一些属性，所有的子">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS基础">
+<meta property="og:url" content="http://example.com/2021/09/07/CSS%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="1.基本结构在head中写，内部样式表。 123&lt;style type&#x3D;&amp;#x27;text&#x2F;css&amp;#x27;&gt;具体CSS代码&lt;&#x2F;style&gt; 外部样式表内联样式表 三大特征层叠性：css处理冲突的一种能力层叠性只有在多个选择器同时选中同一个标签，然后又设置了相同的属性，才会发生层叠可通过谷歌浏览器开发者工具右边的style标签中查看继承性：给父元素设置一些属性，所有的子">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-06T16:46:32.000Z">
+<meta property="article:modified_time" content="2022-01-07T17:01:55.373Z">
+<meta property="article:author" content="TJ">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/09/07/CSS%E5%9F%BA%E7%A1%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>CSS基础 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/07/CSS%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CSS基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-07 00:46:32" itemprop="dateCreated datePublished" datetime="2021-09-07T00:46:32+08:00">2021-09-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-08 01:01:55" itemprop="dateModified" datetime="2022-01-08T01:01:55+08:00">2022-01-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-基本结构"><a href="#1-基本结构" class="headerlink" title="1.基本结构"></a>1.基本结构</h1><p>在head中写，内部样式表。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&#x27;text/css&#x27;</span>&gt;</span></span><br><span class="line">具体CSS代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>外部样式表<br>内联样式表</p>
+<p>三大特征<br>层叠性：<br>css处理冲突的一种能力<br>层叠性只有在多个选择器同时选中同一个标签，然后又设置了相同的属性，才会发生层叠<br>可通过谷歌浏览器开发者工具右边的style标签中查看<br>继承性：<br>给父元素设置一些属性，所有的子元素都可以继承<br>并不是所有的属性都可以继承，只有以color、font-、text-、line开头的属性才可以继承<br>a标签的字体颜色和下划线是不能继承的<br>h标签的文字大小是不能继承的<br>可通过谷歌浏览器开发者工具右边的style标签中查看<br>一般用于设置网页上的一些共性信息，例如网页的文字颜色，字体大小等<br>优先级：<br>当多个选择器同时选中同一个标签，然后又设置了相同的属性，如何层叠就由优先级来确定<br>如果是间接选中（继承），谁离目标标签近就听谁的<br>如果是直接选中，而且选择器类型相同，那么谁写在后面就听谁的<br>如果是直接选中，选择器类型不同，那么就会按照选择器的优先级来层叠：id选择器》类选择器》标签选择器》通配符选择器》继承》浏览器默认</p>
+<h1 id="2-常用属性"><a href="#2-常用属性" class="headerlink" title="2.常用属性"></a>2.常用属性</h1><p>margin<br>padding<br>font-size：30px；<br>color:yellow;<br>backgroud-color:</p>
+<p>颜色的三种表达方式，rgb三位数255，十六进制，颜色英文名字<br>text-align<br>text-dectoration</p>
+<h2 id="2-1-外边距margin"><a href="#2-1-外边距margin" class="headerlink" title="2.1 外边距margin"></a>2.1 外边距margin</h2><p>margin: 20px;（上、下、左、右各20px。）<br>margin: 20px 40px;（上、下20px；左、右40px。）<br>margin: 20px 40px 60px;（上20px；左、右40px；下60px。）<br>margin: 20px 40px 60px 80px;（上20px；右40px；下60px；左80px。）<br>在css中使用margin可以将margin-top，margin-right，margin-bottom，margin-left，缩写为一个标记，顺序为上右下左（顺时针）。</p>
+<h2 id="2-2内边距-padding"><a href="#2-2内边距-padding" class="headerlink" title="2.2内边距 padding"></a>2.2内边距 padding</h2><p>length - 以 px、pt、cm 等单位指定内边距<br>% - 指定以包含元素宽度的百分比计的内边距<br>inherit - 指定应从父元素继承内边距</p>
+<h2 id="2-3-高度宽度"><a href="#2-3-高度宽度" class="headerlink" title="2.3 高度宽度"></a>2.3 高度宽度</h2><p>height 和 width 属性可设置如下值：</p>
+<p>auto - 默认。浏览器计算高度和宽度。<br>length - 以 px、cm 等定义高度/宽度。<br>% - 以包含块的百分比定义高度/宽度。<br>initial - 将高度/宽度设置为默认值。<br>inherit - 从其父值继承高度/宽度。<br>height 和 width 属性不包括内边距、边框或外边距！它们设置的是元素的内边距、边框和外边距内的区域的高度/宽度！</p>
+<h2 id="2-4outline"><a href="#2-4outline" class="headerlink" title="2.4outline"></a>2.4outline</h2><p>　和border效果类似，只不过<br> outline是不占空间的，即不会增加额外的宽度（width）或高度（height）</p>
+<p>CSS 拥有如下轮廓属性：</p>
+<ul>
+<li>outline-style</li>
+<li>outline-color</li>
+<li>outline-width</li>
+<li>outline-offset</li>
+<li>outline<h2 id="2-5表格"><a href="#2-5表格" class="headerlink" title="2.5表格"></a>2.5表格</h2>为了实现斑马纹表格效果，请使用 nth-child() 选择器，并为所有偶数（或奇数）表行添加 background-color<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tr:nth-child(even) &#123;background-color: #f2f2f2;&#125;</span><br></pre></td></tr></table></figure>
+如果屏幕太小而无法显示全部内容，则响应式表格会显示水平滚动条：<br>在 <table> 元素周围添加带有 overflow-x:auto 的容器元素（例如 <div>），以实现响应式效果：</li>
+</ul>
+<h1 id="3-CSS选择器"><a href="#3-CSS选择器" class="headerlink" title="3.CSS选择器"></a>3.CSS选择器</h1><h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.cont&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在html中是class=‘’</p>
+<h2 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># pd&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在html中是<br>id=‘’</p>
+<h2 id="逗号选择器"><a href="#逗号选择器" class="headerlink" title="逗号选择器"></a>逗号选择器</h2><p>是所有涉及到的都增加此样式</p>
+<h2 id="空格选择器"><a href="#空格选择器" class="headerlink" title="空格选择器"></a>空格选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div p&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有上下级关系，是div下的p标签</p>
+<h2 id="加号选择器"><a href="#加号选择器" class="headerlink" title="加号选择器"></a>加号选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div+p&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>div后面，紧挨其后的p标签</p>
+<h2 id="大于号选择器"><a href="#大于号选择器" class="headerlink" title="大于号选择器"></a>大于号选择器</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.uu &gt;p&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>父节点的类是uu的p标签<br>大于号选择器是强调父节点的。</p>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>[]<br>方括号里边包属性</p>
+<h2 id="属性值选择器"><a href="#属性值选择器" class="headerlink" title="属性值选择器"></a>属性值选择器</h2><p>[属性名=属性值]</p>
+<h1 id="4-块元素"><a href="#4-块元素" class="headerlink" title="4.块元素"></a>4.块元素</h1><p>块元素是一个元素，占用了全宽，前后都是换行符。<br>块元素的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt; </span><br><span class="line">&lt;p&gt; </span><br><span class="line">&lt;div&gt; </span><br></pre></td></tr></table></figure>
+<h1 id="5-盒子模型"><a href="#5-盒子模型" class="headerlink" title="5.盒子模型"></a>5.盒子模型</h1><p>Margin - 清除边框区域。Margin没有背景颜色，它是完全透明<br>Border - 边框周围的填充和内容。边框是受到盒子的背景颜色影响<br>Padding - 清除内容周围的区域。会受到框中填充的背景颜色影响<br>Content - 盒子的内容，显示文本和图像 </p>
+<p>最终元素的总宽度计算公式是这样的：</p>
+<p>总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距</p>
+<p>元素的总高度最终计算公式是这样的：</p>
+<p>总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</p>
+<p>##5.1 position属性</p>
+<ul>
+<li>static 是默认值。任意 position: static; 的元素不会被特殊的定位。一个 static 元素表示它不会被“positioned”，一个 position 属性被设置为其他值的元素表示它会被“positioned”。</li>
+<li>一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。和 relative 一样， top 、 right 、 bottom 和 left 属性都可用。移动浏览器对 fixed 的支持很差。</li>
+<li>absolute 是最棘手的position值。 absolute 与 fixed 的表现类似，但是它不是相对于视窗而是相对于最近的“positioned”祖先元素。如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，那么它是相对于文档的 body 元素，并且它会随着页面滚动而移动。记住一个“positioned”元素是指 position 值不是 static 的元素。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"># CSS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/30/%E9%80%92%E5%BD%92/" rel="prev" title="递归">
+      <i class="fa fa-chevron-left"></i> 递归
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/21/bootstrap%E6%8A%A5%E8%A1%A8%E5%85%A5%E9%97%A8/" rel="next" title="bootstrap报表入门">
+      bootstrap报表入门 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="nav-text">1.基本结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7"><span class="nav-text">2.常用属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%A4%96%E8%BE%B9%E8%B7%9Dmargin"><span class="nav-text">2.1 外边距margin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2%E5%86%85%E8%BE%B9%E8%B7%9D-padding"><span class="nav-text">2.2内边距 padding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E9%AB%98%E5%BA%A6%E5%AE%BD%E5%BA%A6"><span class="nav-text">2.3 高度宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4outline"><span class="nav-text">2.4outline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5%E8%A1%A8%E6%A0%BC"><span class="nav-text">2.5表格</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">3.CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">标签选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">类选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#id-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">id 选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%97%E5%8F%B7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">逗号选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E6%A0%BC%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">空格选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%8F%B7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">加号选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E4%BA%8E%E5%8F%B7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">大于号选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">属性选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E5%80%BC%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">属性值选择器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%9D%97%E5%85%83%E7%B4%A0"><span class="nav-text">4.块元素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-text">5.盒子模型</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

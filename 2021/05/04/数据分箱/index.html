@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="无序变量分箱在实际模型建立当中，有个 job 职业的特征，取值为（“国家机关人员”，“专业技术人员”，“商业服务人员”），对于这一类变量，如果我们将其依次赋值为（国家机关人员&#x3D;1；专业技术人员&#x3D;2；商业服务人员&#x3D;3），就很容易产生一个问题，不同种类的职业在数据层面上就有了大小顺序之分，国家机关人员和商业服务人员的差距是2，专业技术人员和商业服务人员的之间的差距是1，而我们原来的中文分类中是不存在这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据分箱">
+<meta property="og:url" content="http://example.com/2021/05/04/%E6%95%B0%E6%8D%AE%E5%88%86%E7%AE%B1/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="无序变量分箱在实际模型建立当中，有个 job 职业的特征，取值为（“国家机关人员”，“专业技术人员”，“商业服务人员”），对于这一类变量，如果我们将其依次赋值为（国家机关人员&#x3D;1；专业技术人员&#x3D;2；商业服务人员&#x3D;3），就很容易产生一个问题，不同种类的职业在数据层面上就有了大小顺序之分，国家机关人员和商业服务人员的差距是2，专业技术人员和商业服务人员的之间的差距是1，而我们原来的中文分类中是不存在这">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-03T19:23:51.000Z">
+<meta property="article:modified_time" content="2021-05-03T19:26:59.626Z">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/05/04/%E6%95%B0%E6%8D%AE%E5%88%86%E7%AE%B1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>数据分箱 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/04/%E6%95%B0%E6%8D%AE%E5%88%86%E7%AE%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据分箱
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-04 03:23:51 / 修改时间：03:26:59" itemprop="dateCreated datePublished" datetime="2021-05-04T03:23:51+08:00">2021-05-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="无序变量分箱"><a href="#无序变量分箱" class="headerlink" title="无序变量分箱"></a>无序变量分箱</h1><p>在实际模型建立当中，有个 job 职业的特征，取值为（“国家机关人员”，“专业技术人员”，“商业服务人员”），对于这一类变量，如果我们将其依次赋值为（国家机关人员=1；专业技术人员=2；商业服务人员=3），就很容易产生一个问题，不同种类的职业在数据层面上就有了大小顺序之分，国家机关人员和商业服务人员的差距是2，专业技术人员和商业服务人员的之间的差距是1，而我们原来的中文分类中是不存在这种先后顺序关系的。所以这么简单的赋值是会使变量失去原来的衡量效果。</p>
+<p>怎么处理这个问题呢，“一位有效编码” （one-hot Encoding）可以解决这个问题，通常叫做虚变量或者哑变量（dummpy variable）：比如职业特征有3个不同变量，那么将其生成个2哑变量，分别是“是否国家党政职业人员”，“是否专业技术人员” ，每个虚变量取值（1，0）。<br>为什么2个哑变量而非3个？<br>在模型中引入多个虚拟变量时，虚拟变量的个数应按下列原则确定：<br>1.回归模型有截距：一般的，若该特征下n个属性均互斥（如，男/女;儿童/青年/中年/老年），在生成虚拟变量时，应该生成 n-1个虚变量，这样可以避免产生多重共线性。<br>2. 回归模型无截距项：有n个特征，设置n个虚拟变量<br>使用pandas可以很方便的对离散型特征进行one-hot编码:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python 实现</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df= pd.DataFrame([[<span class="string">&#x27;专业技术人员&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="number">1</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="number">2</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="number">1</span>],[<span class="string">&#x27;商业人员&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="number">4</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="number">5</span>]],columns=[<span class="string">&#x27;job&#x27;</span>,<span class="string">&#x27;class&#x27;</span>,<span class="string">&#x27;value&#x27;</span>])</span><br><span class="line">df = pd.get_dummies(df,columns=[<span class="string">&#x27;job&#x27;</span>,<span class="string">&#x27;class&#x27;</span>],drop_first=<span class="number">0</span>)<span class="comment"># columns表示你要引入分箱的变量，drop_first=0 代表使用 n-1个虚拟变量</span></span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
+<h1 id="有序变量分箱"><a href="#有序变量分箱" class="headerlink" title="有序变量分箱"></a>有序变量分箱</h1><p>各取值之间还存在等级关系。比如高血压分级（0=正常，1=正常高值，2=1级高血压，3=2级高血压，4=3级高血压）这类变量处理起来简直不要太省心，使用 pandas 中的 map（）替换相应变量就行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df= pd.DataFrame([<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;3级高血压&#x27;</span>,<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;2级高血压&#x27;</span>,<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;正常高值&#x27;</span>,<span class="string">&#x27;1级高血压&#x27;</span>],columns=[<span class="string">&#x27;blood_pressure&#x27;</span>])</span><br><span class="line">dic_blood = &#123;<span class="string">&#x27;正常&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;正常高值&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;1级高血压&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;2级高血压&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;3级高血压&#x27;</span>:<span class="number">4</span>&#125;</span><br><span class="line">df[<span class="string">&#x27;blood_pressure_enc&#x27;</span>] = df[<span class="string">&#x27;blood_pressure&#x27;</span>].<span class="built_in">map</span>(dic_blood)</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
+<h1 id="连续变量分箱"><a href="#连续变量分箱" class="headerlink" title="连续变量分箱"></a>连续变量分箱</h1><p>等宽划分：按照相同宽度将数据分成几等份。缺点是受到异常值的影响比较大。 pandas.cut方法可以进行等宽划分。</p>
+<p>等频划分：将数据分成几等份，每等份数据里面的个数是一样的。pandas.qcut方法可以进行等频划分。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame([[<span class="number">22</span>,<span class="number">1</span>],[<span class="number">13</span>,<span class="number">1</span>],[<span class="number">33</span>,<span class="number">1</span>],[<span class="number">52</span>,<span class="number">0</span>],[<span class="number">16</span>,<span class="number">0</span>],[<span class="number">42</span>,<span class="number">1</span>],[<span class="number">53</span>,<span class="number">1</span>],[<span class="number">39</span>,<span class="number">1</span>],[<span class="number">26</span>,<span class="number">0</span>],[<span class="number">66</span>,<span class="number">0</span>]],columns=[<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;Y&#x27;</span>])</span><br><span class="line"><span class="comment">#print(df)</span></span><br><span class="line">df[<span class="string">&#x27;age_bin_1&#x27;</span>] = pd.qcut(df[<span class="string">&#x27;age&#x27;</span>],<span class="number">3</span>) <span class="comment">#新增一列存储等频划分的分箱特征</span></span><br><span class="line">df[<span class="string">&#x27;age_bin_2&#x27;</span>] = pd.cut(df[<span class="string">&#x27;age&#x27;</span>],<span class="number">3</span>)  <span class="comment">#新增一列存储等距划分的分箱特征</span></span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/04/24/%E4%BA%8C%E7%BB%B4%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%B8%8E%E9%80%8F%E8%A7%86%E8%A1%A8python/" rel="prev" title="二维表转换与透视表python">
+      <i class="fa fa-chevron-left"></i> 二维表转换与透视表python
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/25/%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC/" rel="next" title="自动化脚本">
+      自动化脚本 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%8F%98%E9%87%8F%E5%88%86%E7%AE%B1"><span class="nav-text">无序变量分箱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%8F%98%E9%87%8F%E5%88%86%E7%AE%B1"><span class="nav-text">有序变量分箱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E7%BB%AD%E5%8F%98%E9%87%8F%E5%88%86%E7%AE%B1"><span class="nav-text">连续变量分箱</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Office 系列软件一直坚持开放的机制，为广大的开发人员提供了定制化的接口和能力，一共出现过主要三代的开发技术。他们分别是VBA加载宏，VSTO外接程序，以及现在的Web Add-in。 VBA非常容易学习，性能也很高，这是因为它是在Excel的进程里面直接运行的。它特别适合把一些日常的工作实现自动化。但VBA也有一些不太擅长的地方，就是它更多的是专注于Office 客户端（例如Excel）内部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="office加载项">
+<meta property="og:url" content="http://example.com/2021/05/26/office%E5%8A%A0%E8%BD%BD%E9%A1%B9/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="Office 系列软件一直坚持开放的机制，为广大的开发人员提供了定制化的接口和能力，一共出现过主要三代的开发技术。他们分别是VBA加载宏，VSTO外接程序，以及现在的Web Add-in。 VBA非常容易学习，性能也很高，这是因为它是在Excel的进程里面直接运行的。它特别适合把一些日常的工作实现自动化。但VBA也有一些不太擅长的地方，就是它更多的是专注于Office 客户端（例如Excel）内部">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-25T16:28:06.000Z">
+<meta property="article:modified_time" content="2022-01-26T00:43:31.275Z">
+<meta property="article:author" content="TJ">
+<meta property="article:tag" content="office加载项">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/05/26/office%E5%8A%A0%E8%BD%BD%E9%A1%B9/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>office加载项 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/26/office%E5%8A%A0%E8%BD%BD%E9%A1%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          office加载项
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-05-26 00:28:06" itemprop="dateCreated datePublished" datetime="2021-05-26T00:28:06+08:00">2021-05-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-26 08:43:31" itemprop="dateModified" datetime="2022-01-26T08:43:31+08:00">2022-01-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/office%E5%8A%A0%E8%BD%BD%E9%A1%B9/" itemprop="url" rel="index"><span itemprop="name">office加载项</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Office 系列软件一直坚持开放的机制，为广大的开发人员提供了定制化的接口和能力，一共出现过主要三代的开发技术。他们分别是VBA加载宏，VSTO外接程序，以及现在的Web Add-in。</p>
+<p>VBA非常容易学习，性能也很高，这是因为它是在Excel的进程里面直接运行的。它特别适合把一些日常的工作实现自动化。但VBA也有一些不太擅长的地方，就是它更多的是专注于Office 客户端（例如Excel）内部对象模型的访问和操作，如果需要访问外部的资源，例如数据库拉，网络资源等等，尤其是说你还想要有些操作计算机本地资源能力的话，相对来说就会困难一些。在2003年左右，微软推出了第一代的VSTO开发工具，那是作为Visual Studio .NET 2003的一个插件提供的，但那个时候就奠定了VSTO的一个架构，它允许开发人员用自己熟悉的C#或<a href="https://link.zhihu.com/?target=http://VB.NET">http://VB.NET</a>为Office 客户端编写插件，也称为外接程序。这些插件跟VBA写的加载宏完全不一样，它是运行在一个独立的进程的，实际上它运行的环境我们称之为托管环境，而且它是需要编译的，通常VSTO外接程序所生成的东西都是一个dll，这个dll需要在对应版本的.NET Framework中才能运行。因为这种设计，所以它能够使用到.NET Framework的全套能力，尤其是强大的网络访问和本地操作的能力，它是通过COM interop的方式与Office客户端进行互操作的。VSTO也存在一定的不足，就是它有对.NET Framework的依赖，那时候.NET Framework还不是默认安装的，所以有时候为了安装一个很小的插件，用户非得去装一个一两百兆的.NET Framework，这给部署带来了一定的挑战，而其它的版本更新又需要重新安装，这个也是限制他发展的一个原因之一，但总体来说，瑕不掩瑜，它把Office Add-in的开发能力提升了一个很大的台阶。</p>
+<p>第三代技术，Office Web Add-in是为云而生的，它随着Office 365的面世和发展而逐渐进入我们的视野。由于Office 365是一个云平台，我们的Office客户端也不仅仅是在桌面端能够使用，而是既能够在浏览器中使用，也能够在手机端使用。这就给Add-in开发提出了新的课题。不管是VBA，还是VSTO，都很难做到跨平台，也不能在浏览器中运行，更不要说在手机里面运行了。所以，这一代技术是基于Web开发，使用HTML和Javscript来编写。它具有跨平台跨设备的好处，能够集中部署和更新，你甚至可以将他们发布到微软官方的应用商店Office Store中去销售你的Add-in。当然，这些好处也会有一定的代价，Office Web Add-in必须联机才能使用，事实上它还对浏览器版本有所依赖，而如果你在桌面版Office使用的话，至少需要Office 2013的版本哦。Office Web Add-in是由两个部分组成的，一个XML文件用来定义Add-in，而一套网站用来真正实现功能，其中如果需要跟宿主程序，例如Excel进行交互的话，会用到一套JavaScript的API，这些API相当于是把之前VBA对象模型进行了一个封装，以便Javascript能够调用。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/office%E5%8A%A0%E8%BD%BD%E9%A1%B9/" rel="tag"># office加载项</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/25/%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC/" rel="prev" title="自动化脚本">
+      <i class="fa fa-chevron-left"></i> 自动化脚本
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/06/27/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="next" title="哈希表">
+      哈希表 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

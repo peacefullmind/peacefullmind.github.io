@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="公式表示方式反tan函数 12syms xy&#x3D;atan(x);  inf 无限大 exp 指数 logM(N) 对数函数 eps 计算机识别的最小数 abs(x) 绝对值 acos(x)反余弦 asin(x) atan(x) angle(x)计算复数x的幅角 mod(x，y)余数 int2str常用符号运算用sym，syms 声明一个或多个符号  123clear;clcsyms a b c dA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MATLAB基础">
+<meta property="og:url" content="http://example.com/2021/02/13/MATLAB%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="公式表示方式反tan函数 12syms xy&#x3D;atan(x);  inf 无限大 exp 指数 logM(N) 对数函数 eps 计算机识别的最小数 abs(x) 绝对值 acos(x)反余弦 asin(x) atan(x) angle(x)计算复数x的幅角 mod(x，y)余数 int2str常用符号运算用sym，syms 声明一个或多个符号  123clear;clcsyms a b c dA">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/02/13/MATLAB%E5%9F%BA%E7%A1%80/tu%E6%B1%82%E5%AF%BC%E4%B8%80%E9%98%B6%E5%AF%BC%E6%95%B0.jpg">
+<meta property="article:published_time" content="2021-02-13T06:25:41.000Z">
+<meta property="article:modified_time" content="2021-02-13T06:53:12.444Z">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/02/13/MATLAB%E5%9F%BA%E7%A1%80/tu%E6%B1%82%E5%AF%BC%E4%B8%80%E9%98%B6%E5%AF%BC%E6%95%B0.jpg">
+
+<link rel="canonical" href="http://example.com/2021/02/13/MATLAB%E5%9F%BA%E7%A1%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>MATLAB基础 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/MATLAB%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MATLAB基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:53:12" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="公式表示方式"><a href="#公式表示方式" class="headerlink" title="公式表示方式"></a>公式表示方式</h1><p>反tan函数</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">y=<span class="built_in">atan</span>(x);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>inf 无限大</li>
+<li>exp 指数</li>
+<li>logM(N) 对数函数</li>
+<li>eps 计算机识别的最小数</li>
+<li>abs(x) 绝对值</li>
+<li>acos(x)反余弦</li>
+<li>asin(x)</li>
+<li>atan(x)</li>
+<li>angle(x)计算复数x的幅角</li>
+<li>mod(x，y)余数</li>
+<li>int2str<h1 id="常用符号运算"><a href="#常用符号运算" class="headerlink" title="常用符号运算"></a>常用符号运算</h1>用sym，syms 声明一个或多个符号</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">syms a b c d</span><br><span class="line">A=sym([a b;c d])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>subs 符号替换</li>
+<li>factor 因式分解</li>
+<li>expand 多项式展开</li>
+<li>collect 合并同类项</li>
+<li>simple 简化函数</li>
+<li>numden 分式通分</li>
+<li>limit 计算极限</li>
+<li>diff() 导数</li>
+<li>int 积分</li>
+<li>symsum求和</li>
+<li>finverse 反函数<h1 id="多项式展开"><a href="#多项式展开" class="headerlink" title="多项式展开"></a>多项式展开</h1></li>
+</ul>
+<h1 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h1><p>一阶导数</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">syms x </span><br><span class="line">f=(x+<span class="number">7</span>)^<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">mdf=diff(f,x)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>);</span><br><span class="line">ezplot(f)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line">ezplot(mdf)</span><br></pre></td></tr></table></figure>
+<p><img src="tu%E6%B1%82%E5%AF%BC%E4%B8%80%E9%98%B6%E5%AF%BC%E6%95%B0.jpg"><br>二阶导数</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mdf=diff(f,x，<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h2><p>ezplot即：Easy to use function plotter。它是一个易用的一元函数绘图函数 。特别是在绘制含有符号变量的函数的图像时，ezplot要比plot更方便。因为plot绘制图形时要指定自变量的范围，而ezplot无需数据准备，直接绘出图形。</p>
+<h2 id="注释和反注释"><a href="#注释和反注释" class="headerlink" title="注释和反注释"></a>注释和反注释</h2><p>ctrl+R<br>ctrl+T</p>
+<h1 id="求解微分方程"><a href="#求解微分方程" class="headerlink" title="求解微分方程"></a>求解微分方程</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">syms x y;</span><br><span class="line">y=dsolve(<span class="string">&#x27;Dy+2*x*y=x*exp(-x^2)&#x27;</span>,<span class="string">&#x27;x&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>求解在初始条件下的特解</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">syms x y;</span><br><span class="line">y=dsolve(<span class="string">&#x27;x*Dy+y-exp(x)=0&#x27;</span>,<span class="string">&#x27;y(1)=2*exp(1)&#x27;</span>,<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">ezplot(y)</span><br></pre></td></tr></table></figure>
+<h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%y=x</span></span><br><span class="line">clear;clc;</span><br><span class="line">syms x</span><br><span class="line">y=x;</span><br><span class="line">int(y)</span><br><span class="line"><span class="comment">%int(y,x)</span></span><br><span class="line"></span><br><span class="line">syms a t</span><br><span class="line">f=a*<span class="built_in">sin</span>(<span class="built_in">pi</span>*t);</span><br><span class="line">int(f,t)</span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">syms t x</span><br><span class="line">f=x*<span class="built_in">sin</span>(x*t);</span><br><span class="line"><span class="comment">%求在区间上的定积分</span></span><br><span class="line">mf=int(f,x,<span class="number">0</span>,<span class="built_in">pi</span>/<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>int(f,x,a,b) 求f(x)在区间a,b上的定积分</li>
+<li>int(f,a,b) 求f(x)在区间a,b上的定积分,对默认自变量</li>
+<li>int(f,x) 求f(x)的不定积分</li>
+</ul>
+<p>int的积分可以是定积分，也可以是不定积分（即有没有积分上下限都可以积）可以得到解析的解，<br>quad是数值积分，它版只能是定积分（就是有积分上下限的积分），它是通过simpson数值积分来求得的（并不是通过解析的方法得到解析解，再将上下限代入，而是用小梯形的面积求和得到的）</p>
+<h2 id="数值积分"><a href="#数值积分" class="headerlink" title="数值积分"></a>数值积分</h2><p>z=trapz(x,y) 用梯形法求解y对x的积分值</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">y=inline(<span class="string">&#x27;sin(x)&#x27;</span>,<span class="string">&#x27;x&#x27;</span>);</span><br><span class="line">q=quad(y,<span class="number">0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>注意点乘，要不然报错</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">y=inline(<span class="string">&#x27;exp(-0.5.*x).*sin(x+pi/6)&#x27;</span>,<span class="string">&#x27;x&#x27;</span>);</span><br><span class="line">S=quad(y,<span class="number">0</span>,<span class="number">3</span>*<span class="built_in">pi</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="二重积分"><a href="#二重积分" class="headerlink" title="二重积分"></a>二重积分</h2><p>设二重积分还是表达式为 z=z(x,y)，积知分域为下限 y1(x) 上限 y2(x)，从 x1 到 x2，则二重积分道代码为：<br>int(int(z,y,y1,y2),x,x1,x2)<br>需要先定义符号回变量 x，y，以及表达式 z，y1，y2 和数值 x1，x2 的值。<br>下面举例在半径为1，以原点为圆心的圆上，对 z=x^2+y^2+xy 做二重积分：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">syms x y;</span><br><span class="line">z=x^<span class="number">2</span>+y^<span class="number">2</span>+x*y;</span><br><span class="line">y1=-(<span class="number">1</span>-x^<span class="number">2</span>)^<span class="number">0.5</span>;</span><br><span class="line">y2=(<span class="number">1</span>-x^<span class="number">2</span>)^<span class="number">0.5</span>;</span><br><span class="line">x1=<span class="number">-1</span>;</span><br><span class="line">x2=<span class="number">1</span>;</span><br><span class="line">int((int(z,y,y1,y2)),x,x1,x2)</span><br></pre></td></tr></table></figure>
+<h1 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h1><p>yi=interp1(x1,y1,xi,’linear’)<br>‘cubic’三次插值<br>一元插值 x1 y1是实测节点数据，</p>
+<h1 id="拟合"><a href="#拟合" class="headerlink" title="拟合"></a>拟合</h1><h2 id="采用cftool-工具箱进行拟合"><a href="#采用cftool-工具箱进行拟合" class="headerlink" title="采用cftool 工具箱进行拟合"></a>采用cftool 工具箱进行拟合</h2><p>拟合的函数类型<br>-Polynomial 多项式拟合</p>
+<ul>
+<li>Exponential 指数逼近</li>
+<li>Fourier 傅里叶逼近</li>
+<li> Gaussian：高斯逼近</li>
+<li> Interpolant：插值逼近</li>
+<li> Power：幂逼近</li>
+<li> Sum of Sin Functions 正弦曲线逼近</li>
+<li> Weibull</li>
+</ul>
+<p>结果解释<br>-SSE 标准差</p>
+<ul>
+<li>RMSE 均方差</li>
+<li>R square称为方程的确定系数，0~1之间，越接近1，表明方程的变量对y的解释能力越强。</li>
+</ul>
+<p>然后在Curve Fitting Tool窗口中点击 “ \ File \ Generate M-file “ 即可生成能直接曲线拟合的m函数文件<br>cftool工具箱只能进行单个变量的曲线拟合</p>
+<h2 id="多项式拟合polyfit"><a href="#多项式拟合polyfit" class="headerlink" title="多项式拟合polyfit"></a>多项式拟合polyfit</h2><p>p=polyfit(x1,y1,n)<br>yi=polyval(p,xi)<br>多项式曲线求值函数polyval</p>
+<h2 id="线性拟合函数regress"><a href="#线性拟合函数regress" class="headerlink" title="线性拟合函数regress"></a>线性拟合函数regress</h2><h2 id="用inline函数进行非线性拟合：求解自定义函数的参数值"><a href="#用inline函数进行非线性拟合：求解自定义函数的参数值" class="headerlink" title="用inline函数进行非线性拟合：求解自定义函数的参数值"></a>用inline函数进行非线性拟合：求解自定义函数的参数值</h2><p>需已知或者猜测出函数的表达式，只是不知道参数怎么求</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">x=[<span class="number">0</span>,<span class="number">47</span>,<span class="number">93</span>,<span class="number">140</span>,<span class="number">186</span>,<span class="number">279</span>,<span class="number">372</span>,<span class="number">465</span>,<span class="number">558</span>,<span class="number">651</span>];</span><br><span class="line">y=[<span class="number">18.98</span>,<span class="number">27.35</span>,<span class="number">34.86</span>,<span class="number">38.52</span>,<span class="number">38.44</span>,<span class="number">37.73</span>,<span class="number">38.43</span>,<span class="number">43.87</span>,<span class="number">42.77</span>,<span class="number">46.22</span>];</span><br><span class="line"><span class="built_in">plot</span>(x,y,<span class="string">&#x27;o&#x27;</span>)</span><br><span class="line">achushi=[<span class="number">43</span> <span class="number">0.6</span> <span class="number">0.1</span>];</span><br><span class="line"><span class="comment">%inline用法：fun=inline(&#x27;f(x)&#x27;,&#x27;参变量数组&#x27;,&#x27;自变量&#x27;)</span></span><br><span class="line"><span class="comment">%matlab中inline函数在matlab命令窗口、程序或函数中创建局部函数时，可用inline。优点</span></span><br><span class="line"><span class="comment">%是不必将其储存为一个单独文件。  inline是用百来定义内联函数的</span></span><br><span class="line"><span class="comment">%自变量，可以是多个自变量，多元</span></span><br><span class="line">mfun=inline(<span class="string">&#x27;a(1)*(1-a(2)*exp(-a(3)*x))&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;x&#x27;</span>);</span><br><span class="line"><span class="comment">%nlinfit用法：[beta,r,J]=nlinfit(x,y,fun,beta0)</span></span><br><span class="line"><span class="comment">% x,y未原始数据离散点数组</span></span><br><span class="line"><span class="comment">%fun是上一步定义好的函数</span></span><br><span class="line"><span class="comment">%beta0参数的初始值，已知给定</span></span><br><span class="line"><span class="comment">%beta需要求解决参数的最优值</span></span><br><span class="line"><span class="comment">%J是雅可比矩阵</span></span><br><span class="line">[a,r,<span class="built_in">j</span>]=nlinfit(x,y,mfun,achushi)</span><br></pre></td></tr></table></figure>
+<p>总结<br>配曲线的一般方法是：<br>（一）先对两个变量x和y作n次试验观察，画出散点图。<br>（二）根据散点图确定须配曲线的类型。<br>通常选择的六类曲线如下：<br>（1）双曲线1/y=a+b/x<br>（2）幂函数曲线y=ax^b，其中x&gt;0，a&gt;0<br>（3）指数曲线y=aexp(bx)其中参数a&gt;0.<br>（4）倒指数曲线y=aexp(b/x)其中a&gt;0，<br>（5）对数曲线y=a+blogx，x&gt;0<br>（6）S型曲线y=1/（a+bexp(-x)）<br>（三）然后由n对试验数据确定每一类曲线的未知参数a和b。</p>
+<h1 id="输出数据"><a href="#输出数据" class="headerlink" title="输出数据"></a>输出数据</h1><h2 id="disp函数"><a href="#disp函数" class="headerlink" title="disp函数"></a>disp函数</h2><h2 id="fprint函数"><a href="#fprint函数" class="headerlink" title="fprint函数"></a>fprint函数</h2>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/13/PYcharm%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" rel="prev" title="Pycharm快捷键">
+      <i class="fa fa-chevron-left"></i> Pycharm快捷键
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/13/KNN/" rel="next" title="KNN">
+      KNN <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F"><span class="nav-text">公式表示方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%AC%A6%E5%8F%B7%E8%BF%90%E7%AE%97"><span class="nav-text">常用符号运算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%B1%95%E5%BC%80"><span class="nav-text">多项式展开</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B1%82%E5%AF%BC"><span class="nav-text">求导</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%BB%E5%9B%BE"><span class="nav-text">画图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%E5%92%8C%E5%8F%8D%E6%B3%A8%E9%87%8A"><span class="nav-text">注释和反注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B1%82%E8%A7%A3%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-text">求解微分方程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%AF%E5%88%86"><span class="nav-text">积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E7%A7%AF%E5%88%86"><span class="nav-text">数值积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86"><span class="nav-text">二重积分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%92%E5%80%BC"><span class="nav-text">插值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%9F%E5%90%88"><span class="nav-text">拟合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%87%E7%94%A8cftool-%E5%B7%A5%E5%85%B7%E7%AE%B1%E8%BF%9B%E8%A1%8C%E6%8B%9F%E5%90%88"><span class="nav-text">采用cftool 工具箱进行拟合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%8B%9F%E5%90%88polyfit"><span class="nav-text">多项式拟合polyfit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%8B%9F%E5%90%88%E5%87%BD%E6%95%B0regress"><span class="nav-text">线性拟合函数regress</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8inline%E5%87%BD%E6%95%B0%E8%BF%9B%E8%A1%8C%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%8B%9F%E5%90%88%EF%BC%9A%E6%B1%82%E8%A7%A3%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0%E5%80%BC"><span class="nav-text">用inline函数进行非线性拟合：求解自定义函数的参数值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE"><span class="nav-text">输出数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#disp%E5%87%BD%E6%95%B0"><span class="nav-text">disp函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fprint%E5%87%BD%E6%95%B0"><span class="nav-text">fprint函数</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

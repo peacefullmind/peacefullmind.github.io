@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="我的Hexo博客">
+<meta property="og:url" content="http://example.com/page/8/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E4%BD%BF%E7%94%A8xlwt%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9Cexcel%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E4%BD%BF%E7%94%A8xlwt%E6%A8%A1%E5%9D%97%E6%93%8D%E4%BD%9Cexcel%E8%A1%A8/" class="post-title-link" itemprop="url">使用xlwt模块操作excel表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 20:52:46" itemprop="dateModified" datetime="2021-04-17T20:52:46+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>使用xlwt模块，操作excel表<br>导入xlwt</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlwt</span><br></pre></td></tr></table></figure>
+<p>新建excel文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file=xlwt.Workbook()<span class="comment"># 首字母大写</span></span><br></pre></td></tr></table></figure>
+<p>新建一个sheet</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table=file.add_sheet(<span class="string">&#x27;sheet name&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>写入数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table.write(<span class="number">0</span>,<span class="number">0</span>,<span class="string">&#x27;123&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>保存文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file.save(<span class="string">&#x27;EXCEL文件名字.xls&#x27;</span>)<span class="comment">#注意后缀</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%A4%A7%E5%B1%8F_%E4%BB%AA%E8%A1%A8%E7%9B%98/" class="post-title-link" itemprop="url">可视化大屏仪表盘</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:06:40" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h1><p>数据可视化包括：<br>local分析<br>PC端数据可视化<br>移动端数据可视化<br>大屏可视化</p>
+<h2 id="本地离线分析"><a href="#本地离线分析" class="headerlink" title="本地离线分析"></a>本地离线分析</h2><p>使用excel做图，做表。<br>可以使用python的Matplotlib、Seaborn等工具等作图<br>使用MATLAB作图，如3维图等。<br>也可以用tableue，power bi等产品来作图。<br>tableue的优点在于大大缩短了拿到数据到出图，出报告的时间，大大提高了效率 。<br>不管用什么作图，都是要导出图片，然后放到PPT，word报告中的，<br>最后的输出成果就是ppt，word报告，这类报告是图文并茂的。</p>
+<h2 id="PC端数据可视化"><a href="#PC端数据可视化" class="headerlink" title="PC端数据可视化"></a>PC端数据可视化</h2><p>PC端数据可视化分成轻度的数据可视化，和重度的数据可视化。<br>前者是报表展示，兼顾用户体验，展示的比较无感，信息密度低，镶嵌在其他功能中，后者更接近于驾驶舱的概念，有一种很硬核，一股脑要告诉用户很多东西的感觉，整张网页都是图展示。<br>有一个简单的区别方法，就是前者一般是白色的，数据展示的比较自然，无感。<br>后者一般是黑色背景，一种强烈的炫技的感觉。</p>
+<p>现在制作可视化大屏的方法我遇见的主要有两种：一是使用Python flask+ajax+ECharts绘图库，二就是使用tableau。当然使用power bi和fine bi的话也是可以绘制的</p>
+<h2 id="仪表盘"><a href="#仪表盘" class="headerlink" title="仪表盘"></a>仪表盘</h2><h2 id="大屏"><a href="#大屏" class="headerlink" title="大屏"></a>大屏</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E5%A4%9A%E4%B8%AA%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E5%A4%9A%E4%B8%AA%E8%A1%A8%E6%A0%BC%E5%90%88%E5%B9%B6/" class="post-title-link" itemprop="url">多个表格合并</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 20:53:27" itemprop="dateModified" datetime="2021-04-17T20:53:27+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="成功了的方法："><a href="#成功了的方法：" class="headerlink" title="成功了的方法："></a>成功了的方法：</h2><p>1.先保留原来的excel，格式，不用转换成csv格式<br>2.用python代码合并，保存为csv<br>3.用记事本打开乱码csv，另存为编码方式选择ANSI</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;./222&#x27;</span>   <span class="comment">#设置csv所在文件夹</span></span><br><span class="line">files = os.listdir(path)  <span class="comment">#获取文件夹下所有文件名</span></span><br><span class="line"></span><br><span class="line">df1 = pd.read_excel(path + <span class="string">&#x27;/&#x27;</span> + files[<span class="number">0</span>])  <span class="comment">#读取首个csv文件，保存到df1中</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files[<span class="number">1</span>:]:</span><br><span class="line">  df2 = pd.read_excel(path +<span class="string">&#x27;/&#x27;</span> +  file)  <span class="comment">#打开csv文件，注意编码问题，保存到df2中</span></span><br><span class="line">  df1 = pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index=<span class="literal">True</span>)  <span class="comment">#将df2数据与df1合并</span></span><br><span class="line"></span><br><span class="line">df1 = df1.drop_duplicates()   <span class="comment">#去重</span></span><br><span class="line">df1 = df1.reset_index(drop=<span class="literal">True</span>) <span class="comment">#重新生成index</span></span><br><span class="line">df1.to_csv(path + <span class="string">&#x27;/&#x27;</span> + <span class="string">&#x27;total.csv&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="过程的坑："><a href="#过程的坑：" class="headerlink" title="过程的坑："></a>过程的坑：</h2><p>1.最后一步，csv乱码问题，用excel打开然后保存编码，或者用naotepad++改变编码另存为，其实都没起作用。<br>2.用python代码合并，保存一直提示是读入的那一句，实际上是编码问题，改最后一句另存为。前面反而不报错了。<br>3.一开始想通过windows的批处理文件自动合并，网上说先换成csv然后再</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy *.csv out.csv</span><br></pre></td></tr></table></figure>
+<p>但是编码怎么都弄不对。</p>
+<h1 id="第二个需求经验更新"><a href="#第二个需求经验更新" class="headerlink" title="第二个需求经验更新"></a>第二个需求经验更新</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;./表格文件夹名字&#x27;</span>   <span class="comment">#设置表格所在文件夹</span></span><br><span class="line">files = os.listdir(path)  <span class="comment">#获取文件夹下所有文件名</span></span><br><span class="line"></span><br><span class="line">df1 = pd.read_excel(path + <span class="string">&#x27;/&#x27;</span> + files[<span class="number">0</span>],sheet_name=<span class="string">&#x27;收入支出类报表项目&#x27;</span>,skiprows=<span class="number">3</span>)  <span class="comment">#读取首个表格文件，保存到df1中</span></span><br><span class="line"><span class="comment">#收入支出类报表项目</span></span><br><span class="line"><span class="comment">#负债和权益类报表项目</span></span><br><span class="line"><span class="comment"># print(df1)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files[<span class="number">1</span>:]:</span><br><span class="line">  df2 = pd.read_excel(path +<span class="string">&#x27;/&#x27;</span> +  file,sheet_name=<span class="string">&#x27;收入支出类报表项目&#x27;</span>,skiprows=<span class="number">3</span>)  <span class="comment">#打开表格文件，注意编码问题，保存到df2中</span></span><br><span class="line">  df1 = pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index=<span class="literal">True</span>)  <span class="comment">#将df2数据与df1合并</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#df1 = df1.drop_duplicates()   #去重,没有用到</span></span><br><span class="line">df1 = df1.reset_index(drop=<span class="literal">True</span>) <span class="comment">#重新生成index</span></span><br><span class="line">df1.to_csv(<span class="string">&#x27;total表3.csv&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br><span class="line">df1.to_excel(<span class="string">&#x27;total表3.xls&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br></pre></td></tr></table></figure>
+<h2 id="经验："><a href="#经验：" class="headerlink" title="经验："></a>经验：</h2><p>1.遇到问题，先合并两个，看是否成功<br>2.合并多个不行，要输出，方便定位</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files[<span class="number">1</span>:]:</span><br><span class="line">  print(<span class="string">&quot;要读入&quot;</span>+file.title())<span class="comment">#为了方便定位进度，遇到问题知道出在哪里</span></span><br><span class="line">  df2 = pd.read_excel(path +<span class="string">&#x27;/&#x27;</span> +  file,sheet_name=<span class="string">&#x27;收入支出类报表项目&#x27;</span>,skiprows=<span class="number">3</span>)  <span class="comment">#打开表格文件，注意编码问题，保存到df2中</span></span><br><span class="line">  print(<span class="string">&quot;已经读入&quot;</span>+file.title())<span class="comment">#为了方便定位进度，遇到问题知道出在哪里</span></span><br><span class="line">  print(df2)<span class="comment">#为了方便定位进度，遇到问题知道出在哪里</span></span><br><span class="line">  df1 = pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index=<span class="literal">True</span>)  <span class="comment">#将df2数据与df1合并</span></span><br></pre></td></tr></table></figure>
+<p>3.遇到一个问题执行程序卡住，并且没有报错，原因是：<br>就是个别文件读入很多列，但是实际只有13列，后面的是空的。<br>然后读入下一个文件后，再做合并时卡住了。</p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><p>进行同一目录下所有的表格合并是非常常用自动化的场景，如：</p>
+<ul>
+<li>分发表格模板让多个分行填报网络访问关系，然后合并表格成一份，进行统一申请</li>
+<li>分发表格让多个公司/机构填报XX数据，然后合并表格成一份，方便自己筛选查看，和一次性导入系统等。<br>更加拓展场景和应用，关键点注意：</li>
+</ul>
+<p>1.用户只需要给出目录路径，不需要指定文件<br>2.格式 csv ，xls，xlsx<br>3.剔除空的，清洗，去重等等。<br>4.增加一列，用来保存表格名，方便对比源文件和程序合并后的，看是否有遗漏的现象。<br>5.可看uistroe上的一些自动化应用场景，获取一些灵感。除了场景还有解决方法上的。</p>
+<h1 id="再改进"><a href="#再改进" class="headerlink" title="再改进"></a>再改进</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;./路径名字&#x27;</span>   <span class="comment">#设置表格所在文件夹</span></span><br><span class="line">files = os.listdir(path)  <span class="comment">#获取文件夹下所有文件名</span></span><br><span class="line"></span><br><span class="line">df1 = pd.read_excel(path + <span class="string">&#x27;/&#x27;</span> + files[<span class="number">0</span>],sheet_name=<span class="string">&#x27;负债和权益类报表项目&#x27;</span>,skiprows=<span class="number">4</span>)  <span class="comment">#读取首个表格文件，保存到df1中</span></span><br><span class="line"><span class="comment">#资产类报表项目 表1</span></span><br><span class="line"><span class="comment">#收入支出类报表项目 表3</span></span><br><span class="line"><span class="comment">#负债和权益类报表项目 表2</span></span><br><span class="line"><span class="comment"># print(df1)</span></span><br><span class="line">df1[<span class="string">&#x27;表名&#x27;</span>]=files[<span class="number">0</span>].title()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files[<span class="number">1</span>:]:</span><br><span class="line">  print(<span class="string">&quot;要读入&quot;</span>+file.title())</span><br><span class="line">  df2 = pd.read_excel(path +<span class="string">&#x27;/&#x27;</span> +  file,sheet_name=<span class="string">&#x27;负债和权益类报表项目&#x27;</span>,skiprows=<span class="number">4</span>)  <span class="comment">#打开表格文件，注意编码问题，保存到df2中</span></span><br><span class="line">  df2[<span class="string">&#x27;表名&#x27;</span>]=file.title()</span><br><span class="line">  print(<span class="string">&quot;已经读入&quot;</span>+file.title())</span><br><span class="line">  print(df2)</span><br><span class="line">  df1 = pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index=<span class="literal">True</span>)  <span class="comment">#将df2数据与df1合并</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># df1 = df1.drop_duplicates()   #去重</span></span><br><span class="line">df1 = df1.reset_index(drop=<span class="literal">True</span>) <span class="comment">#重新生成index</span></span><br><span class="line">df1.to_csv(<span class="string">&#x27;total表2.csv&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br><span class="line">df1.to_excel(<span class="string">&#x27;total表2.xls&#x27;</span>) <span class="comment">#将结果保存为新的csv文件</span></span><br></pre></td></tr></table></figure>
+<p>增加一列，保存表格名字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df2[<span class="string">&#x27;表名&#x27;</span>]=file.title()</span><br></pre></td></tr></table></figure>
+<h1 id="又遇到一个更简单的写法"><a href="#又遇到一个更简单的写法" class="headerlink" title="又遇到一个更简单的写法"></a>又遇到一个更简单的写法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">file_path=<span class="string">&#x27;课程/名单表格/&#x27;</span></span><br><span class="line">file_names=os.listdir(file_path)</span><br><span class="line">file_merge=pd.DataFrame()</span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> file_names:</span><br><span class="line">    df=pd.read_excel(file_path+name)</span><br><span class="line">    file_merge=file_merge.append(df)</span><br><span class="line">file_merge.to_excel(<span class="string">&#x27;./tmp/file_merge.xlsx&#x27;</span>,index=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%8C%89%E7%85%A7word%E6%A8%A1%E6%9D%BF%E6%89%B9%E9%87%8F%E8%BE%93%E5%87%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%8C%89%E7%85%A7word%E6%A8%A1%E6%9D%BF%E6%89%B9%E9%87%8F%E8%BE%93%E5%87%BA/" class="post-title-link" itemprop="url">按照word模板批量输出</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：15:01:21" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_data</span>(<span class="params">title,name,time</span>):</span></span><br><span class="line">    document=Document(<span class="string">&#x27;模板.docx&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> document.paragraphs:</span><br><span class="line">        i.text=i.text.replace(<span class="string">&#x27;**&#x27;</span>,title)</span><br><span class="line">        i.text=i.text.replace(<span class="string">&#x27;XX&#x27;</span>,name)</span><br><span class="line">        i.text = i.text.replace(<span class="string">&#x27;position3&#x27;</span>, time)</span><br><span class="line"></span><br><span class="line">    title=<span class="built_in">str</span>(random.randint(<span class="number">9999</span>,<span class="number">9999</span>))+title</span><br><span class="line">    document.save(title+<span class="string">&#x27;.docx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">excel=xlrd.open_workbook(<span class="string">&#x27;数据.xls&#x27;</span>)</span><br><span class="line">table=excel.sheet_by_index(<span class="number">0</span>)</span><br><span class="line">nows=table.nrows</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(nows):</span><br><span class="line">    title=table.cell(i,<span class="number">0</span>).value</span><br><span class="line">    name=table.cell(i,<span class="number">1</span>).value</span><br><span class="line">    time=xlrd.xldate_as_datetime(table.cell(i,<span class="number">2</span>).value,<span class="number">0</span>)</span><br><span class="line">    time=<span class="built_in">str</span>(time.strftime(<span class="string">&#x27;%Y-%m-%d&#x27;</span>))</span><br><span class="line">    <span class="comment"># print(title,name,time)</span></span><br><span class="line">    change_data(title,name,time)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">批处理命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:48:42" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="dos命令"><a href="#dos命令" class="headerlink" title="dos命令"></a>dos命令</h1><h1 id="单个常用命令"><a href="#单个常用命令" class="headerlink" title="单个常用命令"></a>单个常用命令</h1><p>查看命令使用参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy &#x2F;?</span><br></pre></td></tr></table></figure>
+<p>dir 查看文件下内容 类似于shell的ls<br>cd .. 返回上一级<br>cd \ 返回根目录<br>cd 目录 进入指定目录<br>d: 进入d文件夹</p>
+<p>copy<br>move 移动，重命名<br>del<br>md 新建文件夹<br>ren 重命名<br>xcopy 复制文件和目录树<br>rd 删除<br>rd 目录 /S 删除目录下的所有的<br>/Q 安静模式 </p>
+<p>systeminfo 显示计算机配置<br>msinfo32显示计算机配置图形化界面</p>
+<h1 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h1><p>打开计算器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Windows\System32\</span><br><span class="line">calc.exe</span><br><span class="line">pause</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>echo 输出内容<br>echo off 关闭回显</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" class="post-title-link" itemprop="url">微服务</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-19 17:32:49" itemprop="dateModified" datetime="2021-02-19T17:32:49+08:00">2021-02-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9E%B6%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">架构</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[toc]</p>
+<h1 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h1><ul>
+<li>一组小的服务</li>
+<li>独立的进程</li>
+<li>轻量级通信</li>
+<li>基于业务能力</li>
+<li>独立部署</li>
+<li>无集中式管理</li>
+</ul>
+<p>松散耦合</p>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><ul>
+<li>强模块化边界</li>
+<li> 可独立部署</li>
+<li> 技术多样性<h1 id="弊端"><a href="#弊端" class="headerlink" title="弊端"></a>弊端</h1></li>
+<li>分布式复杂性</li>
+<li>最终一致性</li>
+<li>运维复杂性</li>
+<li>测试复杂性</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%8A%93%E5%8F%96%E9%9B%AA%E7%90%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%8A%93%E5%8F%96%E9%9B%AA%E7%90%83/" class="post-title-link" itemprop="url">抓取雪球</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 20:49:12" itemprop="dateModified" datetime="2021-04-17T20:49:12+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="静态页面和动态页面的区别是什么？"><a href="#静态页面和动态页面的区别是什么？" class="headerlink" title="静态页面和动态页面的区别是什么？"></a>静态页面和动态页面的区别是什么？</h1><p>右击 查看源代码，ctrl+f无法搜到元素内容，说明是动态加载的，需要通过request的接口方法来抓取。</p>
+<h1 id="怎么获取接口数据？注意什么"><a href="#怎么获取接口数据？注意什么" class="headerlink" title="怎么获取接口数据？注意什么"></a>怎么获取接口数据？注意什么</h1><p>1.在浏览器F12中network 刷新后，筛选出XHR类型为接口数据。过滤方法。<br>2.在代码获取requson中吗，如果是403，说明不成功，只有2打头的才成功。缺少headers<br>3.注意代码写法，url为响应中的长url。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response=requests.get(url=url,headers=headers)</span><br></pre></td></tr></table></figure>
+<h1 id="获取接口数据后怎么解析？"><a href="#获取接口数据后怎么解析？" class="headerlink" title="获取接口数据后怎么解析？"></a>获取接口数据后怎么解析？</h1><p>1.善用print剥洋葱<br>2.ppprint 看数据两层剥键值对。<br>3.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NextData=RawData[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;list&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> pprint</span><br><span class="line"></span><br><span class="line">headers=&#123;<span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36&#x27;</span>&#125;</span><br><span class="line">url=<span class="string">&#x27;https://xueqiu.com/service/v5/stock/screener/quote/list?page=1&amp;size=30&amp;order=desc&amp;orderby=percent&amp;order_by=percent&amp;market=CN&amp;type=sh_sz&amp;_=1603124566528&#x27;</span></span><br><span class="line">response=requests.get(url=url,headers=headers)</span><br><span class="line">print(response)</span><br><span class="line">RawData=response.json()</span><br><span class="line"><span class="comment"># pprint.pprint(RawData)</span></span><br><span class="line">NextData=RawData[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;list&#x27;</span>]</span><br><span class="line">print(<span class="built_in">type</span>(NextData))</span><br><span class="line"><span class="comment"># print(NextData)</span></span><br><span class="line"><span class="comment"># print(NextData[0])</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pprint.pprint(NextData[<span class="number">0</span>])</span><br><span class="line"><span class="keyword">for</span> myrow <span class="keyword">in</span> NextData:</span><br><span class="line">    data1=myrow[<span class="string">&#x27;symbol&#x27;</span>]</span><br><span class="line">    data2= myrow[<span class="string">&#x27;name&#x27;</span>]</span><br><span class="line">    data3 = myrow[<span class="string">&#x27;current&#x27;</span>]</span><br><span class="line">    print(data1,data2,data3)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="可以再探索的"><a href="#可以再探索的" class="headerlink" title="可以再探索的"></a>可以再探索的</h1><ul>
+<li>保存至EXCEL</li>
+<li>数据可视化</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8AJAVA%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%8F%8AJAVA%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">排序算法及JAVA程序实现</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-27 13:16:18" itemprop="dateModified" datetime="2021-03-27T13:16:18+08:00">2021-03-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[toc]</p>
+<h1 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h1><p>针对有序数组，不断二分缩小查找范围。</p>
+<ul>
+<li>从数组的中间元素开始，如果中间元素正好是x，而查找成功</li>
+<li>否则我们利用中间位 置将数组分为前、后两个子数组0如果x小于中间位置的元素，则进一 步查找前一个子数组否则进一步查找后-个子数组，</li>
+<li>重复以上步骤，直到找到满足条件的元素，或直到子数组不存在为止，代表查找不成功。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> array[],<span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> left=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> right=array.length-<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">        <span class="keyword">int</span> mid =left+(right-left)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(array[mid]==target)&#123;</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(target&lt;array[mid])&#123;</span><br><span class="line">            right=mid-<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            left=mid+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+调用<br>建立SearchMethon.java，类中包括binarySearch（）方法。<br>在主函数中，如下调用:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] caseArray= &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>&#125;;</span><br><span class="line">        SearchMethod searchMethod=<span class="keyword">new</span> SearchMethod();</span><br><span class="line">        <span class="keyword">int</span> result=searchMethod.binarySearch(caseArray,<span class="number">11</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;二分查找的结果是：&quot;</span>+result);</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+时间复杂度：对数级别<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1>逐一比较<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1>相邻的两个比较<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1>插入排序 对于每个元素，我们将它与之前排好序的元素进行比较，找到对应的位置后并插入</li>
+</ul>
+<p> 1.从第二个元素（第一个要被排序的新元素）开始，从后向前扫描之前的元素序列<br> 2.如果当前扫描的元素大于新元素，将扫描元素移动到下一位<br> 3.重复步骤2，直到找到一个小于或者等于新元素的位置<br> 4.将新元素插入到该位置<br>5.对于之后的元素重复步骤1~4<br>时间复杂度，在此算法中就是计算比较的次数，第一个元素我们需要比较1次，第二个元素2次，对于第n个元素，我们需要和之前的元素比较n次，比较总数量也就是 1 + 2 + … + n = n(n + 1) / 2 ≈ n^2。因为我们调换位置时采用「原地操作」(in place)，所以不需要额外空间，既空间复杂度为O(1)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span> array[])</span></span>&#123;</span><br><span class="line">       <span class="comment">//从第二个元素开始扫描</span></span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=array.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">           <span class="keyword">int</span> cur=array[i];</span><br><span class="line">           <span class="keyword">int</span> j=i-<span class="number">1</span>;</span><br><span class="line">           <span class="comment">//寻找位置和后移位操作</span></span><br><span class="line">           <span class="keyword">while</span>(j&gt;=<span class="number">0</span>&amp;&amp;array[j]&gt;cur)&#123;</span><br><span class="line">               array[j+<span class="number">1</span>]=array[j];</span><br><span class="line">               j--;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//插入操作</span></span><br><span class="line">           array[j+<span class="number">1</span>]=cur;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h1><p>快排 选取一个目标元素，然后将目标元素放到数组中正确的位置。然后根据排好序后的元素，将数组切分为两个子数组，用相同的方法，在没有排好序的范围使用相同的操作。<br>分治递归<br>对于当前的数组，取最后一个元素当做基准数（pivot）<br>将所有比基准数小的元素排到基准数之前，比基准数大的排在基准数之后<br>当基准数被放到准确的位置之后，根据基数数的位置将元素切分为前后两个子数组<br>对子数组采用步骤1~4的递归操作，直到子数组的长度小于等于1为止</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> iStart,<span class="keyword">int</span> iEnd)</span></span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(iStart&gt;=iEnd) <span class="keyword">return</span> ;</span><br><span class="line">       <span class="keyword">int</span> iFind=findAndPut(array,iStart,iEnd);</span><br><span class="line">       quickSort(array,iStart,iFind-<span class="number">1</span>);</span><br><span class="line">       quickSort(array,iFind+<span class="number">1</span>,iEnd);</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findAndPut</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> iStart,<span class="keyword">int</span> iEnd)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">int</span> holdNum=array[iEnd];</span><br><span class="line">       <span class="keyword">int</span> left=iStart;</span><br><span class="line">       <span class="keyword">int</span> right=iEnd-<span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">           <span class="keyword">while</span> (left&lt;=right&amp;array[left]&lt;=holdNum)&#123;</span><br><span class="line">               left++;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">while</span>((right&gt;=left) &amp;&amp; (array[right]&gt;holdNum))&#123;</span><br><span class="line">               right--;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">if</span>(left&gt;right) <span class="keyword">break</span>;</span><br><span class="line">           change(array,left,right);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">       change(array,left,iEnd);</span><br><span class="line">       <span class="keyword">return</span> left;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">       <span class="keyword">int</span> temp=array[i];</span><br><span class="line">       array[i]=array[j];</span><br><span class="line">       array[j]=temp;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>快排这里有些难以理解，有一个更好理解的版本：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findAndPut</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> iStart,<span class="keyword">int</span> iEnd)</span></span>&#123;</span><br><span class="line"><span class="comment">//更好理解的版本</span></span><br><span class="line">        <span class="keyword">int</span> holdNum=array[iEnd];<span class="comment">//选择右边的，则左边的指针先走；</span></span><br><span class="line">        <span class="keyword">int</span> left=iStart;</span><br><span class="line">        <span class="keyword">int</span> right=iEnd;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;right)&#123;</span><br><span class="line">            <span class="keyword">while</span>(array[left]&lt;=holdNum&amp;&amp;(left&lt;right))&#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(array[right]&gt;=holdNum&amp;&amp;(left&lt;right))&#123;</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(left&lt;right)&#123;</span><br><span class="line">                change(array,left,right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//跳出的结果是left==right；</span></span><br><span class="line">        change(array,left,iEnd);</span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p>归并排序<br>先通过递归拆分，然后再合并两个有序数组<br>调试方法：测试样本尽可能小，方便定位问题，然后利用端点调试。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">       <span class="keyword">int</span> len= array.length-<span class="number">1</span>;</span><br><span class="line">       mergeSort(array,<span class="number">0</span>,len);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> (j&gt;i)&#123;</span><br><span class="line">           <span class="keyword">int</span> mid=(i+j)/<span class="number">2</span>;</span><br><span class="line">           mergeSort(array,i,mid);</span><br><span class="line">           mergeSort(array,mid+<span class="number">1</span>,j);</span><br><span class="line">           merge(array,i,mid,j);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> i, <span class="keyword">int</span> mid,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">       <span class="comment">//合并两个有序数组</span></span><br><span class="line">       <span class="keyword">int</span>[] temp=(<span class="keyword">int</span>[])array.clone();</span><br><span class="line">       <span class="keyword">int</span> irun=i;</span><br><span class="line">       <span class="keyword">int</span> jrun=mid+<span class="number">1</span>;</span><br><span class="line">       <span class="keyword">int</span> krun=i;</span><br><span class="line">       <span class="keyword">while</span>(irun&lt;=mid&amp;&amp;jrun&lt;=j)&#123;</span><br><span class="line">           <span class="keyword">if</span>(array[irun]&lt;=array[jrun])&#123;</span><br><span class="line">               temp[krun]=array[irun];</span><br><span class="line">               irun++;</span><br><span class="line">               krun++;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">else</span>&#123;</span><br><span class="line">               temp[krun]=array[jrun];</span><br><span class="line">               jrun++;</span><br><span class="line">               krun++;</span><br><span class="line"></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">while</span>(irun&lt;=mid)&#123;</span><br><span class="line">           temp[krun]=array[irun];</span><br><span class="line">           krun++;</span><br><span class="line">           irun++;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">while</span>(jrun&lt;=j)&#123;</span><br><span class="line">           temp[krun]=array[jrun];</span><br><span class="line">           krun++;</span><br><span class="line">           jrun++;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> myi=i;myi&lt;=j;myi++)&#123;</span><br><span class="line">           array[myi]=temp[myi];</span><br><span class="line">       &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="程序实现"><a href="#程序实现" class="headerlink" title="程序实现"></a>程序实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SortMethod</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//插入排序 对于每个元素，我们将它与之前排好序的元素进行比较，找到对应的位置后并插入</span></span><br><span class="line">    <span class="comment">//1.从第二个元素（第一个要被排序的新元素）开始，从后向前扫描之前的元素序列</span></span><br><span class="line">    <span class="comment">//2.如果当前扫描的元素大于新元素，将扫描元素移动到下一位</span></span><br><span class="line">    <span class="comment">//3.重复步骤2，直到找到一个小于或者等于新元素的位置</span></span><br><span class="line">    <span class="comment">//4.将新元素插入到该位置</span></span><br><span class="line">    <span class="comment">//5.对于之后的元素重复步骤1~4</span></span><br><span class="line">    <span class="comment">//「时间复杂度」在此算法中就是计算比较的次数，第一个元素我们需要比较1次，第二个元素2次，对于第n个元素，我们需要和之前的元素比较n次，比较总数量也就是 1 + 2 + … + n = n(n + 1) / 2</span></span><br><span class="line">    <span class="comment">//≈ n^2。因为我们调换位置时采用「原地操作」(in place)，所以不需要额外空间，既空间复杂度为O(1)。</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span> array[])</span></span>&#123;</span><br><span class="line">        <span class="comment">//从第二个元素开始扫描</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=array.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> cur=array[i];</span><br><span class="line">            <span class="keyword">int</span> j=i-<span class="number">1</span>;</span><br><span class="line">            <span class="comment">//寻找位置和后移位操作</span></span><br><span class="line">            <span class="keyword">while</span>(j&gt;=<span class="number">0</span>&amp;&amp;array[j]&gt;cur)&#123;</span><br><span class="line">                array[j+<span class="number">1</span>]=array[j];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//插入操作</span></span><br><span class="line">            array[j+<span class="number">1</span>]=cur;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//快排 选取一个目标元素，然后将目标元素放到数组中正确的位置。然后根据排好序后的元素，将数组切分为两个子数组，用相同的方法，在没有排好序的范围使用相同的操作。</span></span><br><span class="line">    <span class="comment">//分治递归</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//对于当前的数组，取最后一个元素当做基准数（pivot）</span></span><br><span class="line">    <span class="comment">//将所有比基准数小的元素排到基准数之前，比基准数大的排在基准数之后</span></span><br><span class="line">    <span class="comment">//当基准数被放到准确的位置之后，根据基数数的位置将元素切分为前后两个子数组</span></span><br><span class="line">    <span class="comment">//对子数组采用步骤1~4的递归操作，直到子数组的长度小于等于1为止</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> iStart,<span class="keyword">int</span> iEnd)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(iStart&gt;=iEnd) <span class="keyword">return</span> ;</span><br><span class="line">        <span class="keyword">int</span> iFind=findAndPut(array,iStart,iEnd);</span><br><span class="line">        quickSort(array,iStart,iFind-<span class="number">1</span>);</span><br><span class="line">        quickSort(array,iFind+<span class="number">1</span>,iEnd);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findAndPut</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> iStart,<span class="keyword">int</span> iEnd)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> holdNum=array[iEnd];</span><br><span class="line">        <span class="keyword">int</span> left=iStart;</span><br><span class="line">        <span class="keyword">int</span> right=iEnd-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">            <span class="keyword">while</span> (left&lt;=right&amp;array[left]&lt;=holdNum)&#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>((right&gt;=left) &amp;&amp; (array[right]&gt;holdNum))&#123;</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(left&gt;right) <span class="keyword">break</span>;</span><br><span class="line">            change(array,left,right);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        change(array,left,iEnd);</span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp=array[i];</span><br><span class="line">        array[i]=array[j];</span><br><span class="line">        array[j]=temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//归并排序</span></span><br><span class="line">    <span class="comment">//先通过递归拆分，然后再合并两个有序数组</span></span><br><span class="line">    <span class="comment">//调试方法：测试样本尽可能小，方便定位问题，然后利用端点调试。</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len= array.length-<span class="number">1</span>;</span><br><span class="line">        mergeSort(array,<span class="number">0</span>,len);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (j&gt;i)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid=(i+j)/<span class="number">2</span>;</span><br><span class="line">            mergeSort(array,i,mid);</span><br><span class="line">            mergeSort(array,mid+<span class="number">1</span>,j);</span><br><span class="line">            merge(array,i,mid,j);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] array,<span class="keyword">int</span> i, <span class="keyword">int</span> mid,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="comment">//合并两个有序数组</span></span><br><span class="line">        <span class="keyword">int</span>[] temp=(<span class="keyword">int</span>[])array.clone();</span><br><span class="line">        <span class="keyword">int</span> irun=i;</span><br><span class="line">        <span class="keyword">int</span> jrun=mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> krun=i;</span><br><span class="line">        <span class="keyword">while</span>(irun&lt;=mid&amp;&amp;jrun&lt;=j)&#123;</span><br><span class="line">            <span class="keyword">if</span>(array[irun]&lt;=array[jrun])&#123;</span><br><span class="line">                temp[krun]=array[irun];</span><br><span class="line">                irun++;</span><br><span class="line">                krun++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                temp[krun]=array[jrun];</span><br><span class="line">                jrun++;</span><br><span class="line">                krun++;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(irun&lt;=mid)&#123;</span><br><span class="line">            temp[krun]=array[irun];</span><br><span class="line">            krun++;</span><br><span class="line">            irun++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(jrun&lt;=j)&#123;</span><br><span class="line">            temp[krun]=array[jrun];</span><br><span class="line">            krun++;</span><br><span class="line">            jrun++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> myi=i;myi&lt;=j;myi++)&#123;</span><br><span class="line">            array[myi]=temp[myi];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SearchMethod</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//二分搜索</span></span><br><span class="line">    <span class="comment">//●从数组的中间元素开始，如果中间元素正好是x，而查找成功</span></span><br><span class="line">    <span class="comment">//●否则我们利用中间位 置将数组分为前、后两个子数组0如果x小于中间位置的元素，则进一 步查找前一个子数组否则进一步查找后-个子数组，</span></span><br><span class="line">    <span class="comment">//●重复以上步骤，直到找到满足条件的元素，或直到子数组不存在为止，代表查找不成功。</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> array[],<span class="keyword">int</span> target)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right=array.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid =left+(right-left)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(array[mid]==target)&#123;</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(target&lt;array[mid])&#123;</span><br><span class="line">                right=mid-<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                left=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//时间复杂度：对数级别</span></span><br><span class="line">    <span class="comment">//前提是排好序的数组</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] caseArray= &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>&#125;;</span><br><span class="line">        SearchMethod searchMethod=<span class="keyword">new</span> SearchMethod();</span><br><span class="line">        <span class="keyword">int</span> result=searchMethod.binarySearch(caseArray,<span class="number">11</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;二分查找的结果是：&quot;</span>+result);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] caseArray2= &#123;<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br><span class="line">        SortMethod sortmethod=<span class="keyword">new</span> SortMethod();</span><br><span class="line">        sortmethod.insertSort(caseArray2);</span><br><span class="line">        System.out.println(<span class="string">&quot;插入排序的结果是：&quot;</span>+Arrays.toString(caseArray2));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] caseArray3= &#123;<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">22</span>,<span class="number">1</span>&#125;;</span><br><span class="line">        SortMethod quickmethod=<span class="keyword">new</span> SortMethod();</span><br><span class="line">        sortmethod.quickSort(caseArray3,<span class="number">0</span>, caseArray3.length-<span class="number">1</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;快排的结果是：&quot;</span>+Arrays.toString(caseArray3));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] caseArray4= &#123;<span class="number">10</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">12</span>,<span class="number">1</span>&#125;;</span><br><span class="line">        SortMethod mergemethod=<span class="keyword">new</span> SortMethod();</span><br><span class="line">        sortmethod.mergeSort(caseArray4);</span><br><span class="line">        System.out.println(<span class="string">&quot;归并排序的结果是：&quot;</span>+Arrays.toString(caseArray4));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">数据分析思路</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-25 21:17:46" itemprop="dateModified" datetime="2022-01-25T21:17:46+08:00">2022-01-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">数据分析</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="人货场"><a href="#人货场" class="headerlink" title="人货场"></a>人货场</h1><h1 id="数据敏感度"><a href="#数据敏感度" class="headerlink" title="数据敏感度"></a>数据敏感度</h1><p>主动提高数据敏感度的方法： 1.数字游戏。如24点，数独等 2.看财经类新闻报道，判断一下数据是否有问题，可通过搜过，查证，逻辑判断来证明 3.学会质疑，不要盲信专家的数据 4.记大数，关键数和异常数，业务中多记一些游泳的数据会显得更专业 </p>
+<h1 id="数据分析报告"><a href="#数据分析报告" class="headerlink" title="数据分析报告"></a>数据分析报告</h1><p>1、不要试图面面俱到，一定要有重点。 2、不能写成记叙文，要写成议论文。 3、既要关注点，还要照顾线和面。 4、有逻辑性。 5、尽量图表化。 6、不要回避“不良结论”。 7、务必注明数据来源、数据单位、特殊指标的计算方法等</p>
+<h1 id="数据分析思路和角度"><a href="#数据分析思路和角度" class="headerlink" title="数据分析思路和角度"></a>数据分析思路和角度</h1><p>常规思路：<br>数据总览作为第一part，一句话结论<br>如：一共多少条，总价是多少，平均单价是多少<br>分类分析<br>排序分析：单价最高的前几是：最高的几项是：<br>文字类的用词云图<br>常见的图：直方图等</p>
+<h1 id="数据分析示例"><a href="#数据分析示例" class="headerlink" title="数据分析示例"></a>数据分析示例</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pyecharts.options <span class="keyword">as</span> opts</span><br><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Line, Grid, Bar, Pie, Funnel</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据加载</span></span><br><span class="line"><span class="comment"># data_df = pd.read_csv(&#x27;./whole_dataset.csv&#x27;) </span></span><br><span class="line">data_df = pd.read_csv(<span class="string">&#x27;./sampled_dataset.csv&#x27;</span>) <span class="comment"># 加载精简版的数据集</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据预览</span></span><br><span class="line">data_df.head()</span><br><span class="line">data_df.info()</span><br><span class="line"><span class="comment"># 检查重复值</span></span><br><span class="line">data_df.duplicated().<span class="built_in">sum</span>()</span><br><span class="line"><span class="comment"># 删除重复值</span></span><br><span class="line">data_df.drop_duplicates(inplace=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># 删除无用列</span></span><br><span class="line">data_df.drop(columns=[<span class="string">&#x27;user_geohash&#x27;</span>], inplace=<span class="literal">True</span>)</span><br><span class="line">data_df.shape</span><br><span class="line"><span class="comment"># 检查缺失值</span></span><br><span class="line">data_df.isnull().<span class="built_in">sum</span>()</span><br><span class="line"><span class="comment"># 预览清洗后的数据集</span></span><br><span class="line">data_df.head()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加行为类型描述列</span></span><br><span class="line">behavior_type_dict = &#123;<span class="number">1</span>: <span class="string">&#x27;点击&#x27;</span>,</span><br><span class="line">                      <span class="number">2</span>: <span class="string">&#x27;收藏&#x27;</span>,</span><br><span class="line">                      <span class="number">3</span>: <span class="string">&#x27;加入购物车&#x27;</span>,</span><br><span class="line">                      <span class="number">4</span>: <span class="string">&#x27;支付&#x27;</span>&#125;</span><br><span class="line">data_df[<span class="string">&#x27;behavior_desc&#x27;</span>] = data_df[<span class="string">&#x27;behavior_type&#x27;</span>].<span class="built_in">map</span>(behavior_type_dict)</span><br><span class="line">data_df.head()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 处理时间列</span></span><br><span class="line">data_df[[<span class="string">&#x27;date&#x27;</span>, <span class="string">&#x27;hour&#x27;</span>]] = data_df[<span class="string">&#x27;time&#x27;</span>].<span class="built_in">str</span>.split(<span class="string">&#x27; &#x27;</span>, expand=<span class="literal">True</span>)</span><br><span class="line">data_df.head()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更改数据类型</span></span><br><span class="line">data_df[<span class="string">&#x27;date&#x27;</span>] = pd.to_datetime(data_df[<span class="string">&#x27;date&#x27;</span>])</span><br><span class="line">data_df[<span class="string">&#x27;hour&#x27;</span>] = data_df[<span class="string">&#x27;hour&#x27;</span>].astype(<span class="string">&#x27;int&#x27;</span>)</span><br><span class="line"><span class="comment"># 按时间排序</span></span><br><span class="line">data_df = data_df.sort_values(by=[<span class="string">&#x27;date&#x27;</span>,<span class="string">&#x27;hour&#x27;</span>])</span><br><span class="line"><span class="comment"># 保存清洗处理的数据集</span></span><br><span class="line">data_df.to_csv(<span class="string">&#x27;./clean_dataset.csv&#x27;</span>, index=<span class="literal">False</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载处理的数据集</span></span><br><span class="line">data_df = pd.read_csv(<span class="string">&#x27;./clean_dataset.csv&#x27;</span>)</span><br><span class="line">data_df[<span class="string">&#x27;date&#x27;</span>] = pd.to_datetime(data_df[<span class="string">&#x27;date&#x27;</span>])</span><br><span class="line">data_df.head()</span><br><span class="line"><span class="comment"># 总用户数量</span></span><br><span class="line">user_count = data_df[<span class="string">&#x27;user_id&#x27;</span>].nunique()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 成交用户数</span></span><br><span class="line">paid_user_count = data_df[data_df[<span class="string">&#x27;behavior_desc&#x27;</span>] == <span class="string">&#x27;支付&#x27;</span>][<span class="string">&#x27;user_id&#x27;</span>].nunique()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;总用户数量：&#123;&#125;，成交用户数量：&#123;&#125;，成交用户占比：&#123;:.2%&#125;&#x27;</span></span><br><span class="line">      .<span class="built_in">format</span>(user_count, paid_user_count, paid_user_count / user_count))</span><br><span class="line">      </span><br><span class="line"><span class="comment"># 日流量指标</span></span><br><span class="line"><span class="comment"># 日 PV</span></span><br><span class="line">daily_pv = data_df[data_df[<span class="string">&#x27;behavior_desc&#x27;</span>] == <span class="string">&#x27;点击&#x27;</span>].groupby(<span class="string">&#x27;date&#x27;</span>).count()[<span class="string">&#x27;user_id&#x27;</span>].reset_index().rename(columns = &#123;<span class="string">&#x27;user_id&#x27;</span>: <span class="string">&#x27;pv&#x27;</span>&#125;)</span><br><span class="line">daily_pv.head()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可视化日PV</span></span><br><span class="line">daily_pv_line = (</span><br><span class="line">    Line()</span><br><span class="line">    .set_global_opts(</span><br><span class="line">        title_opts=opts.TitleOpts(</span><br><span class="line">            title=<span class="string">&#x27;用户流量指标&#x27;</span>, </span><br><span class="line">            subtitle=<span class="string">&#x27;日PV&#x27;</span>),</span><br><span class="line">        tooltip_opts=opts.TooltipOpts(</span><br><span class="line">            trigger=<span class="string">&#x27;item&#x27;</span>, </span><br><span class="line">            axis_pointer_type=<span class="string">&#x27;cross&#x27;</span>),</span><br><span class="line">        xaxis_opts=opts.AxisOpts(</span><br><span class="line">            type_=<span class="string">&#x27;time&#x27;</span>,</span><br><span class="line">            name=<span class="string">&#x27;日期&#x27;</span>,</span><br><span class="line">        ),</span><br><span class="line">        yaxis_opts=opts.AxisOpts(</span><br><span class="line">            type_=<span class="string">&#x27;value&#x27;</span>,</span><br><span class="line">            name=<span class="string">&#x27;PV&#x27;</span>),</span><br><span class="line">    )</span><br><span class="line">    .add_xaxis(xaxis_data=daily_pv[<span class="string">&#x27;date&#x27;</span>])</span><br><span class="line">    .add_yaxis(</span><br><span class="line">        series_name=<span class="string">&quot;&quot;</span>,</span><br><span class="line">        y_axis=daily_pv[<span class="string">&#x27;pv&#x27;</span>],</span><br><span class="line">        is_symbol_show=<span class="literal">True</span>,</span><br><span class="line">        label_opts=opts.LabelOpts(is_show=<span class="literal">False</span>),</span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">daily_pv_line.render_notebook()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 日流量指标</span></span><br><span class="line"><span class="comment"># 日 UV</span></span><br><span class="line">daily_uv = data_df[data_df[<span class="string">&#x27;behavior_desc&#x27;</span>] == <span class="string">&#x27;点击&#x27;</span>].groupby(<span class="string">&#x27;date&#x27;</span>).nunique()[<span class="string">&#x27;user_id&#x27;</span>].reset_index().rename(columns=&#123;<span class="string">&#x27;user_id&#x27;</span>: <span class="string">&#x27;uv&#x27;</span>&#125;)</span><br><span class="line">daily_uv.head()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构造R值</span></span><br><span class="line">last_time = data_df[data_df[<span class="string">&#x27;behavior_desc&#x27;</span>] == <span class="string">&#x27;支付&#x27;</span>].groupby(<span class="string">&#x27;user_id&#x27;</span>).<span class="built_in">max</span>()[<span class="string">&#x27;date&#x27;</span>]</span><br><span class="line">recency = (data_df[<span class="string">&#x27;date&#x27;</span>].<span class="built_in">max</span>() - last_time).dt.days.copy()</span><br><span class="line">median_recency = recency.median()</span><br><span class="line">recency[recency &lt;= median_recency] = <span class="number">0</span></span><br><span class="line">recency[recency &gt; median_recency] = <span class="number">1</span></span><br><span class="line">recency.name = <span class="string">&#x27;R&#x27;</span></span><br><span class="line">recency.head(<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建F值</span></span><br><span class="line">frequency = data_df[data_df[<span class="string">&#x27;behavior_desc&#x27;</span>] == <span class="string">&#x27;支付&#x27;</span>].groupby(<span class="string">&#x27;user_id&#x27;</span>)[<span class="string">&#x27;item_id&#x27;</span>].size()</span><br><span class="line">median_freq = frequency.median()</span><br><span class="line">frequency[frequency &lt;= median_freq] = <span class="number">0</span></span><br><span class="line">frequency[frequency &gt; median_freq] = <span class="number">1</span></span><br><span class="line">frequency.name = <span class="string">&#x27;F&#x27;</span></span><br><span class="line">frequency.head(<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">rfm = pd.merge(recency, frequency, on=<span class="string">&#x27;user_id&#x27;</span>, how=<span class="string">&#x27;inner&#x27;</span>)</span><br><span class="line">rfm = rfm[[<span class="string">&#x27;R&#x27;</span>,<span class="string">&#x27;F&#x27;</span>]].astype(<span class="string">&#x27;str&#x27;</span>)</span><br><span class="line">rfm[<span class="string">&#x27;RF&#x27;</span>] = rfm[<span class="string">&#x27;R&#x27;</span>] + rfm[<span class="string">&#x27;F&#x27;</span>]</span><br><span class="line">rfm.head()</span><br><span class="line"></span><br><span class="line">user_tag_dict = &#123;</span><br><span class="line">    <span class="string">&#x27;11&#x27;</span>: <span class="string">&#x27;重要价值客户&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;10&#x27;</span>: <span class="string">&#x27;重要发展客户&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;01&#x27;</span>: <span class="string">&#x27;重要保持客户&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;00&#x27;</span>: <span class="string">&#x27;重要挽留客户&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">rfm[<span class="string">&#x27;user_tag&#x27;</span>] = rfm[<span class="string">&#x27;RF&#x27;</span>].<span class="built_in">map</span>(user_tag_dict)</span><br><span class="line">rfm.head()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计分层客户数量</span></span><br><span class="line">user_tag_count = rfm.groupby(<span class="string">&#x27;user_tag&#x27;</span>).size()</span><br></pre></td></tr></table></figure>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><p>info()方法获取到了各个数据非空的数量，以及它们的数据类型：<br>去除重复值<br>df_tb.drop_duplicates(inplace=True)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-title-link" itemprop="url">数据库</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-12 18:40:00" itemprop="dateModified" datetime="2021-04-12T18:40:00+08:00">2021-04-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[toc]</p>
+<h1 id="1-数据库"><a href="#1-数据库" class="headerlink" title="1.数据库"></a>1.数据库</h1><h2 id="1-1关系型数据库"><a href="#1-1关系型数据库" class="headerlink" title="1.1关系型数据库"></a>1.1关系型数据库</h2><p>ER建模，3NF模型，实体加关系<br>主键：唯一不重复，不使用业务数据如学号，身份证号；可以使用自增id，GUID等<br>联合主键：没有必要的情况下，我们尽量不使用联合主键，因为它给关系表带来了复杂度的上升</p>
+<h2 id="1-2-NoSQL数据库"><a href="#1-2-NoSQL数据库" class="headerlink" title="1.2 NoSQL数据库"></a>1.2 NoSQL数据库</h2><p>键值对存储<br>redis</p>
+<p>列存储<br>Hbase</p>
+<p>文档型存储<br>MongoDB</p>
+<p>图性数据库</p>
+<h3 id="1-2-1-mongo使用"><a href="#1-2-1-mongo使用" class="headerlink" title="1.2.1 mongo使用"></a>1.2.1 mongo使用</h3><h4 id="mongd启动"><a href="#mongd启动" class="headerlink" title="mongd启动"></a>mongd启动</h4><p>mongod –dbpath “路径名”<br>这里的路径名指得是你自行建立数据库的地方<br>注意加引号</p>
+<p>这一步可以通过配置之类的，将mongodb制作成windows服务</p>
+<h4 id="cmd连接"><a href="#cmd连接" class="headerlink" title="cmd连接"></a>cmd连接</h4><p>因为已经配置环境变量，所以可以直接在任意路径输入命令<br>命令<br>mongo  可以连接<br>db    显示当前数据库</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p>db   查看当前的数据库<br>show dbs   查看所有的数据库<br>use 数据库名   切换到数据库，如果不存在，则创建一个(插入数据后才算创建成功)<br>db .dropDatabase() 删除当前指向的数据库<br>db.集合名.insert(value)  添加数据到指定的集合中<br>db.集合名.find()</p>
+<h4 id="compass客户端操作"><a href="#compass客户端操作" class="headerlink" title="compass客户端操作"></a>compass客户端操作</h4><p>图形化的客户端，直接连接即可</p>
+<h4 id="python操作"><a href="#python操作" class="headerlink" title="python操作"></a>python操作</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取连接mongodb的对象</span></span><br><span class="line">client=pymongo.MongoClient(<span class="string">&quot;127.0.0.1&quot;</span>,port=<span class="number">27017</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取数据库</span></span><br><span class="line">db=client.test</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取数据库的集合（类似于关系型数据库的表的概念）</span></span><br><span class="line">collection=db.mess</span><br><span class="line"></span><br><span class="line"><span class="comment">#写入数据</span></span><br><span class="line"><span class="comment"># collection.insert_one(&#123;&quot;username&quot;:&quot;tao&quot;&#125;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#写入多条数据</span></span><br><span class="line"><span class="comment"># collection.insert_many([</span></span><br><span class="line"><span class="comment">#     &#123;</span></span><br><span class="line"><span class="comment">#         &quot;name&quot;:&quot;小红&quot;,</span></span><br><span class="line"><span class="comment">#         &quot;age&quot;: 18</span></span><br><span class="line"><span class="comment">#     &#125;,</span></span><br><span class="line"><span class="comment">#     &#123;</span></span><br><span class="line"><span class="comment">#         &quot;name&quot;:&quot;小明&quot;,</span></span><br><span class="line"><span class="comment">#         &quot;age&quot;: 20</span></span><br><span class="line"><span class="comment">#     &#125;</span></span><br><span class="line"><span class="comment"># ])</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查找数据</span></span><br><span class="line"><span class="comment"># cursor=collection.find()</span></span><br><span class="line"><span class="comment"># for x in  cursor:</span></span><br><span class="line"><span class="comment">#     print(x)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更新数据</span></span><br><span class="line">collection.update_one(&#123;<span class="string">&quot;age&quot;</span>:<span class="number">20</span>&#125;,&#123;<span class="string">&quot;$set&quot;</span>:&#123;<span class="string">&quot;age&quot;</span>:<span class="number">33</span>&#125;&#125;)</span><br><span class="line"><span class="comment">#此外还有update_many</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除 delete_one等类似</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

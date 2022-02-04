@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="js是运行在客户端的脚本语言。声明变量外边是双引号，里面是单引号。引入外部js 的script标签中间不可以写代码let var 1. 变量2.1数据类型变量的初始化，分号 1var name&#x3D;12；   String  Number  Boolean   Array  Object这种变量本身类型不固定的语言称之为动态语言。 12var a &#x3D; 123; &#x2F;&#x2F; a的值是整数123a &#x3D; &amp;#x2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript基础">
+<meta property="og:url" content="http://example.com/2021/10/27/javascript%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="js是运行在客户端的脚本语言。声明变量外边是双引号，里面是单引号。引入外部js 的script标签中间不可以写代码let var 1. 变量2.1数据类型变量的初始化，分号 1var name&#x3D;12；   String  Number  Boolean   Array  Object这种变量本身类型不固定的语言称之为动态语言。 12var a &#x3D; 123; &#x2F;&#x2F; a的值是整数123a &#x3D; &amp;#x2">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-26T23:15:33.000Z">
+<meta property="article:modified_time" content="2021-12-29T14:03:29.460Z">
+<meta property="article:author" content="TJ">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/10/27/javascript%E5%9F%BA%E7%A1%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>javascript基础 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/27/javascript%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          javascript基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-27 07:15:33" itemprop="dateCreated datePublished" datetime="2021-10-27T07:15:33+08:00">2021-10-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-29 22:03:29" itemprop="dateModified" datetime="2021-12-29T22:03:29+08:00">2021-12-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>js是运行在客户端的脚本语言。<br>声明变量<br>外边是双引号，里面是单引号。<br>引入外部js 的script标签中间不可以写代码<br>let var</p>
+<h2 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h2><h3 id="2-1数据类型"><a href="#2-1数据类型" class="headerlink" title="2.1数据类型"></a>2.1数据类型</h3><p>变量的初始化，分号</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name=<span class="number">12</span>；</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>String</p>
+</li>
+<li><p>Number</p>
+</li>
+<li><p>Boolean</p>
+</li>
+<li><p> Array</p>
+</li>
+<li><p>Object<br>这种变量本身类型不固定的语言称之为动态语言。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>; <span class="comment">// a的值是整数123</span></span><br><span class="line">a = <span class="string">&#x27;ABC&#x27;</span>; <span class="comment">// a变为字符串</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> v=<span class="built_in">document</span>.querySelector(<span class="string">&#x27;h1&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>ParseInt 转换成<br>转换成string</p>
+<h3 id="2-2数组"><a href="#2-2数组" class="headerlink" title="2.2数组"></a>2.2数组</h3><p>JavaScript的数组可以包括任意数据类型。数组用[]表示，元素之间用,分隔。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3.14</span>, <span class="string">&#x27;Hello&#x27;</span>, <span class="literal">null</span>, <span class="literal">true</span>];</span><br></pre></td></tr></table></figure>
+<p>slice()<br>push()<br>pop()<br>如果要往Array的头部添加若干元素，使用unshift()方法，shift()方法则把Array的第一个元素删掉：<br>sort()可以对当前Array进行排序;<br>reverse()把整个Array的元素给调个个<br>splice()方法是修改Array的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：<br>concat()方法把当前的Array和另一个Array连接起来，并返回一个新的Array：<br>join()方法是一个非常实用的方法，它把当前Array的每个元素都用指定的字符串连接起来，然后返回连接后的字符串;<br>如果数组的某个元素又是一个Array，则可以形成多维数组;</p>
+<h3 id="2-3字符串"><a href="#2-3字符串" class="headerlink" title="2.3字符串"></a>2.3字符串</h3><p>用加号连接字符串<br>用${}包裹变量名的形式<br>获取字符串长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;Hello, world!&#x27;</span>;</span><br><span class="line">s.length; <span class="comment">// 13</span></span><br></pre></td></tr></table></figure>
+<p>要获取字符串某个指定位置的字符，使用类似Array的下标操作，索引号从0开始：<br>toUpperCase()把一个字符串全部变为大写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;Hello&#x27;</span>;</span><br><span class="line">s.toUpperCase(); <span class="comment">// 返回&#x27;HELLO&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>toLowerCase()把一个字符串全部变为小写：<br>indexOf()会搜索指定字符串出现的位置：<br>substring()返回指定索引区间的子串：</p>
+<h3 id="2-4对象"><a href="#2-4对象" class="headerlink" title="2.4对象"></a>2.4对象</h3><p>JavaScript中一切皆对象。JavaScript的对象是一组由键-值组成的无序集合。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">    name: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">    age: <span class="number">20</span>,</span><br><span class="line">    tags: [<span class="string">&#x27;js&#x27;</span>, <span class="string">&#x27;web&#x27;</span>, <span class="string">&#x27;mobile&#x27;</span>],</span><br><span class="line">    city: <span class="string">&#x27;Beijing&#x27;</span>,</span><br><span class="line">    hasCar: <span class="literal">true</span>,</span><br><span class="line">    zipcode: <span class="literal">null</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>要获取一个对象的属性，我们用对象变量.属性名的方式：<br>JavaScript的原型链和Java的Class区别就在，它没有“Class”的概念，所有对象都是实例，所谓继承关系不过是把一个对象的原型指向另一个对象而已。</p>
+<h3 id="2-5运算符"><a href="#2-5运算符" class="headerlink" title="2.5运算符"></a>2.5运算符</h3><ul>
+<li><p>%是求余运算</p>
+</li>
+<li><p>&amp;&amp;运算是与运算</p>
+</li>
+<li><p>||运算是或运算</p>
+</li>
+<li><p>!运算是非运算</p>
+</li>
+<li><p>===比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。三个等号比较的是内存地址。</p>
+<h3 id="2-6-json"><a href="#2-6-json" class="headerlink" title="2.6 json"></a>2.6 json</h3><p>json格式的字符串和对象的相互转化</p>
+</li>
+</ul>
+<h2 id="3-逻辑判断"><a href="#3-逻辑判断" class="headerlink" title="3.逻辑判断"></a>3.逻辑判断</h2><h3 id="3-1循环"><a href="#3-1循环" class="headerlink" title="3.1循环"></a>3.1循环</h3><h3 id="3-2条件判断"><a href="#3-2条件判断" class="headerlink" title="3.2条件判断"></a>3.2条件判断</h3><h3 id="3-3结构"><a href="#3-3结构" class="headerlink" title="3.3结构"></a>3.3结构</h3><p>Map是一组键值对的结构</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>([[<span class="string">&#x27;Michael&#x27;</span>, <span class="number">95</span>], [<span class="string">&#x27;Bob&#x27;</span>, <span class="number">75</span>], [<span class="string">&#x27;Tracy&#x27;</span>, <span class="number">85</span>]]);</span><br><span class="line">m.get(<span class="string">&#x27;Michael&#x27;</span>); <span class="comment">// 95</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>(); <span class="comment">// 空Map</span></span><br><span class="line">m.set(<span class="string">&#x27;Adam&#x27;</span>, <span class="number">67</span>); <span class="comment">// 添加新的key-value</span></span><br><span class="line">m.set(<span class="string">&#x27;Bob&#x27;</span>, <span class="number">59</span>);</span><br><span class="line">m.has(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// 是否存在key &#x27;Adam&#x27;: true</span></span><br><span class="line">m.get(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// 67</span></span><br><span class="line">m.delete(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// 删除key &#x27;Adam&#x27;</span></span><br><span class="line">m.get(<span class="string">&#x27;Adam&#x27;</span>); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>Set和Map类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在Set中，没有重复的key。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="keyword">new</span> <span class="built_in">Set</span>(); <span class="comment">// 空Set</span></span><br><span class="line"><span class="keyword">var</span> s2 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]); <span class="comment">// 含1, 2, 3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="string">&#x27;3&#x27;</span>]);</span><br><span class="line">s; <span class="comment">// Set &#123;1, 2, 3, &quot;3&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-函数"><a href="#2-函数" class="headerlink" title="2.函数"></a>2.函数</h2><h3 id="2-1-常用自带函数"><a href="#2-1-常用自带函数" class="headerlink" title="2.1 常用自带函数"></a>2.1 常用自带函数</h3><ul>
+<li>唯一能判断NaN的方法是通过isNaN()函数<br>typeof <h3 id="2-2函数"><a href="#2-2函数" class="headerlink" title="2.2函数"></a>2.2函数</h3>匿名函数</li>
+</ul>
+<p>map()用法,调用Array的map()方法，传入我们自己的函数，就得到了一个新的Array作为结果。<br>reduce()把结果继续和序列的下一个元素做累积计算。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)</span><br></pre></td></tr></table></figure>
+<p>Array的filter()也接收一个函数。过滤<br>Array.filter(函数名)<br>Array的sort()方法默认把所有元素先转换为String再排序，原生的方法不能直接用来对数字排序，会不对。<br>every()方法可以判断数组的所有元素是否满足测试条件。<br>例如，给定一个包含若干字符串的数组，判断所有字符串是否满足指定的测试条件：<br>find()方法用于查找符合条件的第一个元素，如果找到了，返回这个元素，否则，返回undefined<br>findIndex()和find()类似，也是查找符合条件的第一个元素，不同之处在于findIndex()会返回这个元素的索引，如果没有找到，返回-1；<br>forEach()和map()类似，它也把每个元素依次作用于传入的函数，但不会返回新的数组。forEach()常用于遍历数组，因此，传入的函数不需要返回值，</p>
+<p>闭包</p>
+<h2 id="3-事件"><a href="#3-事件" class="headerlink" title="3.事件"></a>3.事件</h2><p>比如 onclick<br>将事件与元素绑定有许多方法。</p>
+<h2 id="4-浏览器对象"><a href="#4-浏览器对象" class="headerlink" title="4.浏览器对象"></a>4.浏览器对象</h2><p>window 浏览器窗口,window对象有innerWidth和innerHeight属性，可以获取浏览器窗口的内部宽度和高度。内部宽高是指除去菜单栏、工具栏、边框等占位元素后，用于显示网页的净宽高。<br>screen对象表示屏幕的信息<br>location对象表示当前页面的URL信息<br>document对象表示当前页面。由于HTML在浏览器中以DOM形式表示为树形结构，document对象就是整个DOM树的根节点。<br>用document对象提供的getElementById()和getElementsByTagName()可以按ID获得一个DOM节点和按Tag名称获得一组DOM节点.</p>
+<h3 id="4-1操作dom"><a href="#4-1操作dom" class="headerlink" title="4.1操作dom"></a>4.1操作dom</h3><p>在操作一个DOM节点前，我们需要通过各种方式先拿到这个DOM节点。最常用的方法是document.getElementById()和document.getElementsByTagName()，以及CSS选择器document.getElementsByClassName()。<br>由于ID在HTML文档中是唯一的，所以document.getElementById()可以直接定位唯一的一个DOM节点。document.getElementsByTagName()和document.getElementsByClassName()总是返回一组DOM节点。要精确地选择DOM，可以先定位父节点，再从父节点开始选择，以缩小范围。<br>选择节点</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回ID为&#x27;test&#x27;的节点：</span></span><br><span class="line"><span class="keyword">var</span> test = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;test&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 先定位ID为&#x27;test-table&#x27;的节点，再返回其内部所有tr节点：</span></span><br><span class="line"><span class="keyword">var</span> trs = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;test-table&#x27;</span>).getElementsByTagName(<span class="string">&#x27;tr&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 先定位ID为&#x27;test-div&#x27;的节点，再返回其内部所有class包含red的节点：</span></span><br><span class="line"><span class="keyword">var</span> reds = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;test-div&#x27;</span>).getElementsByClassName(<span class="string">&#x27;red&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取节点test下的所有直属子节点:</span></span><br><span class="line"><span class="keyword">var</span> cs = test.children;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取节点test下第一个、最后一个子节点：</span></span><br><span class="line"><span class="keyword">var</span> first = test.firstElementChild;</span><br><span class="line"><span class="keyword">var</span> last = test.lastElementChild;</span><br></pre></td></tr></table></figure>
+<p>第二种方法是使用querySelector()和querySelectorAll()，需要了解selector语法，然后使用条件来获取节点</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过querySelector获取ID为q1的节点：</span></span><br><span class="line"><span class="keyword">var</span> q1 = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#q1&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过querySelectorAll获取q1节点内的符合条件的所有节点：</span></span><br><span class="line"><span class="keyword">var</span> ps = q1.querySelectorAll(<span class="string">&#x27;div.highlighted &gt; p&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>插入dom</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/13/git%E4%BD%BF%E7%94%A8/" rel="prev" title="git使用">
+      <i class="fa fa-chevron-left"></i> git使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/18/linux2/" rel="next" title="linux2">
+      linux2 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%8F%98%E9%87%8F"><span class="nav-text">1. 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">2.1数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E6%95%B0%E7%BB%84"><span class="nav-text">2.2数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">2.3字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4%E5%AF%B9%E8%B1%A1"><span class="nav-text">2.4对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">2.5运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-json"><span class="nav-text">2.6 json</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E9%80%BB%E8%BE%91%E5%88%A4%E6%96%AD"><span class="nav-text">3.逻辑判断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E5%BE%AA%E7%8E%AF"><span class="nav-text">3.1循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="nav-text">3.2条件判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3%E7%BB%93%E6%9E%84"><span class="nav-text">3.3结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%87%BD%E6%95%B0"><span class="nav-text">2.函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%B8%B8%E7%94%A8%E8%87%AA%E5%B8%A6%E5%87%BD%E6%95%B0"><span class="nav-text">2.1 常用自带函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E5%87%BD%E6%95%B0"><span class="nav-text">2.2函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BA%8B%E4%BB%B6"><span class="nav-text">3.事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1"><span class="nav-text">4.浏览器对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E6%93%8D%E4%BD%9Cdom"><span class="nav-text">4.1操作dom</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

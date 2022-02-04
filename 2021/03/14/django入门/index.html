@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="welcome[toc] 1.创建django的基本步骤1.1 创建虚拟环境1conda create -n ll_env 列出当前所有的环境 1conda env list 激活虚拟环境 1activate ll_env 注意部分命令 linux，windows不一样 安装包命令 1pip install django&#x3D;&#x3D;2.2 -i https:&#x2F;&#x2F;py">
+<meta property="og:type" content="article">
+<meta property="og:title" content="django入门">
+<meta property="og:url" content="http://example.com/2021/03/14/django%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:description" content="welcome[toc] 1.创建django的基本步骤1.1 创建虚拟环境1conda create -n ll_env 列出当前所有的环境 1conda env list 激活虚拟环境 1activate ll_env 注意部分命令 linux，windows不一样 安装包命令 1pip install django&#x3D;&#x3D;2.2 -i https:&#x2F;&#x2F;py">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-14T13:08:05.000Z">
+<meta property="article:modified_time" content="2021-09-20T10:44:29.505Z">
+<meta property="article:author" content="TJ">
+<meta property="article:tag" content="django">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/03/14/django%E5%85%A5%E9%97%A8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>django入门 | 我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/django%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          django入门
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-14 21:08:05" itemprop="dateCreated datePublished" datetime="2021-03-14T21:08:05+08:00">2021-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-20 18:44:29" itemprop="dateModified" datetime="2021-09-20T18:44:29+08:00">2021-09-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/django/" itemprop="url" rel="index"><span itemprop="name">django</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>welcome<br>[toc]</p>
+<h2 id="1-创建django的基本步骤"><a href="#1-创建django的基本步骤" class="headerlink" title="1.创建django的基本步骤"></a>1.创建django的基本步骤</h2><h3 id="1-1-创建虚拟环境"><a href="#1-1-创建虚拟环境" class="headerlink" title="1.1 创建虚拟环境"></a>1.1 创建虚拟环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n ll_env</span><br></pre></td></tr></table></figure>
+<p>列出当前所有的环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env list</span><br></pre></td></tr></table></figure>
+<p>激活虚拟环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate ll_env</span><br></pre></td></tr></table></figure>
+<p>注意部分命令 linux，windows不一样</p>
+<p>安装包命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django&#x3D;&#x3D;2.2 -i https:&#x2F;&#x2F;pypi&#x2F;douban.com&#x2F;simple</span><br></pre></td></tr></table></figure>
+<p>删除环境</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove -n 名字 --<span class="built_in">all</span></span><br></pre></td></tr></table></figure>
+<p>删除虚拟环境中的包</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove --name $虚拟环境名字 $包名</span><br></pre></td></tr></table></figure>
+<p>安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install 包名</span><br></pre></td></tr></table></figure>
+<h3 id="1-2创建工程"><a href="#1-2创建工程" class="headerlink" title="1.2创建工程"></a>1.2创建工程</h3><p>在安装django并且处于专门设置的环境下的前提下，创建工程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject learning_log</span><br></pre></td></tr></table></figure>
+<p><strong>创建数据库</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>在正确的路径下，多了db.sqlite3</p>
+<p>启用工程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure>
+<h3 id="1-3创建app"><a href="#1-3创建app" class="headerlink" title="1.3创建app"></a>1.3创建app</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp learning_logs</span><br></pre></td></tr></table></figure>
+<p>在settings.py中将新建的app追加进去</p>
+<h3 id="1-4启动已有项目"><a href="#1-4启动已有项目" class="headerlink" title="1.4启动已有项目"></a>1.4启动已有项目</h3><p>step1 激活虚拟环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate ll_env</span><br></pre></td></tr></table></figure>
+<p>step2 进入工程目录<br>step3.启动工程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure>
+<h2 id="2-细化mvc的内容"><a href="#2-细化mvc的内容" class="headerlink" title="2.细化mvc的内容"></a>2.细化mvc的内容</h2><p>修改models.py<br>具体略去</p>
+<p>修改了model后要重新生成数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations learning_logs</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>创建superuser</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py creatsuperuser</span><br></pre></td></tr></table></figure>
+<p>修改admin.py<br>注册model中的类</p>
+<h2 id="3-django-shell调试"><a href="#3-django-shell调试" class="headerlink" title="3.django shell调试"></a>3.django shell调试</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br><span class="line"># 然后输入命令，比如</span><br><span class="line">from learning_logs.models import Topic</span><br><span class="line">Topic.objects.all()</span><br><span class="line"># get set命令等</span><br></pre></td></tr></table></figure>
+<h2 id="4-整体流程"><a href="#4-整体流程" class="headerlink" title="4.整体流程"></a>4.整体流程</h2><p>models.py<br>urls.py<br>views.py<br>然后在模板文件夹里，建立html文件</p>
+<p>通用试图和函数</p>
+<p>整体流程是：</p>
+<p>1.先建立并运行默认的界面</p>
+<p>2.简单修改成helloworld</p>
+<p>新建应用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python startproject XXX</span><br></pre></td></tr></table></figure>
+<p>在新应用目录下views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&quot;Hello, world. You&#x27;re at the polls index.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>在新应用目录下新建urls.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;&#x27;</span>, views.index, name=<span class="string">&#x27;index&#x27;</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>在原目录下的urls.py中纳入新建的urls.py</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from django.urls import include, path</span><br><span class="line"></span><br><span class="line">urlpatterns &#x3D; [</span><br><span class="line">    path(&#39;admin&#x2F;&#39;, admin.site.urls),</span><br><span class="line">    path(&#39;&#39;,include(&#39;zhishi.urls&#39;))</span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>修改settings.py</p>
+<p>包括installed app，时区，数据库。</p>
+<h1 id="5-应用下的models"><a href="#5-应用下的models" class="headerlink" title="5.应用下的models"></a>5.应用下的models</h1><p>ORM常用字段类型：</p>
+<p>区别在于CharField是定长的，而TextField的长度则可以是无线的，具体使用哪一个要看需要</p>
+<p>　1、CharField：字符串类型，映射到数据库中会转换成varchar类型，使用时必须传入max_length属性以定义该字符串的最大长度，如果超过254个字符，就不建议使用CharField了，此时建议使用TextField<br>10、BooleanField：布尔类型(True/False)，映射到数据库中会变成长度只有1位的tinyint类型，这个Field不接受null参数，要想使用可以为null的布尔类型的字段，就要使用NullBooleanField<br>11、AutoField:自增长类型，映射到数据库中是11位的整数，使用此字段时，必须传递primary_key=True，否则在生成迁移脚本文件时，就会报错，一个模型不能有两个自增长字段。一般情况下我们用不到这个字段，如果不定义主键，django会自动的为我们生成id字段作为主键</p>
+<p>DateTimeField：日期时间类型，在python中对应的是datetime.datetime类型，在映射到数据库中也是datetime类型。使用这个Field可以传递以下几个参数：<br>　　　　auto_now=True：在每次这个数据保存的时候，都使用当前的时间。比如作为一个记录修改日期的字段<br>　　　　auto_now_add=True：在每条数据第一次被添加进去的时候，都使用当前的时间。比如作为一个记录第一次入库的字段</p>
+<p>14、DateField：日期类型，用法同DateTimeField，在python中对应的是datetime.date类型，在映射到数据库中是date类型<br>　　15、TimeField：时间类型，用法同DateTimeField，在python中对应的是datetime.time类型，在映射到数据库中是time类型<br>　　16、FileField：用来存储文件的<br>　　17、ImageField：用来存储图片文件的<br>　　18、TextField：大量的文本类型</p>
+<p>Field的常用参数：<br>　　1、null：标识是否可以为空，默认是为False。在使用字符串相关的Field（CharField/TextField/URLField/EmailField）的时候，官方推荐尽量不要使用这个参数，也就是保持默认值False。因为Django在处理字符串相关的Field的时候，即使这个Field的null=False，如果你没有给这个Field传递任何值，那么Django也会使用一个空的字符串””来作为默认值存储进去。因此如果再使用null=True，Django会产生两种空值的情形（NULL或者空字符串）。如果想要在表单验证的时候允许这个字符串为空，那么建议使用blank=True。如果你的Field是BooleanField，由于BooleanField不接受null参数，因此你如果想要设置这个字段可以为空的bool类型，那么对应的可空的bool类型字段则为NullBooleanField。<br>　　2、blank：标识这个字段在表单验证的时候是否可以为空，默认是False。这个和null是有区别的，null是一个纯数据库级别的。而blank是表单验证级别的。<br>　　3、db_column：这个字段在数据库中的名字。如果没有设置这个参数，那么将会使用模型中属性的名字。<br>　　4、db_index：标识这个字段是否为索引字段。<br>　　5、default：默认值。可以为一个值，或者是一个函数，但是不支持lambda表达式。并且不支持列表/字典/集合等可变的数据结构。在用函数作为值传递给default时，只能传递函数名，不需要加括号。<br>　　6、primary_key：是否为主键，与AutoField/BigAutoField连用，默认是False。<br>　　7、unique：在表中这个字段的值是否唯一，在数据库中就是唯一约束，一般是设置手机号码/邮箱等。<br>　　8、choices：在一个范围内选择出一项，注意这个选项与ForeignKey的区别<br>　　　　作用：1、django admin中显示下拉框；2、避免连表查询</p>
+<p>　　　　TYPE_CHOICES = ( 　　#数据库只保存内部元祖的第一个值，后面的值保存在内存中<br>　　　　　　(0, ‘—‘),<br>　　　　　　(1, ‘第一类’),<br>　　　　　　(2, ‘第二类’),<br>　　　　　　(3, ‘第三类’),<br>　　　　)<br>　　　　type = models.IntegerField(default=0,choices=TYPE_CHOICES)</p>
+<p>修改好model 后</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations XXX</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>重置数据库中所有数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py flush</span><br></pre></td></tr></table></figure>
+<p>实例</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    name = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    grade = models.IntegerField()</span><br><span class="line">    section = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    school = models.ForeignKey(School, on_delete=models.CASCADE)</span><br><span class="line">    blood_group = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    mobile = models.CharField(max_length=<span class="number">20</span>)</span><br><span class="line">    address = models.TextField()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">School</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    name = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    email = models.EmailField(null=<span class="literal">True</span>, blank=<span class="literal">True</span>)</span><br><span class="line">    address = models.TextField()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br></pre></td></tr></table></figure>
+<h1 id="管理后台"><a href="#管理后台" class="headerlink" title="管理后台"></a>管理后台</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure>
+<p>注册类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</span><br><span class="line">admin.site.register(Question)</span><br></pre></td></tr></table></figure>
+<h1 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h1><p>views向html中传递</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render_to_response</span><br><span class="line"></span><br><span class="line">address = [</span><br><span class="line">    &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;张三&#x27;</span>, <span class="string">&#x27;address&#x27;</span>:<span class="string">&#x27;地址一&#x27;</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;李四&#x27;</span>, <span class="string">&#x27;address&#x27;</span>:<span class="string">&#x27;地址二&#x27;</span>&#125;</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> render_to_response(<span class="string">&#x27;list.html&#x27;</span>, &#123;<span class="string">&#x27;address&#x27;</span>: address&#125;)</span><br></pre></td></tr></table></figure>
+<p>这里使用了一个新方法是 render_to_response ，它可以直接调用模板并返回生成好的文本，直接返回它即可。它接收两个参数，第一个是模板的名字。</p>
+<p>第二个参数是一个字典，这里只有一个 Key ，名字是 address ，它的值是一个字典的列表。只要注意模板所接收的就是这样的字典和包含字典的列表就行了。</p>
+<p>创建templates目录</p>
+<h1 id="修改settings-py"><a href="#修改settings-py" class="headerlink" title="修改settings.py"></a>修改settings.py</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LANGUAGE_CODE = <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"></span><br><span class="line">TIME_ZONE = <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/django/" rel="tag"># django</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/16/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" rel="prev" title="软件工程">
+      <i class="fa fa-chevron-left"></i> 软件工程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/15/vscode%E4%BD%BF%E7%94%A8/" rel="next" title="vscode使用">
+      vscode使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BAdjango%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-text">1.创建django的基本步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-text">1.1 创建虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E5%88%9B%E5%BB%BA%E5%B7%A5%E7%A8%8B"><span class="nav-text">1.2创建工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E5%88%9B%E5%BB%BAapp"><span class="nav-text">1.3创建app</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E5%90%AF%E5%8A%A8%E5%B7%B2%E6%9C%89%E9%A1%B9%E7%9B%AE"><span class="nav-text">1.4启动已有项目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%BB%86%E5%8C%96mvc%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-text">2.细化mvc的内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-django-shell%E8%B0%83%E8%AF%95"><span class="nav-text">3.django shell调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B"><span class="nav-text">4.整体流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%BA%94%E7%94%A8%E4%B8%8B%E7%9A%84models"><span class="nav-text">5.应用下的models</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0"><span class="nav-text">管理后台</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%A0%E5%8F%82"><span class="nav-text">传参</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9settings-py"><span class="nav-text">修改settings.py</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

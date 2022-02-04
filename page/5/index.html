@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="我的Hexo博客">
+<meta property="og:url" content="http://example.com/page/5/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/%E7%AE%97%E6%B3%95%E6%B8%B8%E6%88%8F%E4%B8%8E%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/%E7%AE%97%E6%B3%95%E6%B8%B8%E6%88%8F%E4%B8%8E%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">算法游戏与经典算法问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 21:39:32" itemprop="dateCreated datePublished" datetime="2021-02-13T21:39:32+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-15 23:45:19" itemprop="dateModified" datetime="2021-02-15T23:45:19+08:00">2021-02-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="八皇后问题"><a href="#八皇后问题" class="headerlink" title="八皇后问题"></a>八皇后问题</h1><p>问题描述：<br>一个棋局八乘以八的棋局，要放置8个皇后，让彼此不攻击，需要怎么放置？<br>攻击：在一行，一列，或者一条斜线就是攻击</p>
+<h1 id="华容道问题"><a href="#华容道问题" class="headerlink" title="华容道问题"></a>华容道问题</h1><h1 id="约瑟夫环问题"><a href="#约瑟夫环问题" class="headerlink" title="约瑟夫环问题"></a>约瑟夫环问题</h1><h1 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h1><h1 id="骑士周游列国问题"><a href="#骑士周游列国问题" class="headerlink" title="骑士周游列国问题"></a>骑士周游列国问题</h1><h1 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h1><h1 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h1><p>一个主题的线下活动，女生比例是30%，是否说明女生不爱参加线下活动？<br>不能，影响因素至少有两个，一个是首先关注特定主题，其次是关注特定主题的前提下爱参加活动，[条件概率]男女比例差异体现在了是否关注特定主题。<br>而且，结合更广泛的补充，恰恰相反，女生更热衷于参加活动。</p>
+<h1 id="辛普森悖论"><a href="#辛普森悖论" class="headerlink" title="辛普森悖论"></a>辛普森悖论</h1><p>在某个条件下的两组数据，分别讨论时都会满足某种性质，可是一旦合并考虑，却可能导致相反的结论。<br>在某些前提下有时会产生的一种现象：<br>1.有组间差异<br>2.两个组占比不均衡</p>
+<p>当指标是一个均值或比例时，子模块的指标变化可能和总体的变化不一致，比如子模块的指标上升了，总体的指标却下降了。<br>某APP的每日人均发帖量 = 每日总贴数 / 总人数。现在发现这个指标下降了，我们按用户的手机类型做个拆分：安卓客户端和苹果客户端，却发现：两个客户端的人均发帖量都上升了</p>
+<h1 id="三门问题"><a href="#三门问题" class="headerlink" title="三门问题"></a>三门问题</h1><p>这个”三门”问题的结果为什么会违反大多数人的直觉？如果主持人先打开一扇空门，剩下两扇门中任何一个有车的可能性都是50%，但为什么我先选择一下，主持人再开门，却能改变另两扇门后有车的可能性呢？主持人开门的瞬间发生了什么？<br>要回答这个问题，我们可以把三扇门换成n扇门，这样更容易看清楚这个问题的本质。把它想成有十个门，而主持人在选后打开其中八个不通的门，就容易理解多了。<br>“三门”问题的本质是：主持人排除一扇空门为你二次选择带来的获奖概率增幅大于你损失掉的第一次选择时获奖的概率。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/JAVA%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/JAVA%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">JAVA SE</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-30 12:48:34" itemprop="dateModified" datetime="2021-06-30T12:48:34+08:00">2021-06-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1-环境"><a href="#1-环境" class="headerlink" title="1. 环境"></a>1. 环境</h1><p>编译型语言：C++<br>解释型语言：PYTHON，Ruby,JavaScript<br>JAVA,生成字节码文件，通过JVM（java虚拟机）进行执行该字节码文件，从而实现了跨平台，所有平台上JVM向上提供给字节码文件的接口完全相同，向下提供给不同平台的接口互不相同。</p>
+<p>执行程序时，使用了两个命令 javac和java<br>javac命令 后面跟着java文件的文件名 从HelloWorld.java生成了HelloWorld.class，字节码文件<br>java命令 后面跟着类名 【不要加.class】</p>
+<h1 id="2-idea-技巧"><a href="#2-idea-技巧" class="headerlink" title="2. idea 技巧"></a>2. idea 技巧</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>文件名和类名一致,一个源文件中只能有一个 public 类<br>一个源文件可以有多个非 public 类<br>建立project 然后建立moudle</p>
+<p>idea快捷键<br>psvm  public static void main(String[] args)<br>sout System.out.println);</p>
+<h1 id="3-语法"><a href="#3-语法" class="headerlink" title="3.语法"></a>3.语法</h1><h2 id="3-1java修饰符"><a href="#3-1java修饰符" class="headerlink" title="3.1java修饰符"></a>3.1java修饰符</h2><p>类本身，方法，变量<br>访问控制修饰符<br>default public protected,private<br>非访问控制修饰符<br>final abstract static  synchronized</p>
+<h2 id="3-2构造方法"><a href="#3-2构造方法" class="headerlink" title="3.2构造方法"></a>3.2构造方法</h2><p>每个类都有构造方法。如果没有显式地为类定义构造方法，Java 编译器将会为该类提供一个默认构造方法。</p>
+<p>在创建一个对象的时候，至少要调用一个构造方法。构造方法的名称必须与类同名，<strong>一个类可以有多个构造方法。</strong></p>
+<p>方法的调用：<br>静态，非静态</p>
+<h1 id="4-leetcode"><a href="#4-leetcode" class="headerlink" title="4.leetcode"></a>4.leetcode</h1><h2 id="4-1数组"><a href="#4-1数组" class="headerlink" title="4.1数组"></a>4.1数组</h2><p>初始化数组</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] n=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">9</span>];</span><br></pre></td></tr></table></figure>
+<p>直接赋值初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] n=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> l=</span><br><span class="line"><span class="keyword">char</span>[][] a=&#123;&#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>&#125;,&#123;<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
+<p>取长度</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] n=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> l=n.length;</span><br></pre></td></tr></table></figure>
+
+<p>字符串</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">&quot;www.runoob.com&quot;</span>;</span><br><span class="line"><span class="keyword">char</span> result = s.charAt(<span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+
+<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">   * 判断是否是回文</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isHUI</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n = s.length();</span><br><span class="line">	s = s.toLowerCase();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= (n / <span class="number">2</span> - <span class="number">1</span>); i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s.charAt(i) != s.charAt(n - <span class="number">1</span> - i)) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>全部程序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TEST</span> </span>&#123;</span><br><span class="line">	  <span class="comment">/*</span></span><br><span class="line"><span class="comment">	   * 判断是否是回文</span></span><br><span class="line"><span class="comment">	   */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isHUI</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n = s.length();</span><br><span class="line">		s = s.toLowerCase();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= (n / <span class="number">2</span> - <span class="number">1</span>); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (s.charAt(i) != s.charAt(n - <span class="number">1</span> - i)) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            String str1=<span class="string">&quot;1&quot;</span>;</span><br><span class="line">            String str2=<span class="string">&quot;Aa&quot;</span>;</span><br><span class="line">            TEST test=<span class="keyword">new</span> TEST();</span><br><span class="line">            <span class="keyword">boolean</span> b1=test.isHUI(str1);</span><br><span class="line">            <span class="keyword">boolean</span> b2=test.isHUI(str2);</span><br><span class="line">            System.out.println(<span class="string">&quot;结果是:&quot;</span>+(b1?<span class="string">&quot;是&quot;</span>:<span class="string">&quot;否&quot;</span>));</span><br><span class="line">            System.out.println(<span class="string">&quot;结果是:&quot;</span>+(b2?<span class="string">&quot;是&quot;</span>:<span class="string">&quot;否&quot;</span>));</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">	  &#125;</span><br><span class="line">	  </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>格式化代码：右键——Source——Format<br>for循环执行，<br>先初始化，再判断，之后执行循环内的，再执行序号更新。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"> <span class="keyword">int</span> [] numbers= &#123;<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>&#125;;</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">int</span> x: numbers) &#123;</span><br><span class="line">  <span class="keyword">if</span>(x==<span class="number">20</span>) &#123;</span><br><span class="line">	  <span class="keyword">continue</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  System.out.println(x);</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>JAVA 自带的函数</p>
+<p>判断是否是某个类的实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> b=s <span class="keyword">instanceof</span> String;</span><br></pre></td></tr></table></figure>
+<p>一个String中遍历出来字符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s=<span class="string">&quot;opanda&quot;</span>;</span><br><span class="line"><span class="keyword">char</span> c;</span><br><span class="line">c=s.charAt(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<p>取字符串的长度</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String s=<span class="string">&quot;opanda&quot;</span>;</span><br><span class="line"><span class="keyword">int</span> n=s.length();</span><br></pre></td></tr></table></figure>
+<p>数组的长度</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> [] b=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> k= b.length;</span><br></pre></td></tr></table></figure>
+<p>最长回文子字符串</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TEST2</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isHUI</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n = s.length();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= (n / <span class="number">2</span> - <span class="number">1</span>); i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (s.charAt(i) != s.charAt(n - <span class="number">1</span> - i)) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> ns = s.length();</span><br><span class="line">		<span class="keyword">if</span> (ns &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> s;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> istart = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> iend = ns;</span><br><span class="line">		<span class="keyword">int</span> longest = ns;</span><br><span class="line">		<span class="keyword">int</span> f = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (longest &gt; <span class="number">1</span>) &#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= f; i++) &#123;</span><br><span class="line">				<span class="keyword">int</span> j = f - i;</span><br><span class="line">				String s1 = s.substring(istart + i, iend - j);</span><br><span class="line">				<span class="keyword">if</span> (isHUI(s1)) &#123;</span><br><span class="line">					<span class="keyword">return</span> s1;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			f++;</span><br><span class="line">			longest--;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		String ss;</span><br><span class="line">		ss = String.valueOf(s.charAt(<span class="number">0</span>));</span><br><span class="line">		<span class="comment">// ss=s.charAt(0);</span></span><br><span class="line">		<span class="keyword">return</span> ss;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		String s = <span class="string">&quot;cbbd&quot;</span>;</span><br><span class="line">		<span class="comment">// String ss=s.substring(2,6);</span></span><br><span class="line">		String ss = longestPalindrome(s);</span><br><span class="line"></span><br><span class="line">		System.out.println(ss);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>String切片</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s.substring(Math.min(len-<span class="number">3</span>-<span class="number">3</span>*i,<span class="number">0</span>),len-<span class="number">3</span>*i);</span><br><span class="line"><span class="comment">//左边包含，右边不包含在内，如果填入一个参数，则默认到结尾。</span></span><br></pre></td></tr></table></figure>
+<p>String拼接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s2&#x3D;temp.concat(s2);</span><br></pre></td></tr></table></figure>
+<p>int转String</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String s=<span class="string">&quot;&quot;</span>;</span><br><span class="line">  s=n+<span class="string">&quot;&quot;</span>;<span class="comment">//n是int值</span></span><br></pre></td></tr></table></figure>
+<p>千分位加点的程序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TEST2</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">thousandSeparator</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        String s=<span class="string">&quot;&quot;</span>;</span><br><span class="line">        s=n+<span class="string">&quot;&quot;</span>;</span><br><span class="line">        </span><br><span class="line">       </span><br><span class="line">        <span class="keyword">int</span> len=s.length();</span><br><span class="line">        <span class="keyword">int</span> Ndot=(len-<span class="number">1</span>)/<span class="number">3</span>;</span><br><span class="line">        String s2=<span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span>(Ndot&lt;=<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> s;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            String temp=s.substring(len-<span class="number">3</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=Ndot;i++)</span><br><span class="line">             &#123;</span><br><span class="line">                String Sdot=<span class="string">&quot;.&quot;</span>;</span><br><span class="line">                String stemp=Sdot.concat(temp);</span><br><span class="line">                s2=stemp.concat(s2);</span><br><span class="line">                temp=s.substring(Math.max(len-<span class="number">3</span>-<span class="number">3</span>*i,<span class="number">0</span>),len-<span class="number">3</span>*i);</span><br><span class="line">            </span><br><span class="line">             &#125;</span><br><span class="line">            s2=temp.concat(s2);</span><br><span class="line">            <span class="keyword">return</span> s2;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		String mys=thousandSeparator(<span class="number">1234</span>);</span><br><span class="line">		System.out.print(mys);	</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/KNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/KNN/" class="post-title-link" itemprop="url">KNN</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-27 13:16:45" itemprop="dateModified" datetime="2021-03-27T13:16:45+08:00">2021-03-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>KNN算法伪代码:</p>
+<p>将问题抽象成数据矩阵<br>对于每一个在数据集中的数据点:<br>    计算目标的数据点（需要分类的数据点）与该数据点的距离（需要归一化）<br>    将距离排序: 从小到大<br>    选取前K个最短距离<br>    选取这K个中最多的分类类别<br>    返回该类别来作为目标数据点的预测值</p>
+<p>手写数字识别：<br>需要识别的数字是存储在文本文件中的具有相同的色彩和大小: 宽高是 32 像素 * 32 像素的黑白图像。<br>将图像文本数据转换为向量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">img2vector</span>(<span class="params">filename</span>):</span></span><br><span class="line">    returnVect = zeros((<span class="number">1</span>,<span class="number">1024</span>))</span><br><span class="line">    fr = <span class="built_in">open</span>(filename)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">32</span>):</span><br><span class="line">        lineStr = fr.readline()</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">32</span>):</span><br><span class="line">            returnVect[<span class="number">0</span>,<span class="number">32</span>*i+j] = <span class="built_in">int</span>(lineStr[j])</span><br><span class="line">    <span class="keyword">return</span> returnVect</span><br></pre></td></tr></table></figure>
+<p>近似误差<br>最小化近似误差，即为使估计值尽量接近真实值，但是这个接近只是对训练样本（当前问题）而言，模型本身并不是最接近真实分布。换一组样本，可能就不近似了。这种只管眼前不顾未来预测的行为，即为过拟合。<br>估计误差<br>最小化估计误差，即为使估计系数尽量接近真实系数，但是此时对训练样本（当前问题）得到的估计值不一定是最接近真实值的估计值；但是对模型本身来说，它能适应更多的问题（测试样本）。<br>近似误差随着假设空间增大而减小，估计误差随着假设空间增大而增大；<br>估计误差不仅与假设空间有关，还与训练集的大小有关，训练集越大则找到的经验风险最小化函数性能越好；<br>近似误差则单纯与假设空间有关。<br>对于这个训练集而言，其实选择3次多项式来作为预测模型是与实际模型最符合的，可是当选择9次多项式的话（对应k值越小），虽然对训练集的预测非常准确（近似误差越小），但是这是一个明显的过度拟合问题（overfitting），得出的预测模型的估计误差相对于3次多项式其实是更大<br>在这个k临近法中其实设定的k值越小，得出的模型是越复杂的，因为k值越小会导致特征空间被划分成更多的子空间（可以理解为模型的项越多）。而k值越大得到的模型其实是越简单的–所以当k值越小，对于训练集的预测更加精确，近似误差会越小（因为你选择了更加复杂的模型去预测训练集）。当k值越大，对于训练集的预测则不会那么准确，所以近似误差会越大（因为你选择了更加简单的模型去预测）。</p>
+<p>太大太小都不太好，可以用交叉验证（cross validation）来选取适合的k值。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/MATLAB%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/MATLAB%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">MATLAB基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:53:12" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="公式表示方式"><a href="#公式表示方式" class="headerlink" title="公式表示方式"></a>公式表示方式</h1><p>反tan函数</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">syms x</span><br><span class="line">y=<span class="built_in">atan</span>(x);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>inf 无限大</li>
+<li>exp 指数</li>
+<li>logM(N) 对数函数</li>
+<li>eps 计算机识别的最小数</li>
+<li>abs(x) 绝对值</li>
+<li>acos(x)反余弦</li>
+<li>asin(x)</li>
+<li>atan(x)</li>
+<li>angle(x)计算复数x的幅角</li>
+<li>mod(x，y)余数</li>
+<li>int2str<h1 id="常用符号运算"><a href="#常用符号运算" class="headerlink" title="常用符号运算"></a>常用符号运算</h1>用sym，syms 声明一个或多个符号</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">syms a b c d</span><br><span class="line">A=sym([a b;c d])</span><br></pre></td></tr></table></figure>
+<ul>
+<li>subs 符号替换</li>
+<li>factor 因式分解</li>
+<li>expand 多项式展开</li>
+<li>collect 合并同类项</li>
+<li>simple 简化函数</li>
+<li>numden 分式通分</li>
+<li>limit 计算极限</li>
+<li>diff() 导数</li>
+<li>int 积分</li>
+<li>symsum求和</li>
+<li>finverse 反函数<h1 id="多项式展开"><a href="#多项式展开" class="headerlink" title="多项式展开"></a>多项式展开</h1></li>
+</ul>
+<h1 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h1><p>一阶导数</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">syms x </span><br><span class="line">f=(x+<span class="number">7</span>)^<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">mdf=diff(f,x)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>);</span><br><span class="line">ezplot(f)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line">ezplot(mdf)</span><br></pre></td></tr></table></figure>
+<p><img src="tu%E6%B1%82%E5%AF%BC%E4%B8%80%E9%98%B6%E5%AF%BC%E6%95%B0.jpg"><br>二阶导数</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mdf=diff(f,x，<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h2><p>ezplot即：Easy to use function plotter。它是一个易用的一元函数绘图函数 。特别是在绘制含有符号变量的函数的图像时，ezplot要比plot更方便。因为plot绘制图形时要指定自变量的范围，而ezplot无需数据准备，直接绘出图形。</p>
+<h2 id="注释和反注释"><a href="#注释和反注释" class="headerlink" title="注释和反注释"></a>注释和反注释</h2><p>ctrl+R<br>ctrl+T</p>
+<h1 id="求解微分方程"><a href="#求解微分方程" class="headerlink" title="求解微分方程"></a>求解微分方程</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">syms x y;</span><br><span class="line">y=dsolve(<span class="string">&#x27;Dy+2*x*y=x*exp(-x^2)&#x27;</span>,<span class="string">&#x27;x&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>求解在初始条件下的特解</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">syms x y;</span><br><span class="line">y=dsolve(<span class="string">&#x27;x*Dy+y-exp(x)=0&#x27;</span>,<span class="string">&#x27;y(1)=2*exp(1)&#x27;</span>,<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">ezplot(y)</span><br></pre></td></tr></table></figure>
+<h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%y=x</span></span><br><span class="line">clear;clc;</span><br><span class="line">syms x</span><br><span class="line">y=x;</span><br><span class="line">int(y)</span><br><span class="line"><span class="comment">%int(y,x)</span></span><br><span class="line"></span><br><span class="line">syms a t</span><br><span class="line">f=a*<span class="built_in">sin</span>(<span class="built_in">pi</span>*t);</span><br><span class="line">int(f,t)</span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">syms t x</span><br><span class="line">f=x*<span class="built_in">sin</span>(x*t);</span><br><span class="line"><span class="comment">%求在区间上的定积分</span></span><br><span class="line">mf=int(f,x,<span class="number">0</span>,<span class="built_in">pi</span>/<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>int(f,x,a,b) 求f(x)在区间a,b上的定积分</li>
+<li>int(f,a,b) 求f(x)在区间a,b上的定积分,对默认自变量</li>
+<li>int(f,x) 求f(x)的不定积分</li>
+</ul>
+<p>int的积分可以是定积分，也可以是不定积分（即有没有积分上下限都可以积）可以得到解析的解，<br>quad是数值积分，它版只能是定积分（就是有积分上下限的积分），它是通过simpson数值积分来求得的（并不是通过解析的方法得到解析解，再将上下限代入，而是用小梯形的面积求和得到的）</p>
+<h2 id="数值积分"><a href="#数值积分" class="headerlink" title="数值积分"></a>数值积分</h2><p>z=trapz(x,y) 用梯形法求解y对x的积分值</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">y=inline(<span class="string">&#x27;sin(x)&#x27;</span>,<span class="string">&#x27;x&#x27;</span>);</span><br><span class="line">q=quad(y,<span class="number">0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>注意点乘，要不然报错</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">y=inline(<span class="string">&#x27;exp(-0.5.*x).*sin(x+pi/6)&#x27;</span>,<span class="string">&#x27;x&#x27;</span>);</span><br><span class="line">S=quad(y,<span class="number">0</span>,<span class="number">3</span>*<span class="built_in">pi</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="二重积分"><a href="#二重积分" class="headerlink" title="二重积分"></a>二重积分</h2><p>设二重积分还是表达式为 z=z(x,y)，积知分域为下限 y1(x) 上限 y2(x)，从 x1 到 x2，则二重积分道代码为：<br>int(int(z,y,y1,y2),x,x1,x2)<br>需要先定义符号回变量 x，y，以及表达式 z，y1，y2 和数值 x1，x2 的值。<br>下面举例在半径为1，以原点为圆心的圆上，对 z=x^2+y^2+xy 做二重积分：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">syms x y;</span><br><span class="line">z=x^<span class="number">2</span>+y^<span class="number">2</span>+x*y;</span><br><span class="line">y1=-(<span class="number">1</span>-x^<span class="number">2</span>)^<span class="number">0.5</span>;</span><br><span class="line">y2=(<span class="number">1</span>-x^<span class="number">2</span>)^<span class="number">0.5</span>;</span><br><span class="line">x1=<span class="number">-1</span>;</span><br><span class="line">x2=<span class="number">1</span>;</span><br><span class="line">int((int(z,y,y1,y2)),x,x1,x2)</span><br></pre></td></tr></table></figure>
+<h1 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h1><p>yi=interp1(x1,y1,xi,’linear’)<br>‘cubic’三次插值<br>一元插值 x1 y1是实测节点数据，</p>
+<h1 id="拟合"><a href="#拟合" class="headerlink" title="拟合"></a>拟合</h1><h2 id="采用cftool-工具箱进行拟合"><a href="#采用cftool-工具箱进行拟合" class="headerlink" title="采用cftool 工具箱进行拟合"></a>采用cftool 工具箱进行拟合</h2><p>拟合的函数类型<br>-Polynomial 多项式拟合</p>
+<ul>
+<li>Exponential 指数逼近</li>
+<li>Fourier 傅里叶逼近</li>
+<li> Gaussian：高斯逼近</li>
+<li> Interpolant：插值逼近</li>
+<li> Power：幂逼近</li>
+<li> Sum of Sin Functions 正弦曲线逼近</li>
+<li> Weibull</li>
+</ul>
+<p>结果解释<br>-SSE 标准差</p>
+<ul>
+<li>RMSE 均方差</li>
+<li>R square称为方程的确定系数，0~1之间，越接近1，表明方程的变量对y的解释能力越强。</li>
+</ul>
+<p>然后在Curve Fitting Tool窗口中点击 “ \ File \ Generate M-file “ 即可生成能直接曲线拟合的m函数文件<br>cftool工具箱只能进行单个变量的曲线拟合</p>
+<h2 id="多项式拟合polyfit"><a href="#多项式拟合polyfit" class="headerlink" title="多项式拟合polyfit"></a>多项式拟合polyfit</h2><p>p=polyfit(x1,y1,n)<br>yi=polyval(p,xi)<br>多项式曲线求值函数polyval</p>
+<h2 id="线性拟合函数regress"><a href="#线性拟合函数regress" class="headerlink" title="线性拟合函数regress"></a>线性拟合函数regress</h2><h2 id="用inline函数进行非线性拟合：求解自定义函数的参数值"><a href="#用inline函数进行非线性拟合：求解自定义函数的参数值" class="headerlink" title="用inline函数进行非线性拟合：求解自定义函数的参数值"></a>用inline函数进行非线性拟合：求解自定义函数的参数值</h2><p>需已知或者猜测出函数的表达式，只是不知道参数怎么求</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">clear;clc</span><br><span class="line">x=[<span class="number">0</span>,<span class="number">47</span>,<span class="number">93</span>,<span class="number">140</span>,<span class="number">186</span>,<span class="number">279</span>,<span class="number">372</span>,<span class="number">465</span>,<span class="number">558</span>,<span class="number">651</span>];</span><br><span class="line">y=[<span class="number">18.98</span>,<span class="number">27.35</span>,<span class="number">34.86</span>,<span class="number">38.52</span>,<span class="number">38.44</span>,<span class="number">37.73</span>,<span class="number">38.43</span>,<span class="number">43.87</span>,<span class="number">42.77</span>,<span class="number">46.22</span>];</span><br><span class="line"><span class="built_in">plot</span>(x,y,<span class="string">&#x27;o&#x27;</span>)</span><br><span class="line">achushi=[<span class="number">43</span> <span class="number">0.6</span> <span class="number">0.1</span>];</span><br><span class="line"><span class="comment">%inline用法：fun=inline(&#x27;f(x)&#x27;,&#x27;参变量数组&#x27;,&#x27;自变量&#x27;)</span></span><br><span class="line"><span class="comment">%matlab中inline函数在matlab命令窗口、程序或函数中创建局部函数时，可用inline。优点</span></span><br><span class="line"><span class="comment">%是不必将其储存为一个单独文件。  inline是用百来定义内联函数的</span></span><br><span class="line"><span class="comment">%自变量，可以是多个自变量，多元</span></span><br><span class="line">mfun=inline(<span class="string">&#x27;a(1)*(1-a(2)*exp(-a(3)*x))&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;x&#x27;</span>);</span><br><span class="line"><span class="comment">%nlinfit用法：[beta,r,J]=nlinfit(x,y,fun,beta0)</span></span><br><span class="line"><span class="comment">% x,y未原始数据离散点数组</span></span><br><span class="line"><span class="comment">%fun是上一步定义好的函数</span></span><br><span class="line"><span class="comment">%beta0参数的初始值，已知给定</span></span><br><span class="line"><span class="comment">%beta需要求解决参数的最优值</span></span><br><span class="line"><span class="comment">%J是雅可比矩阵</span></span><br><span class="line">[a,r,<span class="built_in">j</span>]=nlinfit(x,y,mfun,achushi)</span><br></pre></td></tr></table></figure>
+<p>总结<br>配曲线的一般方法是：<br>（一）先对两个变量x和y作n次试验观察，画出散点图。<br>（二）根据散点图确定须配曲线的类型。<br>通常选择的六类曲线如下：<br>（1）双曲线1/y=a+b/x<br>（2）幂函数曲线y=ax^b，其中x&gt;0，a&gt;0<br>（3）指数曲线y=aexp(bx)其中参数a&gt;0.<br>（4）倒指数曲线y=aexp(b/x)其中a&gt;0，<br>（5）对数曲线y=a+blogx，x&gt;0<br>（6）S型曲线y=1/（a+bexp(-x)）<br>（三）然后由n对试验数据确定每一类曲线的未知参数a和b。</p>
+<h1 id="输出数据"><a href="#输出数据" class="headerlink" title="输出数据"></a>输出数据</h1><h2 id="disp函数"><a href="#disp函数" class="headerlink" title="disp函数"></a>disp函数</h2><h2 id="fprint函数"><a href="#fprint函数" class="headerlink" title="fprint函数"></a>fprint函数</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/PYcharm%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/PYcharm%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">Pycharm快捷键</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-05 16:29:37" itemprop="dateModified" datetime="2021-09-05T16:29:37+08:00">2021-09-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>ctrl+alt+L，             格式化代码<br>找到菜单栏的“Code”,点击一下“Reformat Code”就能自动地将代码进行规范化处理。<br>ctrl+shift+f10          运行当前文件<br>shift+enter             另起一行，光标在行内任意位置都能另起一行，且不破坏当行结构<br>ctrl+p                       调用方法时查看参数，在括号内按下，就知道当前位置该给啥参数<br>shift+tab                取消缩进</p>
+<p>ctrl+B 转到方法定义处</p>
+<p>快速修改同一个变量或类<br>我们只需要选中需要重新命名的变量或类，右键弹出选项中选择Refactor,然后点击Rename，就可以进行全局修改了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/chrom%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/chrom%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">chrome插件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:40:56" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Chrome插件是一个用Web技术开发、用来增强浏览器功能的软件，它其实就是一个由HTML、CSS、JS、图片等资源组成的一个.crx后缀的压缩包.</p>
+<p>另外，其实不只是前端技术，Chrome插件还可以配合C++编写的dll动态链接库实现一些更底层的功能</p>
+<p>Firefox插件只能运行在Firefox上，而Chrome除了Chrome浏览器之外，还可以运行在所有webkit内核的国产浏览器，比如360极速浏览器、360安全浏览器、搜狗浏览器、QQ浏览器等等；</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/html/" class="post-title-link" itemprop="url">html，css基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-08 00:14:31" itemprop="dateModified" datetime="2022-01-08T00:14:31+08:00">2022-01-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1-HTML基础"><a href="#1-HTML基础" class="headerlink" title="1.HTML基础"></a>1.HTML基础</h1><h2 id="1-1-基本结构"><a href="#1-1-基本结构" class="headerlink" title="1.1  基本结构"></a>1.1  基本结构</h2><p>html下包裹head和body；<br>head 下包裹title<br>body下包裹正文</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		正文</span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="1-2-标题"><a href="#1-2-标题" class="headerlink" title="1.2 标题"></a>1.2 标题</h2><p>在body内包裹标题<br> 一级标题 中间包裹标题内容，一级标题只能有一个</p>
+<h1></h1>
+<h2></h2>
+一直到h6
+## 1.3 段落
+段落
+<p></p> 包裹着中间的段落
+注释
+<!--注释内容-->
+
+<h2 id="1-4-链接"><a href="#1-4-链接" class="headerlink" title="1.4 链接"></a>1.4 链接</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">hrep</span>=<span class="string">&quot;htttps://www.baidu.com&quot;</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>a包裹这内容，<br>然后在首a 上 属性=“  ”这种内容，a的属性就是href</p>
+<h2 id="1-5瞄点"><a href="#1-5瞄点" class="headerlink" title="1.5瞄点"></a>1.5瞄点</h2><p>页面跳转，href=没办法写成链接，可以在地方写成<br>需要找到的地方写id=””<br>href=”#”<br>这种方式进行连接</p>
+<p>1、id是一个标签，用于区分不同的结构和内容；id是先找到结构/内容，再给它定义样式；class是一个样式，可以套在任何结构和内容上；class是先定义好一种样式，再套给多个结构/内容。<br>2、id是元素的名称，可以供js或其它脚本程序来访问该元素对象，而class是该元素的css类名。<br>3、定义样式时，id=”aa”的用#aa{…}，class=”bb”的用.bb{…}。<br>4、class是全局属性，id是局部属性。</p>
+<h2 id="1-6表格"><a href="#1-6表格" class="headerlink" title="1.6表格"></a>1.6表格</h2><p>table 包裹整个表格，tr包裹行，td包裹列<br>表格常见属性<br>border=”1” 边框像素值1px<br>align=”center” 表格在浏览器中居中<br>cellpadding=”20” 文字和边框的距离<br>cellspacing=”0.1” 表格小单元格之间的距离</p>
+<p>bgcolor=”blue” 属性如果在table后面，修饰的是整个表格，如果是在特定的td后面修饰的是单元格</p>
+<p>不同的属性用空格隔开<br>合并单元格 行合并 rowsapan=”2” 列合并 colspan=”2”<br>始终为属性值加引号</p>
+<h2 id="1-7图像标签"><a href="#1-7图像标签" class="headerlink" title="1.7图像标签"></a>1.7图像标签</h2><p>img 是单标签，属性有src,width height等，宽，高给一个，另外的等比例缩放就可以<br>如果要居中的话，需要有个父标签，让父标签居中<br>img的align指的是图片和周围文字的距离，不推荐使用，<br>title 属性 当鼠标悬停在图片上的提示文字<br>alt 当图片无法正常加载时，给的提示性文字。</p>
+<h2 id="1-8-列表"><a href="#1-8-列表" class="headerlink" title="1.8 列表"></a>1.8 列表</h2><p>无序列表<br>ul li 可以嵌套使用<br>ul必须紧跟li</p>
+<p>有序列表<br>ol li</p>
+<p>定义列表<br>dl dt dd</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dt</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dd</span>&gt;</span>中国的首都<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dd</span>&gt;</span>中国的政治中心<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="1-9常用标签"><a href="#1-9常用标签" class="headerlink" title="1.9常用标签"></a>1.9常用标签</h2><p>加粗 b strong<br>斜体 i em<br>下划线 u<br>删除线 s del</p>
+<p>单标签<br>分割线hr<br>换行 br</p>
+<p>下标 sub<br>上标 sup</p>
+<h2 id="1-10-div-span标签"><a href="#1-10-div-span标签" class="headerlink" title="1.10 div span标签"></a>1.10 div span标签</h2><p>span包裹了一段文字，然后通过css，来设置格式。区分css这样设置格式，和直接html标签设置格式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>很长的一段话，<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;background-color: yellow;color: red;&quot;</span>&gt;</span>具体<span class="tag">&lt;/<span class="name">span</span>&gt;</span>内容如下<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>网页布局通过div+css实现</p>
+<h2 id="1-11-表单"><a href="#1-11-表单" class="headerlink" title="1.11 表单"></a>1.11 表单</h2><p>表单有文本输入框，密码框，多选框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">	用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">	密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> /&gt;</span> <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">	性别：</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>/&gt;</span>男</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> /&gt;</span>女</span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>对于多选框，通过两个选择，都赋值一样的name来实现单选。<br>select 和option配合实现下拉框选择</p>
+<h2 id="1-12转义"><a href="#1-12转义" class="headerlink" title="1.12转义"></a>1.12转义</h2><p>&amp;lt &amp;gt</p>
+<h1 id="2-css基础"><a href="#2-css基础" class="headerlink" title="2.css基础"></a>2.css基础</h1><h2 id="2-1基本结构"><a href="#2-1基本结构" class="headerlink" title="2.1基本结构"></a>2.1基本结构</h2><p>css关键字 style，stytle写在head中，title后面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;&lt;&#x2F;title&gt;</span><br><span class="line">		&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">			.content&#123;</span><br><span class="line">				color: red;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;&#x2F;style&gt;</span><br><span class="line">	&lt;&#x2F;head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;p class&#x3D;&quot;content&quot;&gt;正文内容&lt;&#x2F;p&gt;</span><br><span class="line">	&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-2-CSS选择器"><a href="#2-2-CSS选择器" class="headerlink" title="2.2 CSS选择器"></a>2.2 CSS选择器</h2><p>类选择器<br>id选择器<br>通配符选择器<br>标签选择器<br>逗号 标识并列<br>空格 标识父子关系<br>加号 紧挨着<br>大于号选择器</p>
+<h2 id="2-3css浮动"><a href="#2-3css浮动" class="headerlink" title="2.3css浮动"></a>2.3css浮动</h2><p>float :left</p>
+<h2 id="2-4"><a href="#2-4" class="headerlink" title="2.4"></a>2.4</h2><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">#header&#123;</span><br><span class="line"><span class="css">	<span class="attribute">background-color</span>:black;</span></span><br><span class="line"><span class="css">	<span class="attribute">color</span>:white;</span></span><br><span class="line"><span class="css">	<span class="attribute">text-align</span>:center;</span></span><br><span class="line"><span class="css">	<span class="attribute">padding</span>:<span class="number">5px</span>;</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">#citys&#123;</span><br><span class="line"><span class="css">	<span class="attribute">line-height</span>:<span class="number">30px</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">background-color</span>:<span class="number">#eeeeee</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">height</span>:<span class="number">300px</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">width</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">float</span><span class="selector-pseudo">:left</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">padding</span>:<span class="number">10px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line">#neirong&#123;</span><br><span class="line"><span class="css">	<span class="attribute">width</span>:<span class="number">350px</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">float</span><span class="selector-pseudo">:left</span>;</span></span><br><span class="line"><span class="css">	<span class="attribute">padding</span>:<span class="number">10px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line">#footer&#123;</span><br><span class="line"><span class="css">	<span class="attribute">background-color</span>:black;</span></span><br><span class="line"><span class="css">	<span class="attribute">color</span>:white;</span></span><br><span class="line"><span class="css">	<span class="attribute">clear</span>:both;</span></span><br><span class="line"><span class="css">	<span class="attribute">text-align</span>:center;</span></span><br><span class="line"><span class="css">	<span class="attribute">padding</span>:<span class="number">5px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>城市列表<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;citys&quot;</span>&gt;</span></span><br><span class="line">北京<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">天津<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">保定<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;neirong&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>北京市（Běijīng Shì）简称京，是中华人民共和国的首都，中国中央四个直辖市之一，全国政治、经济、文化、科研、教育和国际交往中心。北京位于华北平原北端，东南局部地区与天津市相连，其余为河北省所环绕。以市区人口数相比，北京为次于上海的中国第二大城市，同时也是中国陆空交通的总枢纽。北京已经成功举办了2008年北京奥运会。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>全球只有极少数城市像北京一样长时间作为一个国家的政治和文化中心。其荟萃了自元明清以来的中华文化，拥有众多名胜古迹和人文景观。《不列颠百科全书》将北京形容为&quot;One of the world&#x27;s great cities&quot;。北京正以它古老又时尚的全新面貌，迎接每年超过1亿4700万的旅客。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;footer&quot;</span>&gt;</span></span><br><span class="line">Copyright W3School.com.cn</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>bolck块级元素<br>比如div form p等都是块级元素，会新开始一行并尽可能撑满容器。</p>
+<p>inline行内元素<br>span a标签等是常用的行业元素。不会打乱布局。</p>
+<ul>
+<li>diaplay值可以是none，一些特殊元素的display值是它，通常用来被JavaScript 用来在不删除元素的情况下隐藏或显示元素。</li>
+<li> visibility 属性，把 display 设置成 none 元素不会占据它本来应该显示的空间，但是设置成 visibility: hidden; 还会占据空间。</li>
+<li>  display 值，例如 list-item 和 table，到 inline-block 和 flex 。</li>
+<li>  一个常用的：把 li 元素修改成 inline，制作成水平菜单。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/mysql%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/mysql%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">mysql使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-12 00:51:37" itemprop="dateModified" datetime="2021-05-12T00:51:37+08:00">2021-05-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><p>显示所有的数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<p>使用某数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use test_db;</span><br></pre></td></tr></table></figure>
+<p>显示数据库内所有的表格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+<p>显示teble数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student</span><br></pre></td></tr></table></figure>
+<h1 id="启动服务查看"><a href="#启动服务查看" class="headerlink" title="启动服务查看"></a>启动服务查看</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysql start</span><br><span class="line">mysql -u root</span><br><span class="line"> show databases;</span><br><span class="line"> show databases;</span><br><span class="line">show tables;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>使用命令 quit 或者 exit 退出 MySQL。</p>
+<p>show columns from 表名; 查看表下面那些列<br>更便捷方式 是 describe</p>
+<h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><p>导入导出要在指定的文件路径下<br>查看指定的路径</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> variables <span class="keyword">like</span> <span class="string">&#x27;%secure%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>导入sql语句</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source <span class="operator">/</span>home<span class="operator">/</span>...<span class="operator">/</span>XXX.sql;</span><br></pre></td></tr></table></figure>
+<p>导入文件</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load data infile <span class="string">&#x27;文件路径和文件名&#x27;</span> <span class="keyword">into</span> <span class="keyword">table</span> 表名;</span><br></pre></td></tr></table></figure>
+<h1 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h1><p>导入导出要在指定的文件路径下<br>导出文件</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> 列<span class="number">1</span>，列<span class="number">2</span> <span class="keyword">into</span> outfile <span class="string">&#x27;文件路径和文件名&#x27;</span> <span class="keyword">from</span> 表名字;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/numpy%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%97%A5%E6%9C%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/numpy%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%97%A5%E6%9C%9F/" class="post-title-link" itemprop="url">numpy使用及日期</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-13 14:25:41" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-01 13:03:23" itemprop="dateModified" datetime="2022-02-01T13:03:23+08:00">2022-02-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">data=np.array([<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>])</span><br><span class="line">data1=np.ones(<span class="number">3</span>)</span><br><span class="line">data2=np.zeros(<span class="number">3</span>)</span><br><span class="line">data3=np.random.random(<span class="number">3</span>)</span><br><span class="line">data4=np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br></pre></td></tr></table></figure>
+<h1 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h1><p>元素之间的直接运算，不必写循环<br>这个叫做广播机制。</p>
+<h1 id="时间的表示"><a href="#时间的表示" class="headerlink" title="时间的表示"></a>时间的表示</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.arange(<span class="string">&#x27;2020-08-01&#x27;</span>, <span class="string">&#x27;2020-08-10&#x27;</span>, dtype=np.datetime64)</span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a=np.arange(<span class="string">&#x27;2020-08-01 20:00&#x27;</span>,<span class="string">&#x27;2020-08-10&#x27;</span>,dtype=np.datetime64)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/13/plt%E7%9A%84bar%E5%9B%BEdemo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/13/plt%E7%9A%84bar%E5%9B%BEdemo/" class="post-title-link" itemprop="url">plt的bar图</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-13 14:25:41 / 修改时间：14:54:33" itemprop="dateCreated datePublished" datetime="2021-02-13T14:25:41+08:00">2021-02-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="comment">#绘制三张图，并且本程序提单量是2020-01-01之后的。</span></span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>]=[<span class="string">&#x27;SimHei&#x27;</span>] <span class="comment">#用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>]=<span class="literal">False</span> <span class="comment">#用来正常显示负号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#==========================================================================================================================</span></span><br><span class="line"><span class="comment">#读入提交报销单的表，绘制第一张图，提单量</span></span><br><span class="line">data=pd.read_excel(<span class="string">&#x27;RP31594372605000.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mydf=data</span><br><span class="line"><span class="comment">#对申请人所在公司名称进行简写</span></span><br><span class="line">mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;总行&#x27;</span>)</span><br><span class="line">mydf.loc[:,<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">mydf.loc[:,<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;分行&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#提单日期筛选日期&gt;=2020-01-01的</span></span><br><span class="line">mydf.loc[:,<span class="string">&#x27;创建日期&#x27;</span>]=pd.to_datetime(mydf[<span class="string">&#x27;创建日期&#x27;</span>])</span><br><span class="line">s_date = datetime.datetime.strptime(<span class="string">&#x27;2020-01-01&#x27;</span>, <span class="string">&#x27;%Y-%m-%d&#x27;</span>)</span><br><span class="line">mydf=mydf[(mydf[<span class="string">&#x27;创建日期&#x27;</span>]&gt;= s_date)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印相关信息；</span></span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].tail(<span class="number">20</span>))</span><br><span class="line"></span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].unique())</span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].value_counts())</span><br><span class="line"></span><br><span class="line"><span class="comment">#统计各分行数据</span></span><br><span class="line">mydata=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].value_counts()</span><br><span class="line">X=<span class="built_in">list</span>(mydata.index)</span><br><span class="line">Y=mydata.tolist()</span><br><span class="line">print(X)</span><br><span class="line">print(Y)</span><br><span class="line"></span><br><span class="line"><span class="comment">#画图</span></span><br><span class="line">plt.figure(<span class="number">1</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">plt.bar(X,Y,width = <span class="number">0.9</span>,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;日常报销单&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(X,Y):</span><br><span class="line">    plt.text(x,y+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line"></span><br><span class="line">plt.ylabel(<span class="string">&quot;提单量&quot;</span>)</span><br><span class="line"><span class="comment"># plt.legend((&#x27;日常报销单&#x27;,))</span></span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment">#===================================================================================================</span></span><br><span class="line"><span class="comment">#绘制第二张图，读入员工数据表，计算各个分行体量</span></span><br><span class="line">data2=pd.read_excel(<span class="string">&#x27;user_full_info.xlsx&#x27;</span>,header=<span class="number">3</span>)</span><br><span class="line">mydf2=data2</span><br><span class="line">mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;总行&#x27;</span>)</span><br><span class="line">mydf2.loc[:,<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">mydf2.loc[:,<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;分行&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(data2.columns.values)</span><br><span class="line">print(mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].unique())</span><br><span class="line">print(mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].value_counts())</span><br><span class="line"></span><br><span class="line"><span class="comment">#统计各分行体量</span></span><br><span class="line">mydata2=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].value_counts()</span><br><span class="line">X2=<span class="built_in">list</span>(mydata2.index)</span><br><span class="line">Y2=mydata2.tolist()</span><br><span class="line">print(X2)</span><br><span class="line">print(Y2)</span><br><span class="line"></span><br><span class="line"><span class="comment">#画图</span></span><br><span class="line">plt.figure(<span class="number">2</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">plt.bar(X2,Y2,width = <span class="number">0.5</span>,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;各分行体量&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line"><span class="keyword">for</span> x2,y2 <span class="keyword">in</span> <span class="built_in">zip</span>(X2,Y2):</span><br><span class="line">    plt.text(x2,y2+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y2,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line">plt.xticks(rotation=<span class="number">270</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;员工人数&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment">#==========================================================================</span></span><br><span class="line"><span class="comment">#绘制第三张图，将提单两和体量放在一起</span></span><br><span class="line">Y3=[<span class="number">0</span>]*<span class="built_in">len</span>(X)<span class="comment">#初始化list，Y3为长度和X相同，初始值为0</span></span><br><span class="line"><span class="keyword">for</span> ibank <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(X)):</span><br><span class="line">    bankname=X[ibank]</span><br><span class="line">    k=X2.index(bankname)</span><br><span class="line">    Y3[ibank]=Y2[k]</span><br><span class="line"></span><br><span class="line">print(X)</span><br><span class="line">print(Y3)</span><br><span class="line"></span><br><span class="line">tick_label =X</span><br><span class="line">plt.figure(<span class="number">3</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">bar_width=<span class="number">0.45</span></span><br><span class="line">Xn=np.arange(<span class="built_in">len</span>(X))</span><br><span class="line">plt.bar(Xn,Y,width = bar_width,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;日常报销单提单量&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line">plt.bar(Xn+bar_width,Y3,width = bar_width,facecolor=<span class="string">&#x27;#B0C4DE&#x27;</span>,label=<span class="string">&#x27;员工人数&#x27;</span>,zorder=<span class="number">101</span>)</span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(Xn,Y):</span><br><span class="line">    plt.text(x,y+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x3,y3 <span class="keyword">in</span> <span class="built_in">zip</span>(Xn,Y3):</span><br><span class="line">    plt.text(x3+bar_width,y3+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y3,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line">plt.xticks(Xn+bar_width/<span class="number">2</span>,tick_label)</span><br><span class="line">plt.ylabel(<span class="string">&quot;数量&quot;</span>)</span><br><span class="line"><span class="comment"># plt.legend((&#x27;日常报销单&#x27;,))</span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>各种颜色的代码  <a href="https://blog.csdn.net/CD_Don/article/details/88070453">https://blog.csdn.net/CD_Don/article/details/88070453</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

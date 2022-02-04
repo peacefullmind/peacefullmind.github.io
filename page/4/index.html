@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="我的Hexo博客">
+<meta property="og:url" content="http://example.com/page/4/index.html">
+<meta property="og:site_name" content="我的Hexo博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="TJ">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/page/4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>我的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">我的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/15/%E6%95%B0%E6%8D%AE%E6%98%A0%E5%B0%84%E5%A4%84%E7%90%86%E4%B8%8E%E6%A0%B8%E5%AF%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/15/%E6%95%B0%E6%8D%AE%E6%98%A0%E5%B0%84%E5%A4%84%E7%90%86%E4%B8%8E%E6%A0%B8%E5%AF%B9/" class="post-title-link" itemprop="url">数据映射处理与核对</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-15 01:54:10" itemprop="dateCreated datePublished" datetime="2021-04-15T01:54:10+08:00">2021-04-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-17 20:48:12" itemprop="dateModified" datetime="2021-04-17T20:48:12+08:00">2021-04-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>jyputer配置显示所有行列</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#显示所有列</span></span><br><span class="line">pd.set_option(<span class="string">&#x27;display.max_columns&#x27;</span>, <span class="literal">None</span>)</span><br><span class="line"><span class="comment">#显示所有行</span></span><br><span class="line">pd.set_option(<span class="string">&#x27;display.max_rows&#x27;</span>, <span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<p>读入数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data&#x3D;pd.read_csv(&#39;测试indx_comn_02_0100000000_20210331.txt&#39;,sep&#x3D;&quot;\|\+\|&quot;,header&#x3D;None,dtype&#x3D;str,engine&#x3D;&#39;python&#39;,names&#x3D;[&#39;日期&#39;,&#39;指标编码&#39;,&#39;频率&#39;,&#39;机构代码&#39;,&#39;币种代码&#39;,&#39;数值&#39;])</span><br><span class="line">mapping1&#x3D;pd.read_excel(&#39;回去表.xlsx&#39;,sheet_name&#x3D;&#39;机构&#39;,dtype&#x3D;str)</span><br><span class="line">mapping2&#x3D;pd.read_excel(&#39;回去表.xlsx&#39;,sheet_name&#x3D;&#39;指标&#39;,dtype&#x3D;str)</span><br><span class="line">mapping2&#x3D;mapping2.rename(columns&#x3D;&#123;&#39;ACCOUNT&#39;:&#39;指标编码&#39;&#125;)</span><br></pre></td></tr></table></figure>
+<p>多表匹配，然后增加列,类似于vlookup功能</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dftest=data.merge(mapping1,how=<span class="string">&#x27;left&#x27;</span>,on=<span class="string">&#x27;机构代码&#x27;</span>)</span><br><span class="line">dftest=dftest.merge(mapping2,how=<span class="string">&#x27;left&#x27;</span>,on=<span class="string">&#x27;指标编码&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>选取pandans中的部分列作为结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dfout=dftest[[<span class="string">&#x27;日期&#x27;</span>,<span class="string">&#x27;机构代码&#x27;</span>,<span class="string">&#x27;机构名称&#x27;</span>,<span class="string">&#x27;指标编码&#x27;</span>,<span class="string">&#x27;指标名称&#x27;</span>,<span class="string">&#x27;数值&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+<p>删除空行，未用到</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dfout2=dfout.dropna(thresh=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>统计个数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">value_count=dfout[<span class="string">&#x27;机构名称&#x27;</span>].value_counts()</span><br><span class="line">dflog=value_count.to_frame()</span><br><span class="line">dflog=dflog.rename(columns=&#123;<span class="string">&#x27;机构名称&#x27;</span>:<span class="string">&#x27;导出数据指标个数&#x27;</span>&#125;)</span><br><span class="line">dflog.loc[<span class="string">&#x27;汇总&#x27;</span>]=<span class="built_in">sum</span>(value_count)</span><br></pre></td></tr></table></figure>
+<p>输出表格，因为需要设置列宽，所以通过xlsxwriter来设置表格格式等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">writer = pd.ExcelWriter(<span class="string">&#x27;根据txt数据反向回去的指标.xlsx&#x27;</span>, engine=<span class="string">&#x27;xlsxwriter&#x27;</span>)</span><br><span class="line">dfout.to_excel(writer ,sheet_name=<span class="string">&#x27;指标值&#x27;</span>,index=<span class="literal">False</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">worksheet = writer.sheets[<span class="string">&#x27;指标值&#x27;</span>]</span><br><span class="line">worksheet.set_column(<span class="string">&quot;A:A&quot;</span>, <span class="number">10</span>) <span class="comment"># 在这里更改宽度值</span></span><br><span class="line">worksheet.set_column(<span class="string">&quot;B:B&quot;</span>, <span class="number">15</span>) <span class="comment"># 在这里更改宽度值</span></span><br><span class="line"></span><br><span class="line">dflog.to_excel(writer ,sheet_name=<span class="string">&#x27;推送数据统计情况&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">sheetlog = writer.sheets[<span class="string">&#x27;推送数据统计情况&#x27;</span>]</span><br><span class="line">sheetlog.set_column(<span class="string">&quot;A:A&quot;</span>, <span class="number">35</span>) <span class="comment"># 在这里更改宽度值</span></span><br><span class="line">sheetlog.set_column(<span class="string">&quot;B:B&quot;</span>, <span class="number">10</span>) <span class="comment"># 在这里更改宽度值</span></span><br><span class="line"></span><br><span class="line"> writer.save()</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/12/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/12/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" class="post-title-link" itemprop="url">数据仓库</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-12 18:40:28 / 修改时间：23:41:02" itemprop="dateCreated datePublished" datetime="2021-04-12T18:40:28+08:00">2021-04-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据仓库</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="数据仓库介绍"><a href="#数据仓库介绍" class="headerlink" title="数据仓库介绍"></a>数据仓库介绍</h2><p>数据库关系模型，数据仓库是维度模型。<br>分层，解耦<br>业务数据库的雪花模型到大宽表；<br>业务自身的源数据库是 <strong>面向事务处理</strong>  的<br>数据库是用来操作的，增删改查，【术语：面向事务的操作性数据库】；数据仓库是用来分析和支持决策的；另外数据仓库的数据可以是来自于多个异构的数据源。</p>
+<h2 id="2-hadoop"><a href="#2-hadoop" class="headerlink" title="2. hadoop"></a>2. hadoop</h2><p>运行在linux上，hadoop集群<br>hdfs 分布式<br>mapreduce 离线分析<br>yarn 资源管理和调度框架</p>
+<h2 id="3-spark"><a href="#3-spark" class="headerlink" title="3.spark"></a>3.spark</h2><p>批处理计算<br>mapreduce 替代品</p>
+<h2 id="4-hive"><a href="#4-hive" class="headerlink" title="4.hive"></a>4.hive</h2><p>hive在mapReduce之上，将hive sql转换成mapReduce作业。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/10/web%E5%BC%80%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/10/web%E5%BC%80%E5%8F%91/" class="post-title-link" itemprop="url">web开发</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-10 13:35:27" itemprop="dateCreated datePublished" datetime="2021-04-10T13:35:27+08:00">2021-04-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-04-11 18:03:33" itemprop="dateModified" datetime="2021-04-11T18:03:33+08:00">2021-04-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">web开发</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="从url输入到返回请求的过程"><a href="#从url输入到返回请求的过程" class="headerlink" title="从url输入到返回请求的过程"></a>从url输入到返回请求的过程</h2><p>用户在浏览器输入url，url通过dns解析成ip+端口的形式，这个是http请求的目标地址，发送http请求至server端【三次握手】，server端根据接收到的参数返回，前端页面（浏览器渲染）和数据。</p>
+<p>url为什么要解析？dns查询规则是什么？<br>因为url是人类认识的，真正的server地址是IP加端口。<br>先hosts文件，本地dns解析器，计算机配置的dns服务器，根服务器。</p>
+<p>应用层抓包工具：fiddler，postman，F12</p>
+<h2 id="从网卡把数据包传输出去到服务器发生了什么？参考OSI模型"><a href="#从网卡把数据包传输出去到服务器发生了什么？参考OSI模型" class="headerlink" title="从网卡把数据包传输出去到服务器发生了什么？参考OSI模型"></a>从网卡把数据包传输出去到服务器发生了什么？参考OSI模型</h2><p>网卡——&gt;交换机——&gt;路由器——&gt;服务器<br>mac——&gt;ip——&gt;端口——&gt;应用协议<br>物理层  数据链路层 网络层  传输层 应用层</p>
+<p>包含网络层的抓包<br>wireshark<br>网络拓扑模拟软件 Packet Tracer</p>
+<p>OSI模型，TCP/IP模型</p>
+<p>Ip出于TCP/IP的网络层，网络层的主要作用是：实现主机与主机之间的通信，也叫点对点（end to end）通信。<br>分不清IP（网络层）和MAC（数据链路层）之间的区别和关系。<br>其实很容易区分，在上面我们知道IP的作用是主机之间通信用的，而MAC的作用则是实现「直连」<br>的两个设备之间通信，而IP则负责在「没有直连」的两个网络之间进行通信传输。<br>源IP地址和目标IP地址在传输过程中是不会变化的，只有源MAC地址和目标MAC一直在变化。<br>P地址（IPv4地址）由32位正整数来表示，IP地址在计算机是以二进制的方式处理的。<br>而人类为了方便记忆采用了点分十进制的标记方式，也就是将32位IP地址以每8位为组，共分为2组，每组以「.」隔开，再将每组转换成十进制。<br>10.100.122.2/24 标识前24位是网络号，剩余的8位是主机号。<br>另外一种划分网络号和主机号的形式就是子网掩码，掩码的意思是覆盖掉主机号，剩余的是网络号。</p>
+<h2 id="http常见的状态码"><a href="#http常见的状态码" class="headerlink" title="http常见的状态码"></a>http常见的状态码</h2><p>1XX 中间状态<br>2XX 成功<br>3XX 重定向<br>4XX 客户端错误<br>5XX 服务器错误</p>
+<p>https是在http与tcp层之间层架了SSL/TLS安全传输层。<br>HTTP连接建立相对简单，TCP三次握手之后便可进行HTTP的文传输.而HTTPS在TCP三次握手之后，还需进行SSLTLS的握手过程，才可进入加密报文传输。<br>HTTP的端口号是80，HTTPS的端口号是443.<br>HTTPS协议需要向CA（证书权威机构）申请数字证书，来保证服务器的身份是可信的。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/30/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">加密算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-30 07:25:41 / 修改时间：07:33:32" itemprop="dateCreated datePublished" datetime="2021-03-30T07:25:41+08:00">2021-03-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>对称加密<br>彩虹表<br>一个实例<br>直接修改密文</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/27/SVM%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/27/SVM%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">SVM算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-27 13:23:26" itemprop="dateCreated datePublished" datetime="2021-03-27T13:23:26+08:00">2021-03-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/27/K%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/27/K%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">K均值聚类算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-27 13:19:09 / 修改时间：14:41:06" itemprop="dateCreated datePublished" datetime="2021-03-27T13:19:09+08:00">2021-03-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>聚类算法是 <strong>无监督学习</strong> 的常用算法。</p>
+<p>在一些商业应用中，我们需要对新用户的用户类型进行判别，然而”用户类型”的概念很难全面准确地被商家定义，于是我们可以针对已有的用户数据进行聚类，将聚类结果的每一个簇定义为一个类，然后再根据这些类来训练分类模型，达到判别新用户的类型的目标。</p>
+<p>用k-means算法就必须要求事前给出k值，也就是预先确定好想要把数据集分成几类。其次，不同的初始化点，最后通过k-means得出的聚类结果也有可能产生差异。最后一点，k-means对于”噪声点”是极其敏感的，可能极少的”噪声点”都会对最后的结果产生很大的影响。</p>
+<p>使用matlab调用自带函数kmeans()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">data&#x3D;xlsread(&#39;data.xlsx&#39;);</span><br><span class="line">k&#x3D;3;</span><br><span class="line">Idx&#x3D;kmeans(data,k)</span><br></pre></td></tr></table></figure>
+<p>Idx是一个列向量，分别为1，2，3代表属于哪类</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/15/vscode%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/15/vscode%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">vscode使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-15 13:16:37" itemprop="dateCreated datePublished" datetime="2021-03-15T13:16:37+08:00">2021-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-21 15:07:25" itemprop="dateModified" datetime="2021-09-21T15:07:25+08:00">2021-09-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vscode/" itemprop="url" rel="index"><span itemprop="name">vscode</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Hbuilder比较<br>VScode设置和插件</p>
+<p>右键 新建html文件后</p>
+<p>感叹号加回车 自动生成html文件</p>
+<p>shift+alt+下箭头 复制本行到下一行</p>
+<p>ctrl+X 删除本行</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/django%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/14/django%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">django入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-14 21:08:05" itemprop="dateCreated datePublished" datetime="2021-03-14T21:08:05+08:00">2021-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-20 18:44:29" itemprop="dateModified" datetime="2021-09-20T18:44:29+08:00">2021-09-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/django/" itemprop="url" rel="index"><span itemprop="name">django</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>welcome<br>[toc]</p>
+<h2 id="1-创建django的基本步骤"><a href="#1-创建django的基本步骤" class="headerlink" title="1.创建django的基本步骤"></a>1.创建django的基本步骤</h2><h3 id="1-1-创建虚拟环境"><a href="#1-1-创建虚拟环境" class="headerlink" title="1.1 创建虚拟环境"></a>1.1 创建虚拟环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n ll_env</span><br></pre></td></tr></table></figure>
+<p>列出当前所有的环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env list</span><br></pre></td></tr></table></figure>
+<p>激活虚拟环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate ll_env</span><br></pre></td></tr></table></figure>
+<p>注意部分命令 linux，windows不一样</p>
+<p>安装包命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django&#x3D;&#x3D;2.2 -i https:&#x2F;&#x2F;pypi&#x2F;douban.com&#x2F;simple</span><br></pre></td></tr></table></figure>
+<p>删除环境</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove -n 名字 --<span class="built_in">all</span></span><br></pre></td></tr></table></figure>
+<p>删除虚拟环境中的包</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove --name $虚拟环境名字 $包名</span><br></pre></td></tr></table></figure>
+<p>安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install 包名</span><br></pre></td></tr></table></figure>
+<h3 id="1-2创建工程"><a href="#1-2创建工程" class="headerlink" title="1.2创建工程"></a>1.2创建工程</h3><p>在安装django并且处于专门设置的环境下的前提下，创建工程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject learning_log</span><br></pre></td></tr></table></figure>
+<p><strong>创建数据库</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>在正确的路径下，多了db.sqlite3</p>
+<p>启用工程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure>
+<h3 id="1-3创建app"><a href="#1-3创建app" class="headerlink" title="1.3创建app"></a>1.3创建app</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp learning_logs</span><br></pre></td></tr></table></figure>
+<p>在settings.py中将新建的app追加进去</p>
+<h3 id="1-4启动已有项目"><a href="#1-4启动已有项目" class="headerlink" title="1.4启动已有项目"></a>1.4启动已有项目</h3><p>step1 激活虚拟环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate ll_env</span><br></pre></td></tr></table></figure>
+<p>step2 进入工程目录<br>step3.启动工程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure>
+<h2 id="2-细化mvc的内容"><a href="#2-细化mvc的内容" class="headerlink" title="2.细化mvc的内容"></a>2.细化mvc的内容</h2><p>修改models.py<br>具体略去</p>
+<p>修改了model后要重新生成数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations learning_logs</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>创建superuser</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py creatsuperuser</span><br></pre></td></tr></table></figure>
+<p>修改admin.py<br>注册model中的类</p>
+<h2 id="3-django-shell调试"><a href="#3-django-shell调试" class="headerlink" title="3.django shell调试"></a>3.django shell调试</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br><span class="line"># 然后输入命令，比如</span><br><span class="line">from learning_logs.models import Topic</span><br><span class="line">Topic.objects.all()</span><br><span class="line"># get set命令等</span><br></pre></td></tr></table></figure>
+<h2 id="4-整体流程"><a href="#4-整体流程" class="headerlink" title="4.整体流程"></a>4.整体流程</h2><p>models.py<br>urls.py<br>views.py<br>然后在模板文件夹里，建立html文件</p>
+<p>通用试图和函数</p>
+<p>整体流程是：</p>
+<p>1.先建立并运行默认的界面</p>
+<p>2.简单修改成helloworld</p>
+<p>新建应用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python startproject XXX</span><br></pre></td></tr></table></figure>
+<p>在新应用目录下views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&quot;Hello, world. You&#x27;re at the polls index.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>在新应用目录下新建urls.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;&#x27;</span>, views.index, name=<span class="string">&#x27;index&#x27;</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>在原目录下的urls.py中纳入新建的urls.py</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from django.urls import include, path</span><br><span class="line"></span><br><span class="line">urlpatterns &#x3D; [</span><br><span class="line">    path(&#39;admin&#x2F;&#39;, admin.site.urls),</span><br><span class="line">    path(&#39;&#39;,include(&#39;zhishi.urls&#39;))</span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>修改settings.py</p>
+<p>包括installed app，时区，数据库。</p>
+<h1 id="5-应用下的models"><a href="#5-应用下的models" class="headerlink" title="5.应用下的models"></a>5.应用下的models</h1><p>ORM常用字段类型：</p>
+<p>区别在于CharField是定长的，而TextField的长度则可以是无线的，具体使用哪一个要看需要</p>
+<p>　1、CharField：字符串类型，映射到数据库中会转换成varchar类型，使用时必须传入max_length属性以定义该字符串的最大长度，如果超过254个字符，就不建议使用CharField了，此时建议使用TextField<br>10、BooleanField：布尔类型(True/False)，映射到数据库中会变成长度只有1位的tinyint类型，这个Field不接受null参数，要想使用可以为null的布尔类型的字段，就要使用NullBooleanField<br>11、AutoField:自增长类型，映射到数据库中是11位的整数，使用此字段时，必须传递primary_key=True，否则在生成迁移脚本文件时，就会报错，一个模型不能有两个自增长字段。一般情况下我们用不到这个字段，如果不定义主键，django会自动的为我们生成id字段作为主键</p>
+<p>DateTimeField：日期时间类型，在python中对应的是datetime.datetime类型，在映射到数据库中也是datetime类型。使用这个Field可以传递以下几个参数：<br>　　　　auto_now=True：在每次这个数据保存的时候，都使用当前的时间。比如作为一个记录修改日期的字段<br>　　　　auto_now_add=True：在每条数据第一次被添加进去的时候，都使用当前的时间。比如作为一个记录第一次入库的字段</p>
+<p>14、DateField：日期类型，用法同DateTimeField，在python中对应的是datetime.date类型，在映射到数据库中是date类型<br>　　15、TimeField：时间类型，用法同DateTimeField，在python中对应的是datetime.time类型，在映射到数据库中是time类型<br>　　16、FileField：用来存储文件的<br>　　17、ImageField：用来存储图片文件的<br>　　18、TextField：大量的文本类型</p>
+<p>Field的常用参数：<br>　　1、null：标识是否可以为空，默认是为False。在使用字符串相关的Field（CharField/TextField/URLField/EmailField）的时候，官方推荐尽量不要使用这个参数，也就是保持默认值False。因为Django在处理字符串相关的Field的时候，即使这个Field的null=False，如果你没有给这个Field传递任何值，那么Django也会使用一个空的字符串””来作为默认值存储进去。因此如果再使用null=True，Django会产生两种空值的情形（NULL或者空字符串）。如果想要在表单验证的时候允许这个字符串为空，那么建议使用blank=True。如果你的Field是BooleanField，由于BooleanField不接受null参数，因此你如果想要设置这个字段可以为空的bool类型，那么对应的可空的bool类型字段则为NullBooleanField。<br>　　2、blank：标识这个字段在表单验证的时候是否可以为空，默认是False。这个和null是有区别的，null是一个纯数据库级别的。而blank是表单验证级别的。<br>　　3、db_column：这个字段在数据库中的名字。如果没有设置这个参数，那么将会使用模型中属性的名字。<br>　　4、db_index：标识这个字段是否为索引字段。<br>　　5、default：默认值。可以为一个值，或者是一个函数，但是不支持lambda表达式。并且不支持列表/字典/集合等可变的数据结构。在用函数作为值传递给default时，只能传递函数名，不需要加括号。<br>　　6、primary_key：是否为主键，与AutoField/BigAutoField连用，默认是False。<br>　　7、unique：在表中这个字段的值是否唯一，在数据库中就是唯一约束，一般是设置手机号码/邮箱等。<br>　　8、choices：在一个范围内选择出一项，注意这个选项与ForeignKey的区别<br>　　　　作用：1、django admin中显示下拉框；2、避免连表查询</p>
+<p>　　　　TYPE_CHOICES = ( 　　#数据库只保存内部元祖的第一个值，后面的值保存在内存中<br>　　　　　　(0, ‘—‘),<br>　　　　　　(1, ‘第一类’),<br>　　　　　　(2, ‘第二类’),<br>　　　　　　(3, ‘第三类’),<br>　　　　)<br>　　　　type = models.IntegerField(default=0,choices=TYPE_CHOICES)</p>
+<p>修改好model 后</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations XXX</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>重置数据库中所有数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py flush</span><br></pre></td></tr></table></figure>
+<p>实例</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    name = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    grade = models.IntegerField()</span><br><span class="line">    section = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    school = models.ForeignKey(School, on_delete=models.CASCADE)</span><br><span class="line">    blood_group = models.CharField(max_length=<span class="number">10</span>)</span><br><span class="line">    mobile = models.CharField(max_length=<span class="number">20</span>)</span><br><span class="line">    address = models.TextField()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">School</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    name = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    email = models.EmailField(null=<span class="literal">True</span>, blank=<span class="literal">True</span>)</span><br><span class="line">    address = models.TextField()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br></pre></td></tr></table></figure>
+<h1 id="管理后台"><a href="#管理后台" class="headerlink" title="管理后台"></a>管理后台</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure>
+<p>注册类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</span><br><span class="line">admin.site.register(Question)</span><br></pre></td></tr></table></figure>
+<h1 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h1><p>views向html中传递</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render_to_response</span><br><span class="line"></span><br><span class="line">address = [</span><br><span class="line">    &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;张三&#x27;</span>, <span class="string">&#x27;address&#x27;</span>:<span class="string">&#x27;地址一&#x27;</span>&#125;,</span><br><span class="line">    &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;李四&#x27;</span>, <span class="string">&#x27;address&#x27;</span>:<span class="string">&#x27;地址二&#x27;</span>&#125;</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> render_to_response(<span class="string">&#x27;list.html&#x27;</span>, &#123;<span class="string">&#x27;address&#x27;</span>: address&#125;)</span><br></pre></td></tr></table></figure>
+<p>这里使用了一个新方法是 render_to_response ，它可以直接调用模板并返回生成好的文本，直接返回它即可。它接收两个参数，第一个是模板的名字。</p>
+<p>第二个参数是一个字典，这里只有一个 Key ，名字是 address ，它的值是一个字典的列表。只要注意模板所接收的就是这样的字典和包含字典的列表就行了。</p>
+<p>创建templates目录</p>
+<h1 id="修改settings-py"><a href="#修改settings-py" class="headerlink" title="修改settings.py"></a>修改settings.py</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LANGUAGE_CODE = <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"></span><br><span class="line">TIME_ZONE = <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/16/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/16/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" class="post-title-link" itemprop="url">软件工程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-16 11:46:14" itemprop="dateCreated datePublished" datetime="2021-02-16T11:46:14+08:00">2021-02-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-18 18:28:15" itemprop="dateModified" datetime="2021-12-18T18:28:15+08:00">2021-12-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">软件工程</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h2><p>瀑布模型很难响应需求变更，约到后面代价越大<br>开发过程中看不到结果，只有最后才能看到结果。</p>
+<h2 id="技术债务"><a href="#技术债务" class="headerlink" title="技术债务"></a>技术债务</h2><h1 id="人月神话"><a href="#人月神话" class="headerlink" title="人月神话"></a>人月神话</h1><blockquote>
+</blockquote>
+<p>表面上看起来好像没有任何一个单独的问题会导致困难，每个都能被解决，但是当它们相互纠缠和累积在一起的时候，团队的行动就会变得越来越慢。对问题的麻烦程度，每个人似乎都会感到惊讶，并且很难看清问题的本质。不过，如果我们想解决问题，就必须试图先去理解它。</p>
+<blockquote>
+<p>编程为什么有趣？作为回报，它的从业者期望得到什么样的快乐？<br>首先是一种创建事物的纯粹快乐。如同小孩在玩泥巴时感到愉快一样，成年人喜欢创建事物，特别是自己进行设计。我想这种快乐是上帝创造世界的折射，一种呈现在每片独特、崭新的树叶和雪花上的喜悦！。<br>其次，快乐来自于开发对其他人有用的东西。内心深处，我们期望其他人使用我们的劳动成果，并能对他们有所帮助。从这个方面，这同小孩用粘土为“爸爸办公室”捏制铅笔盒没有本质的区别。<br>第三是整个过程体现出魔术般的力量–将相互啮合的零部件组装在一起，看到它们精妙地运行，得到预先所希望的结果。比起弹珠游戏或点唱机所具有的迷人魅力，程序化的计算机毫不逊色。<br>第四是学习的乐趣，来自于这项工作的非重复特性。人们所面临的问题，在某个或其它方面总有些不同。因而解决问题的人可以从中学习新的事物：有时是实践上的，有时是理论上的，或者兼而有之。</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<p>对于系统编程人员而言，对其他人的依赖是一件非常痛苦的事情。他依靠其他人的程序，而往往这些程序设计得并不合理，实现拙劣，发布不完整（没有源代码或测试用例），或者文档记录得很糟。所以，系统编程人员不得不花费时间去研究和修改，而它们在理想情况下本应该是可靠完整的。</p>
+<blockquote>
+</blockquote>
+<p>对于创造者，只有在实现的过程中，才能发现我们构思的不完整性和不一致性。因此，对于理论家而言，书写、试验以及“工作实现”是非常基本和必要的。</p>
+<blockquote>
+</blockquote>
+<p>在单个的任务中，“一切都将运转正常”的假设在时间进度上具有可实现性。因为所遇的延迟是一个概率分布曲线，“不会延迟”仅具有有限的概率，所以现实情况可能会像计划安排的那样顺利。然而大型的编程工作，或多或少包含了很多任务，某些任务间还具有前后的次序，从而一切正常的概率变得非常小，甚至接近于无。</p>
+<blockquote>
+</blockquote>
+<p>人数和时间的互换仅仅适用于以下情况：某个任务可以分解给参与人员，并且他们之间不需要相互的交流。这在割小麦或收获棉花的工作中是可行的；而在系统编程中近乎不可能。</p>
+<blockquote>
+</blockquote>
+<p>一拥而上的开发方法是高成本的、速度缓慢的、不充分的，开发出的是无法在概念上进行集成的产品。</p>
+<blockquote>
+</blockquote>
+<p>因为左手不知道右手在做什么，所以进度灾难、功能的不合理和系统缺陷纷纷出现。随着工作的进行，许多小组慢慢地修改自己程序的功能、规模和速度，他们明确或者隐含地更改了一些有效输入和输出结果用法上的约定。</p>
+<blockquote>
+</blockquote>
+<p>使用项目手册的第二个原因是控制信息发布。控制信息发布并不是为了限制信息，而42是确保信息能到达所有需要它的人的手中。</p>
+<blockquote>
+</blockquote>
+<p>项目手册的第一步是对所有的备忘录编号，从而每个工作人员可以通过标题列表来检索是否有他所需要的信息。还有一种更好的组织方法，就是使用树状的索引结构。而且如果需要的话，可以使用树结构中的子树来维护发布列表。</p>
+<blockquote>
+<p>处理机制。同许多其它的软件管理问题一样，随着项目规模的扩大，技术备忘录的问题以非线性趋势增长。10人的项目，文档仅仅通过简单的编号就可以了。100人的项目，若干个线性索引常常可以满足要求。1000人的项目，人员无可避免地散布在多个地点。</p>
+</blockquote>
+<blockquote>
+<p>理解的问题可以通过持续的文档维护来解决。文档变更的强调有若干个步骤。首先，必须在页面上标记发生改变的文本，例如，使用页边上的竖线标记每行变化的文字。第二，分发的变更页附带独立的总结性文字，对变更的重要性以及批注进行记录。</p>
+</blockquote>
+<blockquote>
+<p>卡内基一梅隆大学的D.L.Parnas提出了更彻底的解决方法。他认为，编程人员仅了解自己负责的部分，而不是整个系统的开发细节时，工作效率最高。这种方法的先决条件是精确和完整地定义所有接口。这的确是一个彻底的解决方法。如果能处理得好，的确是能解央很多“灾难”。</p>
+</blockquote>
+<blockquote>
+<p>第二，文档能够作为同其他人的沟通渠道。项目经理常常会不断发现，许多理应被普遍认同的策略，完全不为团队的一些成员所知。正因为项目经理的基本职责是使每个人都向着相同的方向前进，所以他的主要工作是沟通，而不是做出决定。这些文档能极大地减轻他的负担。</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/15/%E6%96%B9%E6%B3%95%E8%AE%BA%E5%92%8C%E7%BB%8F%E9%AA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="TJ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的Hexo博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/15/%E6%96%B9%E6%B3%95%E8%AE%BA%E5%92%8C%E7%BB%8F%E9%AA%8C/" class="post-title-link" itemprop="url">方法论和经验</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-15 01:59:08" itemprop="dateCreated datePublished" datetime="2021-02-15T01:59:08+08:00">2021-02-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-19 21:29:23" itemprop="dateModified" datetime="2021-02-19T21:29:23+08:00">2021-02-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">方法论</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[toc]</p>
+<h2 id="方法论"><a href="#方法论" class="headerlink" title="方法论"></a>方法论</h2><ul>
+<li>实战第一，JD是最好的学习方法</li>
+<li>不要买课，不参与打卡之类的活动，按照自己的节奏来</li>
+<li>社区交流很重要，社区交流可以有更多的触发点。【动机 能力 触发点】</li>
+<li>主动回想起来，给自己提问题。然后要思考本质是什么，要从直觉的角度想明白这个问题。尤其是算法和概率的问题。</li>
+<li>笔记不要copy，要记录自己的，清洗后的笔记，包括自己用自己的语言描述，另外也积累自己的代码库，方便下次遇到相同的问题，直接copy。</li>
+<li>==遇到问题解决问题的这个过程== 中恰恰是提升的那一重要的步骤，这个过程正好是不能速成的重要积累。是宝贵的hands on experience。有问题，遇到不符合预期的问题，解决和排查的过程很重要</li>
+<li>多用实例，引发兴趣和问题的例子，场景</li>
+<li>初期可以用视频学习，然后是文档，博客。同样的up主，youtube上干货更多，B站上更商业化；找废话少的视频，一下好几百集的可以直接不看，这种适合收藏，而不适合用来入门。</li>
+<li>带着问题，以自己为主线，偶尔看一下这个文章带来的宏观架构都有什么，泛化，但是不要花太多时间，会被带偏。跟着自己的任务走。</li>
+<li> 有环境：如linux linux 虚拟机，xshell，实际敲命令；网络有wiresock，postman，抓包看；python 在ide中试；有素材：做数据分析要数据，做web要有图等，有具体的要求和目标等；有场景：有问题，遇到不符合预期的问题，解决和排查的过程很重要<h2 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h2></li>
+</ul>
+<p>1.收集-&gt;复盘，重视周报，日报，总结汇报等，并不是浪费时间，是非常重要的事情。形式反而不重要，可以用表格，邮件，word等，重要的是坚持。<br>2.事情有窗口期，一定要趁着机会做，不要把所有的事情都推后。这是最省力气的。</p>
+<h2 id="blog原则"><a href="#blog原则" class="headerlink" title="blog原则"></a>blog原则</h2><ul>
+<li>在原有的地方更新增加，促进自己有更高的掌握，有积累感。</li>
+<li>不要为了强行归类，舍弃闪光点</li>
+<li>初期可以乱些，等有了更深的认识再更新</li>
+<li>注意写代码，不要只写基础理论，场景实际例子非常重要，可以以实例的角度来写，而不是站在一个尽可能掌握多而系统的技术的角度来写。包括命名用目的例子来命名。</li>
+<li>记录经常犯错，或者总是忘得东西，方便下次用的时候直接快速得回想起来，而不是再从0查找。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">TJ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">98</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TJ</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
