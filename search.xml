@@ -114,6 +114,18 @@
       </tags>
   </entry>
   <entry>
+    <title>JS入门</title>
+    <url>/2021/04/19/JS%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">10</span> + <span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`10+5=<span class="subst">$&#123;num&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>KNN</title>
     <url>/2021/02/13/KNN/</url>
     <content><![CDATA[<p>KNN算法伪代码:</p>
@@ -128,18 +140,6 @@
       </categories>
       <tags>
         <tag>机器学习算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS入门</title>
-    <url>/2021/04/19/JS%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">10</span> + <span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`10+5=<span class="subst">$&#123;num&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
@@ -223,18 +223,18 @@
 <h1 id="输出数据"><a href="#输出数据" class="headerlink" title="输出数据"></a>输出数据</h1><h2 id="disp函数"><a href="#disp函数" class="headerlink" title="disp函数"></a>disp函数</h2><h2 id="fprint函数"><a href="#fprint函数" class="headerlink" title="fprint函数"></a>fprint函数</h2>]]></content>
   </entry>
   <entry>
-    <title>K均值聚类算法</title>
-    <url>/2021/03/27/K%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>聚类算法是 <strong>无监督学习</strong> 的常用算法。</p>
-<p>在一些商业应用中，我们需要对新用户的用户类型进行判别，然而”用户类型”的概念很难全面准确地被商家定义，于是我们可以针对已有的用户数据进行聚类，将聚类结果的每一个簇定义为一个类，然后再根据这些类来训练分类模型，达到判别新用户的类型的目标。</p>
-<p>用k-means算法就必须要求事前给出k值，也就是预先确定好想要把数据集分成几类。其次，不同的初始化点，最后通过k-means得出的聚类结果也有可能产生差异。最后一点，k-means对于”噪声点”是极其敏感的，可能极少的”噪声点”都会对最后的结果产生很大的影响。</p>
-<p>使用matlab调用自带函数kmeans()</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">data&#x3D;xlsread(&#39;data.xlsx&#39;);</span><br><span class="line">k&#x3D;3;</span><br><span class="line">Idx&#x3D;kmeans(data,k)</span><br></pre></td></tr></table></figure>
-<p>Idx是一个列向量，分别为1，2，3代表属于哪类</p>
+    <title>Pycharm快捷键</title>
+    <url>/2021/02/13/PYcharm%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<p>ctrl+alt+L，             格式化代码<br>找到菜单栏的“Code”,点击一下“Reformat Code”就能自动地将代码进行规范化处理。<br>ctrl+shift+f10          运行当前文件<br>shift+enter             另起一行，光标在行内任意位置都能另起一行，且不破坏当行结构<br>ctrl+p                       调用方法时查看参数，在括号内按下，就知道当前位置该给啥参数<br>shift+tab                取消缩进</p>
+<p>ctrl+B 转到方法定义处</p>
+<p>快速修改同一个变量或类<br>我们只需要选中需要重新命名的变量或类，右键弹出选项中选择Refactor,然后点击Rename，就可以进行全局修改了。</p>
 ]]></content>
       <categories>
-        <category>算法</category>
+        <category>python</category>
       </categories>
+      <tags>
+        <tag>pycharm</tag>
+      </tags>
   </entry>
   <entry>
     <title>SVM算法</title>
@@ -248,18 +248,18 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Pycharm快捷键</title>
-    <url>/2021/02/13/PYcharm%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<p>ctrl+alt+L，             格式化代码<br>找到菜单栏的“Code”,点击一下“Reformat Code”就能自动地将代码进行规范化处理。<br>ctrl+shift+f10          运行当前文件<br>shift+enter             另起一行，光标在行内任意位置都能另起一行，且不破坏当行结构<br>ctrl+p                       调用方法时查看参数，在括号内按下，就知道当前位置该给啥参数<br>shift+tab                取消缩进</p>
-<p>ctrl+B 转到方法定义处</p>
-<p>快速修改同一个变量或类<br>我们只需要选中需要重新命名的变量或类，右键弹出选项中选择Refactor,然后点击Rename，就可以进行全局修改了。</p>
+    <title>K均值聚类算法</title>
+    <url>/2021/03/27/K%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>聚类算法是 <strong>无监督学习</strong> 的常用算法。</p>
+<p>在一些商业应用中，我们需要对新用户的用户类型进行判别，然而”用户类型”的概念很难全面准确地被商家定义，于是我们可以针对已有的用户数据进行聚类，将聚类结果的每一个簇定义为一个类，然后再根据这些类来训练分类模型，达到判别新用户的类型的目标。</p>
+<p>用k-means算法就必须要求事前给出k值，也就是预先确定好想要把数据集分成几类。其次，不同的初始化点，最后通过k-means得出的聚类结果也有可能产生差异。最后一点，k-means对于”噪声点”是极其敏感的，可能极少的”噪声点”都会对最后的结果产生很大的影响。</p>
+<p>使用matlab调用自带函数kmeans()</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">clear;clc;</span><br><span class="line">data&#x3D;xlsread(&#39;data.xlsx&#39;);</span><br><span class="line">k&#x3D;3;</span><br><span class="line">Idx&#x3D;kmeans(data,k)</span><br></pre></td></tr></table></figure>
+<p>Idx是一个列向量，分别为1，2，3代表属于哪类</p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>算法</category>
       </categories>
-      <tags>
-        <tag>pycharm</tag>
-      </tags>
   </entry>
   <entry>
     <title>bootstrap</title>
@@ -720,34 +720,6 @@
       </tags>
   </entry>
   <entry>
-    <title>leetcode刷题之动态规划总结</title>
-    <url>/2022/02/04/leetcode%E5%88%B7%E9%A2%98%E4%B9%8B%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1 id="1-动态规划步骤"><a href="#1-动态规划步骤" class="headerlink" title="1.动态规划步骤"></a>1.动态规划步骤</h1><ol>
-<li>确定dp数组（dp table）以及下标的含义</li>
-<li>确定递推公式</li>
-<li>dp数组如何初始化</li>
-<li>确定遍历顺序</li>
-<li>举例推导dp数组</li>
-</ol>
-<h1 id="2-递归"><a href="#2-递归" class="headerlink" title="2.递归"></a>2.递归</h1><p>底层原理是递归<br>优化的空间，不希望反复计算子问题，可以用值将子问题的结果记录下来。<br>#3.消除重叠子问题<br>以斐波拉契数列为例<br>f(1)=1,f(2)=1,f(n)等于前两项之和</p>
-<h2 id="3-1暴力递归"><a href="#3-1暴力递归" class="headerlink" title="3.1暴力递归"></a>3.1暴力递归</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">elif</span>(n==<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> f(n-<span class="number">1</span>)+f(n-<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">res=f(<span class="number">10</span>)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-<h2 id="3-2带备忘录的递归"><a href="#3-2带备忘录的递归" class="headerlink" title="3.2带备忘录的递归"></a>3.2带备忘录的递归</h2><p>带备忘录的，这种带备忘录的解法就是我们经常说的“剪枝”操作，以下把一颗非常冗余的树修剪的很干净，或者说就是减少了重叠子问题</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">back</span>(<span class="params">memory,n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>):</span><br><span class="line">        memory[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">2</span>):</span><br><span class="line">        memory[<span class="number">2</span>] = <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(memory[n]!=<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> memory[n]</span><br><span class="line">    res=back(memory,n-<span class="number">1</span>)+back(memory,n-<span class="number">2</span>)</span><br><span class="line">    memory[n]=res</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    memory=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> back(memory,n)</span><br><span class="line"></span><br><span class="line">res=fib(<span class="number">10</span>)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-<h2 id="3-3自底向上"><a href="#3-3自底向上" class="headerlink" title="3.3自底向上"></a>3.3自底向上</h2><p>通过数组来记录每个结果值，自底向上</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib_low</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">2</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    dp = [<span class="number">0</span>] * (n + <span class="number">1</span>)</span><br><span class="line">    dp[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line">    dp[<span class="number">2</span>] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>, n + <span class="number">1</span>):</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>]</span><br><span class="line">    <span class="keyword">return</span>  dp[n]</span><br><span class="line">n=<span class="number">10</span></span><br><span class="line">res=fib_low(n)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-<h2 id="3-4-迭代"><a href="#3-4-迭代" class="headerlink" title="3.4 迭代"></a>3.4 迭代</h2><p>迭代也是自底向上,当前状态仅仅和前两个状态有关，而前面无关，所以我们可以优化空间，不采用数组，直接两个变量，交替保存。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib_d</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">2</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    pre_pre=<span class="number">1</span></span><br><span class="line">    pre=<span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,n+<span class="number">1</span>):</span><br><span class="line">        temp=pre+pre_pre</span><br><span class="line">        pre_pre=pre</span><br><span class="line">        pre=temp</span><br><span class="line">    <span class="keyword">return</span> temp</span><br><span class="line">n=<span class="number">10</span></span><br><span class="line">res=fib_d(n)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>动态规划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux2</title>
     <url>/2021/12/18/linux2/</url>
     <content><![CDATA[<h2 id="应用程序安装的原理"><a href="#应用程序安装的原理" class="headerlink" title="应用程序安装的原理"></a>应用程序安装的原理</h2><p>Windows下安装软件的大概过程如下：  </p>
@@ -772,6 +744,35 @@
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode刷题之动态规划总结</title>
+    <url>/2022/02/04/leetcode%E5%88%B7%E9%A2%98%E4%B9%8B%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="1-动态规划步骤"><a href="#1-动态规划步骤" class="headerlink" title="1.动态规划步骤"></a>1.动态规划步骤</h1><ol>
+<li>确定dp数组（dp table）以及下标的含义</li>
+<li>确定递推公式</li>
+<li>dp数组如何初始化</li>
+<li>确定遍历顺序</li>
+<li>举例推导dp数组</li>
+</ol>
+<h1 id="2-递归"><a href="#2-递归" class="headerlink" title="2.递归"></a>2.递归</h1><p>底层原理是递归<br>优化的空间，不希望反复计算子问题，可以用值将子问题的结果记录下来。</p>
+<h1 id="3-消除重叠子问题"><a href="#3-消除重叠子问题" class="headerlink" title="3.消除重叠子问题"></a>3.消除重叠子问题</h1><p>以斐波拉契数列为例<br>f(1)=1,f(2)=1,f(n)等于前两项之和</p>
+<h2 id="3-1暴力递归"><a href="#3-1暴力递归" class="headerlink" title="3.1暴力递归"></a>3.1暴力递归</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">elif</span>(n==<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> f(n-<span class="number">1</span>)+f(n-<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">res=f(<span class="number">10</span>)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+<h2 id="3-2带备忘录的递归"><a href="#3-2带备忘录的递归" class="headerlink" title="3.2带备忘录的递归"></a>3.2带备忘录的递归</h2><p>带备忘录的，这种带备忘录的解法就是我们经常说的“剪枝”操作，以下把一颗非常冗余的树修剪的很干净，或者说就是减少了重叠子问题</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">back</span>(<span class="params">memory,n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>):</span><br><span class="line">        memory[<span class="number">1</span>]=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">2</span>):</span><br><span class="line">        memory[<span class="number">2</span>] = <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(memory[n]!=<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> memory[n]</span><br><span class="line">    res=back(memory,n-<span class="number">1</span>)+back(memory,n-<span class="number">2</span>)</span><br><span class="line">    memory[n]=res</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    memory=[<span class="number">0</span>]*(n+<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> back(memory,n)</span><br><span class="line"></span><br><span class="line">res=fib(<span class="number">10</span>)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+<h2 id="3-3自底向上"><a href="#3-3自底向上" class="headerlink" title="3.3自底向上"></a>3.3自底向上</h2><p>通过数组来记录每个结果值，自底向上</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib_low</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">2</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    dp = [<span class="number">0</span>] * (n + <span class="number">1</span>)</span><br><span class="line">    dp[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line">    dp[<span class="number">2</span>] = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>, n + <span class="number">1</span>):</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>]</span><br><span class="line">    <span class="keyword">return</span>  dp[n]</span><br><span class="line">n=<span class="number">10</span></span><br><span class="line">res=fib_low(n)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+<h2 id="3-4-迭代"><a href="#3-4-迭代" class="headerlink" title="3.4 迭代"></a>3.4 迭代</h2><p>迭代也是自底向上,当前状态仅仅和前两个状态有关，而前面无关，所以我们可以优化空间，不采用数组，直接两个变量，交替保存。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib_d</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">2</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    pre_pre=<span class="number">1</span></span><br><span class="line">    pre=<span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,n+<span class="number">1</span>):</span><br><span class="line">        temp=pre+pre_pre</span><br><span class="line">        pre_pre=pre</span><br><span class="line">        pre=temp</span><br><span class="line">    <span class="keyword">return</span> temp</span><br><span class="line">n=<span class="number">10</span></span><br><span class="line">res=fib_d(n)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
@@ -816,27 +817,6 @@
       </categories>
   </entry>
   <entry>
-    <title>office加载项</title>
-    <url>/2021/05/26/office%E5%8A%A0%E8%BD%BD%E9%A1%B9/</url>
-    <content><![CDATA[<p>Office 系列软件一直坚持开放的机制，为广大的开发人员提供了定制化的接口和能力，一共出现过主要三代的开发技术。他们分别是VBA加载宏，VSTO外接程序，以及现在的Web Add-in。</p>
-<p>VBA非常容易学习，性能也很高，这是因为它是在Excel的进程里面直接运行的。它特别适合把一些日常的工作实现自动化。但VBA也有一些不太擅长的地方，就是它更多的是专注于Office 客户端（例如Excel）内部对象模型的访问和操作，如果需要访问外部的资源，例如数据库拉，网络资源等等，尤其是说你还想要有些操作计算机本地资源能力的话，相对来说就会困难一些。在2003年左右，微软推出了第一代的VSTO开发工具，那是作为Visual Studio .NET 2003的一个插件提供的，但那个时候就奠定了VSTO的一个架构，它允许开发人员用自己熟悉的C#或<a href="https://link.zhihu.com/?target=http://VB.NET">http://VB.NET</a>为Office 客户端编写插件，也称为外接程序。这些插件跟VBA写的加载宏完全不一样，它是运行在一个独立的进程的，实际上它运行的环境我们称之为托管环境，而且它是需要编译的，通常VSTO外接程序所生成的东西都是一个dll，这个dll需要在对应版本的.NET Framework中才能运行。因为这种设计，所以它能够使用到.NET Framework的全套能力，尤其是强大的网络访问和本地操作的能力，它是通过COM interop的方式与Office客户端进行互操作的。VSTO也存在一定的不足，就是它有对.NET Framework的依赖，那时候.NET Framework还不是默认安装的，所以有时候为了安装一个很小的插件，用户非得去装一个一两百兆的.NET Framework，这给部署带来了一定的挑战，而其它的版本更新又需要重新安装，这个也是限制他发展的一个原因之一，但总体来说，瑕不掩瑜，它把Office Add-in的开发能力提升了一个很大的台阶。</p>
-<p>第三代技术，Office Web Add-in是为云而生的，它随着Office 365的面世和发展而逐渐进入我们的视野。由于Office 365是一个云平台，我们的Office客户端也不仅仅是在桌面端能够使用，而是既能够在浏览器中使用，也能够在手机端使用。这就给Add-in开发提出了新的课题。不管是VBA，还是VSTO，都很难做到跨平台，也不能在浏览器中运行，更不要说在手机里面运行了。所以，这一代技术是基于Web开发，使用HTML和Javscript来编写。它具有跨平台跨设备的好处，能够集中部署和更新，你甚至可以将他们发布到微软官方的应用商店Office Store中去销售你的Add-in。当然，这些好处也会有一定的代价，Office Web Add-in必须联机才能使用，事实上它还对浏览器版本有所依赖，而如果你在桌面版Office使用的话，至少需要Office 2013的版本哦。Office Web Add-in是由两个部分组成的，一个XML文件用来定义Add-in，而一套网站用来真正实现功能，其中如果需要跟宿主程序，例如Excel进行交互的话，会用到一套JavaScript的API，这些API相当于是把之前VBA对象模型进行了一个封装，以便Javascript能够调用。</p>
-]]></content>
-      <categories>
-        <category>office加载项</category>
-      </categories>
-      <tags>
-        <tag>office加载项</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>plt的bar图</title>
-    <url>/2021/02/13/plt%E7%9A%84bar%E5%9B%BEdemo/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="comment">#绘制三张图，并且本程序提单量是2020-01-01之后的。</span></span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>]=[<span class="string">&#x27;SimHei&#x27;</span>] <span class="comment">#用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>]=<span class="literal">False</span> <span class="comment">#用来正常显示负号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#==========================================================================================================================</span></span><br><span class="line"><span class="comment">#读入提交报销单的表，绘制第一张图，提单量</span></span><br><span class="line">data=pd.read_excel(<span class="string">&#x27;RP31594372605000.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mydf=data</span><br><span class="line"><span class="comment">#对申请人所在公司名称进行简写</span></span><br><span class="line">mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;总行&#x27;</span>)</span><br><span class="line">mydf.loc[:,<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">mydf.loc[:,<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;分行&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#提单日期筛选日期&gt;=2020-01-01的</span></span><br><span class="line">mydf.loc[:,<span class="string">&#x27;创建日期&#x27;</span>]=pd.to_datetime(mydf[<span class="string">&#x27;创建日期&#x27;</span>])</span><br><span class="line">s_date = datetime.datetime.strptime(<span class="string">&#x27;2020-01-01&#x27;</span>, <span class="string">&#x27;%Y-%m-%d&#x27;</span>)</span><br><span class="line">mydf=mydf[(mydf[<span class="string">&#x27;创建日期&#x27;</span>]&gt;= s_date)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印相关信息；</span></span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].tail(<span class="number">20</span>))</span><br><span class="line"></span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].unique())</span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].value_counts())</span><br><span class="line"></span><br><span class="line"><span class="comment">#统计各分行数据</span></span><br><span class="line">mydata=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].value_counts()</span><br><span class="line">X=<span class="built_in">list</span>(mydata.index)</span><br><span class="line">Y=mydata.tolist()</span><br><span class="line">print(X)</span><br><span class="line">print(Y)</span><br><span class="line"></span><br><span class="line"><span class="comment">#画图</span></span><br><span class="line">plt.figure(<span class="number">1</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">plt.bar(X,Y,width = <span class="number">0.9</span>,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;日常报销单&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(X,Y):</span><br><span class="line">    plt.text(x,y+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line"></span><br><span class="line">plt.ylabel(<span class="string">&quot;提单量&quot;</span>)</span><br><span class="line"><span class="comment"># plt.legend((&#x27;日常报销单&#x27;,))</span></span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment">#===================================================================================================</span></span><br><span class="line"><span class="comment">#绘制第二张图，读入员工数据表，计算各个分行体量</span></span><br><span class="line">data2=pd.read_excel(<span class="string">&#x27;user_full_info.xlsx&#x27;</span>,header=<span class="number">3</span>)</span><br><span class="line">mydf2=data2</span><br><span class="line">mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;总行&#x27;</span>)</span><br><span class="line">mydf2.loc[:,<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">mydf2.loc[:,<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;分行&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(data2.columns.values)</span><br><span class="line">print(mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].unique())</span><br><span class="line">print(mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].value_counts())</span><br><span class="line"></span><br><span class="line"><span class="comment">#统计各分行体量</span></span><br><span class="line">mydata2=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].value_counts()</span><br><span class="line">X2=<span class="built_in">list</span>(mydata2.index)</span><br><span class="line">Y2=mydata2.tolist()</span><br><span class="line">print(X2)</span><br><span class="line">print(Y2)</span><br><span class="line"></span><br><span class="line"><span class="comment">#画图</span></span><br><span class="line">plt.figure(<span class="number">2</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">plt.bar(X2,Y2,width = <span class="number">0.5</span>,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;各分行体量&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line"><span class="keyword">for</span> x2,y2 <span class="keyword">in</span> <span class="built_in">zip</span>(X2,Y2):</span><br><span class="line">    plt.text(x2,y2+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y2,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line">plt.xticks(rotation=<span class="number">270</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;员工人数&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment">#==========================================================================</span></span><br><span class="line"><span class="comment">#绘制第三张图，将提单两和体量放在一起</span></span><br><span class="line">Y3=[<span class="number">0</span>]*<span class="built_in">len</span>(X)<span class="comment">#初始化list，Y3为长度和X相同，初始值为0</span></span><br><span class="line"><span class="keyword">for</span> ibank <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(X)):</span><br><span class="line">    bankname=X[ibank]</span><br><span class="line">    k=X2.index(bankname)</span><br><span class="line">    Y3[ibank]=Y2[k]</span><br><span class="line"></span><br><span class="line">print(X)</span><br><span class="line">print(Y3)</span><br><span class="line"></span><br><span class="line">tick_label =X</span><br><span class="line">plt.figure(<span class="number">3</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">bar_width=<span class="number">0.45</span></span><br><span class="line">Xn=np.arange(<span class="built_in">len</span>(X))</span><br><span class="line">plt.bar(Xn,Y,width = bar_width,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;日常报销单提单量&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line">plt.bar(Xn+bar_width,Y3,width = bar_width,facecolor=<span class="string">&#x27;#B0C4DE&#x27;</span>,label=<span class="string">&#x27;员工人数&#x27;</span>,zorder=<span class="number">101</span>)</span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(Xn,Y):</span><br><span class="line">    plt.text(x,y+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x3,y3 <span class="keyword">in</span> <span class="built_in">zip</span>(Xn,Y3):</span><br><span class="line">    plt.text(x3+bar_width,y3+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y3,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line">plt.xticks(Xn+bar_width/<span class="number">2</span>,tick_label)</span><br><span class="line">plt.ylabel(<span class="string">&quot;数量&quot;</span>)</span><br><span class="line"><span class="comment"># plt.legend((&#x27;日常报销单&#x27;,))</span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>各种颜色的代码  <a href="https://blog.csdn.net/CD_Don/article/details/88070453">https://blog.csdn.net/CD_Don/article/details/88070453</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>pandas使用</title>
     <url>/2021/02/13/pandas%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h1><p>读取txt文件</p>
@@ -859,6 +839,27 @@
       <tags>
         <tag>数据分析</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>office加载项</title>
+    <url>/2021/05/26/office%E5%8A%A0%E8%BD%BD%E9%A1%B9/</url>
+    <content><![CDATA[<p>Office 系列软件一直坚持开放的机制，为广大的开发人员提供了定制化的接口和能力，一共出现过主要三代的开发技术。他们分别是VBA加载宏，VSTO外接程序，以及现在的Web Add-in。</p>
+<p>VBA非常容易学习，性能也很高，这是因为它是在Excel的进程里面直接运行的。它特别适合把一些日常的工作实现自动化。但VBA也有一些不太擅长的地方，就是它更多的是专注于Office 客户端（例如Excel）内部对象模型的访问和操作，如果需要访问外部的资源，例如数据库拉，网络资源等等，尤其是说你还想要有些操作计算机本地资源能力的话，相对来说就会困难一些。在2003年左右，微软推出了第一代的VSTO开发工具，那是作为Visual Studio .NET 2003的一个插件提供的，但那个时候就奠定了VSTO的一个架构，它允许开发人员用自己熟悉的C#或<a href="https://link.zhihu.com/?target=http://VB.NET">http://VB.NET</a>为Office 客户端编写插件，也称为外接程序。这些插件跟VBA写的加载宏完全不一样，它是运行在一个独立的进程的，实际上它运行的环境我们称之为托管环境，而且它是需要编译的，通常VSTO外接程序所生成的东西都是一个dll，这个dll需要在对应版本的.NET Framework中才能运行。因为这种设计，所以它能够使用到.NET Framework的全套能力，尤其是强大的网络访问和本地操作的能力，它是通过COM interop的方式与Office客户端进行互操作的。VSTO也存在一定的不足，就是它有对.NET Framework的依赖，那时候.NET Framework还不是默认安装的，所以有时候为了安装一个很小的插件，用户非得去装一个一两百兆的.NET Framework，这给部署带来了一定的挑战，而其它的版本更新又需要重新安装，这个也是限制他发展的一个原因之一，但总体来说，瑕不掩瑜，它把Office Add-in的开发能力提升了一个很大的台阶。</p>
+<p>第三代技术，Office Web Add-in是为云而生的，它随着Office 365的面世和发展而逐渐进入我们的视野。由于Office 365是一个云平台，我们的Office客户端也不仅仅是在桌面端能够使用，而是既能够在浏览器中使用，也能够在手机端使用。这就给Add-in开发提出了新的课题。不管是VBA，还是VSTO，都很难做到跨平台，也不能在浏览器中运行，更不要说在手机里面运行了。所以，这一代技术是基于Web开发，使用HTML和Javscript来编写。它具有跨平台跨设备的好处，能够集中部署和更新，你甚至可以将他们发布到微软官方的应用商店Office Store中去销售你的Add-in。当然，这些好处也会有一定的代价，Office Web Add-in必须联机才能使用，事实上它还对浏览器版本有所依赖，而如果你在桌面版Office使用的话，至少需要Office 2013的版本哦。Office Web Add-in是由两个部分组成的，一个XML文件用来定义Add-in，而一套网站用来真正实现功能，其中如果需要跟宿主程序，例如Excel进行交互的话，会用到一套JavaScript的API，这些API相当于是把之前VBA对象模型进行了一个封装，以便Javascript能够调用。</p>
+]]></content>
+      <categories>
+        <category>office加载项</category>
+      </categories>
+      <tags>
+        <tag>office加载项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>plt的bar图</title>
+    <url>/2021/02/13/plt%E7%9A%84bar%E5%9B%BEdemo/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="comment">#绘制三张图，并且本程序提单量是2020-01-01之后的。</span></span><br><span class="line"></span><br><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>]=[<span class="string">&#x27;SimHei&#x27;</span>] <span class="comment">#用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>]=<span class="literal">False</span> <span class="comment">#用来正常显示负号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#==========================================================================================================================</span></span><br><span class="line"><span class="comment">#读入提交报销单的表，绘制第一张图，提单量</span></span><br><span class="line">data=pd.read_excel(<span class="string">&#x27;RP31594372605000.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mydf=data</span><br><span class="line"><span class="comment">#对申请人所在公司名称进行简写</span></span><br><span class="line">mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;总行&#x27;</span>)</span><br><span class="line">mydf.loc[:,<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">mydf.loc[:,<span class="string">&#x27;申请人所在公司&#x27;</span>]=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;分行&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#提单日期筛选日期&gt;=2020-01-01的</span></span><br><span class="line">mydf.loc[:,<span class="string">&#x27;创建日期&#x27;</span>]=pd.to_datetime(mydf[<span class="string">&#x27;创建日期&#x27;</span>])</span><br><span class="line">s_date = datetime.datetime.strptime(<span class="string">&#x27;2020-01-01&#x27;</span>, <span class="string">&#x27;%Y-%m-%d&#x27;</span>)</span><br><span class="line">mydf=mydf[(mydf[<span class="string">&#x27;创建日期&#x27;</span>]&gt;= s_date)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印相关信息；</span></span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].tail(<span class="number">20</span>))</span><br><span class="line"></span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].unique())</span><br><span class="line">print(mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].value_counts())</span><br><span class="line"></span><br><span class="line"><span class="comment">#统计各分行数据</span></span><br><span class="line">mydata=mydf[<span class="string">&#x27;申请人所在公司&#x27;</span>].value_counts()</span><br><span class="line">X=<span class="built_in">list</span>(mydata.index)</span><br><span class="line">Y=mydata.tolist()</span><br><span class="line">print(X)</span><br><span class="line">print(Y)</span><br><span class="line"></span><br><span class="line"><span class="comment">#画图</span></span><br><span class="line">plt.figure(<span class="number">1</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">plt.bar(X,Y,width = <span class="number">0.9</span>,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;日常报销单&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(X,Y):</span><br><span class="line">    plt.text(x,y+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line"></span><br><span class="line">plt.ylabel(<span class="string">&quot;提单量&quot;</span>)</span><br><span class="line"><span class="comment"># plt.legend((&#x27;日常报销单&#x27;,))</span></span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment">#===================================================================================================</span></span><br><span class="line"><span class="comment">#绘制第二张图，读入员工数据表，计算各个分行体量</span></span><br><span class="line">data2=pd.read_excel(<span class="string">&#x27;user_full_info.xlsx&#x27;</span>,header=<span class="number">3</span>)</span><br><span class="line">mydf2=data2</span><br><span class="line">mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;总行&#x27;</span>)</span><br><span class="line">mydf2.loc[:,<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;中国光大银行股份有限公司&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">mydf2.loc[:,<span class="string">&#x27;公司（必填）&#x27;</span>]=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].<span class="built_in">str</span>.replace(<span class="string">&#x27;分行&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">print(data2.columns.values)</span><br><span class="line">print(mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].unique())</span><br><span class="line">print(mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].value_counts())</span><br><span class="line"></span><br><span class="line"><span class="comment">#统计各分行体量</span></span><br><span class="line">mydata2=mydf2[<span class="string">&#x27;公司（必填）&#x27;</span>].value_counts()</span><br><span class="line">X2=<span class="built_in">list</span>(mydata2.index)</span><br><span class="line">Y2=mydata2.tolist()</span><br><span class="line">print(X2)</span><br><span class="line">print(Y2)</span><br><span class="line"></span><br><span class="line"><span class="comment">#画图</span></span><br><span class="line">plt.figure(<span class="number">2</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">plt.bar(X2,Y2,width = <span class="number">0.5</span>,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;各分行体量&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line"><span class="keyword">for</span> x2,y2 <span class="keyword">in</span> <span class="built_in">zip</span>(X2,Y2):</span><br><span class="line">    plt.text(x2,y2+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y2,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line">plt.xticks(rotation=<span class="number">270</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;员工人数&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment">#==========================================================================</span></span><br><span class="line"><span class="comment">#绘制第三张图，将提单两和体量放在一起</span></span><br><span class="line">Y3=[<span class="number">0</span>]*<span class="built_in">len</span>(X)<span class="comment">#初始化list，Y3为长度和X相同，初始值为0</span></span><br><span class="line"><span class="keyword">for</span> ibank <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(X)):</span><br><span class="line">    bankname=X[ibank]</span><br><span class="line">    k=X2.index(bankname)</span><br><span class="line">    Y3[ibank]=Y2[k]</span><br><span class="line"></span><br><span class="line">print(X)</span><br><span class="line">print(Y3)</span><br><span class="line"></span><br><span class="line">tick_label =X</span><br><span class="line">plt.figure(<span class="number">3</span>)</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.facecolor&#x27;</span>] = <span class="string">&#x27;#F0F8FF&#x27;</span></span><br><span class="line">plt.grid(axis=<span class="string">&quot;y&quot;</span>,c=<span class="string">&#x27;white&#x27;</span>)</span><br><span class="line">bar_width=<span class="number">0.45</span></span><br><span class="line">Xn=np.arange(<span class="built_in">len</span>(X))</span><br><span class="line">plt.bar(Xn,Y,width = bar_width,facecolor=<span class="string">&#x27;#87CEEB&#x27;</span>,label=<span class="string">&#x27;日常报销单提单量&#x27;</span>,zorder=<span class="number">100</span>)</span><br><span class="line">plt.bar(Xn+bar_width,Y3,width = bar_width,facecolor=<span class="string">&#x27;#B0C4DE&#x27;</span>,label=<span class="string">&#x27;员工人数&#x27;</span>,zorder=<span class="number">101</span>)</span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> <span class="built_in">zip</span>(Xn,Y):</span><br><span class="line">    plt.text(x,y+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x3,y3 <span class="keyword">in</span> <span class="built_in">zip</span>(Xn,Y3):</span><br><span class="line">    plt.text(x3+bar_width,y3+<span class="number">0.05</span>,<span class="string">&#x27;%.0f&#x27;</span> % y3,ha=<span class="string">&#x27;center&#x27;</span>, va=<span class="string">&#x27;bottom&#x27;</span>, fontsize=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # mydata.plot.bar()</span></span><br><span class="line">plt.xticks(Xn+bar_width/<span class="number">2</span>,tick_label)</span><br><span class="line">plt.ylabel(<span class="string">&quot;数量&quot;</span>)</span><br><span class="line"><span class="comment"># plt.legend((&#x27;日常报销单&#x27;,))</span></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>各种颜色的代码  <a href="https://blog.csdn.net/CD_Don/article/details/88070453">https://blog.csdn.net/CD_Don/article/details/88070453</a></p>
+]]></content>
   </entry>
   <entry>
     <title>pythonRPA爬虫表格整理邮件</title>
@@ -923,6 +924,28 @@
       </tags>
   </entry>
   <entry>
+    <title>python分析银行报销数据经验</title>
+    <url>/2021/02/13/python%E5%88%86%E6%9E%90GD%E9%93%B6%E8%A1%8C%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95%E7%BB%8F%E9%AA%8C/</url>
+    <content><![CDATA[<h1 id="调用子函数的方法"><a href="#调用子函数的方法" class="headerlink" title="调用子函数的方法"></a>调用子函数的方法</h1><p>**主函数中调用子函数</p>
+<p>import 子函数名<br>调用格式：<br>文件名.子函数名(参数)</p>
+<p>import的包如果只是子函数中用，写在子函数中即可，不用写在主函数中。<br><strong>子函数中定义</strong><br>def 函数名(参数)：</p>
+<p> return</p>
+<h1 id="pycharm使用相关"><a href="#pycharm使用相关" class="headerlink" title="pycharm使用相关"></a>pycharm使用相关</h1><p>ctrl + R 查找 替换等<br>ctrl +/ 注释 ，反注释</p>
+<h1 id="数据转换"><a href="#数据转换" class="headerlink" title="数据转换"></a>数据转换</h1><p>将多个list ，先转换成字典，再转换成dataframe</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(X)</span><br><span class="line">   print(Yjine)</span><br><span class="line">   print(listSTR1)</span><br><span class="line">   print(YFK2)</span><br><span class="line">   print(listSTR2)</span><br><span class="line">   print(YTD2)</span><br><span class="line"></span><br><span class="line">   <span class="comment">#=========================生成表================================</span></span><br><span class="line">   mydic = &#123;<span class="string">&quot;单据名称&quot;</span>: X,</span><br><span class="line">        <span class="string">&quot;金额&quot;</span>: listSTR1,</span><br><span class="line">        <span class="string">&quot;已付款金额&quot;</span>: listSTR2,</span><br><span class="line">        <span class="string">&quot;提单量&quot;</span>: YTD2&#125;  <span class="comment"># 将列表a，b转换成字典</span></span><br><span class="line">   outdf = DataFrame(mydic)  <span class="comment"># 将字典转换成为数据框</span></span><br></pre></td></tr></table></figure>
+<h1 id="输出word"><a href="#输出word" class="headerlink" title="输出word"></a>输出word</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在生成图的地方，先保存一份图片，为后面输出图片做准备。</span></span><br><span class="line">   plt.savefig(<span class="string">&quot;filename.png&quot;</span>)</span><br><span class="line">   </span><br><span class="line">    <span class="comment"># 新建空白文档</span></span><br><span class="line">   doc1 = Document()</span><br><span class="line">   <span class="comment"># 新增文档标题</span></span><br><span class="line">   ss=fhstr+<span class="string">&#x27;分行&#x27;</span></span><br><span class="line">   doc1.add_heading(ss, <span class="number">0</span>)</span><br><span class="line">   <span class="comment"># doc1_add_table()</span></span><br><span class="line">   t = doc1.add_table(outdf.shape[<span class="number">0</span>] + <span class="number">1</span>, outdf.shape[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">   <span class="comment"># add the header rows.</span></span><br><span class="line">   <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(outdf.shape[-<span class="number">1</span>]):</span><br><span class="line">       t.cell(<span class="number">0</span>, j).text = outdf.columns[j]</span><br><span class="line"></span><br><span class="line">   <span class="comment"># add the rest of the data frame</span></span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(outdf.shape[<span class="number">0</span>]):</span><br><span class="line">       <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(outdf.shape[-<span class="number">1</span>]):</span><br><span class="line">           t.cell(i + <span class="number">1</span>, j).text = <span class="built_in">str</span>(outdf.values[i, j])</span><br><span class="line">   doc1.add_picture(<span class="string">&quot;filename.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 保存文件,这里是特定路径下的，写法，练成一个字符串；</span></span><br><span class="line">    doc1.save(<span class="string">&#x27;./myout/&#x27;</span>+ss+<span class="string">&#x27;.docx&#x27;</span>)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+
+<p>​    </p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python+selenium自动登录163邮箱</title>
     <url>/2021/02/13/python+Selenium%20%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95163%E9%82%AE%E7%AE%B1/</url>
     <content><![CDATA[<p>python+Selenium 自动登录163邮箱<br>Selenium 是一个 Web 应用的自动化框架。</p>
@@ -949,42 +972,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Excel 相关</title>
-    <url>/2016/07/13/python%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip3 install opencv-python -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
-<p>pip 和pip3 不同<br>换个源，这样网速快些<br>如果报错 通常是因为超时，这时可以换个源</p>
-]]></content>
-      <categories>
-        <category>数据分析</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-        <tag>EXCEL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python分析银行报销数据经验</title>
-    <url>/2021/02/13/python%E5%88%86%E6%9E%90GD%E9%93%B6%E8%A1%8C%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95%E7%BB%8F%E9%AA%8C/</url>
-    <content><![CDATA[<h1 id="调用子函数的方法"><a href="#调用子函数的方法" class="headerlink" title="调用子函数的方法"></a>调用子函数的方法</h1><p>**主函数中调用子函数</p>
-<p>import 子函数名<br>调用格式：<br>文件名.子函数名(参数)</p>
-<p>import的包如果只是子函数中用，写在子函数中即可，不用写在主函数中。<br><strong>子函数中定义</strong><br>def 函数名(参数)：</p>
-<p> return</p>
-<h1 id="pycharm使用相关"><a href="#pycharm使用相关" class="headerlink" title="pycharm使用相关"></a>pycharm使用相关</h1><p>ctrl + R 查找 替换等<br>ctrl +/ 注释 ，反注释</p>
-<h1 id="数据转换"><a href="#数据转换" class="headerlink" title="数据转换"></a>数据转换</h1><p>将多个list ，先转换成字典，再转换成dataframe</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(X)</span><br><span class="line">   print(Yjine)</span><br><span class="line">   print(listSTR1)</span><br><span class="line">   print(YFK2)</span><br><span class="line">   print(listSTR2)</span><br><span class="line">   print(YTD2)</span><br><span class="line"></span><br><span class="line">   <span class="comment">#=========================生成表================================</span></span><br><span class="line">   mydic = &#123;<span class="string">&quot;单据名称&quot;</span>: X,</span><br><span class="line">        <span class="string">&quot;金额&quot;</span>: listSTR1,</span><br><span class="line">        <span class="string">&quot;已付款金额&quot;</span>: listSTR2,</span><br><span class="line">        <span class="string">&quot;提单量&quot;</span>: YTD2&#125;  <span class="comment"># 将列表a，b转换成字典</span></span><br><span class="line">   outdf = DataFrame(mydic)  <span class="comment"># 将字典转换成为数据框</span></span><br></pre></td></tr></table></figure>
-<h1 id="输出word"><a href="#输出word" class="headerlink" title="输出word"></a>输出word</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在生成图的地方，先保存一份图片，为后面输出图片做准备。</span></span><br><span class="line">   plt.savefig(<span class="string">&quot;filename.png&quot;</span>)</span><br><span class="line">   </span><br><span class="line">    <span class="comment"># 新建空白文档</span></span><br><span class="line">   doc1 = Document()</span><br><span class="line">   <span class="comment"># 新增文档标题</span></span><br><span class="line">   ss=fhstr+<span class="string">&#x27;分行&#x27;</span></span><br><span class="line">   doc1.add_heading(ss, <span class="number">0</span>)</span><br><span class="line">   <span class="comment"># doc1_add_table()</span></span><br><span class="line">   t = doc1.add_table(outdf.shape[<span class="number">0</span>] + <span class="number">1</span>, outdf.shape[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">   <span class="comment"># add the header rows.</span></span><br><span class="line">   <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(outdf.shape[-<span class="number">1</span>]):</span><br><span class="line">       t.cell(<span class="number">0</span>, j).text = outdf.columns[j]</span><br><span class="line"></span><br><span class="line">   <span class="comment"># add the rest of the data frame</span></span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(outdf.shape[<span class="number">0</span>]):</span><br><span class="line">       <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(outdf.shape[-<span class="number">1</span>]):</span><br><span class="line">           t.cell(i + <span class="number">1</span>, j).text = <span class="built_in">str</span>(outdf.values[i, j])</span><br><span class="line">   doc1.add_picture(<span class="string">&quot;filename.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">   <span class="comment"># 保存文件,这里是特定路径下的，写法，练成一个字符串；</span></span><br><span class="line">    doc1.save(<span class="string">&#x27;./myout/&#x27;</span>+ss+<span class="string">&#x27;.docx&#x27;</span>)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-
-
-<p>​    </p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python类</title>
     <url>/2021/02/13/python%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="python-类"><a href="#python-类" class="headerlink" title="python 类"></a>python 类</h1><p>定义函数：<br>def myfun(a,b,c):</p>
@@ -997,9 +984,18 @@
       </categories>
   </entry>
   <entry>
-    <title>python操作数据库</title>
-    <url>/2021/02/13/python%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">&quot;localhost&quot;</span>, <span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;test_db&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 cursor() 方法创建一个游标对象 cursor</span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line">cursor.execute(<span class="string">&#x27;select * from student&#x27;</span>)</span><br><span class="line">results = cursor.fetchall()</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> results:</span><br><span class="line">    print(row)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>]]></content>
+    <title>Excel 相关</title>
+    <url>/2016/07/13/python%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip3 install opencv-python -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
+<p>pip 和pip3 不同<br>换个源，这样网速快些<br>如果报错 通常是因为超时，这时可以换个源</p>
+]]></content>
+      <categories>
+        <category>数据分析</category>
+      </categories>
+      <tags>
+        <tag>数据分析</tag>
+        <tag>EXCEL</tag>
+      </tags>
   </entry>
   <entry>
     <title>python基础练习</title>
@@ -1023,11 +1019,9 @@
       </categories>
   </entry>
   <entry>
-    <title>python操作文件</title>
-    <url>/2021/02/13/python%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="读取txt文件"><a href="#读取txt文件" class="headerlink" title="读取txt文件"></a>读取txt文件</h1><p>f = open(‘ip_list.txt’)<br>for row in f.readlines():</p>
-<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><p>使用Paramiko来SSH登录一台网络设备</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> getpass <span class="keyword">import</span> getpass</span><br><span class="line"></span><br><span class="line">username = <span class="built_in">input</span>(<span class="string">&#x27;Enter your username: &#x27;</span>)</span><br><span class="line">password = getpass(<span class="string">&#x27;Enter you password: &#x27;</span>)</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;ip_list.txt&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ips <span class="keyword">in</span> f.readlines():</span><br><span class="line">    ip = ips.strip()</span><br><span class="line">    ssh_client = paramiko.SSHClient()</span><br><span class="line">    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())</span><br><span class="line">    ssh_client.connect(hostname=ip, username=username, password=password, look_for_keys=<span class="literal">False</span>)</span><br><span class="line">    command = ssh_client.invoke_shell()</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">f&#x27;Sucessfully login to <span class="subst">&#123;ip&#125;</span>&#x27;</span>)</span><br><span class="line">    command.send(<span class="string">&#x27;term len 0\n&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    <title>python操作数据库</title>
+    <url>/2021/02/13/python%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">&quot;localhost&quot;</span>, <span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;test_db&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 cursor() 方法创建一个游标对象 cursor</span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line">cursor.execute(<span class="string">&#x27;select * from student&#x27;</span>)</span><br><span class="line">results = cursor.fetchall()</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> results:</span><br><span class="line">    print(row)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>python爬虫小说</title>
@@ -1048,25 +1042,11 @@
       </categories>
   </entry>
   <entry>
-    <title>python自动化办公</title>
-    <url>/2021/02/13/python%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/</url>
-    <content><![CDATA[<h1 id="1-word模板"><a href="#1-word模板" class="headerlink" title="1. word模板"></a>1. word模板</h1><p>python-docx是一个操作Word文档非常好用的python模块，入门也非常简单。它把一个Word文档像一层层剥洋葱一样拆分为Document,Paragraph,Run三层。<br>Run又是对段落的拆分。一个run对象是相同样式文本的延续，只要文本的格式（大小、颜色等）没有改变，那么就是一个run，一旦改变就是另外一个run了。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> docx</span><br><span class="line">document = Document(<span class="string">&#x27;/Users/cuiyingdan/Desktop/邀请函模版.docx&#x27;</span>)</span><br><span class="line">all_paragraphs = document.paragraphs</span><br></pre></td></tr></table></figure>
-<p>文本替换</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">replace_text</span>(<span class="params">old_text, new_text</span>):</span></span><br><span class="line">    <span class="comment">#读取所有的自然段</span></span><br><span class="line">    all_paragraphs = document.paragraphs</span><br><span class="line">    <span class="keyword">for</span> paragraph <span class="keyword">in</span> all_paragraphs:</span><br><span class="line">        <span class="keyword">for</span> run <span class="keyword">in</span> paragraph.runs:</span><br><span class="line">            run_text = run.text.replace(old_text, new_text)</span><br><span class="line">            run.text = run_text</span><br></pre></td></tr></table></figure>
-<h1 id="2-表格处理"><a href="#2-表格处理" class="headerlink" title="2.表格处理"></a>2.表格处理</h1><p>表格的处理工作用到Python的openpyxl模块【只能操作新版本】，或者xlwt xlrd [推荐，对于老版本适用]<br>Workbook(工作簿，一个包含多个Sheet的Excel文件)<br>Worksheet（工作表，一个Workbook有多个Worksheet，如“Sheet1”,“Sheet2”等）<br>Cell（单元格，存储具体的数据对象）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">wb = load_workbook(<span class="string">&#x27;/Users/cuiyingdan/Desktop/data.xlsx&#x27;</span>)</span><br><span class="line">sheet = wb.active <span class="comment">#用wb.active获取第一张Worksheet工作表：</span></span><br></pre></td></tr></table></figure>
-<p>库的官网<br><a href="https://xlrd.readthedocs.io/en/latest/">xlrd</a></p>
-<h2 id="2-1例子"><a href="#2-1例子" class="headerlink" title="2.1例子"></a>2.1例子</h2><p>人名的拼音</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pypinyin <span class="keyword">import</span> lazy_pinyin, Style</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line"><span class="comment"># style = Style.TONE3</span></span><br><span class="line"></span><br><span class="line">data1=pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line">file =xlwt.Workbook() <span class="comment">#新建一个excel</span></span><br><span class="line">table=file.add_sheet(<span class="string">&#x27;输出结果&#x27;</span>)</span><br><span class="line">table_row=<span class="number">0</span><span class="comment">#这是行数，从0行开始写</span></span><br><span class="line">table.write(table_row, <span class="number">0</span>, <span class="string">&#x27;姓名&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">1</span>, <span class="string">&#x27;拼音&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table_row=table_row+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(data1)):</span><br><span class="line">    print(i)</span><br><span class="line">    name = data1.iloc[i, <span class="number">0</span>]</span><br><span class="line">    Pname=lazy_pinyin(name)</span><br><span class="line">    P2name = <span class="string">&#x27;&#x27;</span>.join(Pname)</span><br><span class="line">    print(name)</span><br><span class="line">    print(Pname)</span><br><span class="line">    print(P2name)</span><br><span class="line">    <span class="comment"># 杨蕾</span></span><br><span class="line">	<span class="comment">#[&#x27;yang&#x27;, &#x27;lei&#x27;]</span></span><br><span class="line">    <span class="comment">#yanglei</span></span><br><span class="line">    table.write(table_row, <span class="number">0</span>, name)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table.write(table_row, <span class="number">1</span>, P2name)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table_row = table_row + <span class="number">1</span></span><br><span class="line">    <span class="comment"># author=dfS.iloc[i, 0]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># print(lazy_pinyin(&#x27;聪明的小兔子&#x27;))</span></span><br><span class="line">file.save(<span class="string">&#x27;查询结果.xls&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="3-系统文件"><a href="#3-系统文件" class="headerlink" title="3.系统文件"></a>3.系统文件</h1><p>文件夹下批量改名</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件夹下批量改名</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">path=<span class="string">r&quot;D:/&quot;</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">    <span class="keyword">if</span><span class="string">&quot;3A&quot;</span> <span class="keyword">in</span> file:</span><br><span class="line">        <span class="comment"># print(file)</span></span><br><span class="line">        str1=os.path.join(path,file)</span><br><span class="line">        str2=str1.replace(<span class="string">&quot;3A_&quot;</span>,<span class="string">&quot;&quot;</span>)</span><br><span class="line">        os.rename(str1,str2)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>自动化办公</tag>
-      </tags>
+    <title>python操作文件</title>
+    <url>/2021/02/13/python%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="读取txt文件"><a href="#读取txt文件" class="headerlink" title="读取txt文件"></a>读取txt文件</h1><p>f = open(‘ip_list.txt’)<br>for row in f.readlines():</p>
+<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><p>使用Paramiko来SSH登录一台网络设备</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> getpass <span class="keyword">import</span> getpass</span><br><span class="line"></span><br><span class="line">username = <span class="built_in">input</span>(<span class="string">&#x27;Enter your username: &#x27;</span>)</span><br><span class="line">password = getpass(<span class="string">&#x27;Enter you password: &#x27;</span>)</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;ip_list.txt&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ips <span class="keyword">in</span> f.readlines():</span><br><span class="line">    ip = ips.strip()</span><br><span class="line">    ssh_client = paramiko.SSHClient()</span><br><span class="line">    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())</span><br><span class="line">    ssh_client.connect(hostname=ip, username=username, password=password, look_for_keys=<span class="literal">False</span>)</span><br><span class="line">    command = ssh_client.invoke_shell()</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">f&#x27;Sucessfully login to <span class="subst">&#123;ip&#125;</span>&#x27;</span>)</span><br><span class="line">    command.send(<span class="string">&#x27;term len 0\n&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>python病毒</title>
@@ -1081,46 +1061,6 @@
       <categories>
         <category>python</category>
       </categories>
-  </entry>
-  <entry>
-    <title>sklearn初探</title>
-    <url>/2022/01/29/skearn%E5%88%9D%E6%8E%A2/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>sklearn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>sql刷题</title>
-    <url>/2022/01/28/sql%E5%88%B7%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><p>窗口函数</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="built_in">row_number</span>() <span class="keyword">over</span>(<span class="keyword">PARTITION</span> <span class="keyword">by</span> `课程` <span class="keyword">ORDER</span> <span class="keyword">BY</span> `成绩` <span class="keyword">DESC</span>) <span class="keyword">as</span> `课程排名`</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>错误1<br>==注意PARTITION by和ORDER BY之间是个空格，没有逗号==。</p>
-</li>
-<li><p>错误2<br>==注意select后面的字段用逗号隔开，但是最后不要有多余的逗号==<br><img src="https://raw.githubusercontent.com/peacefullmind/Picture/main/%E9%94%99%E8%AF%AF2.png"><br>此问题易发在复制字段上。</p>
-</li>
-</ul>
-<h2 id="补充小的语法点"><a href="#补充小的语法点" class="headerlink" title="补充小的语法点"></a>补充小的语法点</h2><ul>
-<li><p>对于空值的处理<br>ifnull(a,b)a是单列，b是当a为空时的值，如null,避免报错。<br>==当a是个查询语句的时候，应该整体用括号括起来==</p>
-</li>
-<li><p>排名<br>limit n子句表示查询结果返回前n条数据<br>offset n表示跳过x条语句<br>limit y offset x 分句表示查询结果跳过 x 条数据，读取前 y 条数据<br>limit y,x<br>配合order by 使用<br>或者新增一列表示排名，然后用 where r=n</p>
-</li>
-<li><p>日期函数求差值<br>==diffdate(a.日期, b.日期) = 1”或者“timestampdiff(day, a.日期, b.日期) = -1”，以此为基准，提取表中的数据==</p>
-</li>
-<li><p>cross join<br>找出前一天</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>刷题</tag>
-      </tags>
   </entry>
   <entry>
     <title>sql函数</title>
@@ -1180,6 +1120,67 @@
       </categories>
       <tags>
         <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python自动化办公</title>
+    <url>/2021/02/13/python%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/</url>
+    <content><![CDATA[<h1 id="1-word模板"><a href="#1-word模板" class="headerlink" title="1. word模板"></a>1. word模板</h1><p>python-docx是一个操作Word文档非常好用的python模块，入门也非常简单。它把一个Word文档像一层层剥洋葱一样拆分为Document,Paragraph,Run三层。<br>Run又是对段落的拆分。一个run对象是相同样式文本的延续，只要文本的格式（大小、颜色等）没有改变，那么就是一个run，一旦改变就是另外一个run了。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> docx</span><br><span class="line">document = Document(<span class="string">&#x27;/Users/cuiyingdan/Desktop/邀请函模版.docx&#x27;</span>)</span><br><span class="line">all_paragraphs = document.paragraphs</span><br></pre></td></tr></table></figure>
+<p>文本替换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">replace_text</span>(<span class="params">old_text, new_text</span>):</span></span><br><span class="line">    <span class="comment">#读取所有的自然段</span></span><br><span class="line">    all_paragraphs = document.paragraphs</span><br><span class="line">    <span class="keyword">for</span> paragraph <span class="keyword">in</span> all_paragraphs:</span><br><span class="line">        <span class="keyword">for</span> run <span class="keyword">in</span> paragraph.runs:</span><br><span class="line">            run_text = run.text.replace(old_text, new_text)</span><br><span class="line">            run.text = run_text</span><br></pre></td></tr></table></figure>
+<h1 id="2-表格处理"><a href="#2-表格处理" class="headerlink" title="2.表格处理"></a>2.表格处理</h1><p>表格的处理工作用到Python的openpyxl模块【只能操作新版本】，或者xlwt xlrd [推荐，对于老版本适用]<br>Workbook(工作簿，一个包含多个Sheet的Excel文件)<br>Worksheet（工作表，一个Workbook有多个Worksheet，如“Sheet1”,“Sheet2”等）<br>Cell（单元格，存储具体的数据对象）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">wb = load_workbook(<span class="string">&#x27;/Users/cuiyingdan/Desktop/data.xlsx&#x27;</span>)</span><br><span class="line">sheet = wb.active <span class="comment">#用wb.active获取第一张Worksheet工作表：</span></span><br></pre></td></tr></table></figure>
+<p>库的官网<br><a href="https://xlrd.readthedocs.io/en/latest/">xlrd</a></p>
+<h2 id="2-1例子"><a href="#2-1例子" class="headerlink" title="2.1例子"></a>2.1例子</h2><p>人名的拼音</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pypinyin <span class="keyword">import</span> lazy_pinyin, Style</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line"><span class="comment"># style = Style.TONE3</span></span><br><span class="line"></span><br><span class="line">data1=pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line">file =xlwt.Workbook() <span class="comment">#新建一个excel</span></span><br><span class="line">table=file.add_sheet(<span class="string">&#x27;输出结果&#x27;</span>)</span><br><span class="line">table_row=<span class="number">0</span><span class="comment">#这是行数，从0行开始写</span></span><br><span class="line">table.write(table_row, <span class="number">0</span>, <span class="string">&#x27;姓名&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table.write(table_row, <span class="number">1</span>, <span class="string">&#x27;拼音&#x27;</span>)  <span class="comment"># 将,,写入</span></span><br><span class="line">table_row=table_row+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(data1)):</span><br><span class="line">    print(i)</span><br><span class="line">    name = data1.iloc[i, <span class="number">0</span>]</span><br><span class="line">    Pname=lazy_pinyin(name)</span><br><span class="line">    P2name = <span class="string">&#x27;&#x27;</span>.join(Pname)</span><br><span class="line">    print(name)</span><br><span class="line">    print(Pname)</span><br><span class="line">    print(P2name)</span><br><span class="line">    <span class="comment"># 杨蕾</span></span><br><span class="line">	<span class="comment">#[&#x27;yang&#x27;, &#x27;lei&#x27;]</span></span><br><span class="line">    <span class="comment">#yanglei</span></span><br><span class="line">    table.write(table_row, <span class="number">0</span>, name)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table.write(table_row, <span class="number">1</span>, P2name)  <span class="comment"># 将,,写入</span></span><br><span class="line">    table_row = table_row + <span class="number">1</span></span><br><span class="line">    <span class="comment"># author=dfS.iloc[i, 0]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># print(lazy_pinyin(&#x27;聪明的小兔子&#x27;))</span></span><br><span class="line">file.save(<span class="string">&#x27;查询结果.xls&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="3-系统文件"><a href="#3-系统文件" class="headerlink" title="3.系统文件"></a>3.系统文件</h1><p>文件夹下批量改名</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件夹下批量改名</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">path=<span class="string">r&quot;D:/&quot;</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">    <span class="keyword">if</span><span class="string">&quot;3A&quot;</span> <span class="keyword">in</span> file:</span><br><span class="line">        <span class="comment"># print(file)</span></span><br><span class="line">        str1=os.path.join(path,file)</span><br><span class="line">        str2=str1.replace(<span class="string">&quot;3A_&quot;</span>,<span class="string">&quot;&quot;</span>)</span><br><span class="line">        os.rename(str1,str2)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>自动化办公</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sklearn初探</title>
+    <url>/2022/01/29/skearn%E5%88%9D%E6%8E%A2/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>sklearn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sql刷题</title>
+    <url>/2022/01/28/sql%E5%88%B7%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><p>窗口函数</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="built_in">row_number</span>() <span class="keyword">over</span>(<span class="keyword">PARTITION</span> <span class="keyword">by</span> `课程` <span class="keyword">ORDER</span> <span class="keyword">BY</span> `成绩` <span class="keyword">DESC</span>) <span class="keyword">as</span> `课程排名`</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>错误1<br>==注意PARTITION by和ORDER BY之间是个空格，没有逗号==。</p>
+</li>
+<li><p>错误2<br>==注意select后面的字段用逗号隔开，但是最后不要有多余的逗号==<br><img src="https://raw.githubusercontent.com/peacefullmind/Picture/main/%E9%94%99%E8%AF%AF2.png"><br>此问题易发在复制字段上。</p>
+</li>
+</ul>
+<h2 id="补充小的语法点"><a href="#补充小的语法点" class="headerlink" title="补充小的语法点"></a>补充小的语法点</h2><ul>
+<li><p>对于空值的处理<br>ifnull(a,b)a是单列，b是当a为空时的值，如null,避免报错。<br>==当a是个查询语句的时候，应该整体用括号括起来==</p>
+</li>
+<li><p>排名<br>limit n子句表示查询结果返回前n条数据<br>offset n表示跳过x条语句<br>limit y offset x 分句表示查询结果跳过 x 条数据，读取前 y 条数据<br>limit y,x<br>配合order by 使用<br>或者新增一列表示排名，然后用 where r=n</p>
+</li>
+<li><p>日期函数求差值<br>==diffdate(a.日期, b.日期) = 1”或者“timestampdiff(day, a.日期, b.日期) = -1”，以此为基准，提取表中的数据==</p>
+</li>
+<li><p>cross join<br>找出前一天</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>刷题</tag>
       </tags>
   </entry>
   <entry>
@@ -1259,6 +1260,28 @@
       </categories>
   </entry>
   <entry>
+    <title>vscode使用</title>
+    <url>/2021/03/15/vscode%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>Hbuilder比较<br>VScode设置和插件</p>
+<p>右键 新建html文件后</p>
+<p>感叹号加回车 自动生成html文件</p>
+<p>shift+alt+下箭头 复制本行到下一行</p>
+<p>ctrl+X 删除本行</p>
+]]></content>
+      <categories>
+        <category>vscode</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tensorflow安装</title>
+    <url>/2021/02/13/tensorflow%20%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="tensorflow-安装"><a href="#tensorflow-安装" class="headerlink" title="tensorflow 安装"></a>tensorflow 安装</h1><p>选择是安装GPU版本，还是CPU版本，<br>选择GPU<br>下载cuda，cnnti，然后注意将下载的cnnti版本的内容拷贝到cudn<br>注意 cuda cnnti tensorflow版本适配，最好不要太高版本</p>
+]]></content>
+  </entry>
+  <entry>
     <title>sql语句表结构</title>
     <url>/2021/02/13/sql%E8%AF%AD%E5%8F%A5%E8%A1%A8%E7%BB%93%E6%9E%84%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<h1 id="1-查看表结构"><a href="#1-查看表结构" class="headerlink" title="1.查看表结构"></a>1.查看表结构</h1><p>查看表结构，字段类型<br>describe 或者desc</p>
@@ -1311,12 +1334,6 @@
       </tags>
   </entry>
   <entry>
-    <title>tensorflow安装</title>
-    <url>/2021/02/13/tensorflow%20%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="tensorflow-安装"><a href="#tensorflow-安装" class="headerlink" title="tensorflow 安装"></a>tensorflow 安装</h1><p>选择是安装GPU版本，还是CPU版本，<br>选择GPU<br>下载cuda，cnnti，然后注意将下载的cnnti版本的内容拷贝到cudn<br>注意 cuda cnnti tensorflow版本适配，最好不要太高版本</p>
-]]></content>
-  </entry>
-  <entry>
     <title>web开发</title>
     <url>/2021/04/10/web%E5%BC%80%E5%8F%91/</url>
     <content><![CDATA[<h2 id="从url输入到返回请求的过程"><a href="#从url输入到返回请求的过程" class="headerlink" title="从url输入到返回请求的过程"></a>从url输入到返回请求的过程</h2><p>用户在浏览器输入url，url通过dns解析成ip+端口的形式，这个是http请求的目标地址，发送http请求至server端【三次握手】，server端根据接收到的参数返回，前端页面（浏览器渲染）和数据。</p>
@@ -1343,19 +1360,39 @@
 ]]></content>
   </entry>
   <entry>
-    <title>vscode使用</title>
-    <url>/2021/03/15/vscode%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>Hbuilder比较<br>VScode设置和插件</p>
-<p>右键 新建html文件后</p>
-<p>感叹号加回车 自动生成html文件</p>
-<p>shift+alt+下箭头 复制本行到下一行</p>
-<p>ctrl+X 删除本行</p>
+    <title>二维表转换与透视表python</title>
+    <url>/2021/04/24/%E4%BA%8C%E7%BB%B4%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%B8%8E%E9%80%8F%E8%A7%86%E8%A1%A8python/</url>
+    <content><![CDATA[<h2 id="二维表转换"><a href="#二维表转换" class="headerlink" title="二维表转换"></a>二维表转换</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df=pd.read_excel(<span class="string">&quot;data.xlsx&quot;</span>,<span class="string">&quot;Sheet1&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>df数据为<br><img src="/images/df%E6%95%B0%E6%8D%AE.jpg" alt="df数据"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#将二维表转换成一维表</span></span><br><span class="line">new_data=df.set_indwx(<span class="string">&quot;地区&quot;</span>) <span class="comment"># 将df中的地区一列设置为索引列</span></span><br><span class="line">df1 = new_data.stack()  <span class="comment"># stack的返回对象df1是一个二级索引Series对象</span></span><br><span class="line">df2 = df1.reset_index() <span class="comment"># 通过reset_index函数将Series对象的二级索引均转化为DataFrame对象的列值</span></span><br><span class="line"> df2.columns = [<span class="string">&#x27;地区&#x27;</span>,<span class="string">&#x27;时间&#x27;</span>,<span class="string">&#x27;金额&#x27;</span>]</span><br><span class="line">df2</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 将一维数据表转化为二维数据表：</span></span><br><span class="line">s = pd.Series(<span class="built_in">list</span>(df2[<span class="string">&#x27;金额&#x27;</span>]),index=[df2[<span class="string">&#x27;地区&#x27;</span>],df2[<span class="string">&#x27;时间&#x27;</span>]])  <span class="comment"># 利用一维数据表df2构造一个二级索引Series对象</span></span><br><span class="line">df3 = s.unstack() <span class="comment"># 对s执行stack的逆操作unstack</span></span><br><span class="line">df3</span><br></pre></td></tr></table></figure>
+<h2 id="分类型数据"><a href="#分类型数据" class="headerlink" title="分类型数据"></a>分类型数据</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df[<span class="string">&quot;状态&quot;</span>] = df[<span class="string">&quot;状态&quot;</span>].astype(<span class="string">&quot;category&quot;</span>)</span><br><span class="line">df[<span class="string">&quot;状态&quot;</span>].cat.set_categories([<span class="string">&quot;完成&quot;</span>,<span class="string">&quot;待供&quot;</span>,<span class="string">&quot;提供&quot;</span>,<span class="string">&quot;被拒供&quot;</span>],inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="透视数据"><a href="#透视数据" class="headerlink" title="透视数据"></a>透视数据</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>])</span><br></pre></td></tr></table></figure>
+<p>通过将“销售代表”与其“经理”分组来开始汇总数据并进行汇总,其他列我们暂时不想看。那我们通过显式定义 values 字段来指定要显示的列。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>])</span><br></pre></td></tr></table></figure>
+<p>价格会自动对数据进行平均，但我们可以进行计数或总和。使用aggfunc和添加np.sum。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>],aggfunc=np.<span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>
+<p>aggfunc可以添加不同的聚合函数。可以使用numpy.mean函数求平均值并len计数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>],aggfunc=[np.mean,<span class="built_in">len</span>])</span><br></pre></td></tr></table></figure>
+<p>透视表pivot_table()是一种进行分组统计的函数，参数aggfunc决定统计类型。</p>
+<h2 id="多层索引与转换"><a href="#多层索引与转换" class="headerlink" title="多层索引与转换"></a>多层索引与转换</h2><p>stack<br>unstack</p>
 ]]></content>
       <categories>
-        <category>vscode</category>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>使用openyxl来处理表格</title>
+    <url>/2021/04/24/%E4%BD%BF%E7%94%A8openyxl%E6%9D%A5%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC/</url>
+    <content><![CDATA[<p>代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> transData</span><br><span class="line"></span><br><span class="line">wb = load_workbook(<span class="string">&#x27;MNT_000_快报(集团汇总查看)202103期从系统下载数据2.xlsm&#x27;</span>,data_only=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#源数据</span></span><br><span class="line">mysheet = wb.get_sheet_by_name(<span class="string">&#x27;M03-集团汇总输出给快报&#x27;</span>)</span><br><span class="line"></span><br><span class="line">wb2=load_workbook(<span class="string">&#x27;202102.xlsx&#x27;</span>,data_only=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#目标数据模板,模板格式要设置对，百分比等</span></span><br><span class="line">mysheet2=wb2.get_sheet_by_name(<span class="string">&#x27;Sheet1&#x27;</span>)</span><br><span class="line">transData.tranData(mysheet[<span class="string">&#x27;M43&#x27;</span>:<span class="string">&#x27;P63&#x27;</span>],mysheet2[<span class="string">&#x27;D11&#x27;</span>:<span class="string">&#x27;G31&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<p>函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranData</span>(<span class="params">tuple1,tuple2</span>):</span></span><br><span class="line">    <span class="built_in">list</span> = []</span><br><span class="line">    <span class="keyword">for</span> row_obj <span class="keyword">in</span> tuple1:</span><br><span class="line">        l = []</span><br><span class="line">        <span class="keyword">for</span> cell_obj <span class="keyword">in</span> row_obj:</span><br><span class="line">            myvalue = cell_obj.value</span><br><span class="line">            l.append(myvalue)</span><br><span class="line">        <span class="built_in">list</span>.append(l)</span><br><span class="line"></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row_obj <span class="keyword">in</span> tuple2:</span><br><span class="line">        j = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> cell_obj <span class="keyword">in</span> row_obj:</span><br><span class="line">            cell_obj.value = <span class="built_in">list</span>[i][j]</span><br><span class="line">            print(cell_obj.value)</span><br><span class="line">            j = j + <span class="number">1</span></span><br><span class="line">        i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>vscode</tag>
+        <tag>openyxl</tag>
       </tags>
   </entry>
   <entry>
@@ -1400,55 +1437,11 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">myresult=TestA_data.loc[:,(<span class="string">&#x27;SaleID&#x27;</span>)]</span><br><span class="line">myresult=pd.DataFrame(myresult)</span><br><span class="line">myresult.insert(<span class="number">1</span>, <span class="string">&#x27;price&#x27;</span>, xgbr_y_predict)</span><br><span class="line">print(myresult)</span><br><span class="line">myresult.to_csv(<span class="string">&quot;predictions.csv&quot;</span>,index=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
-    <title>二维表转换与透视表python</title>
-    <url>/2021/04/24/%E4%BA%8C%E7%BB%B4%E8%A1%A8%E8%BD%AC%E6%8D%A2%E4%B8%8E%E9%80%8F%E8%A7%86%E8%A1%A8python/</url>
-    <content><![CDATA[<h2 id="二维表转换"><a href="#二维表转换" class="headerlink" title="二维表转换"></a>二维表转换</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df=pd.read_excel(<span class="string">&quot;data.xlsx&quot;</span>,<span class="string">&quot;Sheet1&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>df数据为<br><img src="/images/df%E6%95%B0%E6%8D%AE.jpg" alt="df数据"></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#将二维表转换成一维表</span></span><br><span class="line">new_data=df.set_indwx(<span class="string">&quot;地区&quot;</span>) <span class="comment"># 将df中的地区一列设置为索引列</span></span><br><span class="line">df1 = new_data.stack()  <span class="comment"># stack的返回对象df1是一个二级索引Series对象</span></span><br><span class="line">df2 = df1.reset_index() <span class="comment"># 通过reset_index函数将Series对象的二级索引均转化为DataFrame对象的列值</span></span><br><span class="line"> df2.columns = [<span class="string">&#x27;地区&#x27;</span>,<span class="string">&#x27;时间&#x27;</span>,<span class="string">&#x27;金额&#x27;</span>]</span><br><span class="line">df2</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 将一维数据表转化为二维数据表：</span></span><br><span class="line">s = pd.Series(<span class="built_in">list</span>(df2[<span class="string">&#x27;金额&#x27;</span>]),index=[df2[<span class="string">&#x27;地区&#x27;</span>],df2[<span class="string">&#x27;时间&#x27;</span>]])  <span class="comment"># 利用一维数据表df2构造一个二级索引Series对象</span></span><br><span class="line">df3 = s.unstack() <span class="comment"># 对s执行stack的逆操作unstack</span></span><br><span class="line">df3</span><br></pre></td></tr></table></figure>
-<h2 id="分类型数据"><a href="#分类型数据" class="headerlink" title="分类型数据"></a>分类型数据</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df[<span class="string">&quot;状态&quot;</span>] = df[<span class="string">&quot;状态&quot;</span>].astype(<span class="string">&quot;category&quot;</span>)</span><br><span class="line">df[<span class="string">&quot;状态&quot;</span>].cat.set_categories([<span class="string">&quot;完成&quot;</span>,<span class="string">&quot;待供&quot;</span>,<span class="string">&quot;提供&quot;</span>,<span class="string">&quot;被拒供&quot;</span>],inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="透视数据"><a href="#透视数据" class="headerlink" title="透视数据"></a>透视数据</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>])</span><br></pre></td></tr></table></figure>
-<p>通过将“销售代表”与其“经理”分组来开始汇总数据并进行汇总,其他列我们暂时不想看。那我们通过显式定义 values 字段来指定要显示的列。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>])</span><br></pre></td></tr></table></figure>
-<p>价格会自动对数据进行平均，但我们可以进行计数或总和。使用aggfunc和添加np.sum。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>],aggfunc=np.<span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>
-<p>aggfunc可以添加不同的聚合函数。可以使用numpy.mean函数求平均值并len计数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.pivot_table(df,index=[<span class="string">&quot;经理&quot;</span>,<span class="string">&quot;销售代表&quot;</span>],values=[<span class="string">&quot;价格&quot;</span>],aggfunc=[np.mean,<span class="built_in">len</span>])</span><br></pre></td></tr></table></figure>
-<p>透视表pivot_table()是一种进行分组统计的函数，参数aggfunc决定统计类型。</p>
-<h2 id="多层索引与转换"><a href="#多层索引与转换" class="headerlink" title="多层索引与转换"></a>多层索引与转换</h2><p>stack<br>unstack</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-  </entry>
-  <entry>
     <title>人物动漫调用百度AI接口</title>
     <url>/2021/02/13/%E4%BA%BA%E7%89%A9%E5%8A%A8%E6%BC%AB%E7%94%BB%E8%B0%83%E7%94%A8%E7%99%BE%E5%BA%A6AI%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># encoding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_token</span>():</span></span><br><span class="line">    <span class="comment">#host = &#x27;https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&amp;client_id=【官网获取的AK】&amp;client_secret=【官网获取的SK】&#x27;</span></span><br><span class="line">    url=<span class="string">&quot;https://aip.baidubce.com/oauth/2.0/token&quot;</span></span><br><span class="line">    params=&#123;</span><br><span class="line">        <span class="string">&#x27;grant_type&#x27;</span>:<span class="string">&#x27;client_credentials&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;client_id&#x27;</span>:<span class="string">&#x27;??????????&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;client_secret&#x27;</span>:<span class="string">&#x27;??????????&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url,params)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> response:</span><br><span class="line">       <span class="comment"># print(response.json(),type(response))</span></span><br><span class="line">        access_token = <span class="built_in">eval</span>(response.text)[<span class="string">&#x27;access_token&#x27;</span>]</span><br><span class="line">        <span class="comment">#print(access_token)</span></span><br><span class="line">        <span class="keyword">return</span> access_token</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">人物动漫化</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">request_url = <span class="string">&quot;https://aip.baidubce.com/rest/2.0/image-process/v1/selfie_anime&quot;</span></span><br><span class="line"><span class="comment"># 二进制方式打开图片文件</span></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;test.jpeg&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line">img = base64.b64encode(f.read())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">params = &#123;<span class="string">&quot;image&quot;</span>:img&#125;</span><br><span class="line">access_token = get_token()</span><br><span class="line">request_url = request_url + <span class="string">&quot;?access_token=&quot;</span> + access_token</span><br><span class="line">headers = &#123;<span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>&#125;</span><br><span class="line">response = requests.post(request_url, data=params, headers=headers)</span><br><span class="line"><span class="keyword">if</span> response:</span><br><span class="line">    <span class="built_in">print</span> (response.json())</span><br><span class="line">    img_base64 = <span class="built_in">eval</span>(response.text)[<span class="string">&#x27;image&#x27;</span>]</span><br><span class="line">    print(img_base64)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    f2=<span class="built_in">open</span>(<span class="string">&#x27;testout.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">    img = base64.b64decode(img_base64)</span><br><span class="line">    f2.write(img)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>-百度AI接口的调用<br>-request.post(),request.post()的使用<br>-文件读取和写入的方法<br>-base64编码</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>使用openyxl来处理表格</title>
-    <url>/2021/04/24/%E4%BD%BF%E7%94%A8openyxl%E6%9D%A5%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC/</url>
-    <content><![CDATA[<p>代码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> transData</span><br><span class="line"></span><br><span class="line">wb = load_workbook(<span class="string">&#x27;MNT_000_快报(集团汇总查看)202103期从系统下载数据2.xlsm&#x27;</span>,data_only=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#源数据</span></span><br><span class="line">mysheet = wb.get_sheet_by_name(<span class="string">&#x27;M03-集团汇总输出给快报&#x27;</span>)</span><br><span class="line"></span><br><span class="line">wb2=load_workbook(<span class="string">&#x27;202102.xlsx&#x27;</span>,data_only=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#目标数据模板,模板格式要设置对，百分比等</span></span><br><span class="line">mysheet2=wb2.get_sheet_by_name(<span class="string">&#x27;Sheet1&#x27;</span>)</span><br><span class="line">transData.tranData(mysheet[<span class="string">&#x27;M43&#x27;</span>:<span class="string">&#x27;P63&#x27;</span>],mysheet2[<span class="string">&#x27;D11&#x27;</span>:<span class="string">&#x27;G31&#x27;</span>])</span><br></pre></td></tr></table></figure>
-<p>函数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranData</span>(<span class="params">tuple1,tuple2</span>):</span></span><br><span class="line">    <span class="built_in">list</span> = []</span><br><span class="line">    <span class="keyword">for</span> row_obj <span class="keyword">in</span> tuple1:</span><br><span class="line">        l = []</span><br><span class="line">        <span class="keyword">for</span> cell_obj <span class="keyword">in</span> row_obj:</span><br><span class="line">            myvalue = cell_obj.value</span><br><span class="line">            l.append(myvalue)</span><br><span class="line">        <span class="built_in">list</span>.append(l)</span><br><span class="line"></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> row_obj <span class="keyword">in</span> tuple2:</span><br><span class="line">        j = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> cell_obj <span class="keyword">in</span> row_obj:</span><br><span class="line">            cell_obj.value = <span class="built_in">list</span>[i][j]</span><br><span class="line">            print(cell_obj.value)</span><br><span class="line">            j = j + <span class="number">1</span></span><br><span class="line">        i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>openyxl</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息转录</title>
-    <url>/2021/06/27/%E4%BF%A1%E6%81%AF%E8%BD%AC%E5%BD%95/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span>  pd</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.keys <span class="keyword">import</span> Keys</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver <span class="keyword">import</span> ActionChains</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url=<span class="string">&#x27;http://211.144.37.34/TxLogin&#x27;</span></span><br><span class="line">acc=<span class="string">&#x27;李冰&#x27;</span></span><br><span class="line">password=<span class="string">&#x27;libing13398951206&#x27;</span></span><br><span class="line">data=pd.read_excel(<span class="string">&#x27;PD质控数据汇总表.xlsx&#x27;</span>,skiprows=<span class="number">1</span>)</span><br><span class="line">name_list=data[<span class="string">&#x27;患者姓名&#x27;</span>]</span><br><span class="line"><span class="comment"># print(name_list)</span></span><br><span class="line">result=pd.DataFrame()</span><br><span class="line">mylist=[]</span><br><span class="line"></span><br><span class="line"><span class="comment">#============================================================================================================</span></span><br><span class="line">chromeDriver = <span class="string">&quot;D:\\chromedriver_win32\\chromedriver.exe&quot;</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=chromeDriver)</span><br><span class="line">driver.get(url=url)</span><br><span class="line">time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;form1&quot;]/div[3]/div[2]/div[2]/div[1]/div[2]/label&#x27;</span>).click()</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;tbUser&quot;]&#x27;</span>).send_keys(acc)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;tbPwd&quot;]&#x27;</span>).send_keys(password)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;btnLogin&quot;]&#x27;</span>).click()</span><br><span class="line">time.sleep(<span class="number">0.5</span>)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;topNavRecord&quot;]/a&#x27;</span>).click()</span><br><span class="line"><span class="comment">#============================================================================================================</span></span><br><span class="line">name=name_list[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;searchKey&quot;]&#x27;</span>).send_keys(name)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;searchKey&quot;]&#x27;</span>).send_keys(Keys.ENTER)</span><br><span class="line">time.sleep(<span class="number">0.5</span>)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;recordsViewTable&quot;]/tbody/tr&#x27;</span>).click()</span><br><span class="line">time.sleep(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意切换窗口</span></span><br><span class="line">windows = driver.window_handles</span><br><span class="line">driver.switch_to.window(windows[-<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">js=<span class="string">&quot;var q=document.documentElement.scrollTop=10000&quot;</span></span><br><span class="line">js3=<span class="string">&quot;window.scrollTo(100,450);&quot;</span></span><br><span class="line">driver.execute_script(js)</span><br><span class="line"></span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/ul/li[3]/a&#x27;</span>).click()</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[2]/div/button&#x27;</span>).click()</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[2]/div/ul/li[3]/a&#x27;</span>).click()</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意没有小括号</span></span><br><span class="line"><span class="comment">#第一季度</span></span><br><span class="line">text=driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/p[2]/span[3]&#x27;</span>).text</span><br><span class="line">print(text)</span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;本季度已登记&quot;</span> <span class="keyword">in</span> text:</span><br><span class="line">    <span class="comment"># temp=[]</span></span><br><span class="line">    print(<span class="string">&quot;yes&quot;</span>)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/p[2]/span[2]&#x27;</span>).click()</span><br><span class="line">    js = <span class="string">&#x27;window.scrollBy(0,150)&#x27;</span></span><br><span class="line">    driver.execute_script(js)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    tbody=driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/div/table/tbody&#x27;</span>)</span><br><span class="line">    rowCount = <span class="built_in">len</span>(driver.find_elements_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/div/table/tbody/tr&#x27;</span>))</span><br><span class="line">    <span class="comment"># print(rowCount)</span></span><br><span class="line"></span><br><span class="line">    temp=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,rowCount):</span><br><span class="line">        print(i)</span><br><span class="line">        zhi=driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/div/table/tbody/tr[%s]/td[1]&#x27;</span>%i).text</span><br><span class="line">        print(zhi)</span><br><span class="line">        value=driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/div/table/tbody/tr[%s]/td[2]&#x27;</span>%i).text</span><br><span class="line">        print(value)</span><br><span class="line">        temp=temp.append([zhi,value])</span><br><span class="line">    print(temp)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;程序运行结束&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
   </entry>
   <entry>
     <title>使用xlwt模块操作excel表</title>
@@ -1475,6 +1468,14 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <tags>
         <tag>自动化</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>信息转录</title>
+    <url>/2021/06/27/%E4%BF%A1%E6%81%AF%E8%BD%AC%E5%BD%95/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span>  pd</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.keys <span class="keyword">import</span> Keys</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver <span class="keyword">import</span> ActionChains</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url=<span class="string">&#x27;http://211.144.37.34/TxLogin&#x27;</span></span><br><span class="line">acc=<span class="string">&#x27;李冰&#x27;</span></span><br><span class="line">password=<span class="string">&#x27;libing13398951206&#x27;</span></span><br><span class="line">data=pd.read_excel(<span class="string">&#x27;PD质控数据汇总表.xlsx&#x27;</span>,skiprows=<span class="number">1</span>)</span><br><span class="line">name_list=data[<span class="string">&#x27;患者姓名&#x27;</span>]</span><br><span class="line"><span class="comment"># print(name_list)</span></span><br><span class="line">result=pd.DataFrame()</span><br><span class="line">mylist=[]</span><br><span class="line"></span><br><span class="line"><span class="comment">#============================================================================================================</span></span><br><span class="line">chromeDriver = <span class="string">&quot;D:\\chromedriver_win32\\chromedriver.exe&quot;</span></span><br><span class="line">driver = webdriver.Chrome(executable_path=chromeDriver)</span><br><span class="line">driver.get(url=url)</span><br><span class="line">time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;form1&quot;]/div[3]/div[2]/div[2]/div[1]/div[2]/label&#x27;</span>).click()</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;tbUser&quot;]&#x27;</span>).send_keys(acc)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;tbPwd&quot;]&#x27;</span>).send_keys(password)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;btnLogin&quot;]&#x27;</span>).click()</span><br><span class="line">time.sleep(<span class="number">0.5</span>)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;topNavRecord&quot;]/a&#x27;</span>).click()</span><br><span class="line"><span class="comment">#============================================================================================================</span></span><br><span class="line">name=name_list[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;searchKey&quot;]&#x27;</span>).send_keys(name)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;searchKey&quot;]&#x27;</span>).send_keys(Keys.ENTER)</span><br><span class="line">time.sleep(<span class="number">0.5</span>)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;recordsViewTable&quot;]/tbody/tr&#x27;</span>).click()</span><br><span class="line">time.sleep(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意切换窗口</span></span><br><span class="line">windows = driver.window_handles</span><br><span class="line">driver.switch_to.window(windows[-<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">js=<span class="string">&quot;var q=document.documentElement.scrollTop=10000&quot;</span></span><br><span class="line">js3=<span class="string">&quot;window.scrollTo(100,450);&quot;</span></span><br><span class="line">driver.execute_script(js)</span><br><span class="line"></span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/ul/li[3]/a&#x27;</span>).click()</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[2]/div/button&#x27;</span>).click()</span><br><span class="line">driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[2]/div/ul/li[3]/a&#x27;</span>).click()</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意没有小括号</span></span><br><span class="line"><span class="comment">#第一季度</span></span><br><span class="line">text=driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/p[2]/span[3]&#x27;</span>).text</span><br><span class="line">print(text)</span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;本季度已登记&quot;</span> <span class="keyword">in</span> text:</span><br><span class="line">    <span class="comment"># temp=[]</span></span><br><span class="line">    print(<span class="string">&quot;yes&quot;</span>)</span><br><span class="line">    driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/p[2]/span[2]&#x27;</span>).click()</span><br><span class="line">    js = <span class="string">&#x27;window.scrollBy(0,150)&#x27;</span></span><br><span class="line">    driver.execute_script(js)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    tbody=driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/div/table/tbody&#x27;</span>)</span><br><span class="line">    rowCount = <span class="built_in">len</span>(driver.find_elements_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/div/table/tbody/tr&#x27;</span>))</span><br><span class="line">    <span class="comment"># print(rowCount)</span></span><br><span class="line"></span><br><span class="line">    temp=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,rowCount):</span><br><span class="line">        print(i)</span><br><span class="line">        zhi=driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/div/table/tbody/tr[%s]/td[1]&#x27;</span>%i).text</span><br><span class="line">        print(zhi)</span><br><span class="line">        value=driver.find_element_by_xpath(<span class="string">&#x27;//*[@id=&quot;overviewContainer&quot;]/div[11]/div[4]/div[1]/div/table/tbody/tr[%s]/td[2]&#x27;</span>%i).text</span><br><span class="line">        print(value)</span><br><span class="line">        temp=temp.append([zhi,value])</span><br><span class="line">    print(temp)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;程序运行结束&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
   </entry>
   <entry>
     <title>八皇后问题</title>
@@ -1516,6 +1517,17 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <tags>
         <tag>安全</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>刷题常用数据结构基于python</title>
+    <url>/2022/02/05/%E5%88%B7%E9%A2%98%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E4%BA%8Epython/</url>
+    <content><![CDATA[<h2 id="链表之节点"><a href="#链表之节点" class="headerlink" title="链表之节点"></a>链表之节点</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,data,<span class="built_in">next</span>=<span class="literal">None</span></span>):</span></span><br><span class="line">        self.data=data</span><br><span class="line">        self.<span class="built_in">next</span>=<span class="built_in">next</span></span><br></pre></td></tr></table></figure>
+<p>如果有需要，再建立ListNode类</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,head</span>):</span></span><br><span class="line">        self.head=head</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_list</span>(<span class="params">self</span>):</span></span><br><span class="line">        my_node=self.head</span><br><span class="line">        print(my_node.data,end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">while</span>(my_node.<span class="built_in">next</span>):</span><br><span class="line">            my_node=my_node.<span class="built_in">next</span></span><br><span class="line">            print(my_node.data,end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseList</span>(<span class="params">self,head</span>):</span></span><br><span class="line">        <span class="keyword">if</span> head==<span class="literal">None</span> <span class="keyword">or</span> head.<span class="built_in">next</span>==<span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            pre=head</span><br><span class="line">            n=head.<span class="built_in">next</span></span><br><span class="line">            ll=self.reverseList(n)</span><br><span class="line">            n.<span class="built_in">next</span>=pre</span><br><span class="line">            pre.<span class="built_in">next</span>=<span class="literal">None</span></span><br><span class="line">            <span class="keyword">return</span> ll</span><br></pre></td></tr></table></figure>
+<h2 id="2-二叉树"><a href="#2-二叉树" class="headerlink" title="2.二叉树"></a>2.二叉树</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, val=<span class="number">0</span>, left=<span class="literal">None</span>, right=<span class="literal">None</span></span>):</span></span><br><span class="line">        self.val = val</span><br><span class="line">        self.left = left</span><br><span class="line">        self.right = right</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
   </entry>
   <entry>
     <title>双指针</title>
@@ -1609,22 +1621,9 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       </categories>
   </entry>
   <entry>
-    <title>多维分析与辛普森悖论</title>
-    <url>/2022/01/25/%E5%A4%9A%E7%BB%B4%E5%88%86%E6%9E%90%E4%B8%8E%E8%BE%9B%E6%99%AE%E6%A3%AE%E6%82%96%E8%AE%BA/</url>
-    <content><![CDATA[<p>我们对不同维度进行交叉分析时，需要注意辛普森悖论。</p>
-<h2 id="辛普森悖论"><a href="#辛普森悖论" class="headerlink" title="辛普森悖论"></a>辛普森悖论</h2><ul>
-<li>辛普森悖论<br>在分组比较中都占优势的一方，在总评中有时反而是失势的一方。<h3 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h3>辛普森悖论就像是比赛100场篮球以总胜率评价好坏。<br>于是有人专找高手挑战20 场而胜1场，另外80场找平手挑战而胜40场，结果胜率41%；<br>另一人则专挑高手挑战80场而胜8场，而剩下20场平手打个全胜，结果胜率为28%；</li>
-</ul>
-<p>如果我们只看胜率，那么胜率41%的队伍赢了，但仔细观察挑战对象，我们会发现后者明显实力更强。<br>量和质不是等价的。</p>
-]]></content>
-      <categories>
-        <category>数据分析</category>
-      </categories>
-  </entry>
-  <entry>
     <title>常见业务模型</title>
     <url>/2022/01/25/%E5%B8%B8%E8%A7%81%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<h2 id="1-AARRR模型"><a href="#1-AARRR模型" class="headerlink" title="1.AARRR模型"></a>1.AARRR模型</h2><p>用户增长领域：获客、激活、留存、收益、传播。</p>
+    <content><![CDATA[<h1 id="1-常用业务模型"><a href="#1-常用业务模型" class="headerlink" title="1.常用业务模型"></a>1.常用业务模型</h1><h2 id="1-AARRR模型"><a href="#1-AARRR模型" class="headerlink" title="1.AARRR模型"></a>1.AARRR模型</h2><p>用户增长领域：获客、激活、留存、收益、传播。</p>
 <ul>
 <li>获客<br>推广活动的获客数量和质量；</li>
 <li>激活<br>获客后，购买一次算激活成功。</li>
@@ -1644,29 +1643,29 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 <li>市场占有率<br>交叉象限分析<h2 id="5-购物篮分析"><a href="#5-购物篮分析" class="headerlink" title="5.购物篮分析"></a>5.购物篮分析</h2><h2 id="6-KANO模型"><a href="#6-KANO模型" class="headerlink" title="6.KANO模型"></a>6.KANO模型</h2>根据用户需求对用户满意的影响，四象限分析。<br>必备型&gt;期望型&gt;兴奋型&gt;无差异<h2 id="7-ABC分析法"><a href="#7-ABC分析法" class="headerlink" title="7.ABC分析法"></a>7.ABC分析法</h2>ABC分析法的核心思想就是<strong>少数项目贡献了大部分价值</strong>。</li>
 </ul>
 <h2 id="8-杜邦分析法"><a href="#8-杜邦分析法" class="headerlink" title="8.杜邦分析法"></a>8.杜邦分析法</h2><p>对ROE（净资产收益率）进行分解，从盈利能力、运营能力和偿债能力三个方面去衡量企业经营业绩。</p>
+<h1 id="2-业务常识和指标"><a href="#2-业务常识和指标" class="headerlink" title="2.业务常识和指标"></a>2.业务常识和指标</h1><h2 id="2-1用户留存"><a href="#2-1用户留存" class="headerlink" title="2.1用户留存"></a>2.1用户留存</h2><p>“留存率”很重要，是因为留存率的作用在于：衡量不同渠道获得的用户的质量，新用户的使用效果，老用户的使用产品的频次（用户黏性）等。</p>
+<h2 id="2-2活跃用户数指标"><a href="#2-2活跃用户数指标" class="headerlink" title="2.2活跃用户数指标"></a>2.2活跃用户数指标</h2><ul>
+<li>DAU(Daily Active User)日活</li>
+<li>WAU(Weekly Active User)周活</li>
+<li>MAU(Monthly Active User)月活</li>
+</ul>
 ]]></content>
       <categories>
         <category>数据分析</category>
       </categories>
   </entry>
   <entry>
-    <title>按照word模板批量输出</title>
-    <url>/2021/02/13/%E6%8C%89%E7%85%A7word%E6%A8%A1%E6%9D%BF%E6%89%B9%E9%87%8F%E8%BE%93%E5%87%BA/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_data</span>(<span class="params">title,name,time</span>):</span></span><br><span class="line">    document=Document(<span class="string">&#x27;模板.docx&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> document.paragraphs:</span><br><span class="line">        i.text=i.text.replace(<span class="string">&#x27;**&#x27;</span>,title)</span><br><span class="line">        i.text=i.text.replace(<span class="string">&#x27;XX&#x27;</span>,name)</span><br><span class="line">        i.text = i.text.replace(<span class="string">&#x27;position3&#x27;</span>, time)</span><br><span class="line"></span><br><span class="line">    title=<span class="built_in">str</span>(random.randint(<span class="number">9999</span>,<span class="number">9999</span>))+title</span><br><span class="line">    document.save(title+<span class="string">&#x27;.docx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">excel=xlrd.open_workbook(<span class="string">&#x27;数据.xls&#x27;</span>)</span><br><span class="line">table=excel.sheet_by_index(<span class="number">0</span>)</span><br><span class="line">nows=table.nrows</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(nows):</span><br><span class="line">    title=table.cell(i,<span class="number">0</span>).value</span><br><span class="line">    name=table.cell(i,<span class="number">1</span>).value</span><br><span class="line">    time=xlrd.xldate_as_datetime(table.cell(i,<span class="number">2</span>).value,<span class="number">0</span>)</span><br><span class="line">    time=<span class="built_in">str</span>(time.strftime(<span class="string">&#x27;%Y-%m-%d&#x27;</span>))</span><br><span class="line">    <span class="comment"># print(title,name,time)</span></span><br><span class="line">    change_data(title,name,time)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>多维分析与辛普森悖论</title>
+    <url>/2022/01/25/%E5%A4%9A%E7%BB%B4%E5%88%86%E6%9E%90%E4%B8%8E%E8%BE%9B%E6%99%AE%E6%A3%AE%E6%82%96%E8%AE%BA/</url>
+    <content><![CDATA[<p>我们对不同维度进行交叉分析时，需要注意辛普森悖论。</p>
+<h2 id="辛普森悖论"><a href="#辛普森悖论" class="headerlink" title="辛普森悖论"></a>辛普森悖论</h2><ul>
+<li>辛普森悖论<br>在分组比较中都占优势的一方，在总评中有时反而是失势的一方。<h3 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h3>辛普森悖论就像是比赛100场篮球以总胜率评价好坏。<br>于是有人专找高手挑战20 场而胜1场，另外80场找平手挑战而胜40场，结果胜率41%；<br>另一人则专挑高手挑战80场而胜8场，而剩下20场平手打个全胜，结果胜率为28%；</li>
+</ul>
+<p>如果我们只看胜率，那么胜率41%的队伍赢了，但仔细观察挑战对象，我们会发现后者明显实力更强。<br>量和质不是等价的。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>批处理命令</title>
-    <url>/2021/02/13/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="dos命令"><a href="#dos命令" class="headerlink" title="dos命令"></a>dos命令</h1><h1 id="单个常用命令"><a href="#单个常用命令" class="headerlink" title="单个常用命令"></a>单个常用命令</h1><p>查看命令使用参数</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy &#x2F;?</span><br></pre></td></tr></table></figure>
-<p>dir 查看文件下内容 类似于shell的ls<br>cd .. 返回上一级<br>cd \ 返回根目录<br>cd 目录 进入指定目录<br>d: 进入d文件夹</p>
-<p>copy<br>move 移动，重命名<br>del<br>md 新建文件夹<br>ren 重命名<br>xcopy 复制文件和目录树<br>rd 删除<br>rd 目录 /S 删除目录下的所有的<br>/Q 安静模式 </p>
-<p>systeminfo 显示计算机配置<br>msinfo32显示计算机配置图形化界面</p>
-<h1 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h1><p>打开计算器</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd C:\Windows\System32\</span><br><span class="line">calc.exe</span><br><span class="line">pause</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>echo 输出内容<br>echo off 关闭回显</p>
-]]></content>
+      <categories>
+        <category>数据分析</category>
+      </categories>
   </entry>
   <entry>
     <title>微服务</title>
@@ -1699,6 +1698,19 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       </tags>
   </entry>
   <entry>
+    <title>批处理命令</title>
+    <url>/2021/02/13/%E6%89%B9%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="dos命令"><a href="#dos命令" class="headerlink" title="dos命令"></a>dos命令</h1><h1 id="单个常用命令"><a href="#单个常用命令" class="headerlink" title="单个常用命令"></a>单个常用命令</h1><p>查看命令使用参数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">copy &#x2F;?</span><br></pre></td></tr></table></figure>
+<p>dir 查看文件下内容 类似于shell的ls<br>cd .. 返回上一级<br>cd \ 返回根目录<br>cd 目录 进入指定目录<br>d: 进入d文件夹</p>
+<p>copy<br>move 移动，重命名<br>del<br>md 新建文件夹<br>ren 重命名<br>xcopy 复制文件和目录树<br>rd 删除<br>rd 目录 /S 删除目录下的所有的<br>/Q 安静模式 </p>
+<p>systeminfo 显示计算机配置<br>msinfo32显示计算机配置图形化界面</p>
+<h1 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h1><p>打开计算器</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd C:\Windows\System32\</span><br><span class="line">calc.exe</span><br><span class="line">pause</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>echo 输出内容<br>echo off 关闭回显</p>
+]]></content>
+  </entry>
+  <entry>
     <title>抓取雪球</title>
     <url>/2021/02/13/%E6%8A%93%E5%8F%96%E9%9B%AA%E7%90%83/</url>
     <content><![CDATA[<h1 id="静态页面和动态页面的区别是什么？"><a href="#静态页面和动态页面的区别是什么？" class="headerlink" title="静态页面和动态页面的区别是什么？"></a>静态页面和动态页面的区别是什么？</h1><p>右击 查看源代码，ctrl+f无法搜到元素内容，说明是动态加载的，需要通过request的接口方法来抓取。</p>
@@ -1718,6 +1730,12 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <tags>
         <tag>爬虫</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>按照word模板批量输出</title>
+    <url>/2021/02/13/%E6%8C%89%E7%85%A7word%E6%A8%A1%E6%9D%BF%E6%89%B9%E9%87%8F%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">import</span> xlrd</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_data</span>(<span class="params">title,name,time</span>):</span></span><br><span class="line">    document=Document(<span class="string">&#x27;模板.docx&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> document.paragraphs:</span><br><span class="line">        i.text=i.text.replace(<span class="string">&#x27;**&#x27;</span>,title)</span><br><span class="line">        i.text=i.text.replace(<span class="string">&#x27;XX&#x27;</span>,name)</span><br><span class="line">        i.text = i.text.replace(<span class="string">&#x27;position3&#x27;</span>, time)</span><br><span class="line"></span><br><span class="line">    title=<span class="built_in">str</span>(random.randint(<span class="number">9999</span>,<span class="number">9999</span>))+title</span><br><span class="line">    document.save(title+<span class="string">&#x27;.docx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">excel=xlrd.open_workbook(<span class="string">&#x27;数据.xls&#x27;</span>)</span><br><span class="line">table=excel.sheet_by_index(<span class="number">0</span>)</span><br><span class="line">nows=table.nrows</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(nows):</span><br><span class="line">    title=table.cell(i,<span class="number">0</span>).value</span><br><span class="line">    name=table.cell(i,<span class="number">1</span>).value</span><br><span class="line">    time=xlrd.xldate_as_datetime(table.cell(i,<span class="number">2</span>).value,<span class="number">0</span>)</span><br><span class="line">    time=<span class="built_in">str</span>(time.strftime(<span class="string">&#x27;%Y-%m-%d&#x27;</span>))</span><br><span class="line">    <span class="comment"># print(title,name,time)</span></span><br><span class="line">    change_data(title,name,time)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
   <entry>
     <title>排序算法及JAVA程序实现</title>
@@ -1779,21 +1797,6 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       </tags>
   </entry>
   <entry>
-    <title>数据分箱</title>
-    <url>/2021/05/04/%E6%95%B0%E6%8D%AE%E5%88%86%E7%AE%B1/</url>
-    <content><![CDATA[<h1 id="无序变量分箱"><a href="#无序变量分箱" class="headerlink" title="无序变量分箱"></a>无序变量分箱</h1><p>在实际模型建立当中，有个 job 职业的特征，取值为（“国家机关人员”，“专业技术人员”，“商业服务人员”），对于这一类变量，如果我们将其依次赋值为（国家机关人员=1；专业技术人员=2；商业服务人员=3），就很容易产生一个问题，不同种类的职业在数据层面上就有了大小顺序之分，国家机关人员和商业服务人员的差距是2，专业技术人员和商业服务人员的之间的差距是1，而我们原来的中文分类中是不存在这种先后顺序关系的。所以这么简单的赋值是会使变量失去原来的衡量效果。</p>
-<p>怎么处理这个问题呢，“一位有效编码” （one-hot Encoding）可以解决这个问题，通常叫做虚变量或者哑变量（dummpy variable）：比如职业特征有3个不同变量，那么将其生成个2哑变量，分别是“是否国家党政职业人员”，“是否专业技术人员” ，每个虚变量取值（1，0）。<br>为什么2个哑变量而非3个？<br>在模型中引入多个虚拟变量时，虚拟变量的个数应按下列原则确定：<br>1.回归模型有截距：一般的，若该特征下n个属性均互斥（如，男/女;儿童/青年/中年/老年），在生成虚拟变量时，应该生成 n-1个虚变量，这样可以避免产生多重共线性。<br>2. 回归模型无截距项：有n个特征，设置n个虚拟变量<br>使用pandas可以很方便的对离散型特征进行one-hot编码:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python 实现</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df= pd.DataFrame([[<span class="string">&#x27;专业技术人员&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="number">1</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="number">2</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="number">1</span>],[<span class="string">&#x27;商业人员&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="number">4</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="number">5</span>]],columns=[<span class="string">&#x27;job&#x27;</span>,<span class="string">&#x27;class&#x27;</span>,<span class="string">&#x27;value&#x27;</span>])</span><br><span class="line">df = pd.get_dummies(df,columns=[<span class="string">&#x27;job&#x27;</span>,<span class="string">&#x27;class&#x27;</span>],drop_first=<span class="number">0</span>)<span class="comment"># columns表示你要引入分箱的变量，drop_first=0 代表使用 n-1个虚拟变量</span></span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
-<h1 id="有序变量分箱"><a href="#有序变量分箱" class="headerlink" title="有序变量分箱"></a>有序变量分箱</h1><p>各取值之间还存在等级关系。比如高血压分级（0=正常，1=正常高值，2=1级高血压，3=2级高血压，4=3级高血压）这类变量处理起来简直不要太省心，使用 pandas 中的 map（）替换相应变量就行</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df= pd.DataFrame([<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;3级高血压&#x27;</span>,<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;2级高血压&#x27;</span>,<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;正常高值&#x27;</span>,<span class="string">&#x27;1级高血压&#x27;</span>],columns=[<span class="string">&#x27;blood_pressure&#x27;</span>])</span><br><span class="line">dic_blood = &#123;<span class="string">&#x27;正常&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;正常高值&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;1级高血压&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;2级高血压&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;3级高血压&#x27;</span>:<span class="number">4</span>&#125;</span><br><span class="line">df[<span class="string">&#x27;blood_pressure_enc&#x27;</span>] = df[<span class="string">&#x27;blood_pressure&#x27;</span>].<span class="built_in">map</span>(dic_blood)</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
-<h1 id="连续变量分箱"><a href="#连续变量分箱" class="headerlink" title="连续变量分箱"></a>连续变量分箱</h1><p>等宽划分：按照相同宽度将数据分成几等份。缺点是受到异常值的影响比较大。 pandas.cut方法可以进行等宽划分。</p>
-<p>等频划分：将数据分成几等份，每等份数据里面的个数是一样的。pandas.qcut方法可以进行等频划分。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame([[<span class="number">22</span>,<span class="number">1</span>],[<span class="number">13</span>,<span class="number">1</span>],[<span class="number">33</span>,<span class="number">1</span>],[<span class="number">52</span>,<span class="number">0</span>],[<span class="number">16</span>,<span class="number">0</span>],[<span class="number">42</span>,<span class="number">1</span>],[<span class="number">53</span>,<span class="number">1</span>],[<span class="number">39</span>,<span class="number">1</span>],[<span class="number">26</span>,<span class="number">0</span>],[<span class="number">66</span>,<span class="number">0</span>]],columns=[<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;Y&#x27;</span>])</span><br><span class="line"><span class="comment">#print(df)</span></span><br><span class="line">df[<span class="string">&#x27;age_bin_1&#x27;</span>] = pd.qcut(df[<span class="string">&#x27;age&#x27;</span>],<span class="number">3</span>) <span class="comment">#新增一列存储等频划分的分箱特征</span></span><br><span class="line">df[<span class="string">&#x27;age_bin_2&#x27;</span>] = pd.cut(df[<span class="string">&#x27;age&#x27;</span>],<span class="number">3</span>)  <span class="comment">#新增一列存储等距划分的分箱特征</span></span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-  </entry>
-  <entry>
     <title>数据库</title>
     <url>/2021/02/13/%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<p>[toc]</p>
@@ -1816,6 +1819,21 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <tags>
         <tag>NoSQL</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>数据分箱</title>
+    <url>/2021/05/04/%E6%95%B0%E6%8D%AE%E5%88%86%E7%AE%B1/</url>
+    <content><![CDATA[<h1 id="无序变量分箱"><a href="#无序变量分箱" class="headerlink" title="无序变量分箱"></a>无序变量分箱</h1><p>在实际模型建立当中，有个 job 职业的特征，取值为（“国家机关人员”，“专业技术人员”，“商业服务人员”），对于这一类变量，如果我们将其依次赋值为（国家机关人员=1；专业技术人员=2；商业服务人员=3），就很容易产生一个问题，不同种类的职业在数据层面上就有了大小顺序之分，国家机关人员和商业服务人员的差距是2，专业技术人员和商业服务人员的之间的差距是1，而我们原来的中文分类中是不存在这种先后顺序关系的。所以这么简单的赋值是会使变量失去原来的衡量效果。</p>
+<p>怎么处理这个问题呢，“一位有效编码” （one-hot Encoding）可以解决这个问题，通常叫做虚变量或者哑变量（dummpy variable）：比如职业特征有3个不同变量，那么将其生成个2哑变量，分别是“是否国家党政职业人员”，“是否专业技术人员” ，每个虚变量取值（1，0）。<br>为什么2个哑变量而非3个？<br>在模型中引入多个虚拟变量时，虚拟变量的个数应按下列原则确定：<br>1.回归模型有截距：一般的，若该特征下n个属性均互斥（如，男/女;儿童/青年/中年/老年），在生成虚拟变量时，应该生成 n-1个虚变量，这样可以避免产生多重共线性。<br>2. 回归模型无截距项：有n个特征，设置n个虚拟变量<br>使用pandas可以很方便的对离散型特征进行one-hot编码:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python 实现</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df= pd.DataFrame([[<span class="string">&#x27;专业技术人员&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="number">1</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="number">2</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="number">1</span>],[<span class="string">&#x27;商业人员&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="number">4</span>],[<span class="string">&#x27;国家机关人员&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="number">5</span>]],columns=[<span class="string">&#x27;job&#x27;</span>,<span class="string">&#x27;class&#x27;</span>,<span class="string">&#x27;value&#x27;</span>])</span><br><span class="line">df = pd.get_dummies(df,columns=[<span class="string">&#x27;job&#x27;</span>,<span class="string">&#x27;class&#x27;</span>],drop_first=<span class="number">0</span>)<span class="comment"># columns表示你要引入分箱的变量，drop_first=0 代表使用 n-1个虚拟变量</span></span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
+<h1 id="有序变量分箱"><a href="#有序变量分箱" class="headerlink" title="有序变量分箱"></a>有序变量分箱</h1><p>各取值之间还存在等级关系。比如高血压分级（0=正常，1=正常高值，2=1级高血压，3=2级高血压，4=3级高血压）这类变量处理起来简直不要太省心，使用 pandas 中的 map（）替换相应变量就行</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df= pd.DataFrame([<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;3级高血压&#x27;</span>,<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;2级高血压&#x27;</span>,<span class="string">&#x27;正常&#x27;</span>,<span class="string">&#x27;正常高值&#x27;</span>,<span class="string">&#x27;1级高血压&#x27;</span>],columns=[<span class="string">&#x27;blood_pressure&#x27;</span>])</span><br><span class="line">dic_blood = &#123;<span class="string">&#x27;正常&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;正常高值&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;1级高血压&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;2级高血压&#x27;</span>:<span class="number">3</span>,<span class="string">&#x27;3级高血压&#x27;</span>:<span class="number">4</span>&#125;</span><br><span class="line">df[<span class="string">&#x27;blood_pressure_enc&#x27;</span>] = df[<span class="string">&#x27;blood_pressure&#x27;</span>].<span class="built_in">map</span>(dic_blood)</span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>
+<h1 id="连续变量分箱"><a href="#连续变量分箱" class="headerlink" title="连续变量分箱"></a>连续变量分箱</h1><p>等宽划分：按照相同宽度将数据分成几等份。缺点是受到异常值的影响比较大。 pandas.cut方法可以进行等宽划分。</p>
+<p>等频划分：将数据分成几等份，每等份数据里面的个数是一样的。pandas.qcut方法可以进行等频划分。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame([[<span class="number">22</span>,<span class="number">1</span>],[<span class="number">13</span>,<span class="number">1</span>],[<span class="number">33</span>,<span class="number">1</span>],[<span class="number">52</span>,<span class="number">0</span>],[<span class="number">16</span>,<span class="number">0</span>],[<span class="number">42</span>,<span class="number">1</span>],[<span class="number">53</span>,<span class="number">1</span>],[<span class="number">39</span>,<span class="number">1</span>],[<span class="number">26</span>,<span class="number">0</span>],[<span class="number">66</span>,<span class="number">0</span>]],columns=[<span class="string">&#x27;age&#x27;</span>,<span class="string">&#x27;Y&#x27;</span>])</span><br><span class="line"><span class="comment">#print(df)</span></span><br><span class="line">df[<span class="string">&#x27;age_bin_1&#x27;</span>] = pd.qcut(df[<span class="string">&#x27;age&#x27;</span>],<span class="number">3</span>) <span class="comment">#新增一列存储等频划分的分箱特征</span></span><br><span class="line">df[<span class="string">&#x27;age_bin_2&#x27;</span>] = pd.cut(df[<span class="string">&#x27;age&#x27;</span>],<span class="number">3</span>)  <span class="comment">#新增一列存储等距划分的分箱特征</span></span><br><span class="line">print(df)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
   </entry>
   <entry>
     <title>数据映射处理与核对</title>
@@ -1866,6 +1884,12 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 <li>注意写代码，不要只写基础理论，场景实际例子非常重要，可以以实例的角度来写，而不是站在一个尽可能掌握多而系统的技术的角度来写。包括命名用目的例子来命名。</li>
 <li>记录经常犯错，或者总是忘得东西，方便下次用的时候直接快速得回想起来，而不是再从0查找。</li>
 </ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>同样地，在学习某项技术时，把学习拆分成很多段，每段以开发一个小项目进行“验收”，比把一个技术先学完，再做一个大项目，效果要好得多。</p>
+<p>而最糟的方式，一是只看书听课，却不动手，这是在陆地上看游泳录相学游泳</p>
+<p>次糟的方式，是相信先把理论学好，“内力充沛”，然后去实践（即学外功和招数套路），必然势如破竹，进展一日千里</p>
+<p>要遵循人类的认知规律</p>
+<p>螺旋式上升或者波浪式上升，或者阶梯式上升，反正不是线性的。很多人以为是线性的。</p>
+<p>在公司实习一年顶得上你自学三年，这句话不是没道理的，当然我也很想知道为啥会是这样，所以为了探究这个问题，体验我们平常自学和在公司到底有什么区别，我特意找个时间去公司体验了一把，后来让我明白的就是，在公司完全就是项目驱动式的学习（当然不是全部）。</p>
 ]]></content>
       <categories>
         <category>方法论</category>
@@ -1873,46 +1897,6 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <tags>
         <tag>学习方法</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>栈</title>
-    <url>/2021/08/23/%E6%A0%88/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">MyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">0</span>,-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">s = []</span><br><span class="line">flag=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> MyList:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(s) == <span class="number">0</span>  :</span><br><span class="line">        s.append(i)</span><br><span class="line">    <span class="keyword">elif</span> s[i] <span class="keyword">and</span> flag&gt;=<span class="number">0</span>:</span><br><span class="line">        s.append(i)</span><br><span class="line">        flag=<span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> s[-<span class="number">1</span>] - <span class="number">1</span> == i <span class="keyword">and</span> flag&lt;=<span class="number">0</span>:</span><br><span class="line">        s.append(i)</span><br><span class="line">        flag=-<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(s) &gt;= <span class="number">2</span>:</span><br><span class="line">            print(s)</span><br><span class="line">        s = []    <span class="comment"># 清空</span></span><br><span class="line">        flag=<span class="number">0</span></span><br><span class="line">        s.append(i)  <span class="comment"># 入栈</span></span><br><span class="line"><span class="comment"># 最后一轮，需判断下</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(s) &gt;= <span class="number">2</span>:</span><br><span class="line">    print(s)</span><br></pre></td></tr></table></figure>
-<p>数组，不是显式的；</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">calculate</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">calculate</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">        Stack stk=<span class="keyword">new</span> Stack();</span><br><span class="line"><span class="comment">//        // 定义一个栈</span></span><br><span class="line"><span class="comment">//        Stack&lt;Integer&gt; stk;</span></span><br><span class="line">        <span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span> sign=<span class="string">&#x27;+&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">char</span> c= s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(Character.isDigit(c))&#123;</span><br><span class="line">                num=num*<span class="number">10</span>+(c-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!Character.isDigit(c)|| i==s.length()-<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">switch</span> (sign)&#123;</span><br><span class="line">                    <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">                        stk.push(num);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">                        stk.push(-num);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                sign=c;</span><br><span class="line">                num=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (!stk.empty())&#123;</span><br><span class="line">            res+= (<span class="keyword">int</span>) stk.pop();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s=<span class="string">&quot;52-32&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> out=calculate(s);</span><br><span class="line">        System.out.println(out);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>树</title>
-    <url>/2021/07/06/%E6%A0%91/</url>
-    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxdepth</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> Math.max(maxdepth(root.left),maxdepth(root.right))+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>BPS</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	Deque&lt;TreeNode&gt; deque=<span class="keyword">new</span> Deque&lt;&gt;();</span><br><span class="line">	deque.offer(root);</span><br><span class="line">	<span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(!deque.isEmpty())&#123;</span><br><span class="line">		<span class="keyword">int</span> size=duque.size();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)&#123;</span><br><span class="line">			TreeNode tn=de.poll();</span><br><span class="line">			<span class="keyword">if</span>(tn.left!=<span class="keyword">null</span>)&#123;</span><br><span class="line">				deque.offer(tn.left);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(tn.right!=<span class="keyword">null</span>)&#123;</span><br><span class="line">				deque.offer(tn.right);</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		count++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> count;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>树</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则表达式</title>
-    <url>/2021/02/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h1><p>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。</p>
-<p>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表前面的字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。</p>
-<p>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）。</p>
-<p>[0-9] 匹配一个数字<br>星号 匹配0个或多个字符</p>
-<p>[\s\S]*是完全通配的意思；</p>
-<p>“[ ]”是范围描述符。</p>
-<p>\s是指空白，包括空格、换行、tab缩进等所有的空白，而\S刚好相反，这样一正一反下来，就表示所有的字符，完全的，一字不漏的。</p>
-<p>另外，[]这个符号，表示在它里面包含的单个字符不限顺序的出现，比如：<br>[ace]*—这表示，只要出现a/c/e这三个任意的字母，都会被匹配；<br>[\s]—表示，只要出现空白就匹配；<br>[\S]—表示，非空白就匹配；</p>
-<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><p>开始 上三角<br>结束 美元符号<br>花括号 特定的 匹配字符串<br>杠w星表示匹配字母，其中星号表示0个或者多个。</p>
-]]></content>
   </entry>
   <entry>
     <title>机器学习入门</title>
@@ -1937,6 +1921,50 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       <tags>
         <tag>机器学习</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>树</title>
+    <url>/2021/07/06/%E6%A0%91/</url>
+    <content><![CDATA[<h2 id="PYTHON实现二叉树的最大深度"><a href="#PYTHON实现二叉树的最大深度" class="headerlink" title="PYTHON实现二叉树的最大深度"></a>PYTHON实现二叉树的最大深度</h2><h3 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, val=<span class="number">0</span>, left=<span class="literal">None</span>, right=<span class="literal">None</span></span>):</span></span><br><span class="line">        self.val = val</span><br><span class="line">        self.left = left</span><br><span class="line">        self.right = right</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxDepth</span>(<span class="params">self, root: Optional[TreeNode]</span>) -&gt; int:</span></span><br><span class="line">        <span class="comment">#深度优先遍历，树高为root的左子树和右子树中最高的高度加1</span></span><br><span class="line">        <span class="keyword">if</span> root==<span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        left_high=self.maxDepth(root.left)</span><br><span class="line">        right_high=self.maxDepth(root.right)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(left_high,right_high)+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h3 id="BFS"><a href="#BFS" class="headerlink" title="BFS"></a>BFS</h3><p>队列</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">maxDepth2</span>(<span class="params">self, root: Optional[TreeNode]</span>) -&gt; int:</span></span><br><span class="line">       <span class="comment"># 广度优先算法</span></span><br><span class="line">       <span class="comment">#使用队列实现BFS，循环时把当前层的节点出队，下一层节点入队</span></span><br><span class="line">       <span class="comment"># 为了记录层数，要嵌套一个弹出树当前层的所有节点的循环，内部循环结束后depth + 1</span></span><br><span class="line">       <span class="comment"># 当队列为空时，已遍历完树的所有节点，循环结束，返回depth</span></span><br><span class="line">       <span class="comment"># 代码</span></span><br><span class="line">       <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">           <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">       queue = deque([root])</span><br><span class="line">       depth=<span class="number">0</span></span><br><span class="line">       <span class="keyword">while</span> queue:</span><br><span class="line">           n=<span class="built_in">len</span>(queue)</span><br><span class="line">           <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">               node=queue.popleft()</span><br><span class="line">               <span class="keyword">if</span> node.left:</span><br><span class="line">                   queue.append(node.left)</span><br><span class="line">               <span class="keyword">if</span> node.right:</span><br><span class="line">                   queue.append(node.right)</span><br><span class="line">           depth+=<span class="number">1</span></span><br><span class="line">       <span class="keyword">return</span> depth</span><br></pre></td></tr></table></figure>
+<p>DFS</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxdepth</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> Math.max(maxdepth(root.left),maxdepth(root.right))+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>BFS</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	Deque&lt;TreeNode&gt; deque=<span class="keyword">new</span> Deque&lt;&gt;();</span><br><span class="line">	deque.offer(root);</span><br><span class="line">	<span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(!deque.isEmpty())&#123;</span><br><span class="line">		<span class="keyword">int</span> size=duque.size();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)&#123;</span><br><span class="line">			TreeNode tn=de.poll();</span><br><span class="line">			<span class="keyword">if</span>(tn.left!=<span class="keyword">null</span>)&#123;</span><br><span class="line">				deque.offer(tn.left);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(tn.right!=<span class="keyword">null</span>)&#123;</span><br><span class="line">				deque.offer(tn.right);</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		count++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> count;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>栈</title>
+    <url>/2021/08/23/%E6%A0%88/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">MyList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">0</span>,-<span class="number">1</span>,-<span class="number">2</span>,-<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">s = []</span><br><span class="line">flag=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> MyList:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(s) == <span class="number">0</span>  :</span><br><span class="line">        s.append(i)</span><br><span class="line">    <span class="keyword">elif</span> s[i] <span class="keyword">and</span> flag&gt;=<span class="number">0</span>:</span><br><span class="line">        s.append(i)</span><br><span class="line">        flag=<span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> s[-<span class="number">1</span>] - <span class="number">1</span> == i <span class="keyword">and</span> flag&lt;=<span class="number">0</span>:</span><br><span class="line">        s.append(i)</span><br><span class="line">        flag=-<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(s) &gt;= <span class="number">2</span>:</span><br><span class="line">            print(s)</span><br><span class="line">        s = []    <span class="comment"># 清空</span></span><br><span class="line">        flag=<span class="number">0</span></span><br><span class="line">        s.append(i)  <span class="comment"># 入栈</span></span><br><span class="line"><span class="comment"># 最后一轮，需判断下</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(s) &gt;= <span class="number">2</span>:</span><br><span class="line">    print(s)</span><br></pre></td></tr></table></figure>
+<p>数组，不是显式的；</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">calculate</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">calculate</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">        Stack stk=<span class="keyword">new</span> Stack();</span><br><span class="line"><span class="comment">//        // 定义一个栈</span></span><br><span class="line"><span class="comment">//        Stack&lt;Integer&gt; stk;</span></span><br><span class="line">        <span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span> sign=<span class="string">&#x27;+&#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">char</span> c= s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(Character.isDigit(c))&#123;</span><br><span class="line">                num=num*<span class="number">10</span>+(c-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!Character.isDigit(c)|| i==s.length()-<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">switch</span> (sign)&#123;</span><br><span class="line">                    <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">                        stk.push(num);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">                        stk.push(-num);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                sign=c;</span><br><span class="line">                num=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (!stk.empty())&#123;</span><br><span class="line">            res+= (<span class="keyword">int</span>) stk.pop();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String s=<span class="string">&quot;52-32&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> out=calculate(s);</span><br><span class="line">        System.out.println(out);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正则表达式</title>
+    <url>/2021/02/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h1><p>runoo+b，可以匹配 runoob、runooob、runoooooob 等，+ 号代表前面的字符必须至少出现一次（1次或多次）。</p>
+<p>runoo<em>b，可以匹配 runob、runoob、runoooooob 等，</em> 号代表前面的字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。</p>
+<p>colou?r 可以匹配 color 或者 colour，? 问号代表前面的字符最多只可以出现一次（0次、或1次）。</p>
+<p>[0-9] 匹配一个数字<br>星号 匹配0个或多个字符</p>
+<p>[\s\S]*是完全通配的意思；</p>
+<p>“[ ]”是范围描述符。</p>
+<p>\s是指空白，包括空格、换行、tab缩进等所有的空白，而\S刚好相反，这样一正一反下来，就表示所有的字符，完全的，一字不漏的。</p>
+<p>另外，[]这个符号，表示在它里面包含的单个字符不限顺序的出现，比如：<br>[ace]*—这表示，只要出现a/c/e这三个任意的字母，都会被匹配；<br>[\s]—表示，只要出现空白就匹配；<br>[\S]—表示，非空白就匹配；</p>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><p>开始 上三角<br>结束 美元符号<br>花括号 特定的 匹配字符串<br>杠w星表示匹配字母，其中星号表示0个或者多个。</p>
+]]></content>
   </entry>
   <entry>
     <title>爬取二手房</title>
@@ -1996,12 +2024,6 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
 ]]></content>
   </entry>
   <entry>
-    <title>登录页面制作</title>
-    <url>/2021/02/13/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C/</url>
-    <content><![CDATA[<h1 id="VS使用"><a href="#VS使用" class="headerlink" title="VS使用"></a>VS使用</h1><p>注释<br>选中代码，ctrl+K，然后ctrl+c；<br>页面的实时预览<br>open with live server配合brower preview使用</p>
-]]></content>
-  </entry>
-  <entry>
     <title>爬虫美丽汤大学排名</title>
     <url>/2021/02/13/%E7%88%AC%E8%99%AB%E7%BE%8E%E4%B8%BD%E6%B1%A4%E5%A4%A7%E5%AD%A6%E6%8E%92%E5%90%8D/</url>
     <content><![CDATA[<p>创建 Beautiful Soup对象   soup = BeautifulSoup(html，’html.parser’) </p>
@@ -2018,19 +2040,32 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       </tags>
   </entry>
   <entry>
-    <title>算法游戏与经典算法问题</title>
-    <url>/2021/02/13/%E7%AE%97%E6%B3%95%E6%B8%B8%E6%88%8F%E4%B8%8E%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="八皇后问题"><a href="#八皇后问题" class="headerlink" title="八皇后问题"></a>八皇后问题</h1><p>问题描述：<br>一个棋局八乘以八的棋局，要放置8个皇后，让彼此不攻击，需要怎么放置？<br>攻击：在一行，一列，或者一条斜线就是攻击</p>
-<h1 id="华容道问题"><a href="#华容道问题" class="headerlink" title="华容道问题"></a>华容道问题</h1><h1 id="约瑟夫环问题"><a href="#约瑟夫环问题" class="headerlink" title="约瑟夫环问题"></a>约瑟夫环问题</h1><h1 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h1><h1 id="骑士周游列国问题"><a href="#骑士周游列国问题" class="headerlink" title="骑士周游列国问题"></a>骑士周游列国问题</h1><h1 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h1><h1 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h1><p>一个主题的线下活动，女生比例是30%，是否说明女生不爱参加线下活动？<br>不能，影响因素至少有两个，一个是首先关注特定主题，其次是关注特定主题的前提下爱参加活动，[条件概率]男女比例差异体现在了是否关注特定主题。<br>而且，结合更广泛的补充，恰恰相反，女生更热衷于参加活动。</p>
-<h1 id="辛普森悖论"><a href="#辛普森悖论" class="headerlink" title="辛普森悖论"></a>辛普森悖论</h1><p>在某个条件下的两组数据，分别讨论时都会满足某种性质，可是一旦合并考虑，却可能导致相反的结论。<br>在某些前提下有时会产生的一种现象：<br>1.有组间差异<br>2.两个组占比不均衡</p>
-<p>当指标是一个均值或比例时，子模块的指标变化可能和总体的变化不一致，比如子模块的指标上升了，总体的指标却下降了。<br>某APP的每日人均发帖量 = 每日总贴数 / 总人数。现在发现这个指标下降了，我们按用户的手机类型做个拆分：安卓客户端和苹果客户端，却发现：两个客户端的人均发帖量都上升了</p>
-<h1 id="三门问题"><a href="#三门问题" class="headerlink" title="三门问题"></a>三门问题</h1><p>这个”三门”问题的结果为什么会违反大多数人的直觉？如果主持人先打开一扇空门，剩下两扇门中任何一个有车的可能性都是50%，但为什么我先选择一下，主持人再开门，却能改变另两扇门后有车的可能性呢？主持人开门的瞬间发生了什么？<br>要回答这个问题，我们可以把三扇门换成n扇门，这样更容易看清楚这个问题的本质。把它想成有十个门，而主持人在选后打开其中八个不通的门，就容易理解多了。<br>“三门”问题的本质是：主持人排除一扇空门为你二次选择带来的获奖概率增幅大于你损失掉的第一次选择时获奖的概率。</p>
+    <title>登录页面制作</title>
+    <url>/2021/02/13/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C/</url>
+    <content><![CDATA[<h1 id="VS使用"><a href="#VS使用" class="headerlink" title="VS使用"></a>VS使用</h1><p>注释<br>选中代码，ctrl+K，然后ctrl+c；<br>页面的实时预览<br>open with live server配合brower preview使用</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第一个VUEdemo</title>
+    <url>/2021/02/13/%E7%AC%AC%E4%B8%80%E4%B8%AAVUEdemo/</url>
+    <content><![CDATA[<h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>从nodejs官网下载安装，验证：命令行中，node-v出现版本号，说明成功。</p>
+<h1 id="安装npm的国内镜像"><a href="#安装npm的国内镜像" class="headerlink" title="安装npm的国内镜像"></a>安装npm的国内镜像</h1><p>node环境中包括，npm包管理器，由于国外，网速问题，我们安装国内镜像<br>命令行中，<br>npm install -g cnpm -registry=<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a><br>然后可以用cnpm来代替cpm安装依赖包</p>
+<h1 id="安装vue-cli脚手架构建工具"><a href="#安装vue-cli脚手架构建工具" class="headerlink" title="安装vue-cli脚手架构建工具"></a>安装vue-cli脚手架构建工具</h1><p>命令行<br>cnpm install -g vue-cli</p>
+<h1 id="用vue-cli构建项目"><a href="#用vue-cli构建项目" class="headerlink" title="用vue-cli构建项目"></a>用vue-cli构建项目</h1><p>选择一个目录放项目，命令行转到该目录下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack firstVue</span><br></pre></td></tr></table></figure>
+<p>意思是初始化一个项目，利用的是webpack打包和压缩。<br>然后按照提示输入选项</p>
+<h1 id="安装项目所需的依赖"><a href="#安装项目所需的依赖" class="headerlink" title="安装项目所需的依赖"></a>安装项目所需的依赖</h1><p>cd 到项目文件夹下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
+<p>项目目录firstVue中多出一个node_modules的文件夹，就是项目所需的依赖包资源。</p>
+<h1 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h1><p>在项目目录中,运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<p>今天犯了三个错误<br>1.src写错了<br>2.script没有写到head中，也没有写到boby内<br>3.有中文的空格，需要在调试中看报错。</p>
 ]]></content>
       <categories>
-        <category>算法</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>算法游戏</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -2054,26 +2089,19 @@ data.mean() 按列取平均值<br>data.fillna()填充空值<br>data.fillna(data.
       </tags>
   </entry>
   <entry>
-    <title>第一个VUEdemo</title>
-    <url>/2021/02/13/%E7%AC%AC%E4%B8%80%E4%B8%AAVUEdemo/</url>
-    <content><![CDATA[<h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>从nodejs官网下载安装，验证：命令行中，node-v出现版本号，说明成功。</p>
-<h1 id="安装npm的国内镜像"><a href="#安装npm的国内镜像" class="headerlink" title="安装npm的国内镜像"></a>安装npm的国内镜像</h1><p>node环境中包括，npm包管理器，由于国外，网速问题，我们安装国内镜像<br>命令行中，<br>npm install -g cnpm -registry=<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a><br>然后可以用cnpm来代替cpm安装依赖包</p>
-<h1 id="安装vue-cli脚手架构建工具"><a href="#安装vue-cli脚手架构建工具" class="headerlink" title="安装vue-cli脚手架构建工具"></a>安装vue-cli脚手架构建工具</h1><p>命令行<br>cnpm install -g vue-cli</p>
-<h1 id="用vue-cli构建项目"><a href="#用vue-cli构建项目" class="headerlink" title="用vue-cli构建项目"></a>用vue-cli构建项目</h1><p>选择一个目录放项目，命令行转到该目录下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack firstVue</span><br></pre></td></tr></table></figure>
-<p>意思是初始化一个项目，利用的是webpack打包和压缩。<br>然后按照提示输入选项</p>
-<h1 id="安装项目所需的依赖"><a href="#安装项目所需的依赖" class="headerlink" title="安装项目所需的依赖"></a>安装项目所需的依赖</h1><p>cd 到项目文件夹下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
-<p>项目目录firstVue中多出一个node_modules的文件夹，就是项目所需的依赖包资源。</p>
-<h1 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h1><p>在项目目录中,运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-<p>今天犯了三个错误<br>1.src写错了<br>2.script没有写到head中，也没有写到boby内<br>3.有中文的空格，需要在调试中看报错。</p>
+    <title>算法游戏与经典算法问题</title>
+    <url>/2021/02/13/%E7%AE%97%E6%B3%95%E6%B8%B8%E6%88%8F%E4%B8%8E%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="八皇后问题"><a href="#八皇后问题" class="headerlink" title="八皇后问题"></a>八皇后问题</h1><p>问题描述：<br>一个棋局八乘以八的棋局，要放置8个皇后，让彼此不攻击，需要怎么放置？<br>攻击：在一行，一列，或者一条斜线就是攻击</p>
+<h1 id="华容道问题"><a href="#华容道问题" class="headerlink" title="华容道问题"></a>华容道问题</h1><h1 id="约瑟夫环问题"><a href="#约瑟夫环问题" class="headerlink" title="约瑟夫环问题"></a>约瑟夫环问题</h1><h1 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h1><h1 id="骑士周游列国问题"><a href="#骑士周游列国问题" class="headerlink" title="骑士周游列国问题"></a>骑士周游列国问题</h1><h1 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h1><h1 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h1><p>一个主题的线下活动，女生比例是30%，是否说明女生不爱参加线下活动？<br>不能，影响因素至少有两个，一个是首先关注特定主题，其次是关注特定主题的前提下爱参加活动，[条件概率]男女比例差异体现在了是否关注特定主题。<br>而且，结合更广泛的补充，恰恰相反，女生更热衷于参加活动。</p>
+<h1 id="辛普森悖论"><a href="#辛普森悖论" class="headerlink" title="辛普森悖论"></a>辛普森悖论</h1><p>在某个条件下的两组数据，分别讨论时都会满足某种性质，可是一旦合并考虑，却可能导致相反的结论。<br>在某些前提下有时会产生的一种现象：<br>1.有组间差异<br>2.两个组占比不均衡</p>
+<p>当指标是一个均值或比例时，子模块的指标变化可能和总体的变化不一致，比如子模块的指标上升了，总体的指标却下降了。<br>某APP的每日人均发帖量 = 每日总贴数 / 总人数。现在发现这个指标下降了，我们按用户的手机类型做个拆分：安卓客户端和苹果客户端，却发现：两个客户端的人均发帖量都上升了</p>
+<h1 id="三门问题"><a href="#三门问题" class="headerlink" title="三门问题"></a>三门问题</h1><p>这个”三门”问题的结果为什么会违反大多数人的直觉？如果主持人先打开一扇空门，剩下两扇门中任何一个有车的可能性都是50%，但为什么我先选择一下，主持人再开门，却能改变另两扇门后有车的可能性呢？主持人开门的瞬间发生了什么？<br>要回答这个问题，我们可以把三扇门换成n扇门，这样更容易看清楚这个问题的本质。把它想成有十个门，而主持人在选后打开其中八个不通的门，就容易理解多了。<br>“三门”问题的本质是：主持人排除一扇空门为你二次选择带来的获奖概率增幅大于你损失掉的第一次选择时获奖的概率。</p>
 ]]></content>
       <categories>
-        <category>前端</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>前端</tag>
+        <tag>算法游戏</tag>
       </tags>
   </entry>
   <entry>
